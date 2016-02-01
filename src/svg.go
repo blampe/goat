@@ -3,7 +3,6 @@ package goaat
 import (
 	"fmt"
 	"io"
-	"log"
 )
 
 func ASCIItoSVG(in io.Reader, out io.Writer) {
@@ -184,5 +183,4 @@ func (c *RoundedCorner) Draw(out io.Writer) {
 }
 
 func (b *Bridge) Draw(out io.Writer) {
-	log.Print("SKIPPING A BRIDGE")
 }

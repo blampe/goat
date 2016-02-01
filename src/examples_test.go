@@ -1,6 +1,7 @@
 package goaat
 
 import (
+	"io"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -10,8 +11,31 @@ import (
 	"github.com/blampe/goaat/src"
 )
 
+const basePath string = "../examples/"
+
+func getInOut(t testing.TB, fileName string) (io.Reader, io.Writer) {
+
+	sourceName := basePath + fileName
+	svgName := basePath + strings.TrimSuffix(sourceName, filepath.Ext(fileName)) + ".svg"
+
+	in, err := os.Open(sourceName)
+
+	if err != nil {
+		t.Error(err)
+		return nil, nil
+	}
+
+	out, err := os.Create(svgName)
+
+	if err != nil {
+		t.Error(err)
+		return nil, nil
+	}
+
+	return in, out
+}
+
 func TestExamples(t *testing.T) {
-	basePath := "../examples/"
 
 	fileInfos, err := ioutil.ReadDir(basePath)
 
@@ -20,21 +44,15 @@ func TestExamples(t *testing.T) {
 	}
 
 	for _, fileInfo := range fileInfos {
-		sourceName := basePath + fileInfo.Name()
-		svgName := basePath + strings.TrimSuffix(sourceName, filepath.Ext(sourceName)) + ".svg"
+		in, out := getInOut(t, fileInfo.Name())
+		goaat.ASCIItoSVG(in, out)
+	}
+}
 
-		in, err := os.Open(sourceName)
-
-		if err != nil {
-			t.Error(err)
-		}
-
-		out, err := os.Create(svgName)
-
-		if err != nil {
-			t.Error(err)
-		}
-
+func BenchmarkComplicated(b *testing.B) {
+	in, out := getInOut(b, "complicated1.txt")
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
 		goaat.ASCIItoSVG(in, out)
 	}
 }
