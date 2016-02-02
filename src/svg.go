@@ -11,7 +11,7 @@ func ASCIItoSVG(in io.Reader, out io.Writer) {
 	out.Write(
 		[]byte(fmt.Sprintf(
 			"<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='%d' width='%d'>\n",
-			canvas.Height*16, canvas.Width*8,
+			canvas.Height*16+8, (canvas.Width+1)*8,
 		)),
 	)
 
