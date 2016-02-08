@@ -4,7 +4,19 @@ import (
 	"bufio"
 	"bytes"
 	"io"
+	"unicode"
 )
+
+var JOINTS = []rune{'.', '\'', '+'}
+
+func contains(in []rune, r rune) bool {
+	for _, v := range in {
+		if r == v {
+			return true
+		}
+	}
+	return false
+}
 
 type Canvas struct {
 	Width  int
@@ -105,6 +117,7 @@ func (l *Line) setStop(i Index) {
 type Triangle struct {
 	start       Index
 	orientation Orientation
+	halfStep    bool
 }
 
 type Circle struct {
@@ -157,17 +170,6 @@ func (c *Canvas) linesFromIterator(ci canvasIterator, keepers []rune) []Line {
 
 	var currentLine Line
 	var lastSeenRune rune
-
-	JOINTS := []rune{'.', '\'', '+'}
-
-	contains := func(in []rune, r rune) bool {
-		for _, v := range in {
-			if r == v {
-				return true
-			}
-		}
-		return false
-	}
 
 	endCurrentLine := func(i Index) Line {
 		if !currentLine.started() {
@@ -229,22 +231,40 @@ func (c *Canvas) Triangles() []Triangle {
 	o := NONE
 
 	for idx := range upDown(c.Width, c.Height) {
+		halfStep := false
+
+		if c.isText(idx) {
+			continue
+		}
+
 		r := c.runeAt(idx)
 
 		switch r {
 		case '^':
 			o = N
+			if c.runeAt(Index{idx.x, idx.y - 1}) == '-' {
+				halfStep = true
+			}
 		case 'v':
 			o = S
+			if c.runeAt(Index{idx.x, idx.y + 1}) == '-' {
+				halfStep = true
+			}
 		case '<':
 			o = W
+			if c.runeAt(Index{idx.x - 1, idx.y}) == '|' {
+				halfStep = true
+			}
 		case '>':
 			o = E
+			if c.runeAt(Index{idx.x + 1, idx.y}) == '|' {
+				halfStep = true
+			}
 		default:
 			continue
 		}
 
-		triangles = append(triangles, Triangle{start: idx, orientation: o})
+		triangles = append(triangles, Triangle{start: idx, orientation: o, halfStep: halfStep})
 	}
 
 	return triangles
@@ -255,9 +275,9 @@ func (c *Canvas) Circles() []Circle {
 
 	for idx := range upDown(c.Width, c.Height) {
 		// TODO INCOMING
-		if c.runeAt(idx) == 'o' {
+		if c.runeAt(idx) == 'o' && !c.isText(idx) {
 			circles = append(circles, Circle{start: idx})
-		} else if c.runeAt(idx) == '*' {
+		} else if c.runeAt(idx) == '*' && !c.isText(idx) {
 			circles = append(circles, Circle{start: idx, bold: true})
 		}
 	}
@@ -277,6 +297,7 @@ func (c *Canvas) RoundedCorners() []RoundedCorner {
 	return corners
 }
 
+// TODO foo
 func (c *Canvas) isRoundedCorner(i Index) Orientation {
 
 	r := c.runeAt(i)
@@ -329,7 +350,17 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 }
 
 func (c *Canvas) Text() []Text {
-	return nil
+	var text []Text
+
+	for i := range leftRight(c.Width, c.Height) {
+
+		if c.isText(i) {
+			r := c.runeAt(i)
+			text = append(text, Text{start: i, contents: string(r)})
+		}
+
+	}
+	return text
 }
 
 func (c *Canvas) Bridges() []Bridge {
@@ -365,4 +396,105 @@ func (c *Canvas) isBridge(i Index) Orientation {
 	}
 
 	return NONE
+}
+
+func (c *Canvas) isText(i Index) bool {
+
+	// If o or * and letters immediately adjacent, true.
+	if (c.isTextLeft(i, 2) || c.isTextRight(i, 2)) && !c.hasIncomingLine(i) {
+		return true
+	}
+
+	return false
+}
+
+func (c *Canvas) isTextLeft(i Index, limit uint8) bool {
+	if limit == 0 {
+		return false
+	}
+	left := Index{i.x - 1, i.y}
+
+	return c.isDefinitelyText(left) || c.isTextLeft(left, limit-1)
+}
+
+func (c *Canvas) isTextRight(i Index, limit uint8) bool {
+	if limit == 0 {
+		return false
+	}
+	right := Index{i.x + 1, i.y}
+
+	return c.isDefinitelyText(right) || c.isTextRight(right, limit-1)
+}
+
+func (c *Canvas) isDefinitelyText(i Index) bool {
+	r := c.runeAt(i)
+
+	if r == ' ' {
+		return false
+	}
+
+	if unicode.IsLetter(r) || unicode.IsDigit(r) {
+		return true
+	}
+
+	// Reserved characters
+	if contains([]rune{'-', '|', '/', '\\', '^', 'v', '<', '>', '.', '\'', '(', ')', '+', 'o', '*'}, r) {
+		// Check if we have any other reserved characters above us?
+		// \|/
+		// -x-
+		// /|\
+		return false
+	}
+
+	return true
+}
+
+func (c *Canvas) hasIncomingLine(i Index) bool {
+	r := c.runeAt(i)
+
+	north := Index{i.x, i.y - 1}
+	south := Index{i.x, i.y + 1}
+	east := Index{i.x + 1, i.y}
+	west := Index{i.x - 1, i.y}
+	nWest := Index{i.x - 1, i.y - 1}
+	nEast := Index{i.x + 1, i.y - 1}
+	sWest := Index{i.x - 1, i.y + 1}
+	sEast := Index{i.x + 1, i.y + 1}
+
+	switch r {
+	case '*', 'o', '+':
+		if c.runeAt(nWest) == '\\' || c.runeAt(north) == '|' || c.runeAt(nEast) == '/' ||
+			c.runeAt(sWest) == '/' || c.runeAt(south) == '|' || c.runeAt(sEast) == '\\' {
+			return true
+		}
+
+	case '|':
+		if c.runeAt(north) == '|' ||
+			c.runeAt(south) == '|' ||
+			c.runeAt(north) == '\'' ||
+			c.runeAt(north) == '.' ||
+			c.runeAt(south) == '\'' ||
+			c.runeAt(south) == '.' ||
+			c.runeAt(nWest) == '.' ||
+			c.runeAt(nEast) == '.' ||
+			c.runeAt(sWest) == '\'' ||
+			c.runeAt(sEast) == '\'' {
+			return true
+		}
+	case '/':
+		if c.runeAt(nEast) == '/' || c.runeAt(sWest) == '/' || contains(JOINTS, c.runeAt(nEast)) || contains(JOINTS, c.runeAt(sWest)) {
+			return true
+		}
+	case '-':
+		if c.runeAt(east) == '.' || c.runeAt(west) == '.' || c.runeAt(east) == '\'' || c.runeAt(west) == '\'' {
+			return true
+		}
+	case '(', ')':
+		if c.runeAt(north) == '|' || c.runeAt(south) == '|' {
+			return true
+		}
+	}
+
+	return false
+
 }

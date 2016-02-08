@@ -125,20 +125,21 @@ func (c *Circle) Draw(out io.Writer) {
 
 func (t *Text) Draw(out io.Writer) {
 	p := t.start.asPixel()
-	char := t.contents
+	c := t.contents
 
-	switch char {
+	// Escape for XML
+	switch c {
 	case "&":
-		char = "&amp;"
+		c = "&amp;"
 	case ">":
-		char = "&gt;"
+		c = "&gt;"
 	case "<":
-		char = "&lt;"
+		c = "&lt;"
 	}
 
 	out.Write([]byte(fmt.Sprintf(
 		"<text text-anchor='middle' x='%d' y='%d' style='fill:#000'>%s</text>\n",
-		p.x, p.y, char,
+		p.x, p.y+4, c,
 	)))
 }
 

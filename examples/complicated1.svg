@@ -392,8 +392,6 @@
 <path d='M 736,112 L 736,112' style='fill:none;stroke:#000;'></path>
 <polygon points='16.000000,304.000000 4.000000,298.399994 4.000000,309.600006' style='fill:#000' transform='rotate(180.000000, 8.000000, 304.000000)'></polygon>
 <polygon points='48.000000,160.000000 36.000000,154.399994 36.000000,165.600006' style='fill:#000' transform='rotate(180.000000, 40.000000, 160.000000)'></polygon>
-<polygon points='80.000000,224.000000 68.000000,218.399994 68.000000,229.600006' style='fill:#000' transform='rotate(0.000000, 72.000000, 224.000000)'></polygon>
-<polygon points='96.000000,208.000000 84.000000,202.399994 84.000000,213.600006' style='fill:#000' transform='rotate(0.000000, 88.000000, 208.000000)'></polygon>
 <polygon points='136.000000,160.000000 124.000000,154.399994 124.000000,165.600006' style='fill:#000' transform='rotate(0.000000, 128.000000, 160.000000)'></polygon>
 <polygon points='136.000000,176.000000 124.000000,170.399994 124.000000,181.600006' style='fill:#000' transform='rotate(180.000000, 128.000000, 176.000000)'></polygon>
 <polygon points='160.000000,288.000000 148.000000,282.399994 148.000000,293.600006' style='fill:#000' transform='rotate(0.000000, 152.000000, 288.000000)'></polygon>
@@ -406,33 +404,13 @@
 <polygon points='384.000000,352.000000 372.000000,346.399994 372.000000,357.600006' style='fill:#000' transform='rotate(180.000000, 376.000000, 352.000000)'></polygon>
 <polygon points='392.000000,0.000000 380.000000,-5.600000 380.000000,5.600000' style='fill:#000' transform='rotate(270.000000, 384.000000, 0.000000)'></polygon>
 <polygon points='392.000000,32.000000 380.000000,26.400000 380.000000,37.599998' style='fill:#000' transform='rotate(90.000000, 384.000000, 32.000000)'></polygon>
-<polygon points='392.000000,272.000000 380.000000,266.399994 380.000000,277.600006' style='fill:#000' transform='rotate(90.000000, 384.000000, 272.000000)'></polygon>
 <polygon points='400.000000,224.000000 388.000000,218.399994 388.000000,229.600006' style='fill:#000' transform='rotate(180.000000, 392.000000, 224.000000)'></polygon>
-<polygon points='472.000000,208.000000 460.000000,202.399994 460.000000,213.600006' style='fill:#000' transform='rotate(90.000000, 464.000000, 208.000000)'></polygon>
 <polygon points='640.000000,352.000000 628.000000,346.399994 628.000000,357.600006' style='fill:#000' transform='rotate(90.000000, 632.000000, 352.000000)'></polygon>
 <polygon points='672.000000,176.000000 660.000000,170.399994 660.000000,181.600006' style='fill:#000' transform='rotate(90.000000, 664.000000, 176.000000)'></polygon>
 <polygon points='712.000000,336.000000 700.000000,330.399994 700.000000,341.600006' style='fill:#000' transform='rotate(270.000000, 704.000000, 336.000000)'></polygon>
 <polygon points='720.000000,160.000000 708.000000,154.399994 708.000000,165.600006' style='fill:#000' transform='rotate(270.000000, 712.000000, 160.000000)'></polygon>
-<circle cx='40' cy='224' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='64' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='96' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='104' cy='112' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='136' cy='272' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='176' cy='288' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='176' cy='352' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='192' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='224' cy='352' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='328' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='424' cy='320' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='440' cy='368' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='512' cy='160' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='528' cy='336' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='528' cy='352' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='536' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='536' cy='320' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='544' cy='336' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='568' cy='336' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='656' cy='240' r='6' style='fill:#fff;stroke:#000;'></circle>
 <path d='M 24,80 A 16,16 0 0,0 8,96' style='fill:none;stroke:#000;'></path>
 <path d='M 192,80 A 16,16 0 0,0 176,96' style='fill:none;stroke:#000;'></path>
 <path d='M 240,80 A 16,16 0 0,1 256,96' style='fill:none;stroke:#000;'></path>
@@ -468,5 +446,309 @@
 <path d='M 40,352 A 16,16 0 0,1 24,368' style='fill:none;stroke:#000;'></path>
 <path d='M 136,352 A 16,16 0 0,0 152,368' style='fill:none;stroke:#000;'></path>
 <path d='M 256,352 A 16,16 0 0,1 240,368' style='fill:none;stroke:#000;'></path>
+<text text-anchor='middle' x='24' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='32' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='40' y='20' style='fill:#000'>A</text>
+<text text-anchor='middle' x='48' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='56' y='20' style='fill:#000'>B</text>
+<text text-anchor='middle' x='64' y='20' style='fill:#000'>o</text>
+<text text-anchor='middle' x='72' y='20' style='fill:#000'>x</text>
+<text text-anchor='middle' x='80' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='88' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='152' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='168' y='20' style='fill:#000'>_</text>
+<text text-anchor='middle' x='176' y='20' style='fill:#000'>_</text>
+<text text-anchor='middle' x='184' y='20' style='fill:#000'>.</text>
+<text text-anchor='middle' x='208' y='20' style='fill:#000'>.</text>
+<text text-anchor='middle' x='216' y='20' style='fill:#000'>_</text>
+<text text-anchor='middle' x='224' y='20' style='fill:#000'>_</text>
+<text text-anchor='middle' x='232' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='240' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='248' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='256' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='264' y='20' style='fill:#000'>_</text>
+<text text-anchor='middle' x='272' y='20' style='fill:#000'>_</text>
+<text text-anchor='middle' x='280' y='20' style='fill:#000'>.</text>
+<text text-anchor='middle' x='464' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='472' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='488' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='496' y='20' style='fill:#000'>-</text>
+<text text-anchor='middle' x='368' y='36' style='fill:#000'> </text>
+<text text-anchor='middle' x='376' y='36' style='fill:#000'> </text>
+<text text-anchor='middle' x='392' y='36' style='fill:#000'> </text>
+<text text-anchor='middle' x='400' y='36' style='fill:#000'> </text>
+<text text-anchor='middle' x='168' y='68' style='fill:#000'> </text>
+<text text-anchor='middle' x='176' y='68' style='fill:#000'> </text>
+<text text-anchor='middle' x='184' y='68' style='fill:#000'>R</text>
+<text text-anchor='middle' x='192' y='68' style='fill:#000'>o</text>
+<text text-anchor='middle' x='200' y='68' style='fill:#000'>u</text>
+<text text-anchor='middle' x='208' y='68' style='fill:#000'>n</text>
+<text text-anchor='middle' x='216' y='68' style='fill:#000'>d</text>
+<text text-anchor='middle' x='224' y='68' style='fill:#000'> </text>
+<text text-anchor='middle' x='232' y='68' style='fill:#000'> </text>
+<text text-anchor='middle' x='24' y='100' style='fill:#000'> </text>
+<text text-anchor='middle' x='32' y='100' style='fill:#000'> </text>
+<text text-anchor='middle' x='40' y='100' style='fill:#000'>M</text>
+<text text-anchor='middle' x='48' y='100' style='fill:#000'>i</text>
+<text text-anchor='middle' x='56' y='100' style='fill:#000'>x</text>
+<text text-anchor='middle' x='64' y='100' style='fill:#000'>e</text>
+<text text-anchor='middle' x='72' y='100' style='fill:#000'>d</text>
+<text text-anchor='middle' x='80' y='100' style='fill:#000'> </text>
+<text text-anchor='middle' x='88' y='100' style='fill:#000'>R</text>
+<text text-anchor='middle' x='96' y='100' style='fill:#000'>o</text>
+<text text-anchor='middle' x='104' y='100' style='fill:#000'>u</text>
+<text text-anchor='middle' x='112' y='100' style='fill:#000'>n</text>
+<text text-anchor='middle' x='120' y='100' style='fill:#000'>d</text>
+<text text-anchor='middle' x='128' y='100' style='fill:#000'>e</text>
+<text text-anchor='middle' x='136' y='100' style='fill:#000'>d</text>
+<text text-anchor='middle' x='144' y='100' style='fill:#000'> </text>
+<text text-anchor='middle' x='152' y='100' style='fill:#000'> </text>
+<text text-anchor='middle' x='288' y='100' style='fill:#000'> </text>
+<text text-anchor='middle' x='296' y='100' style='fill:#000'>D</text>
+<text text-anchor='middle' x='304' y='100' style='fill:#000'>i</text>
+<text text-anchor='middle' x='312' y='100' style='fill:#000'>a</text>
+<text text-anchor='middle' x='320' y='100' style='fill:#000'>g</text>
+<text text-anchor='middle' x='328' y='100' style='fill:#000'>o</text>
+<text text-anchor='middle' x='336' y='100' style='fill:#000'>n</text>
+<text text-anchor='middle' x='344' y='100' style='fill:#000'>a</text>
+<text text-anchor='middle' x='352' y='100' style='fill:#000'>l</text>
+<text text-anchor='middle' x='360' y='100' style='fill:#000'>s</text>
+<text text-anchor='middle' x='368' y='100' style='fill:#000'> </text>
+<text text-anchor='middle' x='376' y='100' style='fill:#000'> </text>
+<text text-anchor='middle' x='16' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='24' y='116' style='fill:#000'>&amp;</text>
+<text text-anchor='middle' x='32' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='40' y='116' style='fill:#000'>S</text>
+<text text-anchor='middle' x='48' y='116' style='fill:#000'>q</text>
+<text text-anchor='middle' x='56' y='116' style='fill:#000'>u</text>
+<text text-anchor='middle' x='64' y='116' style='fill:#000'>a</text>
+<text text-anchor='middle' x='72' y='116' style='fill:#000'>r</text>
+<text text-anchor='middle' x='80' y='116' style='fill:#000'>e</text>
+<text text-anchor='middle' x='88' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='96' y='116' style='fill:#000'>C</text>
+<text text-anchor='middle' x='104' y='116' style='fill:#000'>o</text>
+<text text-anchor='middle' x='112' y='116' style='fill:#000'>r</text>
+<text text-anchor='middle' x='120' y='116' style='fill:#000'>n</text>
+<text text-anchor='middle' x='128' y='116' style='fill:#000'>e</text>
+<text text-anchor='middle' x='136' y='116' style='fill:#000'>r</text>
+<text text-anchor='middle' x='144' y='116' style='fill:#000'>s</text>
+<text text-anchor='middle' x='152' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='664' y='132' style='fill:#000'> </text>
+<text text-anchor='middle' x='672' y='132' style='fill:#000'>S</text>
+<text text-anchor='middle' x='680' y='132' style='fill:#000'>e</text>
+<text text-anchor='middle' x='688' y='132' style='fill:#000'>a</text>
+<text text-anchor='middle' x='696' y='132' style='fill:#000'>r</text>
+<text text-anchor='middle' x='704' y='132' style='fill:#000'>c</text>
+<text text-anchor='middle' x='712' y='132' style='fill:#000'>h</text>
+<text text-anchor='middle' x='720' y='132' style='fill:#000'> </text>
+<text text-anchor='middle' x='312' y='164' style='fill:#000'> </text>
+<text text-anchor='middle' x='320' y='164' style='fill:#000'> </text>
+<text text-anchor='middle' x='336' y='164' style='fill:#000'> </text>
+<text text-anchor='middle' x='344' y='164' style='fill:#000'> </text>
+<text text-anchor='middle' x='448' y='164' style='fill:#000'> </text>
+<text text-anchor='middle' x='456' y='164' style='fill:#000'> </text>
+<text text-anchor='middle' x='464' y='164' style='fill:#000'>I</text>
+<text text-anchor='middle' x='472' y='164' style='fill:#000'>n</text>
+<text text-anchor='middle' x='480' y='164' style='fill:#000'>t</text>
+<text text-anchor='middle' x='488' y='164' style='fill:#000'>e</text>
+<text text-anchor='middle' x='496' y='164' style='fill:#000'>r</text>
+<text text-anchor='middle' x='504' y='164' style='fill:#000'>i</text>
+<text text-anchor='middle' x='512' y='164' style='fill:#000'>o</text>
+<text text-anchor='middle' x='520' y='164' style='fill:#000'>r</text>
+<text text-anchor='middle' x='528' y='164' style='fill:#000'> </text>
+<text text-anchor='middle' x='536' y='164' style='fill:#000'> </text>
+<text text-anchor='middle' x='648' y='180' style='fill:#000'> </text>
+<text text-anchor='middle' x='656' y='180' style='fill:#000'> </text>
+<text text-anchor='middle' x='672' y='180' style='fill:#000'> </text>
+<text text-anchor='middle' x='680' y='180' style='fill:#000'> </text>
+<text text-anchor='middle' x='168' y='196' style='fill:#000'> </text>
+<text text-anchor='middle' x='176' y='196' style='fill:#000'> </text>
+<text text-anchor='middle' x='184' y='196' style='fill:#000'>D</text>
+<text text-anchor='middle' x='192' y='196' style='fill:#000'>i</text>
+<text text-anchor='middle' x='200' y='196' style='fill:#000'>a</text>
+<text text-anchor='middle' x='208' y='196' style='fill:#000'>g</text>
+<text text-anchor='middle' x='216' y='196' style='fill:#000'> </text>
+<text text-anchor='middle' x='224' y='196' style='fill:#000'>l</text>
+<text text-anchor='middle' x='232' y='196' style='fill:#000'>i</text>
+<text text-anchor='middle' x='240' y='196' style='fill:#000'>n</text>
+<text text-anchor='middle' x='248' y='196' style='fill:#000'>e</text>
+<text text-anchor='middle' x='256' y='196' style='fill:#000'> </text>
+<text text-anchor='middle' x='264' y='196' style='fill:#000'> </text>
+<text text-anchor='middle' x='24' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='32' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='40' y='212' style='fill:#000'>i</text>
+<text text-anchor='middle' x='48' y='212' style='fill:#000'>f</text>
+<text text-anchor='middle' x='56' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='64' y='212' style='fill:#000'>(</text>
+<text text-anchor='middle' x='80' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='88' y='212' style='fill:#000'>&gt;</text>
+<text text-anchor='middle' x='96' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='112' y='212' style='fill:#000'>)</text>
+<text text-anchor='middle' x='120' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='432' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='440' y='212' style='fill:#000'>C</text>
+<text text-anchor='middle' x='448' y='212' style='fill:#000'>u</text>
+<text text-anchor='middle' x='456' y='212' style='fill:#000'>r</text>
+<text text-anchor='middle' x='464' y='212' style='fill:#000'>v</text>
+<text text-anchor='middle' x='472' y='212' style='fill:#000'>e</text>
+<text text-anchor='middle' x='480' y='212' style='fill:#000'>d</text>
+<text text-anchor='middle' x='488' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='496' y='212' style='fill:#000'>l</text>
+<text text-anchor='middle' x='504' y='212' style='fill:#000'>i</text>
+<text text-anchor='middle' x='512' y='212' style='fill:#000'>n</text>
+<text text-anchor='middle' x='520' y='212' style='fill:#000'>e</text>
+<text text-anchor='middle' x='528' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='536' y='212' style='fill:#000'> </text>
+<text text-anchor='middle' x='24' y='228' style='fill:#000'> </text>
+<text text-anchor='middle' x='32' y='228' style='fill:#000'> </text>
+<text text-anchor='middle' x='40' y='228' style='fill:#000'>o</text>
+<text text-anchor='middle' x='48' y='228' style='fill:#000'>b</text>
+<text text-anchor='middle' x='56' y='228' style='fill:#000'>j</text>
+<text text-anchor='middle' x='64' y='228' style='fill:#000'>-</text>
+<text text-anchor='middle' x='72' y='228' style='fill:#000'>&gt;</text>
+<text text-anchor='middle' x='80' y='228' style='fill:#000'>f</text>
+<text text-anchor='middle' x='88' y='228' style='fill:#000'>c</text>
+<text text-anchor='middle' x='96' y='228' style='fill:#000'>n</text>
+<text text-anchor='middle' x='104' y='228' style='fill:#000'>(</text>
+<text text-anchor='middle' x='112' y='228' style='fill:#000'>)</text>
+<text text-anchor='middle' x='632' y='244' style='fill:#000'> </text>
+<text text-anchor='middle' x='648' y='244' style='fill:#000'>D</text>
+<text text-anchor='middle' x='656' y='244' style='fill:#000'>o</text>
+<text text-anchor='middle' x='664' y='244' style='fill:#000'>n</text>
+<text text-anchor='middle' x='672' y='244' style='fill:#000'>e</text>
+<text text-anchor='middle' x='680' y='244' style='fill:#000'>?</text>
+<text text-anchor='middle' x='120' y='276' style='fill:#000'> </text>
+<text text-anchor='middle' x='128' y='276' style='fill:#000'>J</text>
+<text text-anchor='middle' x='136' y='276' style='fill:#000'>o</text>
+<text text-anchor='middle' x='144' y='276' style='fill:#000'>i</text>
+<text text-anchor='middle' x='152' y='276' style='fill:#000'>n</text>
+<text text-anchor='middle' x='160' y='276' style='fill:#000'> </text>
+<text text-anchor='middle' x='168' y='276' style='fill:#000'> </text>
+<text text-anchor='middle' x='352' y='276' style='fill:#000'> </text>
+<text text-anchor='middle' x='360' y='276' style='fill:#000'>C</text>
+<text text-anchor='middle' x='368' y='276' style='fill:#000'>u</text>
+<text text-anchor='middle' x='376' y='276' style='fill:#000'>r</text>
+<text text-anchor='middle' x='384' y='276' style='fill:#000'>v</text>
+<text text-anchor='middle' x='392' y='276' style='fill:#000'>e</text>
+<text text-anchor='middle' x='400' y='276' style='fill:#000'>d</text>
+<text text-anchor='middle' x='408' y='276' style='fill:#000'> </text>
+<text text-anchor='middle' x='416' y='276' style='fill:#000'> </text>
+<text text-anchor='middle' x='160' y='292' style='fill:#000'> </text>
+<text text-anchor='middle' x='168' y='292' style='fill:#000'> </text>
+<text text-anchor='middle' x='184' y='292' style='fill:#000'> </text>
+<text text-anchor='middle' x='192' y='292' style='fill:#000'> </text>
+<text text-anchor='middle' x='344' y='292' style='fill:#000'> </text>
+<text text-anchor='middle' x='352' y='292' style='fill:#000'> </text>
+<text text-anchor='middle' x='360' y='292' style='fill:#000'>V</text>
+<text text-anchor='middle' x='368' y='292' style='fill:#000'>e</text>
+<text text-anchor='middle' x='376' y='292' style='fill:#000'>r</text>
+<text text-anchor='middle' x='384' y='292' style='fill:#000'>t</text>
+<text text-anchor='middle' x='392' y='292' style='fill:#000'>i</text>
+<text text-anchor='middle' x='400' y='292' style='fill:#000'>c</text>
+<text text-anchor='middle' x='408' y='292' style='fill:#000'>a</text>
+<text text-anchor='middle' x='416' y='292' style='fill:#000'>l</text>
+<text text-anchor='middle' x='424' y='292' style='fill:#000'> </text>
+<text text-anchor='middle' x='432' y='292' style='fill:#000'> </text>
+<text text-anchor='middle' x='696' y='308' style='fill:#000'> </text>
+<text text-anchor='middle' x='712' y='308' style='fill:#000'> </text>
+<text text-anchor='middle' x='160' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='168' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='184' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='192' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='400' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='408' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='416' y='324' style='fill:#000'>n</text>
+<text text-anchor='middle' x='424' y='324' style='fill:#000'>o</text>
+<text text-anchor='middle' x='432' y='324' style='fill:#000'>t</text>
+<text text-anchor='middle' x='440' y='324' style='fill:#000'>:</text>
+<text text-anchor='middle' x='448' y='324' style='fill:#000'>l</text>
+<text text-anchor='middle' x='456' y='324' style='fill:#000'>i</text>
+<text text-anchor='middle' x='464' y='324' style='fill:#000'>n</text>
+<text text-anchor='middle' x='472' y='324' style='fill:#000'>e</text>
+<text text-anchor='middle' x='480' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='488' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='504' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='512' y='324' style='fill:#000'>'</text>
+<text text-anchor='middle' x='520' y='324' style='fill:#000'>q</text>
+<text text-anchor='middle' x='528' y='324' style='fill:#000'>u</text>
+<text text-anchor='middle' x='536' y='324' style='fill:#000'>o</text>
+<text text-anchor='middle' x='544' y='324' style='fill:#000'>t</text>
+<text text-anchor='middle' x='552' y='324' style='fill:#000'>e</text>
+<text text-anchor='middle' x='560' y='324' style='fill:#000'>s</text>
+<text text-anchor='middle' x='568' y='324' style='fill:#000'>'</text>
+<text text-anchor='middle' x='576' y='324' style='fill:#000'> </text>
+<text text-anchor='middle' x='440' y='340' style='fill:#000'> </text>
+<text text-anchor='middle' x='448' y='340' style='fill:#000'> </text>
+<text text-anchor='middle' x='464' y='340' style='fill:#000'> </text>
+<text text-anchor='middle' x='472' y='340' style='fill:#000'>|</text>
+<text text-anchor='middle' x='480' y='340' style='fill:#000'>|</text>
+<text text-anchor='middle' x='488' y='340' style='fill:#000'> </text>
+<text text-anchor='middle' x='504' y='340' style='fill:#000'> </text>
+<text text-anchor='middle' x='512' y='340' style='fill:#000'> </text>
+<text text-anchor='middle' x='520' y='340' style='fill:#000'> </text>
+<text text-anchor='middle' x='528' y='340' style='fill:#000'>*</text>
+<text text-anchor='middle' x='536' y='340' style='fill:#000'>b</text>
+<text text-anchor='middle' x='544' y='340' style='fill:#000'>o</text>
+<text text-anchor='middle' x='552' y='340' style='fill:#000'>l</text>
+<text text-anchor='middle' x='560' y='340' style='fill:#000'>d</text>
+<text text-anchor='middle' x='568' y='340' style='fill:#000'>*</text>
+<text text-anchor='middle' x='576' y='340' style='fill:#000'> </text>
+<text text-anchor='middle' x='152' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='160' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='168' y='356' style='fill:#000'>N</text>
+<text text-anchor='middle' x='176' y='356' style='fill:#000'>o</text>
+<text text-anchor='middle' x='184' y='356' style='fill:#000'>t</text>
+<text text-anchor='middle' x='192' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='200' y='356' style='fill:#000'>a</text>
+<text text-anchor='middle' x='208' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='216' y='356' style='fill:#000'>d</text>
+<text text-anchor='middle' x='224' y='356' style='fill:#000'>o</text>
+<text text-anchor='middle' x='232' y='356' style='fill:#000'>t</text>
+<text text-anchor='middle' x='240' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='248' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='416' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='424' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='432' y='356' style='fill:#000'>A</text>
+<text text-anchor='middle' x='440' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='448' y='356' style='fill:#000'>d</text>
+<text text-anchor='middle' x='456' y='356' style='fill:#000'>a</text>
+<text text-anchor='middle' x='464' y='356' style='fill:#000'>s</text>
+<text text-anchor='middle' x='472' y='356' style='fill:#000'>h</text>
+<text text-anchor='middle' x='480' y='356' style='fill:#000'>-</text>
+<text text-anchor='middle' x='488' y='356' style='fill:#000'>-</text>
+<text text-anchor='middle' x='496' y='356' style='fill:#000'>i</text>
+<text text-anchor='middle' x='504' y='356' style='fill:#000'>s</text>
+<text text-anchor='middle' x='512' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='520' y='356' style='fill:#000'>n</text>
+<text text-anchor='middle' x='528' y='356' style='fill:#000'>o</text>
+<text text-anchor='middle' x='536' y='356' style='fill:#000'>t</text>
+<text text-anchor='middle' x='544' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='552' y='356' style='fill:#000'>a</text>
+<text text-anchor='middle' x='560' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='568' y='356' style='fill:#000'>l</text>
+<text text-anchor='middle' x='576' y='356' style='fill:#000'>i</text>
+<text text-anchor='middle' x='584' y='356' style='fill:#000'>n</text>
+<text text-anchor='middle' x='592' y='356' style='fill:#000'>e</text>
+<text text-anchor='middle' x='600' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='608' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='616' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='624' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='640' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='648' y='356' style='fill:#000'> </text>
+<text text-anchor='middle' x='416' y='372' style='fill:#000'> </text>
+<text text-anchor='middle' x='424' y='372' style='fill:#000'> </text>
+<text text-anchor='middle' x='432' y='372' style='fill:#000'>N</text>
+<text text-anchor='middle' x='440' y='372' style='fill:#000'>o</text>
+<text text-anchor='middle' x='448' y='372' style='fill:#000'>r</text>
+<text text-anchor='middle' x='456' y='372' style='fill:#000'>/</text>
+<text text-anchor='middle' x='464' y='372' style='fill:#000'>i</text>
+<text text-anchor='middle' x='472' y='372' style='fill:#000'>s</text>
+<text text-anchor='middle' x='480' y='372' style='fill:#000'> </text>
+<text text-anchor='middle' x='488' y='372' style='fill:#000'>t</text>
+<text text-anchor='middle' x='496' y='372' style='fill:#000'>h</text>
+<text text-anchor='middle' x='504' y='372' style='fill:#000'>i</text>
+<text text-anchor='middle' x='512' y='372' style='fill:#000'>s</text>
+<text text-anchor='middle' x='520' y='372' style='fill:#000'>.</text>
+<text text-anchor='middle' x='528' y='372' style='fill:#000'> </text>
 </g>
 </svg>
