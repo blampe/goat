@@ -1,6 +1,6 @@
 # GoAT: Go ASCII Tool
 
-This is a Go implementation of [markdeep.mini.js](1)'s ASCII diagram
+This is a Go implementation of [markdeep.mini.js]'s ASCII diagram
 generation.
 
 ## Example
@@ -53,4 +53,4 @@ $ goat my-cool-diagram.txt > my-cool-diagram.svg
 * Bold lines signaled by ???.
 * Draw half-steps (`_.-`) correctly.
 
-[1]: http://casual-effects.com/markdeep/
+[markdeep.mini.js]: http://casual-effects.com/markdeep/
