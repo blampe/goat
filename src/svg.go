@@ -50,6 +50,14 @@ func (l *Line) Draw(out io.Writer) {
 	start := l.start.asPixel()
 	stop := l.stop.asPixel()
 
+	if l.needsNudgingUp {
+		start.y -= 8
+	}
+
+	if l.needsNudgingDown {
+		stop.y += 8
+	}
+
 	out.Write([]byte(fmt.Sprintf(
 		"<path d='M %d,%d L %d,%d' style='fill:none;stroke:#000;'></path>\n",
 		start.x, start.y,
@@ -84,16 +92,20 @@ func (t *Triangle) Draw(out io.Writer) {
 	switch t.orientation {
 	case N:
 		r = 270
-		//x0 += 8
-		//x1 += 8
-		//x2 += 8
+		if t.needsNudging {
+			x0 += 8
+			x1 += 8
+			x2 += 8
+		}
 	case W:
 		r = 180
 	case S:
 		r = 90
-		//x0 += 8
-		//x1 += 8
-		//x2 += 8
+		if t.needsNudging {
+			x0 += 8
+			x1 += 8
+			x2 += 8
+		}
 	}
 
 	out.Write([]byte(fmt.Sprintf(

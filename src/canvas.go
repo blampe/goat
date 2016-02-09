@@ -4,10 +4,26 @@ import (
 	"bufio"
 	"bytes"
 	"io"
-	"unicode"
 )
 
-var JOINTS = []rune{'.', '\'', '+'}
+var jointRunes = []rune{'.', '\'', '+'}
+var reservedRunes = map[rune]bool{
+	'-':  true,
+	'|':  true,
+	'v':  true,
+	'^':  true,
+	'>':  true,
+	'<':  true,
+	'o':  true,
+	'*':  true,
+	'+':  true,
+	'.':  true,
+	'\'': true,
+	'/':  true,
+	'\\': true,
+	')':  true,
+	'(':  true,
+}
 
 func contains(in []rune, r rune) bool {
 	for _, v := range in {
@@ -18,6 +34,7 @@ func contains(in []rune, r rune) bool {
 	return false
 }
 
+// Canvas represents a 2D ASCII rectangle.
 type Canvas struct {
 	Width  int
 	Height int
@@ -30,9 +47,16 @@ func (c *Canvas) String() string {
 	for h := 0; h < c.Height; h++ {
 		for w := 0; w < c.Width; w++ {
 			idx := Index{w, h}
-			buffer.WriteRune(c.runeAt(idx))
+			_, err := buffer.WriteRune(c.runeAt(idx))
+			if err != nil {
+				continue
+			}
 		}
-		buffer.WriteByte('\n')
+
+		err := buffer.WriteByte('\n')
+		if err != nil {
+			continue
+		}
 	}
 
 	return buffer.String()
@@ -47,6 +71,8 @@ func (c *Canvas) runeAt(i Index) rune {
 	return ' '
 }
 
+// NewCanvas creates a new canvas with contents read from the given io.Reader.
+// Content should be newline delimited.
 func NewCanvas(in io.Reader) Canvas {
 	width := 0
 	height := 0
@@ -72,14 +98,18 @@ func NewCanvas(in io.Reader) Canvas {
 	return Canvas{Width: width, Height: height, data: data}
 }
 
+// Drawable represents anything that can Draw itself.
 type Drawable interface {
 	Draw(out io.Writer)
 }
 
+// Line represents a straight segment between two points.
 type Line struct {
-	start  Index
-	stop   Index
-	dashed bool
+	start            Index
+	stop             Index
+	dashed           bool
+	needsNudgingUp   bool
+	needsNudgingDown bool
 
 	state lineState
 }
@@ -87,37 +117,37 @@ type Line struct {
 type lineState int
 
 const (
-	EMPTY lineState = iota
-	STARTED
-	ENDED
+	_Empty lineState = iota
+	_Started
+	_Ended
 )
 
 func (l *Line) started() bool {
-	return l.state != EMPTY
+	return l.state != _Empty
 }
 
 func (l *Line) ended() bool {
-	return l.state == ENDED
+	return l.state == _Ended
 }
 
 func (l *Line) setStart(i Index) {
-	if l.state == EMPTY {
+	if l.state == _Empty {
 		l.start = i
-		l.state = STARTED
+		l.state = _Started
 	}
 }
 
 func (l *Line) setStop(i Index) {
-	if l.state == STARTED || l.state == ENDED {
+	if l.state == _Started || l.state == _Ended {
 		l.stop = i
-		l.state = ENDED
+		l.state = _Ended
 	}
 }
 
 type Triangle struct {
-	start       Index
-	orientation Orientation
-	halfStep    bool
+	start        Index
+	orientation  Orientation
+	needsNudging bool
 }
 
 type Circle struct {
@@ -155,12 +185,22 @@ const (
 )
 
 func (c *Canvas) Lines() []Line {
-	var lines []Line
+	lines := c.linesFromIterator(upDown, []rune{'|', 'v', '^', 'o', '*'})
 
-	lines = append(lines, c.linesFromIterator(upDown, []rune{'|', 'v', '^'})...)
+	for i, l := range lines {
+		above := c.runeAt(l.start.north())
+		below := c.runeAt(l.stop.south())
+		if (c.runeAt(l.start) == '|' && above == '-' || above == '(' || above == ')') || c.runeAt(l.start) == '^' {
+			lines[i].needsNudgingUp = true
+		}
+		if (c.runeAt(l.stop) == '|' && below == '-' || below == ')' || below == '(') || c.runeAt(l.stop) == 'v' {
+			lines[i].needsNudgingDown = true
+		}
+	}
+
 	lines = append(lines, c.linesFromIterator(leftRight, []rune{'-', '<', '>', '(', ')'})...)
-	lines = append(lines, c.linesFromIterator(diagUp, []rune{'/'})...)
-	lines = append(lines, c.linesFromIterator(diagDown, []rune{'\\'})...)
+	lines = append(lines, c.linesFromIterator(diagUp, []rune{'/', 'o', '*'})...)
+	lines = append(lines, c.linesFromIterator(diagDown, []rune{'\\', 'o', '*'})...)
 
 	return lines
 }
@@ -186,8 +226,9 @@ func (c *Canvas) linesFromIterator(ci canvasIterator, keepers []rune) []Line {
 	for idx := range ci(c.Width, c.Height) {
 		r := c.runeAt(idx)
 
-		isJoint := contains(JOINTS, r)
-		shouldKeep := r != ' ' && (contains(keepers, r) || isJoint)
+		isJoint := contains(jointRunes, r)
+		isText := c.isText(idx)
+		shouldKeep := r != ' ' && (contains(keepers, r) || isJoint) && !isText
 
 		if !shouldKeep && !currentLine.started() {
 			continue
@@ -199,7 +240,7 @@ func (c *Canvas) linesFromIterator(ci canvasIterator, keepers []rune) []Line {
 		// --+
 		//   |
 
-		if isJoint && contains(JOINTS, lastSeenRune) && (contains(keepers, '/') || contains(keepers, '\\')) {
+		if isJoint && contains(jointRunes, lastSeenRune) && (contains(keepers, '/') || contains(keepers, '\\')) {
 			currentLine = endCurrentLine(idx)
 			// Start a new line at this joint.
 			currentLine.setStart(idx)
@@ -231,7 +272,8 @@ func (c *Canvas) Triangles() []Triangle {
 	o := NONE
 
 	for idx := range upDown(c.Width, c.Height) {
-		halfStep := false
+		needsNudging := false
+		start := idx
 
 		if c.isText(idx) {
 			continue
@@ -239,37 +281,36 @@ func (c *Canvas) Triangles() []Triangle {
 
 		r := c.runeAt(idx)
 
+		// Identify our orientation and nudge the triangle to touch any
+		// adjacent walls.
 		switch r {
 		case '^':
 			o = N
-			if c.runeAt(Index{idx.x, idx.y - 1}) == '-' {
-				halfStep = true
+			r := c.runeAt(start.north())
+			if r == '-' || contains(jointRunes, r) {
+				needsNudging = true
 			}
 		case 'v':
 			o = S
-			if c.runeAt(Index{idx.x, idx.y + 1}) == '-' {
-				halfStep = true
+			r := c.runeAt(start.south())
+			if r == '-' || contains(jointRunes, r) {
+				needsNudging = true
 			}
 		case '<':
 			o = W
-			if c.runeAt(Index{idx.x - 1, idx.y}) == '|' {
-				halfStep = true
-			}
 		case '>':
 			o = E
-			if c.runeAt(Index{idx.x + 1, idx.y}) == '|' {
-				halfStep = true
-			}
 		default:
 			continue
 		}
 
-		triangles = append(triangles, Triangle{start: idx, orientation: o, halfStep: halfStep})
+		triangles = append(triangles, Triangle{start: start, orientation: o, needsNudging: needsNudging})
 	}
 
 	return triangles
 }
 
+// Circles returns a slice of all 'o' and '*' characters not considered text.
 func (c *Canvas) Circles() []Circle {
 	var circles []Circle
 
@@ -285,6 +326,7 @@ func (c *Canvas) Circles() []Circle {
 	return circles
 }
 
+// RoundedCorders returns a slice of all curvy corners in the diagram.
 func (c *Canvas) RoundedCorners() []RoundedCorner {
 	var corners []RoundedCorner
 
@@ -297,7 +339,8 @@ func (c *Canvas) RoundedCorners() []RoundedCorner {
 	return corners
 }
 
-// TODO foo
+// For . and ' characters this will return a non-NONE orientation if the
+// character falls on a rounded corner.
 func (c *Canvas) isRoundedCorner(i Index) Orientation {
 
 	r := c.runeAt(i)
@@ -306,12 +349,12 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 		return NONE
 	}
 
-	left := Index{i.x - 1, i.y}
-	right := Index{i.x + 1, i.y}
-	lowerLeft := Index{i.x - 1, i.y + 1}
-	lowerRight := Index{i.x + 1, i.y + 1}
-	upperLeft := Index{i.x - 1, i.y - 1}
-	upperRight := Index{i.x + 1, i.y - 1}
+	left := i.west()
+	right := i.east()
+	lowerLeft := i.sWest()
+	lowerRight := i.sEast()
+	upperLeft := i.nWest()
+	upperRight := i.nEast()
 
 	if r == '.' {
 		// North case
@@ -349,6 +392,8 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	return NONE
 }
 
+// Text returns a slace of all text characters not belonging to part of the diagram.
+// How these characters are identified is rather complicated.
 func (c *Canvas) Text() []Text {
 	var text []Text
 
@@ -400,8 +445,19 @@ func (c *Canvas) isBridge(i Index) Orientation {
 
 func (c *Canvas) isText(i Index) bool {
 
-	// If o or * and letters immediately adjacent, true.
-	if (c.isTextLeft(i, 2) || c.isTextRight(i, 2)) && !c.hasIncomingLine(i) {
+	if c.isDefinitelyText(i) {
+		return true
+	}
+
+	// This is a reserved character with an incoming line (e.g., "|") above it,
+	// so call it non-text.
+	if c.hasLineAboveOrBelow(i) {
+		return false
+	}
+
+	// Reserved characters like "o" or "*" with letters sitting next to them
+	// are probably text.
+	if c.isTextLeft(i, 2) || c.isTextRight(i, 2) {
 		return true
 	}
 
@@ -412,7 +468,7 @@ func (c *Canvas) isTextLeft(i Index, limit uint8) bool {
 	if limit == 0 {
 		return false
 	}
-	left := Index{i.x - 1, i.y}
+	left := i.west()
 
 	return c.isDefinitelyText(left) || c.isTextLeft(left, limit-1)
 }
@@ -421,11 +477,14 @@ func (c *Canvas) isTextRight(i Index, limit uint8) bool {
 	if limit == 0 {
 		return false
 	}
-	right := Index{i.x + 1, i.y}
+	right := i.east()
 
 	return c.isDefinitelyText(right) || c.isTextRight(right, limit-1)
 }
 
+// Returns true if the character at this index is not reserved for diagrams.
+// Characters like "o" need more context (e.g., are other text characters
+// nearby) to determine whether they're part of a diagram.
 func (c *Canvas) isDefinitelyText(i Index) bool {
 	r := c.runeAt(i)
 
@@ -433,68 +492,109 @@ func (c *Canvas) isDefinitelyText(i Index) bool {
 		return false
 	}
 
-	if unicode.IsLetter(r) || unicode.IsDigit(r) {
-		return true
-	}
+	_, isReserved := reservedRunes[r]
 
-	// Reserved characters
-	if contains([]rune{'-', '|', '/', '\\', '^', 'v', '<', '>', '.', '\'', '(', ')', '+', 'o', '*'}, r) {
-		// Check if we have any other reserved characters above us?
-		// \|/
-		// -x-
-		// /|\
-		return false
-	}
-
-	return true
+	return !isReserved
 }
 
-func (c *Canvas) hasIncomingLine(i Index) bool {
+func (c *Canvas) hasLineAboveOrBelow(i Index) bool {
 	r := c.runeAt(i)
 
-	north := Index{i.x, i.y - 1}
-	south := Index{i.x, i.y + 1}
-	east := Index{i.x + 1, i.y}
-	west := Index{i.x - 1, i.y}
-	nWest := Index{i.x - 1, i.y - 1}
-	nEast := Index{i.x + 1, i.y - 1}
-	sWest := Index{i.x - 1, i.y + 1}
-	sEast := Index{i.x + 1, i.y + 1}
+	nEast := i.nEast()
+	sWest := i.sWest()
 
 	switch r {
 	case '*', 'o', '+':
-		if c.runeAt(nWest) == '\\' || c.runeAt(north) == '|' || c.runeAt(nEast) == '/' ||
-			c.runeAt(sWest) == '/' || c.runeAt(south) == '|' || c.runeAt(sEast) == '\\' {
-			return true
-		}
-
+		return c.partOfDiagonalLine(i) || c.partOfVerticalLine(i)
 	case '|':
-		if c.runeAt(north) == '|' ||
-			c.runeAt(south) == '|' ||
-			c.runeAt(north) == '\'' ||
-			c.runeAt(north) == '.' ||
-			c.runeAt(south) == '\'' ||
-			c.runeAt(south) == '.' ||
-			c.runeAt(nWest) == '.' ||
-			c.runeAt(nEast) == '.' ||
-			c.runeAt(sWest) == '\'' ||
-			c.runeAt(sEast) == '\'' {
-			return true
-		}
+		return c.partOfVerticalLine(i) || c.partOfRoundedCorner(i)
 	case '/':
-		if c.runeAt(nEast) == '/' || c.runeAt(sWest) == '/' || contains(JOINTS, c.runeAt(nEast)) || contains(JOINTS, c.runeAt(sWest)) {
-			return true
-		}
+		return c.partOfDiagonalLine(i) || contains(jointRunes, c.runeAt(nEast)) || contains(jointRunes, c.runeAt(sWest))
 	case '-':
-		if c.runeAt(east) == '.' || c.runeAt(west) == '.' || c.runeAt(east) == '\'' || c.runeAt(west) == '\'' {
-			return true
-		}
+		return c.partOfRoundedCorner(i)
 	case '(', ')':
-		if c.runeAt(north) == '|' || c.runeAt(south) == '|' {
-			return true
-		}
+		return c.partOfVerticalLine(i)
 	}
 
 	return false
+}
 
+// Returns true if a "|" segment passes through this index.
+func (c *Canvas) partOfVerticalLine(i Index) bool {
+	north := c.runeAt(i.north())
+	south := c.runeAt(i.south())
+
+	if north == '|' || contains(jointRunes, north) {
+		return true
+	}
+
+	if south == '|' || contains(jointRunes, south) {
+		return true
+	}
+
+	return false
+}
+
+// Return true if a "--" segment passes through this index.
+func (c *Canvas) partOfHorizontalLine(i Index) bool {
+	return c.runeAt(i.east()) == '-' || c.runeAt(i.west()) == '-'
+}
+
+func (c *Canvas) partOfDiagonalLine(i Index) bool {
+	return (c.runeAt(i.nWest()) == '\\' ||
+		c.runeAt(i.sEast()) == '\\' ||
+		c.runeAt(i.nEast()) == '/' ||
+		c.runeAt(i.sWest()) == '/')
+}
+
+// For "-" and "|" characters returns true if they could be part of a rounded
+// corner.
+func (c *Canvas) partOfRoundedCorner(i Index) bool {
+	r := c.runeAt(i)
+
+	switch r {
+	case '-':
+		dotNext := c.runeAt(i.west()) == '.' || c.runeAt(i.east()) == '.'
+		hyphenNext := c.runeAt(i.west()) == '\'' || c.runeAt(i.east()) == '\''
+		return dotNext || hyphenNext
+
+	case '|':
+		dotAbove := c.runeAt(i.nWest()) == '.' || c.runeAt(i.nEast()) == '.'
+		hyphenBelow := c.runeAt(i.sWest()) == '\'' || c.runeAt(i.sEast()) == '\''
+		return dotAbove || hyphenBelow
+	}
+
+	return false
+}
+
+func (i *Index) east() Index {
+	return Index{i.x + 1, i.y}
+}
+
+func (i *Index) west() Index {
+	return Index{i.x - 1, i.y}
+}
+
+func (i *Index) north() Index {
+	return Index{i.x, i.y - 1}
+}
+
+func (i *Index) south() Index {
+	return Index{i.x, i.y + 1}
+}
+
+func (i *Index) nWest() Index {
+	return Index{i.x - 1, i.y - 1}
+}
+
+func (i *Index) nEast() Index {
+	return Index{i.x + 1, i.y - 1}
+}
+
+func (i *Index) sWest() Index {
+	return Index{i.x - 1, i.y + 1}
+}
+
+func (i *Index) sEast() Index {
+	return Index{i.x + 1, i.y + 1}
 }

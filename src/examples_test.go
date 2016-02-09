@@ -7,8 +7,6 @@ import (
 	"path/filepath"
 	"strings"
 	"testing"
-
-	"github.com/blampe/goaat/src"
 )
 
 const basePath string = "../examples/"
@@ -45,7 +43,7 @@ func TestExamples(t *testing.T) {
 
 	for _, fileInfo := range fileInfos {
 		in, out := getInOut(t, fileInfo.Name())
-		goaat.ASCIItoSVG(in, out)
+		ASCIItoSVG(in, out)
 	}
 }
 
@@ -53,6 +51,6 @@ func BenchmarkComplicated(b *testing.B) {
 	in, out := getInOut(b, "complicated1.txt")
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		goaat.ASCIItoSVG(in, out)
+		ASCIItoSVG(in, out)
 	}
 }
