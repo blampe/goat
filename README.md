@@ -42,10 +42,9 @@ More examples are available [here](examples).
 
 ## Usage
 
-
-
-```go
-goat.ASCIItoSVG(in io.Reader, out io.Writer)
+```bash
+$ go get github.com/blampe/goat
+$ goat my-cool-diagram.txt > my-cool-diagram.svg
 ```
 
 ## TODO
