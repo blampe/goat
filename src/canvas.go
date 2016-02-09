@@ -198,7 +198,7 @@ func (c *Canvas) Lines() []Line {
 		}
 	}
 
-	lines = append(lines, c.linesFromIterator(leftRight, []rune{'-', '<', '>', '(', ')'})...)
+	lines = append(lines, c.linesFromIterator(leftRight, []rune{'-', '<', '>', '(', ')', 'o', '*'})...)
 	lines = append(lines, c.linesFromIterator(diagUp, []rune{'/', 'o', '*'})...)
 	lines = append(lines, c.linesFromIterator(diagDown, []rune{'\\', 'o', '*'})...)
 
@@ -425,8 +425,8 @@ func (c *Canvas) isBridge(i Index) Orientation {
 
 	r := c.runeAt(i)
 
-	left := c.runeAt(Index{i.x - 1, i.y})
-	right := c.runeAt(Index{i.x + 1, i.y})
+	left := c.runeAt(i.west())
+	right := c.runeAt(i.east())
 
 	if left != '-' || right != '-' {
 		return NONE
@@ -445,6 +445,11 @@ func (c *Canvas) isBridge(i Index) Orientation {
 
 func (c *Canvas) isText(i Index) bool {
 
+	if !c.withinBounds(i) {
+		return false
+	}
+
+	// This index refers to a rune not in our reserved set.
 	if c.isDefinitelyText(i) {
 		return true
 	}
@@ -470,7 +475,11 @@ func (c *Canvas) isTextLeft(i Index, limit uint8) bool {
 	}
 	left := i.west()
 
-	return c.isDefinitelyText(left) || c.isTextLeft(left, limit-1)
+	if c.isDefinitelyText(left) && !c.hasLineAboveOrBelow(left) {
+		return true
+	}
+
+	return c.isTextLeft(left, limit-1)
 }
 
 func (c *Canvas) isTextRight(i Index, limit uint8) bool {
@@ -479,7 +488,11 @@ func (c *Canvas) isTextRight(i Index, limit uint8) bool {
 	}
 	right := i.east()
 
-	return c.isDefinitelyText(right) || c.isTextRight(right, limit-1)
+	if c.isDefinitelyText(right) && !c.hasLineAboveOrBelow(right) {
+		return true
+	}
+
+	return c.isTextRight(right, limit-1)
 }
 
 // Returns true if the character at this index is not reserved for diagrams.
@@ -521,14 +534,19 @@ func (c *Canvas) hasLineAboveOrBelow(i Index) bool {
 
 // Returns true if a "|" segment passes through this index.
 func (c *Canvas) partOfVerticalLine(i Index) bool {
+	this := c.runeAt(i)
 	north := c.runeAt(i.north())
 	south := c.runeAt(i.south())
 
-	if north == '|' || contains(jointRunes, north) {
+	jointAboveMe := this == '|' && contains(jointRunes, north)
+
+	if north == '|' || jointAboveMe {
 		return true
 	}
 
-	if south == '|' || contains(jointRunes, south) {
+	jointBelowMe := this == '|' && contains(jointRunes, south)
+
+	if south == '|' || jointBelowMe {
 		return true
 	}
 
@@ -567,34 +585,6 @@ func (c *Canvas) partOfRoundedCorner(i Index) bool {
 	return false
 }
 
-func (i *Index) east() Index {
-	return Index{i.x + 1, i.y}
-}
-
-func (i *Index) west() Index {
-	return Index{i.x - 1, i.y}
-}
-
-func (i *Index) north() Index {
-	return Index{i.x, i.y - 1}
-}
-
-func (i *Index) south() Index {
-	return Index{i.x, i.y + 1}
-}
-
-func (i *Index) nWest() Index {
-	return Index{i.x - 1, i.y - 1}
-}
-
-func (i *Index) nEast() Index {
-	return Index{i.x + 1, i.y - 1}
-}
-
-func (i *Index) sWest() Index {
-	return Index{i.x - 1, i.y + 1}
-}
-
-func (i *Index) sEast() Index {
-	return Index{i.x + 1, i.y + 1}
+func (c *Canvas) withinBounds(i Index) bool {
+	return i.x >= 0 && i.x < c.Width && i.y >= 0 && i.y < c.Height
 }

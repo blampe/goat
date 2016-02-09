@@ -158,7 +158,7 @@ func (t *Text) Draw(out io.Writer) {
 func (c *RoundedCorner) Draw(out io.Writer) {
 	// https://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands
 
-	x, y := c.start.asPixel().x, c.start.asPixel().y
+	x, y := c.start.asPixelXY()
 	startX, startY, endX, endY, sweepFlag := 0, 0, 0, 0, 0
 
 	switch c.orientation {
@@ -196,7 +196,7 @@ func (c *RoundedCorner) Draw(out io.Writer) {
 }
 
 func (b *Bridge) Draw(out io.Writer) {
-	x, y := b.start.asPixel().x, b.start.asPixel().y
+	x, y := b.start.asPixelXY()
 	sweepFlag := 1
 
 	if b.orientation == W {
