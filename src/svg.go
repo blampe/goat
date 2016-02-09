@@ -1,4 +1,4 @@
-package goaat
+package goat
 
 import (
 	"fmt"

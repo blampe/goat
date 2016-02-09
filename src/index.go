@@ -1,4 +1,4 @@
-package goaat
+package goat
 
 // Index represents a position within an ASCII diagram.
 type Index struct {

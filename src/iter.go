@@ -1,4 +1,4 @@
-package goaat
+package goat
 
 type canvasIterator func(width int, height int) chan Index
 
