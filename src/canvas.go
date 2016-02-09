@@ -229,7 +229,6 @@ func (c *Canvas) linesFromIterator(ci canvasIterator, keepers []rune) []Line {
 		}
 		if !currentLine.ended() {
 			currentLine.setStop(currentLine.start)
-			//currentLine.setStop(i)
 		}
 		lines = append(lines, currentLine)
 		return Line{}
@@ -368,18 +367,21 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	upperLeft := i.nWest()
 	upperRight := i.nEast()
 
+	dashRight := c.runeAt(right) == '-'
+	dashLeft := c.runeAt(left) == '-'
+
 	if r == '.' {
 		// North case
 
 		//  .-
 		// |
-		if c.runeAt(right) == '-' && c.runeAt(lowerLeft) == '|' {
+		if dashRight && c.runeAt(lowerLeft) == '|' {
 			return NW
 		}
 
 		// -.
 		//   |
-		if c.runeAt(left) == '-' && c.runeAt(lowerRight) == '|' {
+		if dashLeft && c.runeAt(lowerRight) == '|' {
 			return NE
 		}
 
@@ -388,15 +390,14 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 
 		//   |
 		// -'
-		if c.runeAt(left) == '-' && c.runeAt(upperRight) == '|' {
+		if dashLeft && c.runeAt(upperRight) == '|' {
 			return SE
 		}
 
 		// |
 		//  '-
-		if c.runeAt(right) == '-' && c.runeAt(upperLeft) == '|' {
+		if dashRight && c.runeAt(upperLeft) == '|' {
 			return SW
-
 		}
 	}
 
@@ -419,6 +420,7 @@ func (c *Canvas) Text() []Text {
 	return text
 }
 
+// Bridges returns a slice of all bridges, "-)-" or "-(-".
 func (c *Canvas) Bridges() []Bridge {
 	var bridges []Bridge
 

@@ -1,10 +1,12 @@
 package goaat
 
+// Index represents a position within an ASCII diagram.
 type Index struct {
 	x int
 	y int
 }
 
+// Pixel represents the on-screen coordinates for an Index.
 type Pixel Index
 
 func (i *Index) asPixel() Pixel {

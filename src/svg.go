@@ -5,17 +5,21 @@ import (
 	"io"
 )
 
+// ASCIItoSVG reads in a newline-delimited ASCII diagram and writes a
+// corresponding SVG diagram.
 func ASCIItoSVG(in io.Reader, out io.Writer) {
 	canvas := NewCanvas(in)
 
-	out.Write(
-		[]byte(fmt.Sprintf(
-			"<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='%d' width='%d'>\n",
-			canvas.Height*16+8, (canvas.Width+1)*8,
-		)),
+	// Preamble
+	writeBytes(&out,
+		"<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d'>\n",
+		"diagram",
+		"http://www.w3.org/2000/svg",
+		"1.1",
+		canvas.Height*16+8, (canvas.Width+1)*8,
 	)
 
-	out.Write([]byte("<g transform='translate(8,16)'>\n"))
+	writeBytes(&out, "<g transform='translate(8,16)'>\n")
 
 	for _, l := range canvas.Lines() {
 		l.Draw(out)
@@ -41,14 +45,35 @@ func ASCIItoSVG(in io.Reader, out io.Writer) {
 		t.Draw(out)
 	}
 
-	out.Write([]byte("</g>\n"))
-	out.Write([]byte("</svg>\n"))
+	writeBytes(&out, "</g>\n")
+	writeBytes(&out, "</svg>\n")
 }
 
+func writeBytes(out *io.Writer, format string, args ...interface{}) {
+	bytesOut := fmt.Sprintf(format, args...)
+
+	_, err := (*out).Write([]byte(bytesOut))
+
+	if err != nil {
+		panic(nil)
+	}
+}
+
+// Draw a straight line as an SVG path.
 func (l *Line) Draw(out io.Writer) {
 
 	start := l.start.asPixel()
 	stop := l.stop.asPixel()
+
+	// For cases when a vertical line hits a perpendicular like this:
+	//
+	//   |          |
+	//   |    or    v
+	//  ---        ---
+	//
+	// We need to nudge the vertical line half a vertical cell in the
+	// appropriate direction in order to meet up cleanly with the midline of
+	// the cell next to it.
 
 	if l.needsNudgingUp {
 		start.y -= 8
@@ -58,13 +83,14 @@ func (l *Line) Draw(out io.Writer) {
 		stop.y += 8
 	}
 
-	out.Write([]byte(fmt.Sprintf(
+	writeBytes(&out,
 		"<path d='M %d,%d L %d,%d' style='fill:none;stroke:#000;'></path>\n",
 		start.x, start.y,
 		stop.x, stop.y,
-	)))
+	)
 }
 
+// Draw a solid triable as an SVG polygon element.
 func (t *Triangle) Draw(out io.Writer) {
 	// https://www.w3.org/TR/SVG/shapes.html#PolygonElement
 
@@ -108,16 +134,17 @@ func (t *Triangle) Draw(out io.Writer) {
 		}
 	}
 
-	out.Write([]byte(fmt.Sprintf(
+	writeBytes(&out,
 		"<polygon points='%f,%f %f,%f %f,%f' style='fill:#000' transform='rotate(%f, %f, %f)'></polygon>\n",
 		x0, y0,
 		x1, y1,
 		x2, y2,
 		r,
 		x, y,
-	)))
+	)
 }
 
+// Draw a solid circle as an SVG circle element.
 func (c *Circle) Draw(out io.Writer) {
 	fill := "#fff"
 
@@ -127,14 +154,15 @@ func (c *Circle) Draw(out io.Writer) {
 
 	pixel := c.start.asPixel()
 
-	out.Write([]byte(fmt.Sprintf(
+	writeBytes(&out,
 		"<circle cx='%d' cy='%d' r='6' style='fill:%s;stroke:#000;'></circle>\n",
 		pixel.x,
 		pixel.y,
 		fill,
-	)))
+	)
 }
 
+// Draw a single text character as an SVG text element.
 func (t *Text) Draw(out io.Writer) {
 	p := t.start.asPixel()
 	c := t.contents
@@ -149,12 +177,13 @@ func (t *Text) Draw(out io.Writer) {
 		c = "&lt;"
 	}
 
-	out.Write([]byte(fmt.Sprintf(
+	writeBytes(&out,
 		"<text text-anchor='middle' x='%d' y='%d' style='fill:#000'>%s</text>\n",
 		p.x, p.y+4, c,
-	)))
+	)
 }
 
+// Draw a rounded corner as an SVG elliptical arc element.
 func (c *RoundedCorner) Draw(out io.Writer) {
 	// https://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands
 
@@ -185,16 +214,18 @@ func (c *RoundedCorner) Draw(out io.Writer) {
 		endX = x + 8
 		endY = y
 	}
-	out.Write([]byte(fmt.Sprintf(
+
+	writeBytes(&out,
 		"<path d='M %d,%d A 16,16 0 0,%d %d,%d' style='fill:none;stroke:#000;'></path>\n",
 		startX,
 		startY,
 		sweepFlag,
 		endX,
 		endY,
-	)))
+	)
 }
 
+// Draw a bridge as an SVG elliptical arc element.
 func (b *Bridge) Draw(out io.Writer) {
 	x, y := b.start.asPixelXY()
 	sweepFlag := 1
@@ -203,10 +234,10 @@ func (b *Bridge) Draw(out io.Writer) {
 		sweepFlag = 0
 	}
 
-	out.Write([]byte(fmt.Sprintf(
+	writeBytes(&out,
 		"<path d='M %d,%d A 9,9 0 0,%d %d,%d' style='fill:none;stroke:#000;'></path>\n",
 		x, y-8,
 		sweepFlag,
 		x, y+8,
-	)))
+	)
 }
