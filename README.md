@@ -5,7 +5,11 @@ generation.
 
 ## Example
 
-This input:
+This SVG:
+
+![Complicated Eple](https://cdn.rawgit.com/blampe/goat/master/examples/complicated1.svg)
+
+Was rendered from this input:
 
 ```
 .-------------------.                           ^                      .---.
@@ -33,10 +37,6 @@ This input:
  |   |           |   Not a dot  |      <---+---<--    A dash--is not a line    v        |
   '-'             '---------+--'          /           Nor/is this.            ---
 ```
-
-Results in this SGV:
-
-![Complicated Example](examples/complicated1.svg)
 
 More examples are available [here](examples).
 
