@@ -20,11 +20,10 @@ func upDown(width int, height int) chan Index {
 func leftRight(width int, height int) chan Index {
 	c := make(chan Index, width*height)
 
+	// Transpose an upDown order.
 	go func() {
-		for h := 0; h < height; h++ {
-			for w := 0; w < width; w++ {
-				c <- Index{w, h}
-			}
+		for i := range upDown(height, width) {
+			c <- Index{i.y, i.x}
 		}
 
 		close(c)

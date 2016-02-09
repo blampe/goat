@@ -105,9 +105,9 @@ type Drawable interface {
 
 // Line represents a straight segment between two points.
 type Line struct {
-	start            Index
-	stop             Index
-	dashed           bool
+	start Index
+	stop  Index
+	//dashed           bool
 	needsNudgingUp   bool
 	needsNudgingDown bool
 
@@ -144,46 +144,58 @@ func (l *Line) setStop(i Index) {
 	}
 }
 
+// Triangle corresponds to "^", "v", "<" and ">" runes in the absence of
+// surrounding alphanumerics.
 type Triangle struct {
 	start        Index
 	orientation  Orientation
 	needsNudging bool
 }
 
+// Circle corresponds to "o" or "*" runes in the absence of surrounding
+// alphanumerics.
 type Circle struct {
 	start Index
 	bold  bool
 }
 
+// RoundedCorner corresponds to combinations of "-." or "-'".
 type RoundedCorner struct {
 	start       Index
 	orientation Orientation
 }
 
+// Text corresponds to any runes not reserved for diagrams, or reserved runes
+// surrounded by alphanumerics.
 type Text struct {
 	start    Index
 	contents string
 }
 
+// Bridge correspondes to combinations of "-)-" or "-(-" and is displayed as
+// the vertical line "hopping over" the horizontal.
 type Bridge struct {
 	start       Index
 	orientation Orientation
 }
 
+// Orientation represents the primary direction that a Drawable is facing.
 type Orientation int
 
 const (
-	NONE Orientation = iota
-	N
-	NE
-	NW
-	S
-	SE
-	SW
-	E
-	W
+	NONE Orientation = iota // No orientation; no structure present.
+	N                       // North
+	NE                      // Northeast
+	NW                      // Northwest
+	S                       // South
+	SE                      // Southeast
+	SW                      // Southwest
+	E                       // East
+	W                       // West
 )
 
+// Lines returns a slice of all Line drawables that we can detect -- in all
+// possible orientations.
 func (c *Canvas) Lines() []Line {
 	lines := c.linesFromIterator(upDown, []rune{'|', 'v', '^', 'o', '*'})
 
@@ -266,6 +278,7 @@ func (c *Canvas) linesFromIterator(ci canvasIterator, keepers []rune) []Line {
 	return lines
 }
 
+// Triangles returns a slice of all detectable Triangles.
 func (c *Canvas) Triangles() []Triangle {
 	var triangles []Triangle
 
@@ -326,7 +339,7 @@ func (c *Canvas) Circles() []Circle {
 	return circles
 }
 
-// RoundedCorders returns a slice of all curvy corners in the diagram.
+// RoundedCorners returns a slice of all curvy corners in the diagram.
 func (c *Canvas) RoundedCorners() []RoundedCorner {
 	var corners []RoundedCorner
 
@@ -342,7 +355,6 @@ func (c *Canvas) RoundedCorners() []RoundedCorner {
 // For . and ' characters this will return a non-NONE orientation if the
 // character falls on a rounded corner.
 func (c *Canvas) isRoundedCorner(i Index) Orientation {
-
 	r := c.runeAt(i)
 
 	if r != '.' && r != '\'' {
@@ -386,7 +398,6 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 			return SW
 
 		}
-
 	}
 
 	return NONE

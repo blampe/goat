@@ -7,9 +7,23 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+// SafeBuffer is intended only for testing and doesn't check errors on writes
+// (to make the errcheck linter happy).
+type safeBuffer struct {
+	bytes.Buffer
+}
+
+func (b *safeBuffer) WriteString(s string) {
+	_, err := b.Buffer.WriteString(s)
+
+	if err != nil {
+		panic(err)
+	}
+}
+
 func TestReadASCII(t *testing.T) {
 
-	var buf bytes.Buffer
+	var buf safeBuffer
 
 	// TODO: UNICODE
 	buf.WriteString(" +-->\n")
