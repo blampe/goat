@@ -60,7 +60,6 @@
 <path d='M 568,72 L 568,112' style='fill:none;stroke:#000;'></path>
 <path d='M 568,256 L 568,256' style='fill:none;stroke:#000;'></path>
 <path d='M 568,288 L 568,288' style='fill:none;stroke:#000;'></path>
-<path d='M 568,336 L 568,336' style='fill:none;stroke:#000;'></path>
 <path d='M 576,176 L 576,176' style='fill:none;stroke:#000;'></path>
 <path d='M 584,64 L 584,104' style='fill:none;stroke:#000;'></path>
 <path d='M 584,120 L 584,144' style='fill:none;stroke:#000;'></path>
@@ -245,7 +244,6 @@
 <path d='M 568,288 L 568,288' style='fill:none;stroke:#000;'></path>
 <path d='M 648,144 L 648,144' style='fill:none;stroke:#000;'></path>
 <path d='M 648,144 L 664,112' style='fill:none;stroke:#000;'></path>
-<path d='M 568,336 L 568,336' style='fill:none;stroke:#000;'></path>
 <path d='M 664,144 L 664,144' style='fill:none;stroke:#000;'></path>
 <path d='M 664,144 L 664,144' style='fill:none;stroke:#000;'></path>
 <path d='M 640,240 L 664,192' style='fill:none;stroke:#000;'></path>
@@ -342,7 +340,6 @@
 <path d='M 504,240 L 504,240' style='fill:none;stroke:#000;'></path>
 <path d='M 528,256 L 528,256' style='fill:none;stroke:#000;'></path>
 <path d='M 528,256 L 528,256' style='fill:none;stroke:#000;'></path>
-<path d='M 568,336 L 568,336' style='fill:none;stroke:#000;'></path>
 <path d='M 456,80 L 456,80' style='fill:none;stroke:#000;'></path>
 <path d='M 552,256 L 568,288' style='fill:none;stroke:#000;'></path>
 <path d='M 488,112 L 488,112' style='fill:none;stroke:#000;'></path>
@@ -396,7 +393,6 @@
 <circle cx='224' cy='352' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='232' cy='288' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='536' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='568' cy='336' r='6' style='fill:#000;stroke:#000;'></circle>
 <path d='M 24,80 A 16,16 0 0,0 8,96' style='fill:none;stroke:#000;'></path>
 <path d='M 192,80 A 16,16 0 0,0 176,96' style='fill:none;stroke:#000;'></path>
 <path d='M 240,80 A 16,16 0 0,1 256,96' style='fill:none;stroke:#000;'></path>
@@ -432,6 +428,8 @@
 <path d='M 40,352 A 16,16 0 0,1 24,368' style='fill:none;stroke:#000;'></path>
 <path d='M 136,352 A 16,16 0 0,0 152,368' style='fill:none;stroke:#000;'></path>
 <path d='M 256,352 A 16,16 0 0,1 240,368' style='fill:none;stroke:#000;'></path>
+<path d='M 568,56 A 9,9 0 0,0 568,72' style='fill:none;stroke:#000;'></path>
+<path d='M 584,104 A 9,9 0 0,1 584,120' style='fill:none;stroke:#000;'></path>
 <text text-anchor='middle' x='24' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='32' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='40' y='20' style='fill:#000'>A</text>
@@ -662,6 +660,7 @@
 <text text-anchor='middle' x='544' y='340' style='fill:#000'>o</text>
 <text text-anchor='middle' x='552' y='340' style='fill:#000'>l</text>
 <text text-anchor='middle' x='560' y='340' style='fill:#000'>d</text>
+<text text-anchor='middle' x='568' y='340' style='fill:#000'>*</text>
 <text text-anchor='middle' x='576' y='340' style='fill:#000'> </text>
 <text text-anchor='middle' x='152' y='356' style='fill:#000'> </text>
 <text text-anchor='middle' x='160' y='356' style='fill:#000'> </text>

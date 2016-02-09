@@ -52,7 +52,6 @@ goat.ASCIItoSVG(in io.Reader, out io.Writer)
 
 * Dashed lines signaled by `:` or `=`.
 * Bold lines signaled by ???.
-* Draw bridges (`-(-`) correctly.
 * Draw half-steps (`_.-`) correctly.
 
 [1]: http://casual-effects.com/markdeep/

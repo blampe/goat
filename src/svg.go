@@ -196,4 +196,17 @@ func (c *RoundedCorner) Draw(out io.Writer) {
 }
 
 func (b *Bridge) Draw(out io.Writer) {
+	x, y := b.start.asPixel().x, b.start.asPixel().y
+	sweepFlag := 1
+
+	if b.orientation == W {
+		sweepFlag = 0
+	}
+
+	out.Write([]byte(fmt.Sprintf(
+		"<path d='M %d,%d A 9,9 0 0,%d %d,%d' style='fill:none;stroke:#000;'></path>\n",
+		x, y-8,
+		sweepFlag,
+		x, y+8,
+	)))
 }
