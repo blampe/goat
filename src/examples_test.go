@@ -48,7 +48,7 @@ func TestExamples(t *testing.T) {
 }
 
 func BenchmarkComplicated(b *testing.B) {
-	in, out := getInOut(b, "complicated1.txt")
+	in, out := getInOut(b, "complicated.txt")
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		ASCIItoSVG(in, out)

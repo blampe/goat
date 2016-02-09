@@ -7,7 +7,7 @@ generation.
 
 This SVG:
 
-![Complicated Example](https://cdn.rawgit.com/blampe/goat/master/examples/complicated1.svg)
+![Complicated Example](https://cdn.rawgit.com/blampe/goat/master/examples/complicated.svg)
 
 Was rendered from this input:
 
