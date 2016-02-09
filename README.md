@@ -7,15 +7,15 @@ generation.
 
 This SVG:
 
-![Complicated Eple](https://cdn.rawgit.com/blampe/goat/master/examples/complicated1.svg)
+![Complicated Example](https://cdn.rawgit.com/blampe/goat/master/examples/complicated1.svg)
 
 Was rendered from this input:
 
 ```
-.-------------------.                           ^                      .---.
-|    A Box          |__.--.__    __.-->         |        |  _ -        |   |
-|                   |        '--'               v                      |   |
-'-------------------'                                                  |   |
++-------------------+                           ^                      .---.
+|    A Box          |            <---->         |      .-.             |   |
+|                   |                           v     | * |<---        |   |
++-------------------+                                  '-'             |   |
                        Round                                       *---(-. |
   .-----------------.  .-------.    .----------.         .-------.     | | |
  |   Mixed Rounded  | |         |  / Diagonals  \        |   |   |     | | |
@@ -30,7 +30,7 @@ Was rendered from this input:
  '------------------'     '--'      '--+--------'      .--. .--.     |  .-.     +Done?+-'
     .---+-----.                        |   ^           |\ | | /|  .--+ |   |     \   /
     |   |     | Join        \|/        |   | Curved    | \| |/ | |    \    |      \ /
-    |   |     +---->  o     -o-         '-'  Vertical  '--' '--'  '--  '--'        +  .---.
+    |   |     +---->  o    --o--        '-'  Vertical  '--' '--'  '--  '--'        +  .---.
  <--+---+-----'       |     /|\                                                    |  | 3 |
                       v                             not:line    'quotes'        .-'   '---'
   .-.             .---+--------.            /            A || B   *bold*       |        ^
