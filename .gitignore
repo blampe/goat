@@ -1,0 +1,7 @@
+*.swp
+.DS_Store
+
+examples/.*
+
+goat
+goat.test
