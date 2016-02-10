@@ -277,6 +277,15 @@ func (c *Canvas) linesFromIterator(
 
 		shouldKeep := (isSegment || isTerminal) && !isText && !isRoundedCorner
 
+		// This is an edge case where we have a rounded corner... that's also a
+		// joint... attached to orthogonal line.
+		// TODO: This also depends on the orientation of the corner and our
+		// line.
+		// NW / NE line can't go with EW/NS lines, vertical is OK though.
+		if isRoundedCorner && r == '+' {
+			shouldKeep = !isText
+		}
+
 		// Don't connect | to > for diagonal lines.
 		if isTerminal && justSawATerminal && !contains(segments, '|') {
 			currentLine = snip(currentLine)
@@ -401,7 +410,7 @@ func (c *Canvas) RoundedCorners() []RoundedCorner {
 func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	r := c.runeAt(i)
 
-	if r != '.' && r != '\'' {
+	if !isJoint(r) {
 		return NONE
 	}
 
@@ -420,35 +429,28 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 		return r == '|' || r == '+'
 	}
 
-	if r == '.' {
-		// North case
+	//  .- or  .-
+	// |      +
+	if dashRight && isVerticalSegment(lowerLeft) {
+		return NW
+	}
 
-		//  .- or  .-
-		// |      +
-		if dashRight && isVerticalSegment(lowerLeft) {
-			return NW
-		}
+	// -. or -.
+	//   |     +
+	if dashLeft && isVerticalSegment(lowerRight) {
+		return NE
+	}
 
-		// -. or -.
-		//   |     +
-		if dashLeft && isVerticalSegment(lowerRight) {
-			return NE
-		}
+	//   | or   + or   | or   + or   +
+	// -'     -'     +'     +'     ++
+	if dashLeft && isVerticalSegment(upperRight) {
+		return SE
+	}
 
-	} else {
-		// South case
-
-		//   | or   +
-		// -'     -'
-		if dashLeft && isVerticalSegment(upperRight) {
-			return SE
-		}
-
-		// |  or +
-		//  '-    '-
-		if dashRight && isVerticalSegment(upperLeft) {
-			return SW
-		}
+	// |  or +
+	//  '-    '-
+	if dashRight && isVerticalSegment(upperLeft) {
+		return SW
 	}
 
 	return NONE
