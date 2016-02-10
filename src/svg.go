@@ -167,6 +167,30 @@ func (t *Text) Draw(out io.Writer) {
 	p := t.start.asPixel()
 	c := t.contents
 
+	opacity := 0
+
+	// Markdeep special-cases these character and treats them like a
+	// checkerboard.
+	switch c {
+	case "▉":
+		opacity = -64
+	case "▓":
+		opacity = 64
+	case "▒":
+		opacity = 128
+	case "░":
+		opacity = 191
+	}
+
+	if opacity != 0 {
+		writeBytes(&out,
+			"<rect x='%d' y='%d' width='8' height='16' fill='rgb(%d,%d,%d)'></rect>",
+			p.x-4, p.y-8,
+			opacity, opacity, opacity,
+		)
+		return
+	}
+
 	// Escape for XML
 	switch c {
 	case "&":
