@@ -39,9 +39,9 @@ func TestIterators(t *testing.T) {
 		},
 
 		// DiagUp
-		// 1 2
-		// 2 3
-		// 3 4
+		// 1 3
+		// 2 5
+		// 4 6
 		{
 			iterator: diagUp(2, 3),
 			expected: []Index{
@@ -55,8 +55,8 @@ func TestIterators(t *testing.T) {
 		},
 
 		// DiagDown
-		// 3 2 1
-		// 4 3 2
+		// 2 4 6
+		// 1 3 5
 		{
 			iterator: diagDown(3, 2),
 			expected: []Index{
