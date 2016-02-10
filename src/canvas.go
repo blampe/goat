@@ -215,8 +215,8 @@ func (c *Canvas) Lines() []Line {
 	}
 
 	lines = append(lines, c.linesFromIterator(leftRight, []rune{'-', '<', '>', '(', ')', 'o', '*'})...)
-	lines = append(lines, c.linesFromIterator(diagUp, []rune{'/', 'o', '*'})...)
-	lines = append(lines, c.linesFromIterator(diagDown, []rune{'\\', 'o', '*'})...)
+	lines = append(lines, c.linesFromIterator(diagUp, []rune{'/', 'o', '*', '<', '>', '^', 'v'})...)
+	lines = append(lines, c.linesFromIterator(diagDown, []rune{'\\', 'o', '*', '<', '>', '^', 'v'})...)
 
 	return lines
 }

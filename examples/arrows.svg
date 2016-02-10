@@ -2,8 +2,16 @@
 <g transform='translate(8,16)'>
 <path d='M 32,-8 L 32,72' style='fill:none;stroke:#000;'></path>
 <path d='M 0,32 L 64,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,32 L 0,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,0 L 32,0' style='fill:none;stroke:#000;'></path>
 <path d='M 32,32 L 32,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,64 L 32,64' style='fill:none;stroke:#000;'></path>
+<path d='M 64,32 L 64,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,32 L 0,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,64 L 32,64' style='fill:none;stroke:#000;'></path>
 <path d='M 32,32 L 32,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,0 L 32,0' style='fill:none;stroke:#000;'></path>
+<path d='M 64,32 L 64,32' style='fill:none;stroke:#000;'></path>
 <polygon points='8.000000,32.000000 -4.000000,26.400000 -4.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 0.000000, 32.000000)'></polygon>
 <polygon points='40.000000,0.000000 28.000000,-5.600000 28.000000,5.600000' style='fill:#000' transform='rotate(270.000000, 32.000000, 0.000000)'></polygon>
 <polygon points='40.000000,64.000000 28.000000,58.400002 28.000000,69.599998' style='fill:#000' transform='rotate(90.000000, 32.000000, 64.000000)'></polygon>
