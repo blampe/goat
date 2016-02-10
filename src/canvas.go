@@ -84,13 +84,17 @@ func NewCanvas(in io.Reader) Canvas {
 	for scanner.Scan() {
 		line := scanner.Text()
 
-		for w := 0; w < len(line); w++ {
+		w := 0
+		// Can't use index here because it corresponds to unicode offsets
+		// instead of logical characters.
+		for _, c := range line {
 			idx := Index{x: w, y: height}
-			data[idx] = rune(line[w])
+			data[idx] = rune(c)
+			w++
 		}
 
-		if len(line) > width {
-			width = len(line)
+		if w > width {
+			width = w
 		}
 		height++
 	}

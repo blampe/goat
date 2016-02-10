@@ -27,7 +27,7 @@ func TestReadASCII(t *testing.T) {
 
 	// TODO: UNICODE
 	buf.WriteString(" +-->\n")
-	buf.WriteString(" |\n")
+	buf.WriteString(" | å\n")
 	buf.WriteString(" +----->")
 
 	canvas := NewCanvas(bytes.NewReader(buf.Bytes()))
@@ -37,7 +37,7 @@ func TestReadASCII(t *testing.T) {
 
 	buf.Truncate(0)
 	buf.WriteString(" +-->   \n")
-	buf.WriteString(" |      \n")
+	buf.WriteString(" | å    \n")
 	buf.WriteString(" +----->\n")
 
 	expected := buf.String()
