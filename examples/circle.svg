@@ -4,14 +4,12 @@
 <path d='M 48,32 L 48,32' style='fill:none;stroke:#000;'></path>
 <path d='M 32,16 L 32,16' style='fill:none;stroke:#000;'></path>
 <path d='M 32,48 L 32,48' style='fill:none;stroke:#000;'></path>
-<path d='M 24,48 L 24,48' style='fill:none;stroke:#000;'></path>
-<path d='M 24,48 L 24,48' style='fill:none;stroke:#000;'></path>
-<path d='M 40,48 L 40,48' style='fill:none;stroke:#000;'></path>
-<path d='M 40,48 L 40,48' style='fill:none;stroke:#000;'></path>
-<path d='M 24,16 L 24,16' style='fill:none;stroke:#000;'></path>
-<path d='M 24,16 L 24,16' style='fill:none;stroke:#000;'></path>
-<path d='M 40,16 L 40,16' style='fill:none;stroke:#000;'></path>
-<path d='M 40,16 L 40,16' style='fill:none;stroke:#000;'></path>
+<path d='M 16,32 L 16,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 48,32 L 48,32' style='fill:none;stroke:#000;'></path>
+<path d='M 16,32 L 16,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 48,32 L 48,32' style='fill:none;stroke:#000;'></path>
 <path d='M 32,16 A 16,16 0 0,0 16,32' style='fill:none;stroke:#000;'></path>
 <path d='M 32,16 A 16,16 0 0,1 48,32' style='fill:none;stroke:#000;'></path>
 <path d='M 16,32 A 16,16 0 0,0 32,48' style='fill:none;stroke:#000;'></path>

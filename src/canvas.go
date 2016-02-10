@@ -23,6 +23,9 @@ var reservedRunes = map[rune]bool{
 	'\\': true,
 	')':  true,
 	'(':  true,
+	'╱':  true,
+	'╲':  true,
+	'╳':  true,
 }
 
 func contains(in []rune, r rune) bool {
@@ -121,30 +124,25 @@ type Line struct {
 type lineState int
 
 const (
-	_Empty lineState = iota
+	_Unstarted lineState = iota
 	_Started
-	_Ended
 )
 
 func (l *Line) started() bool {
-	return l.state != _Empty
-}
-
-func (l *Line) ended() bool {
-	return l.state == _Ended
+	return l.state == _Started
 }
 
 func (l *Line) setStart(i Index) {
-	if l.state == _Empty {
+	if l.state == _Unstarted {
 		l.start = i
+		l.stop = i
 		l.state = _Started
 	}
 }
 
 func (l *Line) setStop(i Index) {
-	if l.state == _Started || l.state == _Ended {
+	if l.state == _Started {
 		l.stop = i
-		l.state = _Ended
 	}
 }
 
@@ -201,7 +199,12 @@ const (
 // Lines returns a slice of all Line drawables that we can detect -- in all
 // possible orientations.
 func (c *Canvas) Lines() []Line {
-	lines := c.linesFromIterator(upDown, []rune{'|', 'v', '^', 'o', '*'})
+
+	lines := c.linesFromIterator(
+		upDown,
+		[]rune{'|'},
+		append([]rune{'v', '^', 'o', '*'}, jointRunes...),
+	)
 
 	for i, l := range lines {
 		above := c.runeAt(l.start.north())
@@ -214,65 +217,93 @@ func (c *Canvas) Lines() []Line {
 		}
 	}
 
-	lines = append(lines, c.linesFromIterator(leftRight, []rune{'-', '<', '>', '(', ')', 'o', '*'})...)
-	lines = append(lines, c.linesFromIterator(diagUp, []rune{'/', 'o', '*', '<', '>', '^', 'v'})...)
-	lines = append(lines, c.linesFromIterator(diagDown, []rune{'\\', 'o', '*', '<', '>', '^', 'v'})...)
+	lines = append(lines, c.linesFromIterator(
+		leftRight,
+		[]rune{'-', ')', '('},
+		append([]rune{'o', '*', '<', '>'}, jointRunes...),
+	)...)
+
+	lines = append(lines, c.linesFromIterator(
+		diagUp,
+		[]rune{'/', '╱', '╳'},
+		append([]rune{'o', '*', '<', '>', '^', 'v', '|'}, jointRunes...),
+	)...)
+
+	lines = append(lines, c.linesFromIterator(
+		diagDown,
+		[]rune{'\\', '╲', '╳'},
+		append([]rune{'o', '*', '<', '>', '^', 'v', '|'}, jointRunes...),
+	)...)
 
 	return lines
 }
 
-func (c *Canvas) linesFromIterator(ci canvasIterator, keepers []rune) []Line {
+// ci: the order that we traverse locations on the canvas.
+// segmentPieces characters we 1) include, and 2) keep going.
+// inclusiveTerminals: characters we 1) include, and 2) end the current line.
+// exclusiveTerminals: characters we 1) don't include, and 2) end the line.
+func (c *Canvas) linesFromIterator(
+	ci canvasIterator,
+	segments []rune,
+	terminals []rune,
+) []Line {
 	var lines []Line
 
 	var currentLine Line
 	var lastSeenRune rune
 
-	endCurrentLine := func(i Index) Line {
-		if !currentLine.started() {
-			currentLine.setStart(i)
-		}
-		if !currentLine.ended() {
-			currentLine.setStop(currentLine.start)
-		}
-		lines = append(lines, currentLine)
+	// Helper to throw the current line we're tracking on to the slice and
+	// start a new one.
+	snip := func(l Line) Line {
+		lines = append(lines, l)
 		return Line{}
 	}
 
 	for idx := range ci(c.Width, c.Height) {
 		r := c.runeAt(idx)
 
-		isJoint := contains(jointRunes, r)
 		isText := c.isText(idx)
-		shouldKeep := r != ' ' && (contains(keepers, r) || isJoint) && !isText
+		isTerminal := contains(terminals, r)
+		isSegment := contains(segments, r)
+		isRoundedCorner := c.isRoundedCorner(idx) != NONE
+		isDot := r == 'o' || r == '*'
+		isTriangle := r == '^' || r == 'v' || r == '<' || r == '>'
 
-		if !shouldKeep && !currentLine.started() {
-			continue
+		justSawATerminal := contains(terminals, lastSeenRune)
+
+		shouldKeep := (isSegment || isTerminal) && !isText && !isRoundedCorner
+
+		// Don't connect | to > for diagonal lines.
+		if isTerminal && justSawATerminal && !contains(segments, '|') {
+			currentLine = snip(currentLine)
 		}
 
-		// Don't connect corner joints during diagonal sweeps, e.g:
-		//    |
-		//    +--
-		// --+
-		//   |
-
-		if isJoint && contains(jointRunes, lastSeenRune) && (contains(keepers, '/') || contains(keepers, '\\')) {
-			currentLine = endCurrentLine(idx)
-			// Start a new line at this joint.
-			currentLine.setStart(idx)
-			lastSeenRune = r
-			continue
+		// Don't connect o to o, + to o, etc. This character is a new terminal
+		// so we still want to respect shouldKeep; we just don't want to draw
+		// the existing line through this cell.
+		if justSawATerminal && (isDot || isTriangle) {
+			currentLine = snip(currentLine)
 		}
 
-		notRoundedCorner := (!isJoint || c.isRoundedCorner(idx) == NONE)
-
-		if !currentLine.started() && shouldKeep && notRoundedCorner {
-			currentLine.setStart(idx)
-		} else if currentLine.started() && shouldKeep && notRoundedCorner {
-			currentLine.setStop(idx)
-		}
-
-		if !shouldKeep && currentLine.started() {
-			currentLine = endCurrentLine(idx)
+		switch currentLine.state {
+		case _Unstarted:
+			if shouldKeep {
+				currentLine.setStart(idx)
+			}
+		case _Started:
+			if !shouldKeep {
+				// Snip the existing line, don't add the current cell to it.
+				currentLine = snip(currentLine)
+			} else if isTerminal {
+				// Snip the existing line but include the current terminal
+				// cell.
+				currentLine.setStop(idx)
+				currentLine = snip(currentLine)
+				currentLine.setStart(idx)
+			} else if shouldKeep {
+				// Keep the line going and extend it by this character.
+				currentLine.setStop(idx)
+			}
 		}
 
 		lastSeenRune = r
@@ -320,7 +351,10 @@ func (c *Canvas) Triangles() []Triangle {
 			continue
 		}
 
-		triangles = append(triangles, Triangle{start: start, orientation: o, needsNudging: needsNudging})
+		triangles = append(
+			triangles,
+			Triangle{start: start, orientation: o, needsNudging: needsNudging},
+		)
 	}
 
 	return triangles
@@ -348,7 +382,10 @@ func (c *Canvas) RoundedCorners() []RoundedCorner {
 
 	for idx := range leftRight(c.Width, c.Height) {
 		if o := c.isRoundedCorner(idx); o != NONE {
-			corners = append(corners, RoundedCorner{start: idx, orientation: o})
+			corners = append(
+				corners,
+				RoundedCorner{start: idx, orientation: o},
+			)
 		}
 	}
 
@@ -497,11 +534,7 @@ func (c *Canvas) isTextLeft(i Index, limit uint8) bool {
 	}
 	left := i.west()
 
-	if c.isDefinitelyText(left) && !c.hasLineAboveOrBelow(left) {
-		return true
-	}
-
-	return c.isTextLeft(left, limit-1)
+	return c.isDefinitelyText(left) || c.isTextLeft(left, limit-1)
 }
 
 func (c *Canvas) isTextRight(i Index, limit uint8) bool {
@@ -510,11 +543,7 @@ func (c *Canvas) isTextRight(i Index, limit uint8) bool {
 	}
 	right := i.east()
 
-	if c.isDefinitelyText(right) && !c.hasLineAboveOrBelow(right) {
-		return true
-	}
-
-	return c.isTextRight(right, limit-1)
+	return c.isDefinitelyText(right) || c.isTextRight(right, limit-1)
 }
 
 // Returns true if the character at this index is not reserved for diagrams.

@@ -1,15 +1,23 @@
 <svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='88' width='80'>
 <g transform='translate(8,16)'>
-<path d='M 32,-8 L 32,72' style='fill:none;stroke:#000;'></path>
-<path d='M 0,32 L 64,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,-8 L 32,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,32 L 32,72' style='fill:none;stroke:#000;'></path>
+<path d='M 32,64 L 32,72' style='fill:none;stroke:#000;'></path>
+<path d='M 0,32 L 32,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,32 L 64,32' style='fill:none;stroke:#000;'></path>
+<path d='M 64,32 L 64,32' style='fill:none;stroke:#000;'></path>
 <path d='M 0,32 L 0,32' style='fill:none;stroke:#000;'></path>
 <path d='M 32,0 L 32,0' style='fill:none;stroke:#000;'></path>
+<path d='M 32,16 L 32,16' style='fill:none;stroke:#000;'></path>
 <path d='M 32,32 L 32,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,48 L 32,48' style='fill:none;stroke:#000;'></path>
 <path d='M 32,64 L 32,64' style='fill:none;stroke:#000;'></path>
 <path d='M 64,32 L 64,32' style='fill:none;stroke:#000;'></path>
 <path d='M 0,32 L 0,32' style='fill:none;stroke:#000;'></path>
 <path d='M 32,64 L 32,64' style='fill:none;stroke:#000;'></path>
+<path d='M 32,48 L 32,48' style='fill:none;stroke:#000;'></path>
 <path d='M 32,32 L 32,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,16 L 32,16' style='fill:none;stroke:#000;'></path>
 <path d='M 32,0 L 32,0' style='fill:none;stroke:#000;'></path>
 <path d='M 64,32 L 64,32' style='fill:none;stroke:#000;'></path>
 <polygon points='8.000000,32.000000 -4.000000,26.400000 -4.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 0.000000, 32.000000)'></polygon>
