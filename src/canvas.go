@@ -371,36 +371,41 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	upperLeft := i.nWest()
 	upperRight := i.nEast()
 
-	dashRight := c.runeAt(right) == '-'
-	dashLeft := c.runeAt(left) == '-'
+	dashRight := c.runeAt(right) == '-' || c.runeAt(right) == '+'
+	dashLeft := c.runeAt(left) == '-' || c.runeAt(left) == '+'
+
+	isVerticalSegment := func(i Index) bool {
+		r := c.runeAt(i)
+		return r == '|' || r == '+'
+	}
 
 	if r == '.' {
 		// North case
 
-		//  .-
-		// |
-		if dashRight && c.runeAt(lowerLeft) == '|' {
+		//  .- or  .-
+		// |      +
+		if dashRight && isVerticalSegment(lowerLeft) {
 			return NW
 		}
 
-		// -.
-		//   |
-		if dashLeft && c.runeAt(lowerRight) == '|' {
+		// -. or -.
+		//   |     +
+		if dashLeft && isVerticalSegment(lowerRight) {
 			return NE
 		}
 
 	} else {
 		// South case
 
-		//   |
-		// -'
-		if dashLeft && c.runeAt(upperRight) == '|' {
+		//   | or   +
+		// -'     -'
+		if dashLeft && isVerticalSegment(upperRight) {
 			return SE
 		}
 
-		// |
-		//  '-
-		if dashRight && c.runeAt(upperLeft) == '|' {
+		// |  or +
+		//  '-    '-
+		if dashRight && isVerticalSegment(upperLeft) {
 			return SW
 		}
 	}
