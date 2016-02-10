@@ -1,0 +1,230 @@
+<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='136' width='576'>
+<g transform='translate(8,16)'>
+<path d='M 144,32 L 144,32' style='fill:none;stroke:#000;'></path>
+<path d='M 200,32 L 200,32' style='fill:none;stroke:#000;'></path>
+<path d='M 256,32 L 256,32' style='fill:none;stroke:#000;'></path>
+<path d='M 256,40 L 256,88' style='fill:none;stroke:#000;'></path>
+<path d='M 256,80 L 256,88' style='fill:none;stroke:#000;'></path>
+<path d='M 256,96 L 256,96' style='fill:none;stroke:#000;'></path>
+<path d='M 304,32 L 304,32' style='fill:none;stroke:#000;'></path>
+<path d='M 304,40 L 304,96' style='fill:none;stroke:#000;'></path>
+<path d='M 304,96 L 304,96' style='fill:none;stroke:#000;'></path>
+<path d='M 360,96 L 360,96' style='fill:none;stroke:#000;'></path>
+<path d='M 408,48 L 408,88' style='fill:none;stroke:#000;'></path>
+<path d='M 408,80 L 408,88' style='fill:none;stroke:#000;'></path>
+<path d='M 408,96 L 408,96' style='fill:none;stroke:#000;'></path>
+<path d='M 456,96 L 456,96' style='fill:none;stroke:#000;'></path>
+<path d='M 504,32 L 504,32' style='fill:none;stroke:#000;'></path>
+<path d='M 504,40 L 504,96' style='fill:none;stroke:#000;'></path>
+<path d='M 504,96 L 504,96' style='fill:none;stroke:#000;'></path>
+<path d='M 560,96 L 560,96' style='fill:none;stroke:#000;'></path>
+<path d='M 144,32 L 192,32' style='fill:none;stroke:#000;'></path>
+<path d='M 192,32 L 192,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 200,32 L 200,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 208,32 L 248,32' style='fill:none;stroke:#000;'></path>
+<path d='M 248,32 L 248,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 256,32 L 256,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 264,32 L 304,32' style='fill:none;stroke:#000;'></path>
+<path d='M 304,32 L 392,32' style='fill:none;stroke:#000;'></path>
+<path d='M 504,32 L 504,32' style='fill:none;stroke:#000;'></path>
+<path d='M 256,96 L 256,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 264,96 L 296,96' style='fill:none;stroke:#000;'></path>
+<path d='M 296,96 L 296,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 304,96 L 304,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 312,96 L 352,96' style='fill:none;stroke:#000;'></path>
+<path d='M 352,96 L 352,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 360,96 L 400,96' style='fill:none;stroke:#000;'></path>
+<path d='M 400,96 L 400,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 408,96 L 448,96' style='fill:none;stroke:#000;'></path>
+<path d='M 448,96 L 448,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 456,96 L 496,96' style='fill:none;stroke:#000;'></path>
+<path d='M 496,96 L 496,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 504,96 L 504,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 512,96 L 552,96' style='fill:none;stroke:#000;'></path>
+<path d='M 552,96 L 552,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 560,96 L 560,96' style='fill:none;stroke:#000;'></path>
+<path d='M 144,32 L 144,32' style='fill:none;stroke:#000;'></path>
+<path d='M 192,32 L 192,32' style='fill:none;stroke:#000;'></path>
+<path d='M 200,32 L 200,32' style='fill:none;stroke:#000;'></path>
+<path d='M 208,32 L 208,32' style='fill:none;stroke:#000;'></path>
+<path d='M 248,32 L 248,32' style='fill:none;stroke:#000;'></path>
+<path d='M 256,32 L 256,32' style='fill:none;stroke:#000;'></path>
+<path d='M 256,48 L 256,48' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 264,32 L 264,32' style='fill:none;stroke:#000;'></path>
+<path d='M 256,64 L 256,64' style='fill:none;stroke:#000;'></path>
+<path d='M 256,80 L 256,80' style='fill:none;stroke:#000;'></path>
+<path d='M 256,96 L 256,96' style='fill:none;stroke:#000;'></path>
+<path d='M 264,96 L 264,96' style='fill:none;stroke:#000;'></path>
+<path d='M 304,32 L 304,32' style='fill:none;stroke:#000;'></path>
+<path d='M 304,48 L 304,48' style='fill:none;stroke:#000;'></path>
+<path d='M 304,64 L 304,64' style='fill:none;stroke:#000;'></path>
+<path d='M 296,96 L 296,96' style='fill:none;stroke:#000;'></path>
+<path d='M 304,80 L 304,80' style='fill:none;stroke:#000;'></path>
+<path d='M 304,96 L 304,96' style='fill:none;stroke:#000;'></path>
+<path d='M 312,96 L 312,96' style='fill:none;stroke:#000;'></path>
+<path d='M 352,96 L 352,96' style='fill:none;stroke:#000;'></path>
+<path d='M 360,96 L 360,96' style='fill:none;stroke:#000;'></path>
+<path d='M 408,48 L 408,48' style='fill:none;stroke:#000;'></path>
+<path d='M 408,64 L 408,64' style='fill:none;stroke:#000;'></path>
+<path d='M 400,96 L 400,96' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 408,80 L 408,80' style='fill:none;stroke:#000;'></path>
+<path d='M 408,96 L 408,96' style='fill:none;stroke:#000;'></path>
+<path d='M 448,96 L 448,96' style='fill:none;stroke:#000;'></path>
+<path d='M 456,96 L 456,96' style='fill:none;stroke:#000;'></path>
+<path d='M 504,32 L 504,32' style='fill:none;stroke:#000;'></path>
+<path d='M 504,48 L 504,48' style='fill:none;stroke:#000;'></path>
+<path d='M 504,64 L 504,64' style='fill:none;stroke:#000;'></path>
+<path d='M 496,96 L 496,96' style='fill:none;stroke:#000;'></path>
+<path d='M 504,80 L 504,80' style='fill:none;stroke:#000;'></path>
+<path d='M 504,96 L 504,96' style='fill:none;stroke:#000;'></path>
+<path d='M 512,96 L 512,96' style='fill:none;stroke:#000;'></path>
+<path d='M 552,96 L 552,96' style='fill:none;stroke:#000;'></path>
+<path d='M 560,96 L 560,96' style='fill:none;stroke:#000;'></path>
+<path d='M 144,32 L 144,32' style='fill:none;stroke:#000;'></path>
+<path d='M 192,32 L 192,32' style='fill:none;stroke:#000;'></path>
+<path d='M 200,32 L 200,32' style='fill:none;stroke:#000;'></path>
+<path d='M 208,32 L 208,32' style='fill:none;stroke:#000;'></path>
+<path d='M 256,96 L 256,96' style='fill:none;stroke:#000;'></path>
+<path d='M 256,80 L 256,80' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 264,96 L 264,96' style='fill:none;stroke:#000;'></path>
+<path d='M 256,64 L 256,64' style='fill:none;stroke:#000;'></path>
+<path d='M 248,32 L 248,32' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 256,48 L 256,48' style='fill:none;stroke:#000;'></path>
+<path d='M 256,32 L 256,32' style='fill:none;stroke:#000;'></path>
+<path d='M 264,32 L 264,32' style='fill:none;stroke:#000;'></path>
+<path d='M 296,96 L 296,96' style='fill:none;stroke:#000;'></path>
+<path d='M 304,96 L 304,96' style='fill:none;stroke:#000;'></path>
+<path d='M 304,80 L 304,80' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 312,96 L 312,96' style='fill:none;stroke:#000;'></path>
+<path d='M 304,64 L 304,64' style='fill:none;stroke:#000;'></path>
+<path d='M 304,48 L 304,48' style='fill:none;stroke:#000;'></path>
+<path d='M 304,32 L 304,32' style='fill:none;stroke:#000;'></path>
+<path d='M 352,96 L 352,96' style='fill:none;stroke:#000;'></path>
+<path d='M 360,96 L 360,96' style='fill:none;stroke:#000;'></path>
+<path d='M 400,96 L 400,96' style='fill:none;stroke:#000;'></path>
+<path d='M 408,96 L 408,96' style='fill:none;stroke:#000;'></path>
+<path d='M 408,80 L 408,80' style='fill:none;stroke:#000;'></path>
+<path d='M 408,64 L 408,64' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 408,48 L 408,48' style='fill:none;stroke:#000;'></path>
+<path d='M 448,96 L 448,96' style='fill:none;stroke:#000;'></path>
+<path d='M 456,96 L 456,96' style='fill:none;stroke:#000;'></path>
+<path d='M 496,96 L 496,96' style='fill:none;stroke:#000;'></path>
+<path d='M 504,96 L 504,96' style='fill:none;stroke:#000;'></path>
+<path d='M 504,80 L 504,80' style='fill:none;stroke:#000;'></path>
+<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
+<path d='M 512,96 L 512,96' style='fill:none;stroke:#000;'></path>
+<path d='M 504,64 L 504,64' style='fill:none;stroke:#000;'></path>
+<path d='M 504,48 L 504,48' style='fill:none;stroke:#000;'></path>
+<path d='M 504,32 L 504,32' style='fill:none;stroke:#000;'></path>
+<path d='M 552,96 L 552,96' style='fill:none;stroke:#000;'></path>
+<path d='M 560,96 L 560,96' style='fill:none;stroke:#000;'></path>
+<polygon points='200.000000,32.000000 188.000000,26.400000 188.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 192.000000, 32.000000)'></polygon>
+<polygon points='216.000000,32.000000 204.000000,26.400000 204.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 208.000000, 32.000000)'></polygon>
+<polygon points='256.000000,32.000000 244.000000,26.400000 244.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 248.000000, 32.000000)'></polygon>
+<polygon points='264.000000,48.000000 252.000000,42.400002 252.000000,53.599998' style='fill:#000' transform='rotate(270.000000, 256.000000, 48.000000)'></polygon>
+<polygon points='264.000000,80.000000 252.000000,74.400002 252.000000,85.599998' style='fill:#000' transform='rotate(90.000000, 256.000000, 80.000000)'></polygon>
+<polygon points='272.000000,32.000000 260.000000,26.400000 260.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 264.000000, 32.000000)'></polygon>
+<polygon points='272.000000,96.000000 260.000000,90.400002 260.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 264.000000, 96.000000)'></polygon>
+<polygon points='304.000000,96.000000 292.000000,90.400002 292.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 296.000000, 96.000000)'></polygon>
+<polygon points='312.000000,48.000000 300.000000,42.400002 300.000000,53.599998' style='fill:#000' transform='rotate(270.000000, 304.000000, 48.000000)'></polygon>
+<polygon points='320.000000,96.000000 308.000000,90.400002 308.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 312.000000, 96.000000)'></polygon>
+<polygon points='360.000000,96.000000 348.000000,90.400002 348.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 352.000000, 96.000000)'></polygon>
+<polygon points='408.000000,96.000000 396.000000,90.400002 396.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 400.000000, 96.000000)'></polygon>
+<polygon points='416.000000,80.000000 404.000000,74.400002 404.000000,85.599998' style='fill:#000' transform='rotate(90.000000, 408.000000, 80.000000)'></polygon>
+<polygon points='456.000000,96.000000 444.000000,90.400002 444.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 448.000000, 96.000000)'></polygon>
+<polygon points='504.000000,96.000000 492.000000,90.400002 492.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 496.000000, 96.000000)'></polygon>
+<polygon points='512.000000,48.000000 500.000000,42.400002 500.000000,53.599998' style='fill:#000' transform='rotate(270.000000, 504.000000, 48.000000)'></polygon>
+<polygon points='520.000000,96.000000 508.000000,90.400002 508.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 512.000000, 96.000000)'></polygon>
+<polygon points='560.000000,96.000000 548.000000,90.400002 548.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 552.000000, 96.000000)'></polygon>
+<circle cx='144' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
+<circle cx='200' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
+<circle cx='256' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
+<circle cx='256' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
+<circle cx='304' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
+<circle cx='304' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
+<circle cx='360' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
+<circle cx='408' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
+<circle cx='456' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
+<circle cx='504' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
+<circle cx='504' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
+<circle cx='560' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
+<path d='M 392,32 A 16,16 0 0,1 408,48' style='fill:none;stroke:#000;'></path>
+<text text-anchor='middle' x='128' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='136' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='144' y='20' style='fill:#000'>A</text>
+<text text-anchor='middle' x='152' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='160' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='184' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='192' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='200' y='20' style='fill:#000'>1</text>
+<text text-anchor='middle' x='208' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='216' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='240' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='248' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='256' y='20' style='fill:#000'>2</text>
+<text text-anchor='middle' x='264' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='272' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='288' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='296' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='304' y='20' style='fill:#000'>4</text>
+<text text-anchor='middle' x='312' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='320' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='488' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='496' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='504' y='20' style='fill:#000'>8</text>
+<text text-anchor='middle' x='512' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='520' y='20' style='fill:#000'> </text>
+<text text-anchor='middle' x='240' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='248' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='256' y='116' style='fill:#000'>3</text>
+<text text-anchor='middle' x='264' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='272' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='288' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='296' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='304' y='116' style='fill:#000'>B</text>
+<text text-anchor='middle' x='312' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='320' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='344' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='352' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='360' y='116' style='fill:#000'>5</text>
+<text text-anchor='middle' x='368' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='376' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='392' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='400' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='408' y='116' style='fill:#000'>C</text>
+<text text-anchor='middle' x='416' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='424' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='440' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='448' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='456' y='116' style='fill:#000'>6</text>
+<text text-anchor='middle' x='464' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='472' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='488' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='496' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='504' y='116' style='fill:#000'>7</text>
+<text text-anchor='middle' x='512' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='520' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='544' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='552' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' x='560' y='116' style='fill:#000'>D</text>
+</g>
+</svg>
