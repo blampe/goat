@@ -37,6 +37,10 @@ func contains(in []rune, r rune) bool {
 	return false
 }
 
+func isJoint(r rune) bool {
+	return contains(jointRunes, r)
+}
+
 // Canvas represents a 2D ASCII rectangle.
 type Canvas struct {
 	Width  int
@@ -334,13 +338,13 @@ func (c *Canvas) Triangles() []Triangle {
 		case '^':
 			o = N
 			r := c.runeAt(start.north())
-			if r == '-' || contains(jointRunes, r) {
+			if r == '-' || isJoint(r) {
 				needsNudging = true
 			}
 		case 'v':
 			o = S
 			r := c.runeAt(start.south())
-			if r == '-' || contains(jointRunes, r) {
+			if r == '-' || isJoint(r) {
 				needsNudging = true
 			}
 		case '<':
@@ -509,7 +513,7 @@ func (c *Canvas) isText(i Index) bool {
 	}
 
 	// This index refers to a rune not in our reserved set.
-	if c.isDefinitelyText(i) {
+	if c.isNotReserved(i) {
 		return true
 	}
 
@@ -534,7 +538,7 @@ func (c *Canvas) isTextLeft(i Index, limit uint8) bool {
 	}
 	left := i.west()
 
-	return c.isDefinitelyText(left) || c.isTextLeft(left, limit-1)
+	return c.isNotReserved(left) || c.isTextLeft(left, limit-1)
 }
 
 func (c *Canvas) isTextRight(i Index, limit uint8) bool {
@@ -543,13 +547,13 @@ func (c *Canvas) isTextRight(i Index, limit uint8) bool {
 	}
 	right := i.east()
 
-	return c.isDefinitelyText(right) || c.isTextRight(right, limit-1)
+	return c.isNotReserved(right) || c.isTextRight(right, limit-1)
 }
 
 // Returns true if the character at this index is not reserved for diagrams.
 // Characters like "o" need more context (e.g., are other text characters
 // nearby) to determine whether they're part of a diagram.
-func (c *Canvas) isDefinitelyText(i Index) bool {
+func (c *Canvas) isNotReserved(i Index) bool {
 	r := c.runeAt(i)
 
 	if r == ' ' {
@@ -561,19 +565,20 @@ func (c *Canvas) isDefinitelyText(i Index) bool {
 	return !isReserved
 }
 
+// Returns true if it looks like this character belongs to anything besides a
+// horizontal line. This is the context we use to determine if a reserved
+// character is text or not.
 func (c *Canvas) hasLineAboveOrBelow(i Index) bool {
 	r := c.runeAt(i)
-
-	nEast := i.nEast()
-	sWest := i.sWest()
 
 	switch r {
 	case '*', 'o', '+':
 		return c.partOfDiagonalLine(i) || c.partOfVerticalLine(i)
 	case '|':
 		return c.partOfVerticalLine(i) || c.partOfRoundedCorner(i)
-	case '/':
-		return c.partOfDiagonalLine(i) || contains(jointRunes, c.runeAt(nEast)) || contains(jointRunes, c.runeAt(sWest))
+	case '/', '\\':
+		// TODO: unicode cases
+		return c.partOfDiagonalLine(i)
 	case '-':
 		return c.partOfRoundedCorner(i)
 	case '(', ')':
@@ -589,13 +594,13 @@ func (c *Canvas) partOfVerticalLine(i Index) bool {
 	north := c.runeAt(i.north())
 	south := c.runeAt(i.south())
 
-	jointAboveMe := this == '|' && contains(jointRunes, north)
+	jointAboveMe := this == '|' && isJoint(north)
 
 	if north == '|' || jointAboveMe {
 		return true
 	}
 
-	jointBelowMe := this == '|' && contains(jointRunes, south)
+	jointBelowMe := this == '|' && isJoint(south)
 
 	if south == '|' || jointBelowMe {
 		return true
@@ -610,10 +615,24 @@ func (c *Canvas) partOfHorizontalLine(i Index) bool {
 }
 
 func (c *Canvas) partOfDiagonalLine(i Index) bool {
-	return (c.runeAt(i.nWest()) == '\\' ||
-		c.runeAt(i.sEast()) == '\\' ||
-		c.runeAt(i.nEast()) == '/' ||
-		c.runeAt(i.sWest()) == '/')
+	r := c.runeAt(i)
+
+	nWest := c.runeAt(i.nWest())
+	sEast := c.runeAt(i.sEast())
+	nEast := c.runeAt(i.nEast())
+	sWest := c.runeAt(i.sWest())
+
+	switch r {
+	// Diagonal segments can be connected to joint or other segments.
+	case '/':
+		return nEast == r || sWest == r || isJoint(nEast) || isJoint(sWest)
+	case '\\':
+		return nWest == r || sEast == r || isJoint(nWest) || isJoint(sEast)
+
+	// For everything else just check if we have segments next to us.
+	default:
+		return nWest == '\\' || nEast == '/' || sWest == '/' || sEast == '\\'
+	}
 }
 
 // For "-" and "|" characters returns true if they could be part of a rounded
