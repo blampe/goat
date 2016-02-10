@@ -202,7 +202,7 @@ func (t *Text) Draw(out io.Writer) {
 	}
 
 	writeBytes(&out,
-		"<text text-anchor='middle' x='%d' y='%d' style='fill:#000'>%s</text>\n",
+		"<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='%d' y='%d' style='fill:#000;font-size:1em'>%s</text>\n",
 		p.x, p.y+4, c,
 	)
 }
