@@ -525,7 +525,10 @@ func (c *Canvas) isText(i Index) bool {
 
 	// Reserved characters like "o" or "*" with letters sitting next to them
 	// are probably text.
-	if c.isTextLeft(i, 2) || c.isTextRight(i, 2) {
+	// TODO: Fix this to count contiguous blocks of text. If we had a bunch of
+	// reserved characters previously that were counted as text then this
+	// should be as well, e.g., "A----B".
+	if c.isTextLeft(i, 1) || c.isTextRight(i, 1) {
 		return true
 	}
 
