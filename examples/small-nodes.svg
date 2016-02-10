@@ -168,62 +168,39 @@
 <circle cx='504' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='560' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
 <path d='M 392,32 A 16,16 0 0,1 408,48' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' x='128' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='136' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='144' y='20' style='fill:#000'>A</text>
 <text text-anchor='middle' x='152' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='160' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='184' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='192' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='200' y='20' style='fill:#000'>1</text>
 <text text-anchor='middle' x='208' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='216' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='240' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='248' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='256' y='20' style='fill:#000'>2</text>
 <text text-anchor='middle' x='264' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='272' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='288' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='296' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='304' y='20' style='fill:#000'>4</text>
 <text text-anchor='middle' x='312' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='320' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='488' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='496' y='20' style='fill:#000'> </text>
 <text text-anchor='middle' x='504' y='20' style='fill:#000'>8</text>
 <text text-anchor='middle' x='512' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='520' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='240' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='248' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='256' y='116' style='fill:#000'>3</text>
 <text text-anchor='middle' x='264' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='272' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='288' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='296' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='304' y='116' style='fill:#000'>B</text>
 <text text-anchor='middle' x='312' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='320' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='344' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='352' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='360' y='116' style='fill:#000'>5</text>
 <text text-anchor='middle' x='368' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='376' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='392' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='400' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='408' y='116' style='fill:#000'>C</text>
 <text text-anchor='middle' x='416' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='424' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='440' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='448' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='456' y='116' style='fill:#000'>6</text>
 <text text-anchor='middle' x='464' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='472' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='488' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='496' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='504' y='116' style='fill:#000'>7</text>
 <text text-anchor='middle' x='512' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='520' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='544' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='552' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='560' y='116' style='fill:#000'>D</text>
 </g>

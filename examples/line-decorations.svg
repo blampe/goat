@@ -281,7 +281,6 @@
 <path d='M 720,64 A 16,16 0 0,1 704,80' style='fill:none;stroke:#000;'></path>
 <path d='M 736,80 A 16,16 0 0,1 720,96' style='fill:none;stroke:#000;'></path>
 <path d='M 240,40 A 9,9 0 0,0 240,56' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' x='112' y='4' style='fill:#000'> </text>
 <text text-anchor='middle' x='120' y='4' style='fill:#000'> </text>
 <text text-anchor='middle' x='128' y='4' style='fill:#000'>_</text>
 <text text-anchor='middle' x='136' y='4' style='fill:#000'>_</text>
@@ -292,11 +291,8 @@
 <text text-anchor='middle' x='176' y='4' style='fill:#000'>_</text>
 <text text-anchor='middle' x='184' y='4' style='fill:#000'>_</text>
 <text text-anchor='middle' x='192' y='4' style='fill:#000'> </text>
-<text text-anchor='middle' x='200' y='4' style='fill:#000'> </text>
-<text text-anchor='middle' x='448' y='84' style='fill:#000'> </text>
 <text text-anchor='middle' x='464' y='84' style='fill:#000'>_</text>
 <text text-anchor='middle' x='472' y='84' style='fill:#000'>_</text>
 <text text-anchor='middle' x='480' y='84' style='fill:#000'>|</text>
-<text text-anchor='middle' x='488' y='84' style='fill:#000'> </text>
 </g>
 </svg>

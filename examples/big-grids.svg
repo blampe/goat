@@ -324,35 +324,23 @@
 <path d='M 672,32 L 672,32' style='fill:none;stroke:#000;'></path>
 <path d='M 704,64 L 704,64' style='fill:none;stroke:#000;'></path>
 <path d='M 720,32 L 720,32' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' x='88' y='68' style='fill:#000'> </text>
 <text text-anchor='middle' x='96' y='68' style='fill:#000'> </text>
 <text text-anchor='middle' x='104' y='68' style='fill:#000'>B</text>
 <text text-anchor='middle' x='112' y='68' style='fill:#000'> </text>
-<text text-anchor='middle' x='120' y='68' style='fill:#000'> </text>
-<text text-anchor='middle' x='32' y='100' style='fill:#000'> </text>
 <text text-anchor='middle' x='40' y='100' style='fill:#000'> </text>
 <text text-anchor='middle' x='48' y='100' style='fill:#000'>A</text>
 <text text-anchor='middle' x='56' y='100' style='fill:#000'> </text>
-<text text-anchor='middle' x='64' y='100' style='fill:#000'> </text>
-<text text-anchor='middle' x='352' y='100' style='fill:#000'> </text>
 <text text-anchor='middle' x='360' y='100' style='fill:#000'> </text>
 <text text-anchor='middle' x='368' y='100' style='fill:#000'>B</text>
 <text text-anchor='middle' x='376' y='100' style='fill:#000'> </text>
-<text text-anchor='middle' x='384' y='100' style='fill:#000'> </text>
-<text text-anchor='middle' x='544' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='552' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='560' y='116' style='fill:#000'>A</text>
 <text text-anchor='middle' x='568' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='576' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='592' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='600' y='116' style='fill:#000'> </text>
 <text text-anchor='middle' x='608' y='116' style='fill:#000'>B</text>
 <text text-anchor='middle' x='616' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='624' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='304' y='148' style='fill:#000'> </text>
 <text text-anchor='middle' x='312' y='148' style='fill:#000'> </text>
 <text text-anchor='middle' x='320' y='148' style='fill:#000'>A</text>
 <text text-anchor='middle' x='328' y='148' style='fill:#000'> </text>
-<text text-anchor='middle' x='336' y='148' style='fill:#000'> </text>
 </g>
 </svg>
