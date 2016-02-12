@@ -23,10 +23,6 @@
 <path d='M 344,144 L 344,160' style='fill:none;stroke:#000;'></path>
 <path d='M 344,160 L 344,160' style='fill:none;stroke:#000;'></path>
 <path d='M 360,112 L 360,112' style='fill:none;stroke:#000;'></path>
-<path d='M 376,16 L 376,16' style='fill:none;stroke:#000;'></path>
-<path d='M 376,48 L 376,48' style='fill:none;stroke:#000;'></path>
-<path d='M 376,128 L 376,128' style='fill:none;stroke:#000;'></path>
-<path d='M 376,160 L 376,160' style='fill:none;stroke:#000;'></path>
 <path d='M 408,80 L 408,104' style='fill:none;stroke:#000;'></path>
 <path d='M 408,120 L 408,144' style='fill:none;stroke:#000;'></path>
 <path d='M 408,144 L 408,144' style='fill:none;stroke:#000;'></path>
@@ -35,27 +31,20 @@
 <path d='M 408,240 L 408,256' style='fill:none;stroke:#000;'></path>
 <path d='M 408,256 L 408,256' style='fill:none;stroke:#000;'></path>
 <path d='M 456,176 L 456,176' style='fill:none;stroke:#000;'></path>
-<path d='M 464,144 L 464,152' style='fill:none;stroke:#000;'></path>
-<path d='M 464,168 L 464,176' style='fill:none;stroke:#000;'></path>
+<path d='M 464,176 L 464,176' style='fill:none;stroke:#000;'></path>
 <path d='M 472,0 L 472,24' style='fill:none;stroke:#000;'></path>
 <path d='M 472,40 L 472,112' style='fill:none;stroke:#000;'></path>
 <path d='M 472,112 L 472,112' style='fill:none;stroke:#000;'></path>
-<path d='M 496,144 L 496,144' style='fill:none;stroke:#000;'></path>
-<path d='M 496,176 L 496,176' style='fill:none;stroke:#000;'></path>
 <path d='M 536,32 L 536,48' style='fill:none;stroke:#000;'></path>
 <path d='M 536,96 L 536,128' style='fill:none;stroke:#000;'></path>
 <path d='M 536,160 L 536,160' style='fill:none;stroke:#000;'></path>
 <path d='M 568,160 L 568,160' style='fill:none;stroke:#000;'></path>
-<path d='M 600,128 L 600,128' style='fill:none;stroke:#000;'></path>
-<path d='M 600,160 L 600,160' style='fill:none;stroke:#000;'></path>
 <path d='M 472,0 L 472,0' style='fill:none;stroke:#000;'></path>
-<path d='M 352,16 L 376,16' style='fill:none;stroke:#000;'></path>
-<path d='M 376,16 L 376,16' style='fill:none;stroke:#000;'></path>
+<path d='M 360,16 L 368,16' style='fill:none;stroke:#000;'></path>
 <path d='M 256,32 L 256,32' style='fill:none;stroke:#000;'></path>
 <path d='M 384,32 L 536,32' style='fill:none;stroke:#000;'></path>
 <path d='M 536,32 L 536,32' style='fill:none;stroke:#000;'></path>
-<path d='M 344,48 L 376,48' style='fill:none;stroke:#000;'></path>
-<path d='M 376,48 L 376,48' style='fill:none;stroke:#000;'></path>
+<path d='M 344,48 L 368,48' style='fill:none;stroke:#000;'></path>
 <path d='M 296,80 L 408,80' style='fill:none;stroke:#000;'></path>
 <path d='M 408,80 L 408,80' style='fill:none;stroke:#000;'></path>
 <path d='M 128,96 L 256,96' style='fill:none;stroke:#000;'></path>
@@ -65,37 +54,29 @@
 <path d='M 312,112 L 312,112' style='fill:none;stroke:#000;'></path>
 <path d='M 360,112 L 472,112' style='fill:none;stroke:#000;'></path>
 <path d='M 472,112 L 472,112' style='fill:none;stroke:#000;'></path>
-<path d='M 352,128 L 376,128' style='fill:none;stroke:#000;'></path>
-<path d='M 376,128 L 376,128' style='fill:none;stroke:#000;'></path>
-<path d='M 576,128 L 600,128' style='fill:none;stroke:#000;'></path>
-<path d='M 600,128 L 600,128' style='fill:none;stroke:#000;'></path>
+<path d='M 360,128 L 368,128' style='fill:none;stroke:#000;'></path>
+<path d='M 584,128 L 592,128' style='fill:none;stroke:#000;'></path>
 <path d='M 128,144 L 152,144' style='fill:none;stroke:#000;'></path>
 <path d='M 152,144 L 176,144' style='fill:none;stroke:#000;'></path>
-<path d='M 216,144 L 240,144' style='fill:none;stroke:#000;'></path>
+<path d='M 224,144 L 240,144' style='fill:none;stroke:#000;'></path>
 <path d='M 240,144 L 240,144' style='fill:none;stroke:#000;'></path>
 <path d='M 384,144 L 408,144' style='fill:none;stroke:#000;'></path>
 <path d='M 408,144 L 424,144' style='fill:none;stroke:#000;'></path>
-<path d='M 0,0 L 0,0' style='fill:none;stroke:#000;'></path>
-<path d='M 464,144 L 496,144' style='fill:none;stroke:#000;'></path>
-<path d='M 496,144 L 496,144' style='fill:none;stroke:#000;'></path>
+<path d='M 480,144 L 488,144' style='fill:none;stroke:#000;'></path>
 <path d='M 608,144 L 648,144' style='fill:none;stroke:#000;'></path>
 <path d='M 248,160 L 288,160' style='fill:none;stroke:#000;'></path>
 <path d='M 288,160 L 312,160' style='fill:none;stroke:#000;'></path>
 <path d='M 312,160 L 312,160' style='fill:none;stroke:#000;'></path>
-<path d='M 344,160 L 376,160' style='fill:none;stroke:#000;'></path>
-<path d='M 376,160 L 376,160' style='fill:none;stroke:#000;'></path>
-<path d='M 472,160 L 472,160' style='fill:none;stroke:#000;'></path>
+<path d='M 344,160 L 368,160' style='fill:none;stroke:#000;'></path>
 <path d='M 504,160 L 536,160' style='fill:none;stroke:#000;'></path>
 <path d='M 536,160 L 536,160' style='fill:none;stroke:#000;'></path>
-<path d='M 568,160 L 600,160' style='fill:none;stroke:#000;'></path>
-<path d='M 600,160 L 600,160' style='fill:none;stroke:#000;'></path>
+<path d='M 568,160 L 592,160' style='fill:none;stroke:#000;'></path>
 <path d='M 128,176 L 184,176' style='fill:none;stroke:#000;'></path>
 <path d='M 184,176 L 184,176' style='fill:none;stroke:#000;'></path>
 <path d='M 208,176 L 240,176' style='fill:none;stroke:#000;'></path>
 <path d='M 240,176 L 240,176' style='fill:none;stroke:#000;'></path>
 <path d='M 456,176 L 456,176' style='fill:none;stroke:#000;'></path>
-<path d='M 464,176 L 496,176' style='fill:none;stroke:#000;'></path>
-<path d='M 496,176 L 496,176' style='fill:none;stroke:#000;'></path>
+<path d='M 464,176 L 488,176' style='fill:none;stroke:#000;'></path>
 <path d='M 408,192 L 408,192' style='fill:none;stroke:#000;'></path>
 <path d='M 288,256 L 408,256' style='fill:none;stroke:#000;'></path>
 <path d='M 408,256 L 408,256' style='fill:none;stroke:#000;'></path>
@@ -124,19 +105,15 @@
 <path d='M 288,176 L 288,176' style='fill:none;stroke:#000;'></path>
 <path d='M 312,128 L 312,128' style='fill:none;stroke:#000;'></path>
 <path d='M 288,192 L 288,192' style='fill:none;stroke:#000;'></path>
-<path d='M 376,16 L 376,16' style='fill:none;stroke:#000;'></path>
 <path d='M 288,208 L 288,208' style='fill:none;stroke:#000;'></path>
 <path d='M 312,160 L 312,160' style='fill:none;stroke:#000;'></path>
 <path d='M 288,224 L 288,224' style='fill:none;stroke:#000;'></path>
-<path d='M 376,48 L 376,48' style='fill:none;stroke:#000;'></path>
 <path d='M 288,240 L 288,240' style='fill:none;stroke:#000;'></path>
 <path d='M 288,256 L 288,256' style='fill:none;stroke:#000;'></path>
 <path d='M 344,144 L 344,144' style='fill:none;stroke:#000;'></path>
 <path d='M 360,112 L 360,112' style='fill:none;stroke:#000;'></path>
 <path d='M 344,160 L 344,160' style='fill:none;stroke:#000;'></path>
-<path d='M 376,128 L 376,128' style='fill:none;stroke:#000;'></path>
 <path d='M 408,80 L 408,80' style='fill:none;stroke:#000;'></path>
-<path d='M 376,160 L 376,160' style='fill:none;stroke:#000;'></path>
 <path d='M 408,96 L 408,96' style='fill:none;stroke:#000;'></path>
 <path d='M 408,128 L 408,128' style='fill:none;stroke:#000;'></path>
 <path d='M 472,0 L 472,0' style='fill:none;stroke:#000;'></path>
@@ -152,20 +129,15 @@
 <path d='M 408,240 L 408,240' style='fill:none;stroke:#000;'></path>
 <path d='M 472,112 L 472,112' style='fill:none;stroke:#000;'></path>
 <path d='M 408,256 L 408,256' style='fill:none;stroke:#000;'></path>
-<path d='M 464,144 L 464,144' style='fill:none;stroke:#000;'></path>
 <path d='M 456,176 L 456,176' style='fill:none;stroke:#000;'></path>
 <path d='M 464,176 L 464,176' style='fill:none;stroke:#000;'></path>
 <path d='M 536,32 L 536,32' style='fill:none;stroke:#000;'></path>
 <path d='M 536,48 L 536,48' style='fill:none;stroke:#000;'></path>
-<path d='M 496,144 L 496,144' style='fill:none;stroke:#000;'></path>
-<path d='M 496,176 L 496,176' style='fill:none;stroke:#000;'></path>
 <path d='M 536,96 L 552,64' style='fill:none;stroke:#000;'></path>
 <path d='M 536,112 L 536,112' style='fill:none;stroke:#000;'></path>
 <path d='M 536,128 L 536,128' style='fill:none;stroke:#000;'></path>
 <path d='M 536,160 L 536,160' style='fill:none;stroke:#000;'></path>
 <path d='M 568,160 L 568,160' style='fill:none;stroke:#000;'></path>
-<path d='M 600,128 L 600,128' style='fill:none;stroke:#000;'></path>
-<path d='M 600,160 L 600,160' style='fill:none;stroke:#000;'></path>
 <path d='M 152,144 L 152,144' style='fill:none;stroke:#000;'></path>
 <path d='M 152,128 L 152,128' style='fill:none;stroke:#000;'></path>
 <path d='M 152,112 L 152,112' style='fill:none;stroke:#000;'></path>
@@ -197,26 +169,19 @@
 <path d='M 344,144 L 344,144' style='fill:none;stroke:#000;'></path>
 <path d='M 408,256 L 408,256' style='fill:none;stroke:#000;'></path>
 <path d='M 408,240 L 408,240' style='fill:none;stroke:#000;'></path>
-<path d='M 376,160 L 376,160' style='fill:none;stroke:#000;'></path>
 <path d='M 360,112 L 360,112' style='fill:none;stroke:#000;'></path>
-<path d='M 376,128 L 376,128' style='fill:none;stroke:#000;'></path>
 <path d='M 408,192 L 424,224' style='fill:none;stroke:#000;'></path>
 <path d='M 344,48 L 344,48' style='fill:none;stroke:#000;'></path>
 <path d='M 408,176 L 408,176' style='fill:none;stroke:#000;'></path>
 <path d='M 344,32 L 344,32' style='fill:none;stroke:#000;'></path>
 <path d='M 408,144 L 408,144' style='fill:none;stroke:#000;'></path>
 <path d='M 408,128 L 408,128' style='fill:none;stroke:#000;'></path>
-<path d='M 376,48 L 376,48' style='fill:none;stroke:#000;'></path>
 <path d='M 408,96 L 408,96' style='fill:none;stroke:#000;'></path>
-<path d='M 376,16 L 376,16' style='fill:none;stroke:#000;'></path>
 <path d='M 408,80 L 408,80' style='fill:none;stroke:#000;'></path>
 <path d='M 456,176 L 456,176' style='fill:none;stroke:#000;'></path>
 <path d='M 464,176 L 464,176' style='fill:none;stroke:#000;'></path>
-<path d='M 464,144 L 464,144' style='fill:none;stroke:#000;'></path>
-<path d='M 496,176 L 496,176' style='fill:none;stroke:#000;'></path>
 <path d='M 472,112 L 472,112' style='fill:none;stroke:#000;'></path>
 <path d='M 472,96 L 472,96' style='fill:none;stroke:#000;'></path>
-<path d='M 496,144 L 496,144' style='fill:none;stroke:#000;'></path>
 <path d='M 472,80 L 472,80' style='fill:none;stroke:#000;'></path>
 <path d='M 472,64 L 472,64' style='fill:none;stroke:#000;'></path>
 <path d='M 472,48 L 472,48' style='fill:none;stroke:#000;'></path>
@@ -230,8 +195,6 @@
 <path d='M 568,160 L 568,160' style='fill:none;stroke:#000;'></path>
 <path d='M 536,48 L 536,48' style='fill:none;stroke:#000;'></path>
 <path d='M 536,32 L 536,32' style='fill:none;stroke:#000;'></path>
-<path d='M 600,160 L 600,160' style='fill:none;stroke:#000;'></path>
-<path d='M 600,128 L 600,128' style='fill:none;stroke:#000;'></path>
 <circle cx='152' cy='144' r='6' style='fill:#000;stroke:#000;'></circle>
 <circle cx='248' cy='160' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='256' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
@@ -241,86 +204,80 @@
 <circle cx='408' cy='192' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='472' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
 <circle cx='536' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
+<path d='M 368,16 A 16,16 0 0,1 384,32' style='fill:none;stroke:#000;'></path>
+<path d='M 384,32 A 16,16 0 0,1 368,48' style='fill:none;stroke:#000;'></path>
+<path d='M 368,128 A 16,16 0 0,1 384,144' style='fill:none;stroke:#000;'></path>
+<path d='M 592,128 A 16,16 0 0,1 608,144' style='fill:none;stroke:#000;'></path>
+<path d='M 488,144 A 16,16 0 0,1 504,160' style='fill:none;stroke:#000;'></path>
+<path d='M 384,144 A 16,16 0 0,1 368,160' style='fill:none;stroke:#000;'></path>
+<path d='M 608,144 A 16,16 0 0,1 592,160' style='fill:none;stroke:#000;'></path>
+<path d='M 504,160 A 16,16 0 0,1 488,176' style='fill:none;stroke:#000;'></path>
 <path d='M 472,24 A 9,9 0 0,1 472,40' style='fill:none;stroke:#000;'></path>
 <path d='M 408,104 A 9,9 0 0,1 408,120' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' x='256' y='4' style='fill:#000'> </text>
-<text text-anchor='middle' x='264' y='4' style='fill:#000'>_</text>
-<text text-anchor='middle' x='272' y='4' style='fill:#000'>_</text>
-<text text-anchor='middle' x='280' y='4' style='fill:#000'>_</text>
-<text text-anchor='middle' x='288' y='4' style='fill:#000'>_</text>
-<text text-anchor='middle' x='296' y='4' style='fill:#000'> </text>
-<text text-anchor='middle' x='296' y='20' style='fill:#000'>|</text>
-<text text-anchor='middle' x='304' y='20' style='fill:#000'>_</text>
-<text text-anchor='middle' x='312' y='20' style='fill:#000'>_</text>
-<text text-anchor='middle' x='320' y='20' style='fill:#000'>_</text>
-<text text-anchor='middle' x='328' y='20' style='fill:#000'>_</text>
-<text text-anchor='middle' x='336' y='20' style='fill:#000'>_</text>
-<text text-anchor='middle' x='344' y='20' style='fill:#000'>.</text>
-<text text-anchor='middle' x='296' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='304' y='36' style='fill:#000'>_</text>
-<text text-anchor='middle' x='312' y='36' style='fill:#000'>_</text>
-<text text-anchor='middle' x='320' y='36' style='fill:#000'>_</text>
-<text text-anchor='middle' x='328' y='36' style='fill:#000'>_</text>
-<text text-anchor='middle' x='336' y='36' style='fill:#000'>_</text>
-<text text-anchor='middle' x='512' y='52' style='fill:#000'> </text>
-<text text-anchor='middle' x='520' y='52' style='fill:#000'>_</text>
-<text text-anchor='middle' x='528' y='52' style='fill:#000'>_</text>
-<text text-anchor='middle' x='544' y='52' style='fill:#000'>_</text>
-<text text-anchor='middle' x='552' y='52' style='fill:#000'>_</text>
-<text text-anchor='middle' x='560' y='52' style='fill:#000'> </text>
-<text text-anchor='middle' x='248' y='68' style='fill:#000'>_</text>
-<text text-anchor='middle' x='256' y='68' style='fill:#000'>_</text>
-<text text-anchor='middle' x='264' y='68' style='fill:#000'>_</text>
-<text text-anchor='middle' x='104' y='100' style='fill:#000'> </text>
-<text text-anchor='middle' x='112' y='100' style='fill:#000'>A</text>
-<text text-anchor='middle' x='120' y='100' style='fill:#000'> </text>
-<text text-anchor='middle' x='320' y='132' style='fill:#000'>_</text>
-<text text-anchor='middle' x='328' y='132' style='fill:#000'>_</text>
-<text text-anchor='middle' x='336' y='132' style='fill:#000'>_</text>
-<text text-anchor='middle' x='344' y='132' style='fill:#000'>.</text>
-<text text-anchor='middle' x='544' y='132' style='fill:#000'>_</text>
-<text text-anchor='middle' x='552' y='132' style='fill:#000'>_</text>
-<text text-anchor='middle' x='560' y='132' style='fill:#000'>_</text>
-<text text-anchor='middle' x='568' y='132' style='fill:#000'>.</text>
-<text text-anchor='middle' x='104' y='148' style='fill:#000'> </text>
-<text text-anchor='middle' x='112' y='148' style='fill:#000'>B</text>
-<text text-anchor='middle' x='120' y='148' style='fill:#000'> </text>
-<text text-anchor='middle' x='184' y='148' style='fill:#000'>.</text>
-<text text-anchor='middle' x='192' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='200' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='208' y='148' style='fill:#000'>.</text>
-<text text-anchor='middle' x='312' y='148' style='fill:#000'> </text>
-<text text-anchor='middle' x='320' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='328' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='336' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='432' y='148' style='fill:#000'>.</text>
-<text text-anchor='middle' x='440' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='448' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='456' y='148' style='fill:#000'>.</text>
-<text text-anchor='middle' x='536' y='148' style='fill:#000'> </text>
-<text text-anchor='middle' x='544' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='552' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='560' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='568' y='148' style='fill:#000'>_</text>
-<text text-anchor='middle' x='576' y='148' style='fill:#000'>)</text>
-<text text-anchor='middle' x='656' y='148' style='fill:#000'> </text>
-<text text-anchor='middle' x='664' y='148' style='fill:#000'>Y</text>
-<text text-anchor='middle' x='184' y='164' style='fill:#000'> </text>
-<text text-anchor='middle' x='192' y='164' style='fill:#000'>_</text>
-<text text-anchor='middle' x='200' y='164' style='fill:#000'>_</text>
-<text text-anchor='middle' x='408' y='164' style='fill:#000'> </text>
-<text text-anchor='middle' x='416' y='164' style='fill:#000'>_</text>
-<text text-anchor='middle' x='424' y='164' style='fill:#000'>_</text>
-<text text-anchor='middle' x='432' y='164' style='fill:#000'>_</text>
-<text text-anchor='middle' x='440' y='164' style='fill:#000'>_</text>
-<text text-anchor='middle' x='448' y='164' style='fill:#000'>_</text>
-<text text-anchor='middle' x='456' y='164' style='fill:#000'>_</text>
-<text text-anchor='middle' x='464' y='164' style='fill:#000'>)</text>
-<text text-anchor='middle' x='104' y='180' style='fill:#000'> </text>
-<text text-anchor='middle' x='112' y='180' style='fill:#000'>C</text>
-<text text-anchor='middle' x='120' y='180' style='fill:#000'> </text>
-<text text-anchor='middle' x='400' y='228' style='fill:#000'>_</text>
-<text text-anchor='middle' x='408' y='228' style='fill:#000'>_</text>
-<text text-anchor='middle' x='416' y='228' style='fill:#000'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='312' y='36' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='576' y='148' style='fill:#000;font-size:1em'>)</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='112' y='180' style='fill:#000;font-size:1em'>C</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='328' y='20' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='336' y='36' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='184' y='148' style='fill:#000;font-size:1em'>.</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='464' y='148' style='fill:#000;font-size:1em'>.</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='560' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='320' y='36' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='328' y='36' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='544' y='132' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='132' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='192' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='320' y='20' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='528' y='52' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='328' y='132' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='456' y='164' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='416' y='228' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='400' y='228' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='288' y='4' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='248' y='68' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='336' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='192' y='164' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='424' y='164' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='264' y='4' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='264' y='68' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='568' y='132' style='fill:#000;font-size:1em'>.</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='408' y='228' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='272' y='4' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='52' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='440' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='200' y='164' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='664' y='148' style='fill:#000;font-size:1em'>Y</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='472' y='164' style='fill:#000;font-size:1em'>)</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='312' y='20' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='112' y='148' style='fill:#000;font-size:1em'>B</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='416' y='164' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='464' y='164' style='fill:#000;font-size:1em'>)</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='448' y='164' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='296' y='20' style='fill:#000;font-size:1em'>|</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='336' y='20' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='320' y='132' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='344' y='132' style='fill:#000;font-size:1em'>.</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='456' y='148' style='fill:#000;font-size:1em'>.</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='568' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='280' y='4' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='304' y='20' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='328' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='448' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='544' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='208' y='148' style='fill:#000;font-size:1em'>.</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='320' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='560' y='132' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='200' y='148' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='432' y='164' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='344' y='20' style='fill:#000;font-size:1em'>.</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='520' y='52' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='544' y='52' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='256' y='68' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='336' y='132' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='304' y='36' style='fill:#000;font-size:1em'>_</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='112' y='100' style='fill:#000;font-size:1em'>A</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='432' y='148' style='fill:#000;font-size:1em'>.</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='440' y='164' style='fill:#000;font-size:1em'>_</text>
 </g>
 </svg>

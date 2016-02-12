@@ -303,41 +303,17 @@
 <path d='M 568,112 A 16,16 0 0,1 552,128' style='fill:none;stroke:#000;'></path>
 <path d='M 616,112 A 16,16 0 0,0 632,128' style='fill:none;stroke:#000;'></path>
 <path d='M 648,112 A 16,16 0 0,1 632,128' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' x='32' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='40' y='36' style='fill:#000'>A</text>
-<text text-anchor='middle' x='48' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='120' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='128' y='36' style='fill:#000'>1</text>
-<text text-anchor='middle' x='136' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='208' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='216' y='36' style='fill:#000'>2</text>
-<text text-anchor='middle' x='224' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='288' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='296' y='36' style='fill:#000'>4</text>
-<text text-anchor='middle' x='304' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='624' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='632' y='36' style='fill:#000'>8</text>
-<text text-anchor='middle' x='640' y='36' style='fill:#000'> </text>
-<text text-anchor='middle' x='208' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='216' y='116' style='fill:#000'>3</text>
-<text text-anchor='middle' x='224' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='288' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='296' y='116' style='fill:#000'>B</text>
-<text text-anchor='middle' x='304' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='384' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='392' y='116' style='fill:#000'>5</text>
-<text text-anchor='middle' x='400' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='464' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='472' y='116' style='fill:#000'>C</text>
-<text text-anchor='middle' x='480' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='544' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='552' y='116' style='fill:#000'>6</text>
-<text text-anchor='middle' x='560' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='624' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='632' y='116' style='fill:#000'>7</text>
-<text text-anchor='middle' x='640' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='712' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='720' y='116' style='fill:#000'>D</text>
-<text text-anchor='middle' x='728' y='116' style='fill:#000'> </text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='36' style='fill:#000;font-size:1em'>8</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='216' y='116' style='fill:#000;font-size:1em'>3</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='296' y='116' style='fill:#000;font-size:1em'>B</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='40' y='36' style='fill:#000;font-size:1em'>A</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='128' y='36' style='fill:#000;font-size:1em'>1</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='216' y='36' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='296' y='36' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='720' y='116' style='fill:#000;font-size:1em'>D</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='392' y='116' style='fill:#000;font-size:1em'>5</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='472' y='116' style='fill:#000;font-size:1em'>C</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='116' style='fill:#000;font-size:1em'>6</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='116' style='fill:#000;font-size:1em'>7</text>
 </g>
 </svg>

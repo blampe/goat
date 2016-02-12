@@ -201,72 +201,29 @@
 <path d='M 608,80 A 16,16 0 0,0 592,96' style='fill:none;stroke:#000;'></path>
 <path d='M 568,80 A 16,16 0 0,0 584,96' style='fill:none;stroke:#000;'></path>
 <path d='M 592,96 A 16,16 0 0,0 608,112' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' x='504' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='512' y='20' style='fill:#000'>1</text>
-<text text-anchor='middle' x='520' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='624' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='632' y='20' style='fill:#000'>1</text>
-<text text-anchor='middle' x='640' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='688' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='696' y='20' style='fill:#000'>1</text>
-<text text-anchor='middle' x='504' y='52' style='fill:#000'> </text>
-<text text-anchor='middle' x='512' y='52' style='fill:#000'>2</text>
-<text text-anchor='middle' x='520' y='52' style='fill:#000'> </text>
-<text text-anchor='middle' x='624' y='52' style='fill:#000'> </text>
-<text text-anchor='middle' x='632' y='52' style='fill:#000'>2</text>
-<text text-anchor='middle' x='640' y='52' style='fill:#000'> </text>
-<text text-anchor='middle' x='688' y='52' style='fill:#000'> </text>
-<text text-anchor='middle' x='696' y='52' style='fill:#000'>2</text>
-<text text-anchor='middle' x='504' y='84' style='fill:#000'> </text>
-<text text-anchor='middle' x='512' y='84' style='fill:#000'>3</text>
-<text text-anchor='middle' x='520' y='84' style='fill:#000'> </text>
-<text text-anchor='middle' x='624' y='84' style='fill:#000'> </text>
-<text text-anchor='middle' x='632' y='84' style='fill:#000'>3</text>
-<text text-anchor='middle' x='640' y='84' style='fill:#000'> </text>
-<text text-anchor='middle' x='688' y='84' style='fill:#000'> </text>
-<text text-anchor='middle' x='696' y='84' style='fill:#000'>3</text>
-<text text-anchor='middle' x='32' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='40' y='116' style='fill:#000'>1</text>
-<text text-anchor='middle' x='48' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='64' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='72' y='116' style='fill:#000'>2</text>
-<text text-anchor='middle' x='80' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='88' y='116' style='fill:#000'>3</text>
-<text text-anchor='middle' x='96' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='112' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='120' y='116' style='fill:#000'>4</text>
-<text text-anchor='middle' x='128' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='152' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='160' y='116' style='fill:#000'>1</text>
-<text text-anchor='middle' x='168' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='184' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='192' y='116' style='fill:#000'>2</text>
-<text text-anchor='middle' x='200' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='216' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='224' y='116' style='fill:#000'>3</text>
-<text text-anchor='middle' x='232' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='248' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='256' y='116' style='fill:#000'>4</text>
-<text text-anchor='middle' x='264' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='288' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='296' y='116' style='fill:#000'>1</text>
-<text text-anchor='middle' x='304' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='320' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='328' y='116' style='fill:#000'>2</text>
-<text text-anchor='middle' x='336' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='352' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='360' y='116' style='fill:#000'>3</text>
-<text text-anchor='middle' x='368' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='384' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='392' y='116' style='fill:#000'>4</text>
-<text text-anchor='middle' x='400' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='504' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='512' y='116' style='fill:#000'>4</text>
-<text text-anchor='middle' x='520' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='624' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='632' y='116' style='fill:#000'>4</text>
-<text text-anchor='middle' x='640' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='688' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='696' y='116' style='fill:#000'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='160' y='116' style='fill:#000;font-size:1em'>1</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='192' y='116' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='256' y='116' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='512' y='20' style='fill:#000;font-size:1em'>1</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='512' y='84' style='fill:#000;font-size:1em'>3</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='696' y='84' style='fill:#000;font-size:1em'>3</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='40' y='116' style='fill:#000;font-size:1em'>1</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='72' y='116' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='296' y='116' style='fill:#000;font-size:1em'>1</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='512' y='116' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='696' y='116' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='696' y='20' style='fill:#000;font-size:1em'>1</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='512' y='52' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='84' style='fill:#000;font-size:1em'>3</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='224' y='116' style='fill:#000;font-size:1em'>3</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='116' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='52' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='696' y='52' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='88' y='116' style='fill:#000;font-size:1em'>3</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='328' y='116' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='392' y='116' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='20' style='fill:#000;font-size:1em'>1</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='120' y='116' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='360' y='116' style='fill:#000;font-size:1em'>3</text>
 </g>
 </svg>

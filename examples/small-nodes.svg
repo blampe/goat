@@ -137,24 +137,24 @@
 <path d='M 504,32 L 504,32' style='fill:none;stroke:#000;'></path>
 <path d='M 552,96 L 552,96' style='fill:none;stroke:#000;'></path>
 <path d='M 560,96 L 560,96' style='fill:none;stroke:#000;'></path>
-<polygon points='200.000000,32.000000 188.000000,26.400000 188.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 192.000000, 32.000000)'></polygon>
-<polygon points='216.000000,32.000000 204.000000,26.400000 204.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 208.000000, 32.000000)'></polygon>
-<polygon points='256.000000,32.000000 244.000000,26.400000 244.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 248.000000, 32.000000)'></polygon>
+<polygon points='192.000000,32.000000 180.000000,26.400000 180.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 192.000000, 32.000000)'></polygon>
+<polygon points='208.000000,32.000000 196.000000,26.400000 196.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 208.000000, 32.000000)'></polygon>
+<polygon points='248.000000,32.000000 236.000000,26.400000 236.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 248.000000, 32.000000)'></polygon>
 <polygon points='264.000000,48.000000 252.000000,42.400002 252.000000,53.599998' style='fill:#000' transform='rotate(270.000000, 256.000000, 48.000000)'></polygon>
 <polygon points='264.000000,80.000000 252.000000,74.400002 252.000000,85.599998' style='fill:#000' transform='rotate(90.000000, 256.000000, 80.000000)'></polygon>
-<polygon points='272.000000,32.000000 260.000000,26.400000 260.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 264.000000, 32.000000)'></polygon>
-<polygon points='272.000000,96.000000 260.000000,90.400002 260.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 264.000000, 96.000000)'></polygon>
-<polygon points='304.000000,96.000000 292.000000,90.400002 292.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 296.000000, 96.000000)'></polygon>
+<polygon points='264.000000,32.000000 252.000000,26.400000 252.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 264.000000, 32.000000)'></polygon>
+<polygon points='264.000000,96.000000 252.000000,90.400002 252.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 264.000000, 96.000000)'></polygon>
+<polygon points='296.000000,96.000000 284.000000,90.400002 284.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 296.000000, 96.000000)'></polygon>
 <polygon points='312.000000,48.000000 300.000000,42.400002 300.000000,53.599998' style='fill:#000' transform='rotate(270.000000, 304.000000, 48.000000)'></polygon>
-<polygon points='320.000000,96.000000 308.000000,90.400002 308.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 312.000000, 96.000000)'></polygon>
-<polygon points='360.000000,96.000000 348.000000,90.400002 348.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 352.000000, 96.000000)'></polygon>
-<polygon points='408.000000,96.000000 396.000000,90.400002 396.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 400.000000, 96.000000)'></polygon>
+<polygon points='312.000000,96.000000 300.000000,90.400002 300.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 312.000000, 96.000000)'></polygon>
+<polygon points='352.000000,96.000000 340.000000,90.400002 340.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 352.000000, 96.000000)'></polygon>
+<polygon points='400.000000,96.000000 388.000000,90.400002 388.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 400.000000, 96.000000)'></polygon>
 <polygon points='416.000000,80.000000 404.000000,74.400002 404.000000,85.599998' style='fill:#000' transform='rotate(90.000000, 408.000000, 80.000000)'></polygon>
-<polygon points='456.000000,96.000000 444.000000,90.400002 444.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 448.000000, 96.000000)'></polygon>
-<polygon points='504.000000,96.000000 492.000000,90.400002 492.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 496.000000, 96.000000)'></polygon>
+<polygon points='448.000000,96.000000 436.000000,90.400002 436.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 448.000000, 96.000000)'></polygon>
+<polygon points='496.000000,96.000000 484.000000,90.400002 484.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 496.000000, 96.000000)'></polygon>
 <polygon points='512.000000,48.000000 500.000000,42.400002 500.000000,53.599998' style='fill:#000' transform='rotate(270.000000, 504.000000, 48.000000)'></polygon>
-<polygon points='520.000000,96.000000 508.000000,90.400002 508.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 512.000000, 96.000000)'></polygon>
-<polygon points='560.000000,96.000000 548.000000,90.400002 548.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 552.000000, 96.000000)'></polygon>
+<polygon points='512.000000,96.000000 500.000000,90.400002 500.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 512.000000, 96.000000)'></polygon>
+<polygon points='552.000000,96.000000 540.000000,90.400002 540.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 552.000000, 96.000000)'></polygon>
 <circle cx='144' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
 <circle cx='200' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='256' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
@@ -168,40 +168,17 @@
 <circle cx='504' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='560' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
 <path d='M 392,32 A 16,16 0 0,1 408,48' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' x='136' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='144' y='20' style='fill:#000'>A</text>
-<text text-anchor='middle' x='152' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='192' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='200' y='20' style='fill:#000'>1</text>
-<text text-anchor='middle' x='208' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='248' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='256' y='20' style='fill:#000'>2</text>
-<text text-anchor='middle' x='264' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='296' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='304' y='20' style='fill:#000'>4</text>
-<text text-anchor='middle' x='312' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='496' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='504' y='20' style='fill:#000'>8</text>
-<text text-anchor='middle' x='512' y='20' style='fill:#000'> </text>
-<text text-anchor='middle' x='248' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='256' y='116' style='fill:#000'>3</text>
-<text text-anchor='middle' x='264' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='296' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='304' y='116' style='fill:#000'>B</text>
-<text text-anchor='middle' x='312' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='352' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='360' y='116' style='fill:#000'>5</text>
-<text text-anchor='middle' x='368' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='400' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='408' y='116' style='fill:#000'>C</text>
-<text text-anchor='middle' x='416' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='448' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='456' y='116' style='fill:#000'>6</text>
-<text text-anchor='middle' x='464' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='496' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='504' y='116' style='fill:#000'>7</text>
-<text text-anchor='middle' x='512' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='552' y='116' style='fill:#000'> </text>
-<text text-anchor='middle' x='560' y='116' style='fill:#000'>D</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='560' y='116' style='fill:#000;font-size:1em'>D</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='144' y='20' style='fill:#000;font-size:1em'>A</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='200' y='20' style='fill:#000;font-size:1em'>1</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='256' y='20' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='504' y='20' style='fill:#000;font-size:1em'>8</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='304' y='116' style='fill:#000;font-size:1em'>B</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='360' y='116' style='fill:#000;font-size:1em'>5</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='408' y='116' style='fill:#000;font-size:1em'>C</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='304' y='20' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='256' y='116' style='fill:#000;font-size:1em'>3</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='456' y='116' style='fill:#000;font-size:1em'>6</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='504' y='116' style='fill:#000;font-size:1em'>7</text>
 </g>
 </svg>
