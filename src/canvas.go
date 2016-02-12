@@ -11,6 +11,7 @@ var jointRunes = []rune{'.', '\'', '+', '*', 'o'}
 
 var reservedRunes = map[rune]bool{
 	'-':  true,
+	'_':  true,
 	'|':  true,
 	'v':  true,
 	'^':  true,
@@ -239,35 +240,56 @@ const (
 // possible orientations.
 func (c *Canvas) Lines() []Line {
 
+	// Vertical line segments |
 	lines := c.linesFromIterator(
 		upDown,
 		[]rune{'|'},
 		append([]rune{'v', '^', 'o', '*'}, jointRunes...),
 	)
 
+	// Extend veritcal bars to reach o, *, ^, etc.
 	for i, l := range lines {
 		above := c.runeAt(l.start.north())
 		below := c.runeAt(l.stop.south())
-		if (c.runeAt(l.start) == '|' && above == '-' || above == '(' || above == ')') || c.runeAt(l.start) == '^' {
+		// TODO: Better for o ^ v to draw their own tails.
+		if (c.runeAt(l.start) == '|' && above == '-' || above == '(' || above == ')' || above == '_') || c.runeAt(l.start) == '^' {
 			lines[i].needsNudgingUp = true
 		}
-		if (c.runeAt(l.stop) == '|' && below == '-' || below == ')' || below == '(') || c.runeAt(l.stop) == 'v' {
+		if (c.runeAt(l.stop) == '|' && below == '-' || below == ')' || below == '(' || below == '_') || c.runeAt(l.stop) == 'v' {
 			lines[i].needsNudgingDown = true
 		}
 	}
 
+	// Horizontal line segments --
 	lines = append(lines, c.linesFromIterator(
 		leftRight,
-		[]rune{'-', ')', '('},
-		append([]rune{'o', '*', '<', '>'}, jointRunes...),
+		[]rune{'-'},
+		append([]rune{'o', '*', '<', '>', '(', ')'}, jointRunes...),
 	)...)
 
+	// Horizontal bottom-aligned segments ___
+	bottomLines := c.linesFromIterator(
+		leftRight,
+		[]rune{'_'},
+		//nil,
+		[]rune{'|'},
+		//append([]rune{'|'}),
+	)
+
+	for i, _ := range bottomLines {
+		bottomLines[i].needsNudgingDown = true
+	}
+
+	lines = append(lines, bottomLines...)
+
+	// Diagonal line segments /
 	lines = append(lines, c.linesFromIterator(
 		diagUp,
 		[]rune{'/'},
 		append([]rune{'o', '*', '<', '>', '^', 'v', '|'}, jointRunes...),
 	)...)
 
+	// Diagonal line segments \
 	lines = append(lines, c.linesFromIterator(
 		diagDown,
 		[]rune{'\\'},
@@ -294,7 +316,10 @@ func (c *Canvas) linesFromIterator(
 	// Helper to throw the current line we're tracking on to the slice and
 	// start a new one.
 	snip := func(l Line) Line {
+		// Only collect lines that actually go somewhere.
+		//if l.start != l.stop || l.needsNudgingUp || l.needsNudgingDown {
 		lines = append(lines, l)
+		//}
 		return Line{}
 	}
 
@@ -324,7 +349,7 @@ func (c *Canvas) linesFromIterator(
 			shouldKeep = true
 		}
 
-		// Don't connect | to > for diagonal lines.
+		// Don't connect | to > for diagonal lines or )) for horizontal lines.
 		if isTerminal && justSawATerminal && !contains(segments, '|') {
 			currentLine = snip(currentLine)
 		}
@@ -463,8 +488,8 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	upperLeft := i.nWest()
 	upperRight := i.nEast()
 
-	dashRight := c.runeAt(right) == '-' || c.runeAt(right) == '+'
-	dashLeft := c.runeAt(left) == '-' || c.runeAt(left) == '+'
+	dashRight := c.runeAt(right) == '-' || c.runeAt(right) == '+' || c.runeAt(right) == '_' || c.runeAt(upperRight) == '_'
+	dashLeft := c.runeAt(left) == '-' || c.runeAt(left) == '+' || c.runeAt(left) == '_' || c.runeAt(upperLeft) == '_'
 
 	isVerticalSegment := func(i Index) bool {
 		r := c.runeAt(i)
@@ -477,14 +502,14 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 		return NW
 	}
 
-	// -. or -.  or -.
-	//   |     +      )
+	// -. or -.  or -.  or _.
+	//   |     +      )      )
 	if dashLeft && isVerticalSegment(lowerRight) {
 		return NE
 	}
 
-	//   | or   + or   | or   + or   +
-	// -'     -'     +'     +'     ++
+	//   | or   + or   | or   + or   + or_ )
+	// -'     -'     +'     +'     ++     '
 	if dashLeft && isVerticalSegment(upperRight) {
 		return SE
 	}
