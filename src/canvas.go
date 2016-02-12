@@ -358,8 +358,16 @@ func (c *Canvas) Triangles() []Triangle {
 			}
 		case '<':
 			o = W
+			r := c.runeAt(start.west())
+			if r == 'o' || r == '*' {
+				needsNudging = true
+			}
 		case '>':
 			o = E
+			r := c.runeAt(start.east())
+			if r == 'o' || r == '*' {
+				needsNudging = true
+			}
 		default:
 			continue
 		}

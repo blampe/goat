@@ -125,6 +125,18 @@ func (t *Triangle) Draw(out io.Writer) {
 		}
 	case W:
 		r = 180
+		if t.needsNudging {
+			x0 -= 8
+			x1 -= 8
+			x2 -= 8
+		}
+	case E:
+		r = 0
+		if t.needsNudging {
+			x0 -= 8
+			x1 -= 8
+			x2 -= 8
+		}
 	case S:
 		r = 90
 		if t.needsNudging {
