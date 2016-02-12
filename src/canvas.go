@@ -434,7 +434,7 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 
 	isVerticalSegment := func(i Index) bool {
 		r := c.runeAt(i)
-		return r == '|' || r == '+'
+		return r == '|' || r == '+' || r == ')' || r == '('
 	}
 
 	//  .- or  .-
@@ -443,8 +443,8 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 		return NW
 	}
 
-	// -. or -.
-	//   |     +
+	// -. or -.  or -.
+	//   |     +      )
 	if dashLeft && isVerticalSegment(lowerRight) {
 		return NE
 	}
