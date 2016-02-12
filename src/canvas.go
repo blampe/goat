@@ -6,7 +6,9 @@ import (
 	"io"
 )
 
-var jointRunes = []rune{'.', '\'', '+'}
+// Characters where more than one line segment can come together.
+var jointRunes = []rune{'.', '\'', '+', '*', 'o'}
+
 var reservedRunes = map[rune]bool{
 	'-':  true,
 	'|':  true,
@@ -26,6 +28,7 @@ var reservedRunes = map[rune]bool{
 	'╱':  true,
 	'╲':  true,
 	'╳':  true,
+	' ':  true,
 }
 
 func contains(in []rune, r rune) bool {
@@ -41,11 +44,16 @@ func isJoint(r rune) bool {
 	return contains(jointRunes, r)
 }
 
+func isDot(r rune) bool {
+	return r == 'o' || r == '*'
+}
+
 // Canvas represents a 2D ASCII rectangle.
 type Canvas struct {
 	Width  int
 	Height int
 	data   map[Index]rune
+	text   map[Index]rune
 }
 
 func (c *Canvas) String() string {
@@ -54,7 +62,16 @@ func (c *Canvas) String() string {
 	for h := 0; h < c.Height; h++ {
 		for w := 0; w < c.Width; w++ {
 			idx := Index{w, h}
-			_, err := buffer.WriteRune(c.runeAt(idx))
+
+			// Grab from our text buffer and if nothing's there try the data
+			// buffer.
+			r := c.text[idx]
+			if r == 0 {
+				r = c.runeAt(idx)
+			}
+
+			_, err := buffer.WriteRune(r)
+
 			if err != nil {
 				continue
 			}
@@ -106,7 +123,26 @@ func NewCanvas(in io.Reader) Canvas {
 		height++
 	}
 
-	return Canvas{Width: width, Height: height, data: data}
+	text := make(map[Index]rune)
+
+	c := Canvas{
+		Width:  width,
+		Height: height,
+		data:   data,
+		text:   text,
+	}
+
+	// Extract everything we detect as text to make diagram parsing easier.
+	for idx := range leftRight(width, height) {
+		if c.isText(idx) {
+			c.text[idx] = c.runeAt(idx)
+		}
+	}
+	for idx, _ := range c.text {
+		delete(c.data, idx)
+	}
+
+	return c
 }
 
 // Drawable represents anything that can Draw itself.
@@ -347,19 +383,19 @@ func (c *Canvas) Triangles() []Triangle {
 		case '^':
 			o = N
 			r := c.runeAt(start.north())
-			if r == '-' || isJoint(r) {
+			if r == '-' || isJoint(r) && !isDot(r) {
 				needsNudging = true
 			}
 		case 'v':
 			o = S
 			r := c.runeAt(start.south())
-			if r == '-' || isJoint(r) {
+			if r == '-' || isJoint(r) && !isDot(r) {
 				needsNudging = true
 			}
 		case '<':
 			o = W
 			r := c.runeAt(start.west())
-			if r == 'o' || r == '*' {
+			if isDot(r) {
 				needsNudging = true
 			}
 		case '>':
@@ -469,14 +505,10 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 func (c *Canvas) Text() []Text {
 	var text []Text
 
-	for i := range leftRight(c.Width, c.Height) {
-
-		if c.isText(i) {
-			r := c.runeAt(i)
-			text = append(text, Text{start: i, contents: string(r)})
-		}
-
+	for i, r := range c.text {
+		text = append(text, Text{start: i, contents: string(r)})
 	}
+
 	return text
 }
 
@@ -518,12 +550,16 @@ func (c *Canvas) isBridge(i Index) Orientation {
 
 func (c *Canvas) isText(i Index) bool {
 
-	if !c.withinBounds(i) {
+	// Short circuit, we already saw this index and called it text.
+	if _, isText := c.text[i]; isText {
+		return true
+	}
+
+	if c.runeAt(i) == ' ' {
 		return false
 	}
 
-	// This index refers to a rune not in our reserved set.
-	if c.isNotReserved(i) {
+	if !c.isReserved(i) {
 		return true
 	}
 
@@ -538,44 +574,41 @@ func (c *Canvas) isText(i Index) bool {
 	// TODO: Fix this to count contiguous blocks of text. If we had a bunch of
 	// reserved characters previously that were counted as text then this
 	// should be as well, e.g., "A----B".
-	if c.isTextLeft(i, 1) || c.isTextRight(i, 1) {
+
+	// We're reserved but surrounded by text and probably part of an existing
+	// word. Use a hash lookup on the left to preserve chains of
+	// reserved-but-text characters like "foo----bar".
+	if _, textLeft := c.text[i.west()]; textLeft || !c.isReserved(i.east()) {
+		return true
+	}
+
+	w := i.west()
+	e := i.east()
+
+	if !(c.runeAt(w) == ' ' && c.runeAt(e) == ' ') {
+		return false
+	}
+
+	// Circles surrounded by whitespace shouldn't be shown as text.
+	if c.runeAt(i) == 'o' || c.runeAt(i) == '*' {
+		return false
+	}
+
+	// We're surrounded by whitespace + text on either side.
+	if !c.isReserved(w.west()) || !c.isReserved(e.east()) {
 		return true
 	}
 
 	return false
 }
 
-func (c *Canvas) isTextLeft(i Index, limit uint8) bool {
-	if limit == 0 {
-		return false
-	}
-	left := i.west()
-
-	return c.isNotReserved(left) || c.isTextLeft(left, limit-1)
-}
-
-func (c *Canvas) isTextRight(i Index, limit uint8) bool {
-	if limit == 0 {
-		return false
-	}
-	right := i.east()
-
-	return c.isNotReserved(right) || c.isTextRight(right, limit-1)
-}
-
 // Returns true if the character at this index is not reserved for diagrams.
 // Characters like "o" need more context (e.g., are other text characters
 // nearby) to determine whether they're part of a diagram.
-func (c *Canvas) isNotReserved(i Index) bool {
+func (c *Canvas) isReserved(i Index) bool {
 	r := c.runeAt(i)
-
-	if r == ' ' {
-		return false
-	}
-
 	_, isReserved := reservedRunes[r]
-
-	return !isReserved
+	return isReserved
 }
 
 // Returns true if it looks like this character belongs to anything besides a
@@ -585,7 +618,7 @@ func (c *Canvas) hasLineAboveOrBelow(i Index) bool {
 	r := c.runeAt(i)
 
 	switch r {
-	case '*', 'o', '+':
+	case '*', 'o', '+', 'v', '^':
 		return c.partOfDiagonalLine(i) || c.partOfVerticalLine(i)
 	case '|':
 		return c.partOfVerticalLine(i) || c.partOfRoundedCorner(i)
