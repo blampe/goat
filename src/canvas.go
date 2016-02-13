@@ -302,7 +302,6 @@ func (c *Canvas) linesFromIterator(
 	for idx := range ci(c.Width, c.Height) {
 		r := c.runeAt(idx)
 
-		isText := c.isText(idx)
 		isTerminal := contains(terminals, r)
 		isSegment := contains(segments, r)
 		isRoundedCorner := c.isRoundedCorner(idx) != NONE
@@ -311,15 +310,19 @@ func (c *Canvas) linesFromIterator(
 
 		justSawATerminal := contains(terminals, lastSeenRune)
 
-		shouldKeep := (isSegment || isTerminal) && !isText && !isRoundedCorner
+		shouldKeep := (isSegment || isTerminal) && !isRoundedCorner
 
 		// This is an edge case where we have a rounded corner... that's also a
-		// joint... attached to orthogonal line.
+		// joint... attached to orthogonal line, e.g.:
+		//
+		//  '+--
+		//    |
+		//
 		// TODO: This also depends on the orientation of the corner and our
 		// line.
 		// NW / NE line can't go with EW/NS lines, vertical is OK though.
 		if isRoundedCorner && r == '+' {
-			shouldKeep = !isText
+			shouldKeep = true
 		}
 
 		// Don't connect | to > for diagonal lines.
@@ -371,10 +374,6 @@ func (c *Canvas) Triangles() []Triangle {
 		needsNudging := false
 		start := idx
 
-		if c.isText(idx) {
-			continue
-		}
-
 		r := c.runeAt(idx)
 
 		// Identify our orientation and nudge the triangle to touch any
@@ -423,9 +422,9 @@ func (c *Canvas) Circles() []Circle {
 
 	for idx := range upDown(c.Width, c.Height) {
 		// TODO INCOMING
-		if c.runeAt(idx) == 'o' && !c.isText(idx) {
+		if c.runeAt(idx) == 'o' {
 			circles = append(circles, Circle{start: idx})
-		} else if c.runeAt(idx) == '*' && !c.isText(idx) {
+		} else if c.runeAt(idx) == '*' {
 			circles = append(circles, Circle{start: idx, bold: true})
 		}
 	}
