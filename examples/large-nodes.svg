@@ -303,17 +303,17 @@
 <path d='M 568,112 A 16,16 0 0,1 552,128' style='fill:none;stroke:#000;'></path>
 <path d='M 616,112 A 16,16 0 0,0 632,128' style='fill:none;stroke:#000;'></path>
 <path d='M 648,112 A 16,16 0 0,1 632,128' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='36' style='fill:#000;font-size:1em'>8</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='216' y='116' style='fill:#000;font-size:1em'>3</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='296' y='116' style='fill:#000;font-size:1em'>B</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='40' y='36' style='fill:#000;font-size:1em'>A</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='128' y='36' style='fill:#000;font-size:1em'>1</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='216' y='36' style='fill:#000;font-size:1em'>2</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='296' y='36' style='fill:#000;font-size:1em'>4</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='720' y='116' style='fill:#000;font-size:1em'>D</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='392' y='116' style='fill:#000;font-size:1em'>5</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='472' y='116' style='fill:#000;font-size:1em'>C</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='216' y='116' style='fill:#000;font-size:1em'>3</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='116' style='fill:#000;font-size:1em'>6</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='116' style='fill:#000;font-size:1em'>7</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='296' y='116' style='fill:#000;font-size:1em'>B</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='392' y='116' style='fill:#000;font-size:1em'>5</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='472' y='116' style='fill:#000;font-size:1em'>C</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='720' y='116' style='fill:#000;font-size:1em'>D</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='40' y='36' style='fill:#000;font-size:1em'>A</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='216' y='36' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='296' y='36' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='632' y='36' style='fill:#000;font-size:1em'>8</text>
 </g>
 </svg>

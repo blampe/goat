@@ -324,11 +324,11 @@
 <path d='M 672,32 L 672,32' style='fill:none;stroke:#000;'></path>
 <path d='M 704,64 L 704,64' style='fill:none;stroke:#000;'></path>
 <path d='M 720,32 L 720,32' style='fill:none;stroke:#000;'></path>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='104' y='68' style='fill:#000;font-size:1em'>B</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='48' y='100' style='fill:#000;font-size:1em'>A</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='368' y='100' style='fill:#000;font-size:1em'>B</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='560' y='116' style='fill:#000;font-size:1em'>A</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='608' y='116' style='fill:#000;font-size:1em'>B</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='320' y='148' style='fill:#000;font-size:1em'>A</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='104' y='68' style='fill:#000;font-size:1em'>B</text>
 </g>
 </svg>

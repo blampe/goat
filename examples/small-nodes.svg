@@ -155,6 +155,7 @@
 <polygon points='512.000000,48.000000 500.000000,42.400002 500.000000,53.599998' style='fill:#000' transform='rotate(270.000000, 504.000000, 48.000000)'></polygon>
 <polygon points='512.000000,96.000000 500.000000,90.400002 500.000000,101.599998' style='fill:#000' transform='rotate(180.000000, 512.000000, 96.000000)'></polygon>
 <polygon points='552.000000,96.000000 540.000000,90.400002 540.000000,101.599998' style='fill:#000' transform='rotate(0.000000, 552.000000, 96.000000)'></polygon>
+<path d='M 392,32 A 16,16 0 0,1 408,48' style='fill:none;stroke:#000;'></path>
 <circle cx='144' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
 <circle cx='200' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='256' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
@@ -167,18 +168,17 @@
 <circle cx='504' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='504' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
 <circle cx='560' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
-<path d='M 392,32 A 16,16 0 0,1 408,48' style='fill:none;stroke:#000;'></path>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='560' y='116' style='fill:#000;font-size:1em'>D</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='144' y='20' style='fill:#000;font-size:1em'>A</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='200' y='20' style='fill:#000;font-size:1em'>1</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='256' y='20' style='fill:#000;font-size:1em'>2</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='304' y='20' style='fill:#000;font-size:1em'>4</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='504' y='20' style='fill:#000;font-size:1em'>8</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='304' y='116' style='fill:#000;font-size:1em'>B</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='360' y='116' style='fill:#000;font-size:1em'>5</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='408' y='116' style='fill:#000;font-size:1em'>C</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='304' y='20' style='fill:#000;font-size:1em'>4</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='144' y='20' style='fill:#000;font-size:1em'>A</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='256' y='20' style='fill:#000;font-size:1em'>2</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='256' y='116' style='fill:#000;font-size:1em'>3</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='408' y='116' style='fill:#000;font-size:1em'>C</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='456' y='116' style='fill:#000;font-size:1em'>6</text>
 <text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='504' y='116' style='fill:#000;font-size:1em'>7</text>
+<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='560' y='116' style='fill:#000;font-size:1em'>D</text>
 </g>
 </svg>
