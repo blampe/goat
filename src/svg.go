@@ -29,11 +29,11 @@ func ASCIItoSVG(in io.Reader, out io.Writer) {
 		t.Draw(out)
 	}
 
-	for _, c := range canvas.Circles() {
+	for _, c := range canvas.RoundedCorners() {
 		c.Draw(out)
 	}
 
-	for _, c := range canvas.RoundedCorners() {
+	for _, c := range canvas.Circles() {
 		c.Draw(out)
 	}
 
