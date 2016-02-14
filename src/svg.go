@@ -60,7 +60,7 @@ func writeBytes(out *io.Writer, format string, args ...interface{}) {
 }
 
 // Draw a straight line as an SVG path.
-func (l *Line) Draw(out io.Writer) {
+func (l Line) Draw(out io.Writer) {
 
 	start := l.start.asPixel()
 	stop := l.stop.asPixel()
@@ -74,6 +74,25 @@ func (l *Line) Draw(out io.Writer) {
 	// We need to nudge the vertical line half a vertical cell in the
 	// appropriate direction in order to meet up cleanly with the midline of
 	// the cell next to it.
+
+	// A diagonal segment all by itself needs to be shifted slightly to line
+	// up with _ baselines:
+	//     _
+	//      \_
+	//
+	if l.lonely {
+		start.x -= 8
+		stop.x -= 8
+
+		switch l.orientation {
+		case NE:
+			start.y += 8
+			stop.y += 8
+		case SE:
+			start.y -= 8
+			stop.y -= 8
+		}
+	}
 
 	if l.needsNudgingUp {
 		start.y -= 8
@@ -175,7 +194,7 @@ func (c *Circle) Draw(out io.Writer) {
 }
 
 // Draw a single text character as an SVG text element.
-func (t *Text) Draw(out io.Writer) {
+func (t Text) Draw(out io.Writer) {
 	p := t.start.asPixel()
 	c := t.contents
 

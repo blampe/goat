@@ -25,9 +25,6 @@ var reservedRunes = map[rune]bool{
 	'\\': true,
 	')':  true,
 	'(':  true,
-	'╱':  true,
-	'╲':  true,
-	'╳':  true,
 	' ':  true,
 }
 
@@ -157,6 +154,8 @@ type Line struct {
 	//dashed           bool
 	needsNudgingUp   bool
 	needsNudgingDown bool
+	lonely           bool
+	orientation      Orientation
 
 	state lineState
 }
@@ -265,13 +264,13 @@ func (c *Canvas) Lines() []Line {
 
 	lines = append(lines, c.linesFromIterator(
 		diagUp,
-		[]rune{'/', '╱', '╳'},
+		[]rune{'/'},
 		append([]rune{'o', '*', '<', '>', '^', 'v', '|'}, jointRunes...),
 	)...)
 
 	lines = append(lines, c.linesFromIterator(
 		diagDown,
-		[]rune{'\\', '╲', '╳'},
+		[]rune{'\\'},
 		append([]rune{'o', '*', '<', '>', '^', 'v', '|'}, jointRunes...),
 	)...)
 
@@ -499,13 +498,42 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	return NONE
 }
 
-// Text returns a slace of all text characters not belonging to part of the diagram.
+// Text returns a slice of all text characters not belonging to part of the diagram.
 // How these characters are identified is rather complicated.
-func (c *Canvas) Text() []Text {
-	var text []Text
+func (c *Canvas) Text() []Drawable {
+	var text []Drawable
+
+	newLine := func(i Index, o Orientation) Line {
+		stop := i
+
+		switch o {
+		case NE:
+			stop = i.nEast()
+		case SE:
+			stop = i.sEast()
+		}
+
+		return Line{
+			start:       i,
+			stop:        stop,
+			lonely:      true,
+			orientation: o,
+		}
+	}
 
 	for i, r := range c.text {
-		text = append(text, Text{start: i, contents: string(r)})
+		switch r {
+		// Weird unicode edge cases that markdeep handles. These get
+		// substituted with lines.
+		case '╱':
+			text = append(text, newLine(i, NE))
+		case '╲':
+			text = append(text, newLine(i, SE))
+		case '╳':
+			text = append(text, newLine(i, NE), newLine(i, SE))
+		default:
+			text = append(text, Text{start: i, contents: string(r)})
+		}
 	}
 
 	return text
@@ -622,7 +650,6 @@ func (c *Canvas) hasLineAboveOrBelow(i Index) bool {
 	case '|':
 		return c.partOfVerticalLine(i) || c.partOfRoundedCorner(i)
 	case '/', '\\':
-		// TODO: unicode cases
 		return c.partOfDiagonalLine(i)
 	case '-':
 		return c.partOfRoundedCorner(i)
