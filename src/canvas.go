@@ -264,11 +264,81 @@ const (
 // possible orientations.
 func (c *Canvas) Lines() []Line {
 
+	horizontalMidlines := c.getLinesForSegment('-')
+
 	diagUpLines := c.getLinesForSegment('/')
+	for i, l := range diagUpLines {
+		// /_
+		if c.runeAt(l.start.east()) == '_' {
+			diagUpLines[i].needsTinyNudgingLeft = true
+		}
+
+		// _
+		// /
+		if c.runeAt(l.stop.north()) == '_' {
+			diagUpLines[i].needsTinyNudgingRight = true
+		}
+
+		//  _
+		// /
+		if !l.lonely && c.runeAt(l.stop.nEast()) == '_' {
+			diagUpLines[i].needsTinyNudgingRight = true
+		}
+
+		// _/
+		if !l.lonely && c.runeAt(l.start.west()) == '_' {
+			diagUpLines[i].needsTinyNudgingLeft = true
+		}
+
+		// \
+		// /
+		if !l.lonely && c.runeAt(l.stop.north()) == '\\' {
+			diagUpLines[i].needsTinyNudgingRight = true
+		}
+
+		// /
+		// \
+		if !l.lonely && c.runeAt(l.start.south()) == '\\' {
+			diagUpLines[i].needsTinyNudgingLeft = true
+		}
+	}
 
 	diagDownLines := c.getLinesForSegment('\\')
+	for i, l := range diagDownLines {
+		// _\
+		if c.runeAt(l.stop.west()) == '_' {
+			diagDownLines[i].needsTinyNudgingRight = true
+		}
 
-	horizontalMidlines := c.getLinesForSegment('-')
+		// _
+		// \
+		if c.runeAt(l.start.north()) == '_' {
+			diagDownLines[i].needsTinyNudgingLeft = true
+		}
+
+		//  _
+		//   \
+		if !l.lonely && c.runeAt(l.start.nWest()) == '_' {
+			diagDownLines[i].needsTinyNudgingLeft = true
+		}
+
+		// \_
+		if !l.lonely && c.runeAt(l.stop.east()) == '_' {
+			diagDownLines[i].needsTinyNudgingRight = true
+		}
+
+		// \
+		// /
+		if !l.lonely && c.runeAt(l.stop.south()) == '/' {
+			diagDownLines[i].needsTinyNudgingRight = true
+		}
+
+		// /
+		// \
+		if !l.lonely && c.runeAt(l.start.north()) == '/' {
+			diagDownLines[i].needsTinyNudgingLeft = true
+		}
+	}
 
 	horizontalBaselines := c.getLinesForSegment('_')
 	for i, l := range horizontalBaselines {
@@ -296,6 +366,30 @@ func (c *Canvas) Lines() []Line {
 		//       _
 		// \_   /
 		if c.runeAt(l.start.west()) == '\\' || c.runeAt(l.start.sWest()) == '/' {
+			horizontalBaselines[i].needsTinyNudgingLeft = true
+		}
+
+		// _\
+		if c.runeAt(l.stop.east()) == '\\' {
+			horizontalBaselines[i].needsNudgingRight = true
+			horizontalBaselines[i].needsTinyNudgingRight = true
+		}
+
+		//
+		// /_
+		if c.runeAt(l.start.west()) == '/' {
+			horizontalBaselines[i].needsNudgingLeft = true
+			horizontalBaselines[i].needsTinyNudgingLeft = true
+		}
+		//  _
+		//  /
+		if c.runeAt(l.stop.south()) == '/' {
+			horizontalBaselines[i].needsTinyNudgingRight = true
+		}
+
+		//  _
+		//  \
+		if c.runeAt(l.start.south()) == '\\' {
 			horizontalBaselines[i].needsTinyNudgingLeft = true
 		}
 	}
@@ -578,35 +672,38 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	upperLeft := i.nWest()
 	upperRight := i.nEast()
 
+	opensUp := r == '\'' || r == '+'
+	opensDown := r == '.' || r == '+'
+
 	dashRight := c.runeAt(right) == '-' || c.runeAt(right) == '+' || c.runeAt(right) == '_' || c.runeAt(upperRight) == '_'
 	dashLeft := c.runeAt(left) == '-' || c.runeAt(left) == '+' || c.runeAt(left) == '_' || c.runeAt(upperLeft) == '_'
 
 	isVerticalSegment := func(i Index) bool {
 		r := c.runeAt(i)
-		return r == '|' || r == '+' || r == ')' || r == '('
+		return r == '|' || r == '+' || r == ')' || r == '(' || isDot(r)
 	}
 
 	//  .- or  .-
 	// |      +
-	if dashRight && isVerticalSegment(lowerLeft) {
+	if opensDown && dashRight && isVerticalSegment(lowerLeft) {
 		return NW
 	}
 
-	// -. or -.  or -.  or _.
-	//   |     +      )      )
-	if dashLeft && isVerticalSegment(lowerRight) {
+	// -. or -.  or -.  or _.  or -.
+	//   |     +      )      )      o
+	if opensDown && dashLeft && isVerticalSegment(lowerRight) {
 		return NE
 	}
 
 	//   | or   + or   | or   + or   + or_ )
 	// -'     -'     +'     +'     ++     '
-	if dashLeft && isVerticalSegment(upperRight) {
+	if opensUp && dashLeft && isVerticalSegment(upperRight) {
 		return SE
 	}
 
 	// |  or +
 	//  '-    '-
-	if dashRight && isVerticalSegment(upperLeft) {
+	if opensUp && dashRight && isVerticalSegment(upperLeft) {
 		return SW
 	}
 

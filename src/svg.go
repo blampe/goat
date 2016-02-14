@@ -80,6 +80,7 @@ func (l Line) Draw(out io.Writer) {
 	//     _
 	//      \_
 	//
+	// TODO make this a method on Line to return accurate pixel
 	if l.lonely {
 		switch l.orientation {
 		case NE:
@@ -107,25 +108,45 @@ func (l Line) Draw(out io.Writer) {
 
 	if l.needsNudgingDown {
 		stop.y += 8
-		if start.x != stop.x {
+		if l.horizontal() {
 			start.y += 8
 		}
 	}
 
 	if l.needsNudgingLeft {
 		start.x -= 8
+		//if l.orientation == NE {
+		//start.y += 8
+		//} else if l.orientation == SE {
+		//start.y -= 8
+		//}
 	}
 
 	if l.needsNudgingRight {
 		stop.x += 8
+		//if l.orientation == NE {
+		//stop.y -= 8
+		//} else if l.orientation == SE {
+		//stop.y += 8
+		//}
 	}
 
 	if l.needsTinyNudgingLeft {
 		start.x -= 4
+		if l.orientation == NE {
+			start.y += 8
+		} else if l.orientation == SE {
+			start.y -= 8
+		}
 	}
 
 	if l.needsTinyNudgingRight {
 		stop.x += 4
+		if l.orientation == NE {
+			stop.y -= 8
+		} else if l.orientation == SE {
+			stop.y += 8
+		}
 	}
 
 	writeBytes(&out,
