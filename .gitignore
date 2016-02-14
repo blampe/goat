@@ -1,7 +1,7 @@
 *.swp
 .DS_Store
 
-examples/.*
+examples/*.svg
 
 goat
 goat.test

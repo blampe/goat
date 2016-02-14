@@ -16,7 +16,7 @@ func ASCIItoSVG(in io.Reader, out io.Writer) {
 		"diagram",
 		"http://www.w3.org/2000/svg",
 		"1.1",
-		canvas.Height*16+8, (canvas.Width+1)*8,
+		canvas.Height*16+8+1, (canvas.Width+1)*8,
 	)
 
 	writeBytes(&out, "<g transform='translate(8,16)'>\n")
@@ -81,14 +81,18 @@ func (l Line) Draw(out io.Writer) {
 	//      \_
 	//
 	if l.lonely {
-		start.x -= 8
-		stop.x -= 8
-
 		switch l.orientation {
 		case NE:
+			start.x -= 4
+			stop.x -= 4
 			start.y += 8
 			stop.y += 8
 		case SE:
+			start.x -= 4
+			stop.x -= 4
+			start.y -= 8
+			stop.y -= 8
+		case S:
 			start.y -= 8
 			stop.y -= 8
 		}
@@ -106,6 +110,22 @@ func (l Line) Draw(out io.Writer) {
 		if start.x != stop.x {
 			start.y += 8
 		}
+	}
+
+	if l.needsNudgingLeft {
+		start.x -= 8
+	}
+
+	if l.needsNudgingRight {
+		stop.x += 8
+	}
+
+	if l.needsTinyNudgingLeft {
+		start.x -= 4
+	}
+
+	if l.needsTinyNudgingRight {
+		stop.x += 4
 	}
 
 	writeBytes(&out,

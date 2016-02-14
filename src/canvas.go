@@ -46,6 +46,10 @@ func isDot(r rune) bool {
 	return r == 'o' || r == '*'
 }
 
+func isTriangle(r rune) bool {
+	return r == '^' || r == 'v' || r == '<' || r == '>'
+}
+
 // Canvas represents a 2D ASCII rectangle.
 type Canvas struct {
 	Width  int
@@ -153,10 +157,14 @@ type Line struct {
 	start Index
 	stop  Index
 	//dashed           bool
-	needsNudgingUp   bool
-	needsNudgingDown bool
-	lonely           bool
-	orientation      Orientation
+	needsNudgingUp        bool
+	needsNudgingDown      bool
+	needsNudgingLeft      bool
+	needsNudgingRight     bool
+	needsTinyNudgingLeft  bool
+	needsTinyNudgingRight bool
+	lonely                bool
+	orientation           Orientation
 
 	state lineState
 }
@@ -184,6 +192,22 @@ func (l *Line) setStop(i Index) {
 	if l.state == _Started {
 		l.stop = i
 	}
+}
+
+func (l *Line) goesSomewhere() bool {
+	return l.start != l.stop
+}
+
+func (l *Line) horizontal() bool {
+	return l.orientation == E || l.orientation == W
+}
+
+func (l *Line) vertical() bool {
+	return l.orientation == N || l.orientation == S
+}
+
+func (l *Line) diagonal() bool {
+	return l.orientation == NE || l.orientation == SE || l.orientation == SW || l.orientation == NW
 }
 
 // Triangle corresponds to "^", "v", "<" and ">" runes in the absence of
@@ -240,101 +264,158 @@ const (
 // possible orientations.
 func (c *Canvas) Lines() []Line {
 
-	// Vertical line segments |
-	lines := c.linesFromIterator(
-		upDown,
-		[]rune{'|'},
-		append([]rune{'v', '^', 'o', '*'}, jointRunes...),
-	)
+	diagUpLines := c.getLinesForSegment('/')
 
-	// Extend veritcal bars to reach o, *, ^, etc.
-	for i, l := range lines {
+	diagDownLines := c.getLinesForSegment('\\')
+
+	horizontalMidlines := c.getLinesForSegment('-')
+
+	horizontalBaselines := c.getLinesForSegment('_')
+	for i, l := range horizontalBaselines {
+		// TODO: make this nudge an orientation
+		horizontalBaselines[i].needsNudgingDown = true
+
+		//     _
+		// _| |
+		if c.runeAt(l.stop.sEast()) == '|' || c.runeAt(l.stop.nEast()) == '|' {
+			horizontalBaselines[i].needsNudgingRight = true
+		}
+
+		// _
+		//  |  _|
+		if c.runeAt(l.start.sWest()) == '|' || c.runeAt(l.start.nWest()) == '|' {
+			horizontalBaselines[i].needsNudgingLeft = true
+		}
+
+		//     _
+		// _/   \
+		if c.runeAt(l.stop.east()) == '/' || c.runeAt(l.stop.sEast()) == '\\' {
+			horizontalBaselines[i].needsTinyNudgingRight = true
+		}
+
+		//       _
+		// \_   /
+		if c.runeAt(l.start.west()) == '\\' || c.runeAt(l.start.sWest()) == '/' {
+			horizontalBaselines[i].needsTinyNudgingLeft = true
+		}
+	}
+
+	verticalLines := c.getLinesForSegment('|')
+	for i, l := range verticalLines {
+		// Extend veritcal bars to reach o, *, ^, etc.
 		above := c.runeAt(l.start.north())
 		below := c.runeAt(l.stop.south())
+
+		leftStart := c.runeAt(l.start.nWest())
+		leftStop := c.runeAt(l.stop.west())
+		rightStart := c.runeAt(l.start.nEast())
+		rightStop := c.runeAt(l.stop.east())
+
 		// TODO: Better for o ^ v to draw their own tails.
 		if (c.runeAt(l.start) == '|' && above == '-' || above == '(' || above == ')' || above == '_') || c.runeAt(l.start) == '^' {
-			lines[i].needsNudgingUp = true
+			verticalLines[i].needsNudgingUp = true
 		}
 		if (c.runeAt(l.stop) == '|' && below == '-' || below == ')' || below == '(' || below == '_') || c.runeAt(l.stop) == 'v' {
-			lines[i].needsNudgingDown = true
+			verticalLines[i].needsNudgingDown = true
+		}
+
+		// _
+		//  |
+		if leftStart == '_' || rightStart == '_' {
+			verticalLines[i].needsNudgingUp = true
+		}
+
+		// _|
+		if leftStop == '_' || rightStop == '_' {
+			verticalLines[i].needsNudgingDown = true
 		}
 	}
 
-	// Horizontal line segments --
-	lines = append(lines, c.linesFromIterator(
-		leftRight,
-		[]rune{'-'},
-		append([]rune{'o', '*', '<', '>', '(', ')'}, jointRunes...),
-	)...)
+	var lines []Line
 
-	// Horizontal bottom-aligned segments ___
-	bottomLines := c.linesFromIterator(
-		leftRight,
-		[]rune{'_'},
-		//nil,
-		[]rune{'|'},
-		//append([]rune{'|'}),
-	)
-
-	for i, _ := range bottomLines {
-		bottomLines[i].needsNudgingDown = true
-	}
-
-	lines = append(lines, bottomLines...)
-
-	// Diagonal line segments /
-	lines = append(lines, c.linesFromIterator(
-		diagUp,
-		[]rune{'/'},
-		append([]rune{'o', '*', '<', '>', '^', 'v', '|'}, jointRunes...),
-	)...)
-
-	// Diagonal line segments \
-	lines = append(lines, c.linesFromIterator(
-		diagDown,
-		[]rune{'\\'},
-		append([]rune{'o', '*', '<', '>', '^', 'v', '|'}, jointRunes...),
-	)...)
+	lines = append(lines, horizontalMidlines...)
+	lines = append(lines, horizontalBaselines...)
+	lines = append(lines, verticalLines...)
+	lines = append(lines, diagUpLines...)
+	lines = append(lines, diagDownLines...)
 
 	return lines
 }
 
-// ci: the order that we traverse locations on the canvas.
-// segmentPieces characters we 1) include, and 2) keep going.
-// inclusiveTerminals: characters we 1) include, and 2) end the current line.
-// exclusiveTerminals: characters we 1) don't include, and 2) end the line.
-func (c *Canvas) linesFromIterator(
-	ci canvasIterator,
-	segments []rune,
-	terminals []rune,
-) []Line {
-	var lines []Line
+func (c *Canvas) getLinesForSegment(segment rune) []Line {
+	var iter canvasIterator
+	var orientation Orientation
+	var passThroughs []rune
 
-	var currentLine Line
-	var lastSeenRune rune
+	switch segment {
+	case '-':
+		iter = leftRight
+		orientation = E
+		passThroughs = append(jointRunes, '<', '>', '(', ')')
+	case '_':
+		iter = leftRight
+		orientation = E
+		passThroughs = append(jointRunes, '|')
+	case '|':
+		iter = upDown
+		orientation = S
+		passThroughs = append(jointRunes, '^', 'v')
+	case '/':
+		iter = diagUp
+		orientation = NE
+		passThroughs = append(jointRunes, 'o', '*', '<', '>', '^', 'v', '|')
+	case '\\':
+		iter = diagDown
+		orientation = SE
+		passThroughs = append(jointRunes, 'o', '*', '<', '>', '^', 'v', '|')
+	default:
+		return nil
+	}
+
+	return c.getLines(iter, segment, passThroughs, orientation)
+}
+
+// ci: the order that we traverse locations on the canvas.
+// segment: the primary character we're tracking for this line.
+// passThroughs: characters the line segment is allowed to be drawn underneath
+// (without terminating the line).
+// orientation: the orientation for this line.
+func (c *Canvas) getLines(
+	ci canvasIterator,
+	segment rune,
+	passThroughs []rune,
+	o Orientation,
+) []Line {
+
+	var lines []Line
 
 	// Helper to throw the current line we're tracking on to the slice and
 	// start a new one.
 	snip := func(l Line) Line {
-		// Only collect lines that actually go somewhere.
-		//if l.start != l.stop || l.needsNudgingUp || l.needsNudgingDown {
-		lines = append(lines, l)
-		//}
-		return Line{}
+		// Only collect lines that actually go somewhere or are isolated
+		// segments.
+		if l.goesSomewhere() {
+			lines = append(lines, l)
+		}
+
+		return Line{orientation: o}
 	}
+
+	currentLine := Line{orientation: o}
+	lastSeenRune := ' '
 
 	for idx := range ci(c.Width, c.Height) {
 		r := c.runeAt(idx)
 
-		isTerminal := contains(terminals, r)
-		isSegment := contains(segments, r)
+		isSegment := r == segment
+		isPassThrough := contains(passThroughs, r)
 		isRoundedCorner := c.isRoundedCorner(idx) != NONE
-		isDot := r == 'o' || r == '*'
-		isTriangle := r == '^' || r == 'v' || r == '<' || r == '>'
+		isDot := isDot(r)
+		isTriangle := isTriangle(r)
 
-		justSawATerminal := contains(terminals, lastSeenRune)
+		justPassedThrough := contains(passThroughs, lastSeenRune)
 
-		shouldKeep := (isSegment || isTerminal) && !isRoundedCorner
+		shouldKeep := (isSegment || isPassThrough) && !isRoundedCorner
 
 		// This is an edge case where we have a rounded corner... that's also a
 		// joint... attached to orthogonal line, e.g.:
@@ -350,14 +431,14 @@ func (c *Canvas) linesFromIterator(
 		}
 
 		// Don't connect | to > for diagonal lines or )) for horizontal lines.
-		if isTerminal && justSawATerminal && !contains(segments, '|') {
+		if isPassThrough && justPassedThrough && o != S {
 			currentLine = snip(currentLine)
 		}
 
-		// Don't connect o to o, + to o, etc. This character is a new terminal
+		// Don't connect o to o, + to o, etc. This character is a new pass-through
 		// so we still want to respect shouldKeep; we just don't want to draw
 		// the existing line through this cell.
-		if justSawATerminal && (isDot || isTriangle) {
+		if justPassedThrough && (isDot || isTriangle) {
 			currentLine = snip(currentLine)
 		}
 
@@ -368,11 +449,20 @@ func (c *Canvas) linesFromIterator(
 			}
 		case _Started:
 			if !shouldKeep {
-				// Snip the existing line, don't add the current cell to it.
+				// Snip the existing line, don't add the current cell to it
+				// *unless* its a line segment all by itself. If it is, keep a
+				// record that it's an individual segment because we need to
+				// adjust later in the / and \ cases.
+				if !currentLine.goesSomewhere() && lastSeenRune == segment {
+					if !c.partOfRoundedCorner(currentLine.start) {
+						currentLine.setStop(idx)
+						currentLine.lonely = true
+					}
+				}
 				currentLine = snip(currentLine)
-			} else if isTerminal {
-				// Snip the existing line but include the current terminal
-				// cell.
+			} else if isPassThrough {
+				// Snip the existing line but include the current pass-through
+				// character because we may be continuing the line.
 				currentLine.setStop(idx)
 				currentLine = snip(currentLine)
 				currentLine.setStart(idx)

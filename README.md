@@ -53,6 +53,5 @@ $ goat my-cool-diagram.txt > my-cool-diagram.svg
 * Bold lines signaled by ???.
 * Draw half-steps (`_.-`) correctly.
 * Angled triangles.
-* Hexagons.
 
 [markdeep.mini.js]: http://casual-effects.com/markdeep/
