@@ -157,7 +157,6 @@ type Line struct {
 	start Index
 	stop  Index
 	//dashed           bool
-	needsNudgingUp        bool
 	needsNudgingDown      bool
 	needsNudgingLeft      bool
 	needsNudgingRight     bool
@@ -518,24 +517,24 @@ func (c *Canvas) getLines(
 
 		isSegment := r == segment
 		isPassThrough := contains(passThroughs, r)
-		isRoundedCorner := c.isRoundedCorner(idx) != NONE
+		isRoundedCorner := c.isRoundedCorner(idx)
 		isDot := isDot(r)
 		isTriangle := isTriangle(r)
 
 		justPassedThrough := contains(passThroughs, lastSeenRune)
 
-		shouldKeep := (isSegment || isPassThrough) && !isRoundedCorner
+		shouldKeep := (isSegment || isPassThrough) && isRoundedCorner == NONE
 
 		// This is an edge case where we have a rounded corner... that's also a
 		// joint... attached to orthogonal line, e.g.:
 		//
 		//  '+--
-		//    |
+		//   |
 		//
 		// TODO: This also depends on the orientation of the corner and our
 		// line.
 		// NW / NE line can't go with EW/NS lines, vertical is OK though.
-		if isRoundedCorner && r == '+' {
+		if isRoundedCorner != NONE && o != E && (c.partOfVerticalLine(idx) || c.partOfDiagonalLine(idx)) {
 			shouldKeep = true
 		}
 

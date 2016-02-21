@@ -107,13 +107,6 @@ func (l Line) Draw(out io.Writer) {
 		}
 	}
 
-	if l.needsNudgingUp {
-		start.y -= 8
-		if start.x != stop.x {
-			stop.y -= 8
-		}
-	}
-
 	if l.needsNudgingDown {
 		stop.y += 8
 		if l.horizontal() {
