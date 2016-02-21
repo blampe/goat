@@ -1008,21 +1008,23 @@ func (c *Canvas) partOfHorizontalLine(i Index) bool {
 func (c *Canvas) partOfDiagonalLine(i Index) bool {
 	r := c.runeAt(i)
 
-	nWest := c.runeAt(i.nWest())
-	sEast := c.runeAt(i.sEast())
-	nEast := c.runeAt(i.nEast())
-	sWest := c.runeAt(i.sWest())
+	n := c.runeAt(i.north())
+	s := c.runeAt(i.south())
+	nw := c.runeAt(i.nWest())
+	se := c.runeAt(i.sEast())
+	ne := c.runeAt(i.nEast())
+	sw := c.runeAt(i.sWest())
 
 	switch r {
 	// Diagonal segments can be connected to joint or other segments.
 	case '/':
-		return nEast == r || sWest == r || isJoint(nEast) || isJoint(sWest)
+		return ne == r || sw == r || isJoint(ne) || isJoint(sw) || n == '\\' || s == '\\'
 	case '\\':
-		return nWest == r || sEast == r || isJoint(nWest) || isJoint(sEast)
+		return nw == r || se == r || isJoint(nw) || isJoint(se) || n == '/' || s == '/'
 
 	// For everything else just check if we have segments next to us.
 	default:
-		return nWest == '\\' || nEast == '/' || sWest == '/' || sEast == '\\'
+		return nw == '\\' || ne == '/' || sw == '/' || se == '\\'
 	}
 }
 
