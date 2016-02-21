@@ -512,7 +512,7 @@ func (c *Canvas) getLines(
 	currentLine := Line{orientation: o}
 	lastSeenRune := ' '
 
-	for idx := range ci(c.Width, c.Height) {
+	for idx := range ci(c.Width+1, c.Height+1) {
 		r := c.runeAt(idx)
 
 		isSegment := r == segment
