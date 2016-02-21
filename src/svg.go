@@ -97,6 +97,14 @@ func (l Line) Draw(out io.Writer) {
 			start.y -= 8
 			stop.y -= 8
 		}
+
+		// Half steps
+		switch l.chop {
+		case N:
+			stop.y -= 8
+		case S:
+			start.y += 8
+		}
 	}
 
 	if l.needsNudgingUp {
@@ -358,7 +366,7 @@ func (c *RoundedCorner) Draw(out io.Writer) {
 }
 
 // Draw a bridge as an SVG elliptical arc element.
-func (b *Bridge) Draw(out io.Writer) {
+func (b Bridge) Draw(out io.Writer) {
 	x, y := b.start.asPixelXY()
 	sweepFlag := 1
 

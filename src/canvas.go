@@ -163,8 +163,14 @@ type Line struct {
 	needsNudgingRight     bool
 	needsTinyNudgingLeft  bool
 	needsTinyNudgingRight bool
-	lonely                bool
-	orientation           Orientation
+
+	// This is a line segment all by itself. This centers the segment around
+	// the midline.
+	lonely bool
+	// N or S. Only useful for half steps - chops of this half of the line.
+	chop Orientation
+
+	orientation Orientation
 
 	state lineState
 }
@@ -392,39 +398,21 @@ func (c *Canvas) Lines() []Line {
 		if c.runeAt(l.start.south()) == '\\' {
 			horizontalBaselines[i].needsTinyNudgingLeft = true
 		}
-	}
 
-	verticalLines := c.getLinesForSegment('|')
-	for i, l := range verticalLines {
-		// Extend veritcal bars to reach o, *, ^, etc.
-		above := c.runeAt(l.start.north())
-		below := c.runeAt(l.stop.south())
-
-		leftStart := c.runeAt(l.start.nWest())
-		leftStop := c.runeAt(l.stop.west())
-		rightStart := c.runeAt(l.start.nEast())
-		rightStop := c.runeAt(l.stop.east())
-
-		// -----
-		//   |
-		if c.runeAt(l.start) == '|' && above == '-' || above == '(' || above == ')' || above == '_' || c.runeAt(l.start) == '^' {
-			verticalLines[i].needsNudgingUp = true
-		}
-		if c.runeAt(l.stop) == '|' && below == '-' || below == ')' || below == '(' || below == '_' || c.runeAt(l.stop) == 'v' {
-			verticalLines[i].needsNudgingDown = true
+		//  _
+		// '
+		if c.runeAt(l.start.sWest()) == '\'' {
+			horizontalBaselines[i].needsNudgingLeft = true
 		}
 
 		// _
-		//  |
-		if leftStart == '_' || rightStart == '_' {
-			verticalLines[i].needsNudgingUp = true
-		}
-
-		// _|
-		if leftStop == '_' || rightStop == '_' {
-			verticalLines[i].needsNudgingDown = true
+		//  '
+		if c.runeAt(l.stop.sEast()) == '\'' {
+			horizontalBaselines[i].needsNudgingRight = true
 		}
 	}
+
+	verticalLines := c.getLinesForSegment('|')
 
 	var lines []Line
 
@@ -433,6 +421,32 @@ func (c *Canvas) Lines() []Line {
 	lines = append(lines, verticalLines...)
 	lines = append(lines, diagUpLines...)
 	lines = append(lines, diagDownLines...)
+	lines = append(lines, c.HalfSteps()...)
+
+	return lines
+}
+
+func newHalfStep(i Index, chop Orientation) Line {
+	return Line{
+		start:       i,
+		stop:        i.south(),
+		lonely:      true,
+		chop:        chop,
+		orientation: S,
+	}
+}
+
+func (c *Canvas) HalfSteps() []Line {
+	var lines []Line
+
+	for idx := range upDown(c.Width, c.Height) {
+		if o := c.partOfHalfStep(idx); o != NONE {
+			lines = append(
+				lines,
+				newHalfStep(idx, o),
+			)
+		}
+	}
 
 	return lines
 }
@@ -616,14 +630,18 @@ func (c *Canvas) Triangles() []Drawable {
 			o = E
 		}
 
+		// Determine if we need to snap the triangle to something and, if so,
+		// draw a tail if we need to.
 		switch o {
 		case N:
 			r := c.runeAt(start.north())
 			if r == '-' || isJoint(r) && !isDot(r) {
 				needsNudging = true
+				triangles = append(triangles, newHalfStep(start, N))
 			}
 		case NW:
 			r := c.runeAt(start.nWest())
+			// Need to draw a tail.
 			if r == '-' || isJoint(r) && !isDot(r) {
 				needsNudging = true
 				triangles = append(
@@ -652,6 +670,7 @@ func (c *Canvas) Triangles() []Drawable {
 			r := c.runeAt(start.south())
 			if r == '-' || isJoint(r) && !isDot(r) {
 				needsNudging = true
+				triangles = append(triangles, newHalfStep(start, S))
 			}
 		case SE:
 			r := c.runeAt(start.sEast())
@@ -832,12 +851,20 @@ func (c *Canvas) Text() []Drawable {
 }
 
 // Bridges returns a slice of all bridges, "-)-" or "-(-".
-func (c *Canvas) Bridges() []Bridge {
-	var bridges []Bridge
+func (c *Canvas) Bridges() []Drawable {
+	var bridges []Drawable
 
 	for idx := range leftRight(c.Width, c.Height) {
 		if o := c.isBridge(idx); o != NONE {
-			bridges = append(bridges, Bridge{start: idx, orientation: o})
+			bridges = append(
+				bridges,
+				newHalfStep(idx.north(), S),
+				newHalfStep(idx.south(), N),
+				Bridge{
+					start:       idx,
+					orientation: o,
+				},
+			)
 		}
 	}
 
@@ -1019,6 +1046,55 @@ func (c *Canvas) partOfRoundedCorner(i Index) bool {
 	return false
 }
 
-func (c *Canvas) withinBounds(i Index) bool {
-	return i.x >= 0 && i.x < c.Width && i.y >= 0 && i.y < c.Height
+// TODO: Have this take care of all the vertical line nudging.
+func (c *Canvas) partOfHalfStep(i Index) Orientation {
+	r := c.runeAt(i)
+	if r != '\'' && r != '.' && r != '|' {
+		return NONE
+	}
+
+	if c.isRoundedCorner(i) != NONE {
+		return NONE
+	}
+
+	w := c.runeAt(i.west())
+	e := c.runeAt(i.east())
+	n := c.runeAt(i.north())
+	s := c.runeAt(i.south())
+	nw := c.runeAt(i.nWest())
+	ne := c.runeAt(i.nEast())
+
+	switch r {
+	case '\'':
+		//  _      _
+		//   '-  -'
+		if (nw == '_' && e == '-') || (w == '-' && ne == '_') {
+			return N
+		}
+	case '.':
+		// _.-  -._
+		if (w == '-' && e == '_') || (w == '_' && e == '-') {
+			return S
+		}
+	case '|':
+		//// _   _
+		////  | |
+		if n != '|' && (ne == '_' || nw == '_') {
+			return N
+		}
+
+		if n == '-' {
+			return N
+		}
+
+		//// _| |_
+		if s != '|' && (w == '_' || e == '_') {
+			return S
+		}
+
+		if s == '-' {
+			return S
+		}
+	}
+	return NONE
 }
