@@ -405,11 +405,12 @@ func (c *Canvas) Lines() []Line {
 		rightStart := c.runeAt(l.start.nEast())
 		rightStop := c.runeAt(l.stop.east())
 
-		// TODO: Better for o ^ v to draw their own tails.
-		if (c.runeAt(l.start) == '|' && above == '-' || above == '(' || above == ')' || above == '_') || c.runeAt(l.start) == '^' {
+		// -----
+		//   |
+		if c.runeAt(l.start) == '|' && above == '-' || above == '(' || above == ')' || above == '_' || c.runeAt(l.start) == '^' {
 			verticalLines[i].needsNudgingUp = true
 		}
-		if (c.runeAt(l.stop) == '|' && below == '-' || below == ')' || below == '(' || below == '_') || c.runeAt(l.stop) == 'v' {
+		if c.runeAt(l.stop) == '|' && below == '-' || below == ')' || below == '(' || below == '_' || c.runeAt(l.stop) == 'v' {
 			verticalLines[i].needsNudgingDown = true
 		}
 
@@ -573,8 +574,8 @@ func (c *Canvas) getLines(
 }
 
 // Triangles returns a slice of all detectable Triangles.
-func (c *Canvas) Triangles() []Triangle {
-	var triangles []Triangle
+func (c *Canvas) Triangles() []Drawable {
+	var triangles []Drawable
 
 	o := NONE
 
@@ -584,40 +585,119 @@ func (c *Canvas) Triangles() []Triangle {
 
 		r := c.runeAt(idx)
 
+		if !isTriangle(r) {
+			continue
+		}
+
 		// Identify our orientation and nudge the triangle to touch any
 		// adjacent walls.
 		switch r {
 		case '^':
 			o = N
+			//  ^  and ^
+			// /        \
+			if c.runeAt(start.sWest()) == '/' {
+				o = NE
+			} else if c.runeAt(start.sEast()) == '\\' {
+				o = NW
+			}
+		case 'v':
+			o = S
+			//  /  and \
+			// v        v
+			if c.runeAt(start.nEast()) == '/' {
+				o = SW
+			} else if c.runeAt(start.nWest()) == '\\' {
+				o = SE
+			}
+		case '<':
+			o = W
+		case '>':
+			o = E
+		}
+
+		switch o {
+		case N:
 			r := c.runeAt(start.north())
 			if r == '-' || isJoint(r) && !isDot(r) {
 				needsNudging = true
 			}
-		case 'v':
-			o = S
+		case NW:
+			r := c.runeAt(start.nWest())
+			if r == '-' || isJoint(r) && !isDot(r) {
+				needsNudging = true
+				triangles = append(
+					triangles,
+					Line{
+						start:       start.nWest(),
+						stop:        start,
+						orientation: SE,
+					},
+				)
+			}
+		case NE:
+			r := c.runeAt(start.nEast())
+			if r == '-' || isJoint(r) && !isDot(r) {
+				needsNudging = true
+				triangles = append(
+					triangles,
+					Line{
+						start:       start,
+						stop:        start.nEast(),
+						orientation: NE,
+					},
+				)
+			}
+		case S:
 			r := c.runeAt(start.south())
 			if r == '-' || isJoint(r) && !isDot(r) {
 				needsNudging = true
 			}
-		case '<':
-			o = W
+		case SE:
+			r := c.runeAt(start.sEast())
+			if r == '-' || isJoint(r) && !isDot(r) {
+				needsNudging = true
+				triangles = append(
+					triangles,
+					Line{
+						start:       start,
+						stop:        start.sEast(),
+						orientation: SE,
+					},
+				)
+			}
+		case SW:
+			r := c.runeAt(start.sWest())
+			if r == '-' || isJoint(r) && !isDot(r) {
+				needsNudging = true
+				triangles = append(
+					triangles,
+					Line{
+						start:       start.sWest(),
+						stop:        start,
+						orientation: NE,
+					},
+				)
+			}
+		case W:
 			r := c.runeAt(start.west())
 			if isDot(r) {
 				needsNudging = true
 			}
-		case '>':
-			o = E
+		case E:
 			r := c.runeAt(start.east())
-			if r == 'o' || r == '*' {
+			if isDot(r) {
 				needsNudging = true
 			}
-		default:
-			continue
 		}
 
 		triangles = append(
 			triangles,
-			Triangle{start: start, orientation: o, needsNudging: needsNudging},
+			Triangle{
+				start:        start,
+				orientation:  o,
+				needsNudging: needsNudging,
+			},
 		)
 	}
 

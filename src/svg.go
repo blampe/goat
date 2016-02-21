@@ -115,20 +115,10 @@ func (l Line) Draw(out io.Writer) {
 
 	if l.needsNudgingLeft {
 		start.x -= 8
-		//if l.orientation == NE {
-		//start.y += 8
-		//} else if l.orientation == SE {
-		//start.y -= 8
-		//}
 	}
 
 	if l.needsNudgingRight {
 		stop.x += 8
-		//if l.orientation == NE {
-		//stop.y -= 8
-		//} else if l.orientation == SE {
-		//stop.y += 8
-		//}
 	}
 
 	if l.needsTinyNudgingLeft {
@@ -157,7 +147,7 @@ func (l Line) Draw(out io.Writer) {
 }
 
 // Draw a solid triable as an SVG polygon element.
-func (t *Triangle) Draw(out io.Writer) {
+func (t Triangle) Draw(out io.Writer) {
 	// https://www.w3.org/TR/SVG/shapes.html#PolygonElement
 
 	/*
@@ -189,6 +179,26 @@ func (t *Triangle) Draw(out io.Writer) {
 			x1 += 8
 			x2 += 8
 		}
+	case NE:
+		r = 300
+		x0 += 4
+		x1 += 4
+		x2 += 4
+		if t.needsNudging {
+			x0 += 6
+			x1 += 6
+			x2 += 6
+		}
+	case NW:
+		r = 240
+		x0 += 4
+		x1 += 4
+		x2 += 4
+		if t.needsNudging {
+			x0 += 6
+			x1 += 6
+			x2 += 6
+		}
 	case W:
 		r = 180
 		if t.needsNudging {
@@ -209,6 +219,26 @@ func (t *Triangle) Draw(out io.Writer) {
 			x0 += 8
 			x1 += 8
 			x2 += 8
+		}
+	case SW:
+		r = 120
+		x0 += 4
+		x1 += 4
+		x2 += 4
+		if t.needsNudging {
+			x0 += 6
+			x1 += 6
+			x2 += 6
+		}
+	case SE:
+		r = 60
+		x0 += 4
+		x1 += 4
+		x2 += 4
+		if t.needsNudging {
+			x0 += 6
+			x1 += 6
+			x2 += 6
 		}
 	}
 
