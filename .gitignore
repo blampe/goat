@@ -1,6 +1,7 @@
 *.swp
 .DS_Store
 
+vendor
 examples/*.svg
 
 goat
