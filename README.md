@@ -20,8 +20,7 @@ instead I recommend you look at these forks:
 
 * [@bep] is the fork currently used by Hugo, which I expect to be more active
   over time.
-* [@dmacvicar] has improved SVG/PDF rendering, font handling, and CLI
-  experience.
+* [@dmacvicar] has improved SVG/PNG/PDF rendering.
 * [@sw46] has implemented a really wonderful hand-drawn style worth checking
   out.
 
@@ -29,8 +28,16 @@ instead I recommend you look at these forks:
 
 ```bash
 $ go get github.com/blampe/goat
-$ goat my-cool-diagram.txt > my-cool-diagram.svg
+$ cat my-cool-diagram.txt | goat > my-cool-diagram.svg
 ```
+
+By default, the program reads from stdin, unless `-i infile` is given.
+
+By default, the program writes to stdout, unless `-o outfile` is given or a
+binary format with `-f` is selected.
+
+By default, it writes in [SVG] format, unless another format is specified with
+`-f`.
 
 ## TODO
 
@@ -195,5 +202,6 @@ More examples are available [here](examples).
 [@bep]: https://github.com/bep/goat/
 [@dmacvicar]: https://github.com/dmacvicar/goat
 [@sw46]: https://github.com/sw46/goat/
+[SVG]: https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 [markdeep.mini.js]: http://casual-effects.com/markdeep/
 [v0.93.0]: https://github.com/gohugoio/hugo/releases/tag/v0.93.0
