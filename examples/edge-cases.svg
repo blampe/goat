@@ -1,14 +1,14 @@
 <svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='153' width='352'>
 <g transform='translate(8,16)'>
-<path d='M 24,0 L 40,0' style='fill:none;stroke:#000;'></path>
-<path d='M 24,32 L 40,32' style='fill:none;stroke:#000;'></path>
+<path d='M 32,0 L 40,0' style='fill:none;stroke:#000;'></path>
+<path d='M 32,32 L 40,32' style='fill:none;stroke:#000;'></path>
 <path d='M 152,32 L 232,32' style='fill:none;stroke:#000;'></path>
-<path d='M 24,64 L 40,64' style='fill:none;stroke:#000;'></path>
+<path d='M 32,64 L 40,64' style='fill:none;stroke:#000;'></path>
 <path d='M 120,64 L 144,64' style='fill:none;stroke:#000;'></path>
 <path d='M 240,64 L 264,64' style='fill:none;stroke:#000;'></path>
 <path d='M 288,64 L 304,64' style='fill:none;stroke:#000;'></path>
 <path d='M 320,64 L 336,64' style='fill:none;stroke:#000;'></path>
-<path d='M 24,96 L 40,96' style='fill:none;stroke:#000;'></path>
+<path d='M 32,96 L 40,96' style='fill:none;stroke:#000;'></path>
 <path d='M 152,96 L 232,96' style='fill:none;stroke:#000;'></path>
 <path d='M 16,72 L 16,88' style='fill:none;stroke:#000;'></path>
 <path d='M 48,72 L 48,88' style='fill:none;stroke:#000;'></path>

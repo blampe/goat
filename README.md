@@ -6,14 +6,14 @@ generation.
 ## Usage
 
 ```bash
-$ go get github.com/blampe/goat
+$ go get github.com/bep/goat
 $ goat my-cool-diagram.txt > my-cool-diagram.svg
 ```
 
 ## TODO
 
-* Dashed lines signaled by `:` or `=`.
-* Bold lines signaled by ???.
+- Dashed lines signaled by `:` or `=`.
+- Bold lines signaled by ???.
 
 ## Examples
 
