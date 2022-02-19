@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"io"
+	"sort"
 )
 
 // Characters where more than one line segment can come together.
@@ -73,7 +74,6 @@ func (c *Canvas) String() string {
 			}
 
 			_, err := buffer.WriteRune(r)
-
 			if err != nil {
 				continue
 			}
@@ -89,7 +89,6 @@ func (c *Canvas) String() string {
 }
 
 func (c *Canvas) runeAt(i Index) rune {
-
 	if val, ok := c.data[i]; ok {
 		return val
 	}
@@ -156,7 +155,7 @@ type Drawable interface {
 type Line struct {
 	start Index
 	stop  Index
-	//dashed           bool
+	// dashed           bool
 	needsNudgingDown      bool
 	needsNudgingLeft      bool
 	needsNudgingRight     bool
@@ -268,7 +267,6 @@ const (
 // Lines returns a slice of all Line drawables that we can detect -- in all
 // possible orientations.
 func (c *Canvas) Lines() []Line {
-
 	horizontalMidlines := c.getLinesForSegment('-')
 
 	diagUpLines := c.getLinesForSegment('/')
@@ -808,12 +806,17 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	return NONE
 }
 
+// A wrapper to enable sorting.
+type indexRuneDrawable struct {
+	i Index
+	r rune
+	Drawable
+}
+
 // Text returns a slice of all text characters not belonging to part of the diagram.
 // How these characters are identified is rather complicated.
 func (c *Canvas) Text() []Drawable {
-	var text []Drawable
-
-	newLine := func(i Index, o Orientation) Line {
+	newLine := func(i Index, r rune, o Orientation) Drawable {
 		stop := i
 
 		switch o {
@@ -823,28 +826,48 @@ func (c *Canvas) Text() []Drawable {
 			stop = i.sEast()
 		}
 
-		return Line{
+		l := Line{
 			start:       i,
 			stop:        stop,
 			lonely:      true,
 			orientation: o,
 		}
+
+		return indexRuneDrawable{
+			Drawable: l,
+			i:        i,
+			r:        r,
+		}
 	}
+
+	text := make([]Drawable, len(c.text))
+	var j int
 
 	for i, r := range c.text {
 		switch r {
 		// Weird unicode edge cases that markdeep handles. These get
 		// substituted with lines.
 		case '╱':
-			text = append(text, newLine(i, NE))
+			text[j] = newLine(i, r, NE)
 		case '╲':
-			text = append(text, newLine(i, SE))
+			text[j] = newLine(i, r, SE)
 		case '╳':
-			text = append(text, newLine(i, NE), newLine(i, SE))
+			text[j] = newLine(i, r, NE)
 		default:
-			text = append(text, Text{start: i, contents: string(r)})
+			text[j] = indexRuneDrawable{Drawable: Text{start: i, contents: string(r)}, i: i, r: r}
 		}
+		j++
 	}
+
+	sort.Slice(text, func(i, j int) bool {
+		ti, tj := text[i].(indexRuneDrawable), text[j].(indexRuneDrawable)
+
+		if ti.i.x == tj.i.x {
+			return ti.i.y < tj.i.y || (ti.i.y == tj.i.y && ti.r < tj.r)
+		}
+
+		return ti.i.x < tj.i.x || (ti.i.x == tj.i.x && ti.r < tj.r)
+	})
 
 	return text
 }
@@ -872,7 +895,6 @@ func (c *Canvas) Bridges() []Drawable {
 
 // -)- or -(- or
 func (c *Canvas) isBridge(i Index) Orientation {
-
 	r := c.runeAt(i)
 
 	left := c.runeAt(i.west())
@@ -894,7 +916,6 @@ func (c *Canvas) isBridge(i Index) Orientation {
 }
 
 func (c *Canvas) isText(i Index) bool {
-
 	// Short circuit, we already saw this index and called it text.
 	if _, isText := c.text[i]; isText {
 		return true
