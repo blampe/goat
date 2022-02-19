@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	qt "github.com/frankban/quicktest"
 )
 
 // SafeBuffer is intended only for testing and doesn't check errors on writes
@@ -15,13 +15,13 @@ type safeBuffer struct {
 
 func (b *safeBuffer) WriteString(s string) {
 	_, err := b.Buffer.WriteString(s)
-
 	if err != nil {
 		panic(err)
 	}
 }
 
 func TestReadASCII(t *testing.T) {
+	c := qt.New(t)
 
 	var buf safeBuffer
 
@@ -32,8 +32,8 @@ func TestReadASCII(t *testing.T) {
 
 	canvas := NewCanvas(bytes.NewReader(buf.Bytes()))
 
-	assert.Equal(t, 8, canvas.Width)
-	assert.Equal(t, 3, canvas.Height)
+	c.Assert(canvas.Width, qt.Equals, 8)
+	c.Assert(canvas.Height, qt.Equals, 3)
 
 	buf.Truncate(0)
 	buf.WriteString(" +-->   \n")
@@ -42,5 +42,5 @@ func TestReadASCII(t *testing.T) {
 
 	expected := buf.String()
 
-	assert.Equal(t, expected, canvas.String())
+	c.Assert(expected, qt.Equals, canvas.String())
 }

@@ -3,10 +3,18 @@ package goat
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	qt "github.com/frankban/quicktest"
+	"github.com/google/go-cmp/cmp"
+)
+
+var eq = qt.CmpEquals(
+	cmp.Comparer(func(i1, i2 Index) bool {
+		return i1.x == i2.x && i1.y == i2.y
+	}),
 )
 
 func TestIterators(t *testing.T) {
+	c := qt.New(t)
 
 	tests := []struct {
 		iterator chan Index
@@ -77,6 +85,6 @@ func TestIterators(t *testing.T) {
 			result = append(result, i)
 		}
 
-		assert.Equal(t, tt.expected, result)
+		c.Assert(result, eq, tt.expected)
 	}
 }
