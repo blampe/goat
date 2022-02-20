@@ -1,59 +1,59 @@
 package goat
 
 import (
+	"bytes"
 	"fmt"
 	"io"
 )
 
-// ASCIItoSVG reads in a newline-delimited ASCII diagram and writes a
-// corresponding SVG diagram.
-func ASCIItoSVG(in io.Reader, out io.Writer) {
-	canvas := NewCanvas(in)
+type SVG struct {
+	Body   []byte
+	Width  int
+	Height int
+}
+
+func (s SVG) String() string {
+	return fmt.Sprintf("<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d'>\n%s</svg>\n",
+		"diagram",
+		"http://www.w3.org/2000/svg",
+		"1.1", s.Height, s.Width, s.Body)
+}
+
+// BuildSVG  reads in a newline-delimited ASCII diagram from src and returns a SVG.
+func BuildSVG(src io.Reader) SVG {
+	var buff bytes.Buffer
+	canvas := NewCanvas(src)
+	canvas.WriteSVGBody(&buff)
+	return SVG{
+		Body:   buff.Bytes(),
+		Width:  canvas.widthScreen(),
+		Height: canvas.heightScreen(),
+	}
+}
+
+// BuildAndWriteSVG reads in a newline-delimited ASCII diagram from src and writes a
+// corresponding SVG diagram to dst.
+func BuildAndWriteSVG(src io.Reader, dst io.Writer) {
+	canvas := NewCanvas(src)
 
 	// Preamble
-	writeBytes(&out,
+	writeBytes(dst,
 		"<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d'>\n",
 		"diagram",
 		"http://www.w3.org/2000/svg",
 		"1.1",
-		canvas.Height*16+8+1, (canvas.Width+1)*8,
+		canvas.heightScreen(), canvas.widthScreen(),
 	)
 
-	writeBytes(&out, "<g transform='translate(8,16)'>\n")
+	canvas.WriteSVGBody(dst)
 
-	for _, l := range canvas.Lines() {
-		l.Draw(out)
-	}
-
-	for _, t := range canvas.Triangles() {
-		t.Draw(out)
-	}
-
-	for _, c := range canvas.RoundedCorners() {
-		c.Draw(out)
-	}
-
-	for _, c := range canvas.Circles() {
-		c.Draw(out)
-	}
-
-	for _, b := range canvas.Bridges() {
-		b.Draw(out)
-	}
-
-	for _, t := range canvas.Text() {
-		t.Draw(out)
-	}
-
-	writeBytes(&out, "</g>\n")
-	writeBytes(&out, "</svg>\n")
+	writeBytes(dst, "</svg>\n")
 }
 
-func writeBytes(out *io.Writer, format string, args ...interface{}) {
+func writeBytes(out io.Writer, format string, args ...interface{}) {
 	bytesOut := fmt.Sprintf(format, args...)
 
-	_, err := (*out).Write([]byte(bytesOut))
-
+	_, err := out.Write([]byte(bytesOut))
 	if err != nil {
 		panic(nil)
 	}
@@ -61,7 +61,6 @@ func writeBytes(out *io.Writer, format string, args ...interface{}) {
 
 // Draw a straight line as an SVG path.
 func (l Line) Draw(out io.Writer) {
-
 	start := l.start.asPixel()
 	stop := l.stop.asPixel()
 
@@ -140,7 +139,7 @@ func (l Line) Draw(out io.Writer) {
 		}
 	}
 
-	writeBytes(&out,
+	writeBytes(out,
 		"<path d='M %d,%d L %d,%d' style='fill:none;stroke:#000;'></path>\n",
 		start.x, start.y,
 		stop.x, stop.y,
@@ -243,7 +242,7 @@ func (t Triangle) Draw(out io.Writer) {
 		}
 	}
 
-	writeBytes(&out,
+	writeBytes(out,
 		"<polygon points='%f,%f %f,%f %f,%f' style='fill:#000' transform='rotate(%f, %f, %f)'></polygon>\n",
 		x0, y0,
 		x1, y1,
@@ -263,7 +262,7 @@ func (c *Circle) Draw(out io.Writer) {
 
 	pixel := c.start.asPixel()
 
-	writeBytes(&out,
+	writeBytes(out,
 		"<circle cx='%d' cy='%d' r='6' style='fill:%s;stroke:#000;'></circle>\n",
 		pixel.x,
 		pixel.y,
@@ -292,7 +291,7 @@ func (t Text) Draw(out io.Writer) {
 	}
 
 	if opacity != 0 {
-		writeBytes(&out,
+		writeBytes(out,
 			"<rect x='%d' y='%d' width='8' height='16' fill='rgb(%d,%d,%d)'></rect>",
 			p.x-4, p.y-8,
 			opacity, opacity, opacity,
@@ -310,7 +309,7 @@ func (t Text) Draw(out io.Writer) {
 		c = "&lt;"
 	}
 
-	writeBytes(&out,
+	writeBytes(out,
 		"<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='%d' y='%d' style='fill:#000;font-size:1em'>%s</text>\n",
 		p.x, p.y+4, c,
 	)
@@ -348,7 +347,7 @@ func (c *RoundedCorner) Draw(out io.Writer) {
 		endY = y
 	}
 
-	writeBytes(&out,
+	writeBytes(out,
 		"<path d='M %d,%d A 16,16 0 0,%d %d,%d' style='fill:none;stroke:#000;'></path>\n",
 		startX,
 		startY,
@@ -367,7 +366,7 @@ func (b Bridge) Draw(out io.Writer) {
 		sweepFlag = 0
 	}
 
-	writeBytes(&out,
+	writeBytes(out,
 		"<path d='M %d,%d A 9,9 0 0,%d %d,%d' style='fill:none;stroke:#000;'></path>\n",
 		x, y-8,
 		sweepFlag,

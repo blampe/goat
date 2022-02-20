@@ -88,6 +88,14 @@ func (c *Canvas) String() string {
 	return buffer.String()
 }
 
+func (c *Canvas) heightScreen() int {
+	return c.Height*16 + 8 + 1
+}
+
+func (c *Canvas) widthScreen() int {
+	return (c.Width + 1) * 8
+}
+
 func (c *Canvas) runeAt(i Index) rune {
 	if val, ok := c.data[i]; ok {
 		return val
@@ -263,6 +271,36 @@ const (
 	E                       // East
 	W                       // West
 )
+
+func (c *Canvas) WriteSVGBody(dst io.Writer) {
+	writeBytes(dst, "<g transform='translate(8,16)'>\n")
+
+	for _, l := range c.Lines() {
+		l.Draw(dst)
+	}
+
+	for _, t := range c.Triangles() {
+		t.Draw(dst)
+	}
+
+	for _, c := range c.RoundedCorners() {
+		c.Draw(dst)
+	}
+
+	for _, c := range c.Circles() {
+		c.Draw(dst)
+	}
+
+	for _, b := range c.Bridges() {
+		b.Draw(dst)
+	}
+
+	for _, t := range c.Text() {
+		t.Draw(dst)
+	}
+
+	writeBytes(dst, "</g>\n")
+}
 
 // Lines returns a slice of all Line drawables that we can detect -- in all
 // possible orientations.

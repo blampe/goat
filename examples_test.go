@@ -43,7 +43,7 @@ func TestExamplesStableOutput(t *testing.T) {
 			t.Fatal(err)
 		}
 		var out bytes.Buffer
-		ASCIItoSVG(in, &out)
+		BuildAndWriteSVG(in, &out)
 		if i > 0 && previous != out.String() {
 			c.Fail()
 		}
@@ -59,7 +59,7 @@ func TestExamples(t *testing.T) {
 
 	for _, fileInfo := range fileInfos {
 		in, out := getInOut(t, fileInfo.Name())
-		ASCIItoSVG(in, out)
+		BuildAndWriteSVG(in, out)
 	}
 }
 
@@ -67,6 +67,6 @@ func BenchmarkComplicated(b *testing.B) {
 	in, out := getInOut(b, "complicated.txt")
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		ASCIItoSVG(in, out)
+		BuildAndWriteSVG(in, out)
 	}
 }
