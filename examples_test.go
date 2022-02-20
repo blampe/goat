@@ -72,6 +72,7 @@ func TestExamples(t *testing.T) {
 			if buff.String() != golden {
 				c.Log(buff.Len(), len(golden))
 				c.Fatalf("Content mismatch for %s", name)
+
 			}
 			in.Close()
 			out.Close()
@@ -110,6 +111,7 @@ func getOutString(filename string) string {
 	if err != nil {
 		panic(err)
 	}
+	b = bytes.ReplaceAll(b, []byte("\r\n"), []byte("\n"))
 	return string(b)
 }
 
