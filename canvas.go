@@ -147,7 +147,7 @@ func NewCanvas(in io.Reader) Canvas {
 			c.text[idx] = c.runeAt(idx)
 		}
 	}
-	for idx, _ := range c.text {
+	for idx := range c.text {
 		delete(c.data, idx)
 	}
 
@@ -904,7 +904,7 @@ func (c *Canvas) Text() []Drawable {
 			return ti.i.y < tj.i.y || (ti.i.y == tj.i.y && ti.r < tj.r)
 		}
 
-		return ti.i.x < tj.i.x || (ti.i.x == tj.i.x && ti.r < tj.r)
+		return ti.i.x < tj.i.x
 	})
 
 	return text

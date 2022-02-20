@@ -7,7 +7,7 @@ import (
 )
 
 type SVG struct {
-	Body   []byte
+	Body   string
 	Width  int
 	Height int
 }
@@ -25,7 +25,7 @@ func BuildSVG(src io.Reader) SVG {
 	canvas := NewCanvas(src)
 	canvas.WriteSVGBody(&buff)
 	return SVG{
-		Body:   buff.Bytes(),
+		Body:   buff.String(),
 		Width:  canvas.widthScreen(),
 		Height: canvas.heightScreen(),
 	}

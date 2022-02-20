@@ -7,35 +7,22 @@ import (
 	qt "github.com/frankban/quicktest"
 )
 
-// SafeBuffer is intended only for testing and doesn't check errors on writes
-// (to make the errcheck linter happy).
-type safeBuffer struct {
-	bytes.Buffer
-}
-
-func (b *safeBuffer) WriteString(s string) {
-	_, err := b.Buffer.WriteString(s)
-	if err != nil {
-		panic(err)
-	}
-}
-
 func TestReadASCII(t *testing.T) {
 	c := qt.New(t)
 
-	var buf safeBuffer
+	var buf bytes.Buffer
 
 	// TODO: UNICODE
 	buf.WriteString(" +-->\n")
 	buf.WriteString(" | å\n")
 	buf.WriteString(" +----->")
 
-	canvas := NewCanvas(bytes.NewReader(buf.Bytes()))
+	canvas := NewCanvas(&buf)
 
 	c.Assert(canvas.Width, qt.Equals, 8)
 	c.Assert(canvas.Height, qt.Equals, 3)
 
-	buf.Truncate(0)
+	buf.Reset()
 	buf.WriteString(" +-->   \n")
 	buf.WriteString(" | å    \n")
 	buf.WriteString(" +----->\n")
