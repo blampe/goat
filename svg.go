@@ -13,7 +13,7 @@ type SVG struct {
 }
 
 func (s SVG) String() string {
-	return fmt.Sprintf("<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d'>\n%s</svg>\n",
+	return fmt.Sprintf("<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d' font-family='Menlo,Lucida Console,monospace'>\n%s</svg>\n",
 		"diagram",
 		"http://www.w3.org/2000/svg",
 		"1.1", s.Height, s.Width, s.Body)
@@ -315,7 +315,7 @@ func (t Text) Draw(out io.Writer) {
 	}
 
 	writeBytes(out,
-		"<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='%d' y='%d' fill='currentColor' style='font-size:1em'>%s</text>\n",
+		"<text text-anchor='middle' x='%d' y='%d' fill='currentColor' style='font-size:1em'>%s</text>\n",
 		p.x, p.y+4, c,
 	)
 }
