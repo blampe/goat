@@ -140,7 +140,7 @@ func (l Line) Draw(out io.Writer) {
 	}
 
 	writeBytes(out,
-		"<path d='M %d,%d L %d,%d' style='fill:none;stroke:#000;'></path>\n",
+		"<path d='M %d,%d L %d,%d' fill='none' stroke='currentColor'></path>\n",
 		start.x, start.y,
 		stop.x, stop.y,
 	)
@@ -243,7 +243,7 @@ func (t Triangle) Draw(out io.Writer) {
 	}
 
 	writeBytes(out,
-		"<polygon points='%f,%f %f,%f %f,%f' style='fill:#000' transform='rotate(%f, %f, %f)'></polygon>\n",
+		"<polygon points='%f,%f %f,%f %f,%f' fill='currentColor' transform='rotate(%f, %f, %f)'></polygon>\n",
 		x0, y0,
 		x1, y1,
 		x2, y2,
@@ -257,13 +257,13 @@ func (c *Circle) Draw(out io.Writer) {
 	fill := "#fff"
 
 	if c.bold {
-		fill = "#000"
+		fill = "currentColor"
 	}
 
 	pixel := c.start.asPixel()
 
 	writeBytes(out,
-		"<circle cx='%d' cy='%d' r='6' style='fill:%s;stroke:#000;'></circle>\n",
+		"<circle cx='%d' cy='%d' r='6' stroke='currentColor' fill='%s'></circle>\n",
 		pixel.x,
 		pixel.y,
 		fill,
@@ -290,11 +290,16 @@ func (t Text) Draw(out io.Writer) {
 		opacity = 191
 	}
 
+	fill := "currentColor"
+	if opacity > 0 {
+		fill = fmt.Sprintf("rgb(%d,%d,%d)", opacity, opacity, opacity)
+	}
+
 	if opacity != 0 {
 		writeBytes(out,
-			"<rect x='%d' y='%d' width='8' height='16' fill='rgb(%d,%d,%d)'></rect>",
+			"<rect x='%d' y='%d' width='8' height='16' fill='%s'></rect>",
 			p.x-4, p.y-8,
-			opacity, opacity, opacity,
+			fill,
 		)
 		return
 	}
@@ -310,7 +315,7 @@ func (t Text) Draw(out io.Writer) {
 	}
 
 	writeBytes(out,
-		"<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='%d' y='%d' style='fill:#000;font-size:1em'>%s</text>\n",
+		"<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='%d' y='%d' fill='currentColor' style='font-size:1em'>%s</text>\n",
 		p.x, p.y+4, c,
 	)
 }
@@ -348,7 +353,7 @@ func (c *RoundedCorner) Draw(out io.Writer) {
 	}
 
 	writeBytes(out,
-		"<path d='M %d,%d A 16,16 0 0,%d %d,%d' style='fill:none;stroke:#000;'></path>\n",
+		"<path d='M %d,%d A 16,16 0 0,%d %d,%d' fill='none' stroke='currentColor'></path>\n",
 		startX,
 		startY,
 		sweepFlag,
@@ -367,7 +372,7 @@ func (b Bridge) Draw(out io.Writer) {
 	}
 
 	writeBytes(out,
-		"<path d='M %d,%d A 9,9 0 0,%d %d,%d' style='fill:none;stroke:#000;'></path>\n",
+		"<path d='M %d,%d A 9,9 0 0,%d %d,%d' fill='none' stroke='currentColor'></path>\n",
 		x, y-8,
 		sweepFlag,
 		x, y+8,
