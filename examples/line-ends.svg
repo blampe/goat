@@ -1,212 +1,212 @@
 <svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='185' width='752'>
 <g transform='translate(8,16)'>
-<path d='M 24,0 L 48,0' style='fill:none;stroke:#000;'></path>
-<path d='M 88,0 L 112,0' style='fill:none;stroke:#000;'></path>
-<path d='M 24,16 L 48,16' style='fill:none;stroke:#000;'></path>
-<path d='M 88,16 L 112,16' style='fill:none;stroke:#000;'></path>
-<path d='M 24,32 L 48,32' style='fill:none;stroke:#000;'></path>
-<path d='M 88,32 L 112,32' style='fill:none;stroke:#000;'></path>
-<path d='M 24,48 L 48,48' style='fill:none;stroke:#000;'></path>
-<path d='M 88,48 L 112,48' style='fill:none;stroke:#000;'></path>
-<path d='M 24,144 L 48,144' style='fill:none;stroke:#000;'></path>
-<path d='M 80,144 L 104,144' style='fill:none;stroke:#000;'></path>
-<path d='M 136,144 L 160,144' style='fill:none;stroke:#000;'></path>
-<path d='M 192,144 L 216,144' style='fill:none;stroke:#000;'></path>
-<path d='M 272,144 L 296,144' style='fill:none;stroke:#000;'></path>
-<path d='M 328,144 L 352,144' style='fill:none;stroke:#000;'></path>
-<path d='M 384,144 L 408,144' style='fill:none;stroke:#000;'></path>
-<path d='M 440,144 L 464,144' style='fill:none;stroke:#000;'></path>
-<path d='M 528,144 L 544,144' style='fill:none;stroke:#000;'></path>
-<path d='M 584,144 L 600,144' style='fill:none;stroke:#000;'></path>
-<path d='M 632,144 L 648,144' style='fill:none;stroke:#000;'></path>
-<path d='M 688,144 L 704,144' style='fill:none;stroke:#000;'></path>
-<path d='M 24,80 L 24,96' style='fill:none;stroke:#000;'></path>
-<path d='M 48,80 L 48,96' style='fill:none;stroke:#000;'></path>
-<path d='M 80,96 L 80,112' style='fill:none;stroke:#000;'></path>
-<path d='M 104,96 L 104,112' style='fill:none;stroke:#000;'></path>
-<path d='M 264,0 L 264,32' style='fill:none;stroke:#000;'></path>
-<path d='M 264,64 L 264,96' style='fill:none;stroke:#000;'></path>
-<path d='M 280,0 L 280,32' style='fill:none;stroke:#000;'></path>
-<path d='M 280,64 L 280,96' style='fill:none;stroke:#000;'></path>
-<path d='M 296,0 L 296,32' style='fill:none;stroke:#000;'></path>
-<path d='M 296,64 L 296,96' style='fill:none;stroke:#000;'></path>
-<path d='M 312,0 L 312,32' style='fill:none;stroke:#000;'></path>
-<path d='M 312,64 L 312,96' style='fill:none;stroke:#000;'></path>
-<path d='M 344,0 L 344,32' style='fill:none;stroke:#000;'></path>
-<path d='M 344,64 L 344,96' style='fill:none;stroke:#000;'></path>
-<path d='M 360,0 L 360,32' style='fill:none;stroke:#000;'></path>
-<path d='M 360,64 L 360,96' style='fill:none;stroke:#000;'></path>
-<path d='M 376,0 L 376,32' style='fill:none;stroke:#000;'></path>
-<path d='M 376,64 L 376,96' style='fill:none;stroke:#000;'></path>
-<path d='M 392,0 L 392,32' style='fill:none;stroke:#000;'></path>
-<path d='M 392,64 L 392,96' style='fill:none;stroke:#000;'></path>
-<path d='M 152,16 L 160,0' style='fill:none;stroke:#000;'></path>
-<path d='M 176,16 L 184,0' style='fill:none;stroke:#000;'></path>
-<path d='M 200,32 L 208,16' style='fill:none;stroke:#000;'></path>
-<path d='M 224,32 L 232,16' style='fill:none;stroke:#000;'></path>
-<path d='M 592,32 L 608,0' style='fill:none;stroke:#000;'></path>
-<path d='M 608,32 L 624,0' style='fill:none;stroke:#000;'></path>
-<path d='M 592,96 L 608,64' style='fill:none;stroke:#000;'></path>
-<path d='M 624,32 L 640,0' style='fill:none;stroke:#000;'></path>
-<path d='M 608,96 L 624,64' style='fill:none;stroke:#000;'></path>
-<path d='M 640,32 L 656,0' style='fill:none;stroke:#000;'></path>
-<path d='M 624,96 L 640,64' style='fill:none;stroke:#000;'></path>
-<path d='M 640,96 L 656,64' style='fill:none;stroke:#000;'></path>
-<path d='M 672,32 L 688,0' style='fill:none;stroke:#000;'></path>
-<path d='M 688,32 L 704,0' style='fill:none;stroke:#000;'></path>
-<path d='M 672,96 L 688,64' style='fill:none;stroke:#000;'></path>
-<path d='M 704,32 L 720,0' style='fill:none;stroke:#000;'></path>
-<path d='M 688,96 L 704,64' style='fill:none;stroke:#000;'></path>
-<path d='M 720,32 L 736,0' style='fill:none;stroke:#000;'></path>
-<path d='M 704,96 L 720,64' style='fill:none;stroke:#000;'></path>
-<path d='M 720,96 L 736,64' style='fill:none;stroke:#000;'></path>
-<path d='M 128,80 L 136,96' style='fill:none;stroke:#000;'></path>
-<path d='M 152,80 L 160,96' style='fill:none;stroke:#000;'></path>
-<path d='M 192,96 L 200,112' style='fill:none;stroke:#000;'></path>
-<path d='M 216,96 L 224,112' style='fill:none;stroke:#000;'></path>
-<path d='M 424,64 L 440,96' style='fill:none;stroke:#000;'></path>
-<path d='M 440,64 L 456,96' style='fill:none;stroke:#000;'></path>
-<path d='M 424,0 L 440,32' style='fill:none;stroke:#000;'></path>
-<path d='M 456,64 L 472,96' style='fill:none;stroke:#000;'></path>
-<path d='M 440,0 L 456,32' style='fill:none;stroke:#000;'></path>
-<path d='M 472,64 L 488,96' style='fill:none;stroke:#000;'></path>
-<path d='M 456,0 L 472,32' style='fill:none;stroke:#000;'></path>
-<path d='M 472,0 L 488,32' style='fill:none;stroke:#000;'></path>
-<path d='M 504,64 L 520,96' style='fill:none;stroke:#000;'></path>
-<path d='M 520,64 L 536,96' style='fill:none;stroke:#000;'></path>
-<path d='M 504,0 L 520,32' style='fill:none;stroke:#000;'></path>
-<path d='M 536,64 L 552,96' style='fill:none;stroke:#000;'></path>
-<path d='M 520,0 L 536,32' style='fill:none;stroke:#000;'></path>
-<path d='M 552,64 L 568,96' style='fill:none;stroke:#000;'></path>
-<path d='M 536,0 L 552,32' style='fill:none;stroke:#000;'></path>
-<path d='M 552,0 L 568,32' style='fill:none;stroke:#000;'></path>
-<polygon points='32.000000,96.000000 20.000000,90.400002 20.000000,101.599998' style='fill:#000' transform='rotate(90.000000, 24.000000, 96.000000)'></polygon>
-<polygon points='32.000000,144.000000 20.000000,138.399994 20.000000,149.600006' style='fill:#000' transform='rotate(180.000000, 24.000000, 144.000000)'></polygon>
-<polygon points='56.000000,32.000000 44.000000,26.400000 44.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 48.000000, 32.000000)'></polygon>
-<polygon points='56.000000,96.000000 44.000000,90.400002 44.000000,101.599998' style='fill:#000' transform='rotate(90.000000, 48.000000, 96.000000)'></polygon>
-<polygon points='88.000000,96.000000 76.000000,90.400002 76.000000,101.599998' style='fill:#000' transform='rotate(270.000000, 80.000000, 96.000000)'></polygon>
-<polygon points='88.000000,144.000000 76.000000,138.399994 76.000000,149.600006' style='fill:#000' transform='rotate(180.000000, 80.000000, 144.000000)'></polygon>
-<polygon points='112.000000,96.000000 100.000000,90.400002 100.000000,101.599998' style='fill:#000' transform='rotate(270.000000, 104.000000, 96.000000)'></polygon>
-<polygon points='120.000000,32.000000 108.000000,26.400000 108.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 112.000000, 32.000000)'></polygon>
-<polygon points='148.000000,96.000000 136.000000,90.400002 136.000000,101.599998' style='fill:#000' transform='rotate(60.000000, 136.000000, 96.000000)'></polygon>
-<polygon points='144.000000,144.000000 132.000000,138.399994 132.000000,149.600006' style='fill:#000' transform='rotate(180.000000, 136.000000, 144.000000)'></polygon>
-<polygon points='164.000000,16.000000 152.000000,10.400000 152.000000,21.600000' style='fill:#000' transform='rotate(120.000000, 152.000000, 16.000000)'></polygon>
-<polygon points='172.000000,96.000000 160.000000,90.400002 160.000000,101.599998' style='fill:#000' transform='rotate(60.000000, 160.000000, 96.000000)'></polygon>
-<polygon points='168.000000,144.000000 156.000000,138.399994 156.000000,149.600006' style='fill:#000' transform='rotate(0.000000, 160.000000, 144.000000)'></polygon>
-<polygon points='188.000000,16.000000 176.000000,10.400000 176.000000,21.600000' style='fill:#000' transform='rotate(120.000000, 176.000000, 16.000000)'></polygon>
-<polygon points='204.000000,96.000000 192.000000,90.400002 192.000000,101.599998' style='fill:#000' transform='rotate(240.000000, 192.000000, 96.000000)'></polygon>
-<polygon points='200.000000,144.000000 188.000000,138.399994 188.000000,149.600006' style='fill:#000' transform='rotate(180.000000, 192.000000, 144.000000)'></polygon>
-<polygon points='220.000000,16.000000 208.000000,10.400000 208.000000,21.600000' style='fill:#000' transform='rotate(300.000000, 208.000000, 16.000000)'></polygon>
-<polygon points='228.000000,96.000000 216.000000,90.400002 216.000000,101.599998' style='fill:#000' transform='rotate(240.000000, 216.000000, 96.000000)'></polygon>
-<polygon points='244.000000,16.000000 232.000000,10.400000 232.000000,21.600000' style='fill:#000' transform='rotate(300.000000, 232.000000, 16.000000)'></polygon>
-<polygon points='272.000000,64.000000 260.000000,58.400002 260.000000,69.599998' style='fill:#000' transform='rotate(270.000000, 264.000000, 64.000000)'></polygon>
-<polygon points='288.000000,64.000000 276.000000,58.400002 276.000000,69.599998' style='fill:#000' transform='rotate(270.000000, 280.000000, 64.000000)'></polygon>
-<polygon points='304.000000,32.000000 292.000000,26.400000 292.000000,37.599998' style='fill:#000' transform='rotate(90.000000, 296.000000, 32.000000)'></polygon>
-<polygon points='304.000000,64.000000 292.000000,58.400002 292.000000,69.599998' style='fill:#000' transform='rotate(270.000000, 296.000000, 64.000000)'></polygon>
-<polygon points='304.000000,96.000000 292.000000,90.400002 292.000000,101.599998' style='fill:#000' transform='rotate(90.000000, 296.000000, 96.000000)'></polygon>
-<polygon points='320.000000,64.000000 308.000000,58.400002 308.000000,69.599998' style='fill:#000' transform='rotate(270.000000, 312.000000, 64.000000)'></polygon>
-<polygon points='384.000000,32.000000 372.000000,26.400000 372.000000,37.599998' style='fill:#000' transform='rotate(90.000000, 376.000000, 32.000000)'></polygon>
-<polygon points='384.000000,96.000000 372.000000,90.400002 372.000000,101.599998' style='fill:#000' transform='rotate(90.000000, 376.000000, 96.000000)'></polygon>
-<polygon points='416.000000,144.000000 404.000000,138.399994 404.000000,149.600006' style='fill:#000' transform='rotate(0.000000, 408.000000, 144.000000)'></polygon>
-<polygon points='436.000000,64.000000 424.000000,58.400002 424.000000,69.599998' style='fill:#000' transform='rotate(240.000000, 424.000000, 64.000000)'></polygon>
-<polygon points='452.000000,64.000000 440.000000,58.400002 440.000000,69.599998' style='fill:#000' transform='rotate(240.000000, 440.000000, 64.000000)'></polygon>
-<polygon points='468.000000,64.000000 456.000000,58.400002 456.000000,69.599998' style='fill:#000' transform='rotate(240.000000, 456.000000, 64.000000)'></polygon>
-<polygon points='484.000000,32.000000 472.000000,26.400000 472.000000,37.599998' style='fill:#000' transform='rotate(60.000000, 472.000000, 32.000000)'></polygon>
-<polygon points='484.000000,64.000000 472.000000,58.400002 472.000000,69.599998' style='fill:#000' transform='rotate(240.000000, 472.000000, 64.000000)'></polygon>
-<polygon points='484.000000,96.000000 472.000000,90.400002 472.000000,101.599998' style='fill:#000' transform='rotate(60.000000, 472.000000, 96.000000)'></polygon>
-<polygon points='528.000000,144.000000 516.000000,138.399994 516.000000,149.600006' style='fill:#000' transform='rotate(180.000000, 528.000000, 144.000000)'></polygon>
-<polygon points='564.000000,32.000000 552.000000,26.400000 552.000000,37.599998' style='fill:#000' transform='rotate(60.000000, 552.000000, 32.000000)'></polygon>
-<polygon points='564.000000,96.000000 552.000000,90.400002 552.000000,101.599998' style='fill:#000' transform='rotate(60.000000, 552.000000, 96.000000)'></polygon>
-<polygon points='584.000000,144.000000 572.000000,138.399994 572.000000,149.600006' style='fill:#000' transform='rotate(180.000000, 584.000000, 144.000000)'></polygon>
-<polygon points='620.000000,64.000000 608.000000,58.400002 608.000000,69.599998' style='fill:#000' transform='rotate(300.000000, 608.000000, 64.000000)'></polygon>
-<polygon points='636.000000,32.000000 624.000000,26.400000 624.000000,37.599998' style='fill:#000' transform='rotate(120.000000, 624.000000, 32.000000)'></polygon>
-<polygon points='636.000000,64.000000 624.000000,58.400002 624.000000,69.599998' style='fill:#000' transform='rotate(300.000000, 624.000000, 64.000000)'></polygon>
-<polygon points='636.000000,96.000000 624.000000,90.400002 624.000000,101.599998' style='fill:#000' transform='rotate(120.000000, 624.000000, 96.000000)'></polygon>
-<polygon points='652.000000,64.000000 640.000000,58.400002 640.000000,69.599998' style='fill:#000' transform='rotate(300.000000, 640.000000, 64.000000)'></polygon>
-<polygon points='648.000000,144.000000 636.000000,138.399994 636.000000,149.600006' style='fill:#000' transform='rotate(0.000000, 648.000000, 144.000000)'></polygon>
-<polygon points='668.000000,64.000000 656.000000,58.400002 656.000000,69.599998' style='fill:#000' transform='rotate(300.000000, 656.000000, 64.000000)'></polygon>
-<polygon points='716.000000,32.000000 704.000000,26.400000 704.000000,37.599998' style='fill:#000' transform='rotate(120.000000, 704.000000, 32.000000)'></polygon>
-<polygon points='716.000000,96.000000 704.000000,90.400002 704.000000,101.599998' style='fill:#000' transform='rotate(120.000000, 704.000000, 96.000000)'></polygon>
-<polygon points='704.000000,144.000000 692.000000,138.399994 692.000000,149.600006' style='fill:#000' transform='rotate(0.000000, 704.000000, 144.000000)'></polygon>
-<circle cx='24' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='24' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='24' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='24' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='24' cy='112' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='48' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='48' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='48' cy='112' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='48' cy='144' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='80' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='88' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='88' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='88' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='88' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='104' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='104' cy='144' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='112' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='112' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='144' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='144' cy='112' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='168' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='168' cy='112' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='184' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='208' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='216' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='240' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='264' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='264' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='264' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='280' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='280' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='280' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='296' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='296' cy='144' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='312' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='344' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='344' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='344' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='352' cy='144' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='360' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='360' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='360' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='376' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='392' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='424' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='440' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='440' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='440' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='456' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='456' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='456' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='472' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='504' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='520' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='520' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='520' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='520' cy='144' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='536' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='536' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='536' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='552' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='576' cy='144' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='592' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='592' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='608' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='608' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='608' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='624' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='640' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='656' cy='0' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='656' cy='144' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='672' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='672' cy='96' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='688' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='688' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='688' cy='96' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='704' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='712' cy='144' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='720' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='736' cy='0' r='6' style='fill:#000;stroke:#000;'></circle>
+<path d='M 24,0 L 48,0' fill='none' stroke='currentColor'></path>
+<path d='M 88,0 L 112,0' fill='none' stroke='currentColor'></path>
+<path d='M 24,16 L 48,16' fill='none' stroke='currentColor'></path>
+<path d='M 88,16 L 112,16' fill='none' stroke='currentColor'></path>
+<path d='M 24,32 L 48,32' fill='none' stroke='currentColor'></path>
+<path d='M 88,32 L 112,32' fill='none' stroke='currentColor'></path>
+<path d='M 24,48 L 48,48' fill='none' stroke='currentColor'></path>
+<path d='M 88,48 L 112,48' fill='none' stroke='currentColor'></path>
+<path d='M 24,144 L 48,144' fill='none' stroke='currentColor'></path>
+<path d='M 80,144 L 104,144' fill='none' stroke='currentColor'></path>
+<path d='M 136,144 L 160,144' fill='none' stroke='currentColor'></path>
+<path d='M 192,144 L 216,144' fill='none' stroke='currentColor'></path>
+<path d='M 272,144 L 296,144' fill='none' stroke='currentColor'></path>
+<path d='M 328,144 L 352,144' fill='none' stroke='currentColor'></path>
+<path d='M 384,144 L 408,144' fill='none' stroke='currentColor'></path>
+<path d='M 440,144 L 464,144' fill='none' stroke='currentColor'></path>
+<path d='M 528,144 L 544,144' fill='none' stroke='currentColor'></path>
+<path d='M 584,144 L 600,144' fill='none' stroke='currentColor'></path>
+<path d='M 632,144 L 648,144' fill='none' stroke='currentColor'></path>
+<path d='M 688,144 L 704,144' fill='none' stroke='currentColor'></path>
+<path d='M 24,80 L 24,96' fill='none' stroke='currentColor'></path>
+<path d='M 48,80 L 48,96' fill='none' stroke='currentColor'></path>
+<path d='M 80,96 L 80,112' fill='none' stroke='currentColor'></path>
+<path d='M 104,96 L 104,112' fill='none' stroke='currentColor'></path>
+<path d='M 264,0 L 264,32' fill='none' stroke='currentColor'></path>
+<path d='M 264,64 L 264,96' fill='none' stroke='currentColor'></path>
+<path d='M 280,0 L 280,32' fill='none' stroke='currentColor'></path>
+<path d='M 280,64 L 280,96' fill='none' stroke='currentColor'></path>
+<path d='M 296,0 L 296,32' fill='none' stroke='currentColor'></path>
+<path d='M 296,64 L 296,96' fill='none' stroke='currentColor'></path>
+<path d='M 312,0 L 312,32' fill='none' stroke='currentColor'></path>
+<path d='M 312,64 L 312,96' fill='none' stroke='currentColor'></path>
+<path d='M 344,0 L 344,32' fill='none' stroke='currentColor'></path>
+<path d='M 344,64 L 344,96' fill='none' stroke='currentColor'></path>
+<path d='M 360,0 L 360,32' fill='none' stroke='currentColor'></path>
+<path d='M 360,64 L 360,96' fill='none' stroke='currentColor'></path>
+<path d='M 376,0 L 376,32' fill='none' stroke='currentColor'></path>
+<path d='M 376,64 L 376,96' fill='none' stroke='currentColor'></path>
+<path d='M 392,0 L 392,32' fill='none' stroke='currentColor'></path>
+<path d='M 392,64 L 392,96' fill='none' stroke='currentColor'></path>
+<path d='M 152,16 L 160,0' fill='none' stroke='currentColor'></path>
+<path d='M 176,16 L 184,0' fill='none' stroke='currentColor'></path>
+<path d='M 200,32 L 208,16' fill='none' stroke='currentColor'></path>
+<path d='M 224,32 L 232,16' fill='none' stroke='currentColor'></path>
+<path d='M 592,32 L 608,0' fill='none' stroke='currentColor'></path>
+<path d='M 608,32 L 624,0' fill='none' stroke='currentColor'></path>
+<path d='M 592,96 L 608,64' fill='none' stroke='currentColor'></path>
+<path d='M 624,32 L 640,0' fill='none' stroke='currentColor'></path>
+<path d='M 608,96 L 624,64' fill='none' stroke='currentColor'></path>
+<path d='M 640,32 L 656,0' fill='none' stroke='currentColor'></path>
+<path d='M 624,96 L 640,64' fill='none' stroke='currentColor'></path>
+<path d='M 640,96 L 656,64' fill='none' stroke='currentColor'></path>
+<path d='M 672,32 L 688,0' fill='none' stroke='currentColor'></path>
+<path d='M 688,32 L 704,0' fill='none' stroke='currentColor'></path>
+<path d='M 672,96 L 688,64' fill='none' stroke='currentColor'></path>
+<path d='M 704,32 L 720,0' fill='none' stroke='currentColor'></path>
+<path d='M 688,96 L 704,64' fill='none' stroke='currentColor'></path>
+<path d='M 720,32 L 736,0' fill='none' stroke='currentColor'></path>
+<path d='M 704,96 L 720,64' fill='none' stroke='currentColor'></path>
+<path d='M 720,96 L 736,64' fill='none' stroke='currentColor'></path>
+<path d='M 128,80 L 136,96' fill='none' stroke='currentColor'></path>
+<path d='M 152,80 L 160,96' fill='none' stroke='currentColor'></path>
+<path d='M 192,96 L 200,112' fill='none' stroke='currentColor'></path>
+<path d='M 216,96 L 224,112' fill='none' stroke='currentColor'></path>
+<path d='M 424,64 L 440,96' fill='none' stroke='currentColor'></path>
+<path d='M 440,64 L 456,96' fill='none' stroke='currentColor'></path>
+<path d='M 424,0 L 440,32' fill='none' stroke='currentColor'></path>
+<path d='M 456,64 L 472,96' fill='none' stroke='currentColor'></path>
+<path d='M 440,0 L 456,32' fill='none' stroke='currentColor'></path>
+<path d='M 472,64 L 488,96' fill='none' stroke='currentColor'></path>
+<path d='M 456,0 L 472,32' fill='none' stroke='currentColor'></path>
+<path d='M 472,0 L 488,32' fill='none' stroke='currentColor'></path>
+<path d='M 504,64 L 520,96' fill='none' stroke='currentColor'></path>
+<path d='M 520,64 L 536,96' fill='none' stroke='currentColor'></path>
+<path d='M 504,0 L 520,32' fill='none' stroke='currentColor'></path>
+<path d='M 536,64 L 552,96' fill='none' stroke='currentColor'></path>
+<path d='M 520,0 L 536,32' fill='none' stroke='currentColor'></path>
+<path d='M 552,64 L 568,96' fill='none' stroke='currentColor'></path>
+<path d='M 536,0 L 552,32' fill='none' stroke='currentColor'></path>
+<path d='M 552,0 L 568,32' fill='none' stroke='currentColor'></path>
+<polygon points='32.000000,96.000000 20.000000,90.400002 20.000000,101.599998' fill='currentColor' transform='rotate(90.000000, 24.000000, 96.000000)'></polygon>
+<polygon points='32.000000,144.000000 20.000000,138.399994 20.000000,149.600006' fill='currentColor' transform='rotate(180.000000, 24.000000, 144.000000)'></polygon>
+<polygon points='56.000000,32.000000 44.000000,26.400000 44.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 48.000000, 32.000000)'></polygon>
+<polygon points='56.000000,96.000000 44.000000,90.400002 44.000000,101.599998' fill='currentColor' transform='rotate(90.000000, 48.000000, 96.000000)'></polygon>
+<polygon points='88.000000,96.000000 76.000000,90.400002 76.000000,101.599998' fill='currentColor' transform='rotate(270.000000, 80.000000, 96.000000)'></polygon>
+<polygon points='88.000000,144.000000 76.000000,138.399994 76.000000,149.600006' fill='currentColor' transform='rotate(180.000000, 80.000000, 144.000000)'></polygon>
+<polygon points='112.000000,96.000000 100.000000,90.400002 100.000000,101.599998' fill='currentColor' transform='rotate(270.000000, 104.000000, 96.000000)'></polygon>
+<polygon points='120.000000,32.000000 108.000000,26.400000 108.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 112.000000, 32.000000)'></polygon>
+<polygon points='148.000000,96.000000 136.000000,90.400002 136.000000,101.599998' fill='currentColor' transform='rotate(60.000000, 136.000000, 96.000000)'></polygon>
+<polygon points='144.000000,144.000000 132.000000,138.399994 132.000000,149.600006' fill='currentColor' transform='rotate(180.000000, 136.000000, 144.000000)'></polygon>
+<polygon points='164.000000,16.000000 152.000000,10.400000 152.000000,21.600000' fill='currentColor' transform='rotate(120.000000, 152.000000, 16.000000)'></polygon>
+<polygon points='172.000000,96.000000 160.000000,90.400002 160.000000,101.599998' fill='currentColor' transform='rotate(60.000000, 160.000000, 96.000000)'></polygon>
+<polygon points='168.000000,144.000000 156.000000,138.399994 156.000000,149.600006' fill='currentColor' transform='rotate(0.000000, 160.000000, 144.000000)'></polygon>
+<polygon points='188.000000,16.000000 176.000000,10.400000 176.000000,21.600000' fill='currentColor' transform='rotate(120.000000, 176.000000, 16.000000)'></polygon>
+<polygon points='204.000000,96.000000 192.000000,90.400002 192.000000,101.599998' fill='currentColor' transform='rotate(240.000000, 192.000000, 96.000000)'></polygon>
+<polygon points='200.000000,144.000000 188.000000,138.399994 188.000000,149.600006' fill='currentColor' transform='rotate(180.000000, 192.000000, 144.000000)'></polygon>
+<polygon points='220.000000,16.000000 208.000000,10.400000 208.000000,21.600000' fill='currentColor' transform='rotate(300.000000, 208.000000, 16.000000)'></polygon>
+<polygon points='228.000000,96.000000 216.000000,90.400002 216.000000,101.599998' fill='currentColor' transform='rotate(240.000000, 216.000000, 96.000000)'></polygon>
+<polygon points='244.000000,16.000000 232.000000,10.400000 232.000000,21.600000' fill='currentColor' transform='rotate(300.000000, 232.000000, 16.000000)'></polygon>
+<polygon points='272.000000,64.000000 260.000000,58.400002 260.000000,69.599998' fill='currentColor' transform='rotate(270.000000, 264.000000, 64.000000)'></polygon>
+<polygon points='288.000000,64.000000 276.000000,58.400002 276.000000,69.599998' fill='currentColor' transform='rotate(270.000000, 280.000000, 64.000000)'></polygon>
+<polygon points='304.000000,32.000000 292.000000,26.400000 292.000000,37.599998' fill='currentColor' transform='rotate(90.000000, 296.000000, 32.000000)'></polygon>
+<polygon points='304.000000,64.000000 292.000000,58.400002 292.000000,69.599998' fill='currentColor' transform='rotate(270.000000, 296.000000, 64.000000)'></polygon>
+<polygon points='304.000000,96.000000 292.000000,90.400002 292.000000,101.599998' fill='currentColor' transform='rotate(90.000000, 296.000000, 96.000000)'></polygon>
+<polygon points='320.000000,64.000000 308.000000,58.400002 308.000000,69.599998' fill='currentColor' transform='rotate(270.000000, 312.000000, 64.000000)'></polygon>
+<polygon points='384.000000,32.000000 372.000000,26.400000 372.000000,37.599998' fill='currentColor' transform='rotate(90.000000, 376.000000, 32.000000)'></polygon>
+<polygon points='384.000000,96.000000 372.000000,90.400002 372.000000,101.599998' fill='currentColor' transform='rotate(90.000000, 376.000000, 96.000000)'></polygon>
+<polygon points='416.000000,144.000000 404.000000,138.399994 404.000000,149.600006' fill='currentColor' transform='rotate(0.000000, 408.000000, 144.000000)'></polygon>
+<polygon points='436.000000,64.000000 424.000000,58.400002 424.000000,69.599998' fill='currentColor' transform='rotate(240.000000, 424.000000, 64.000000)'></polygon>
+<polygon points='452.000000,64.000000 440.000000,58.400002 440.000000,69.599998' fill='currentColor' transform='rotate(240.000000, 440.000000, 64.000000)'></polygon>
+<polygon points='468.000000,64.000000 456.000000,58.400002 456.000000,69.599998' fill='currentColor' transform='rotate(240.000000, 456.000000, 64.000000)'></polygon>
+<polygon points='484.000000,32.000000 472.000000,26.400000 472.000000,37.599998' fill='currentColor' transform='rotate(60.000000, 472.000000, 32.000000)'></polygon>
+<polygon points='484.000000,64.000000 472.000000,58.400002 472.000000,69.599998' fill='currentColor' transform='rotate(240.000000, 472.000000, 64.000000)'></polygon>
+<polygon points='484.000000,96.000000 472.000000,90.400002 472.000000,101.599998' fill='currentColor' transform='rotate(60.000000, 472.000000, 96.000000)'></polygon>
+<polygon points='528.000000,144.000000 516.000000,138.399994 516.000000,149.600006' fill='currentColor' transform='rotate(180.000000, 528.000000, 144.000000)'></polygon>
+<polygon points='564.000000,32.000000 552.000000,26.400000 552.000000,37.599998' fill='currentColor' transform='rotate(60.000000, 552.000000, 32.000000)'></polygon>
+<polygon points='564.000000,96.000000 552.000000,90.400002 552.000000,101.599998' fill='currentColor' transform='rotate(60.000000, 552.000000, 96.000000)'></polygon>
+<polygon points='584.000000,144.000000 572.000000,138.399994 572.000000,149.600006' fill='currentColor' transform='rotate(180.000000, 584.000000, 144.000000)'></polygon>
+<polygon points='620.000000,64.000000 608.000000,58.400002 608.000000,69.599998' fill='currentColor' transform='rotate(300.000000, 608.000000, 64.000000)'></polygon>
+<polygon points='636.000000,32.000000 624.000000,26.400000 624.000000,37.599998' fill='currentColor' transform='rotate(120.000000, 624.000000, 32.000000)'></polygon>
+<polygon points='636.000000,64.000000 624.000000,58.400002 624.000000,69.599998' fill='currentColor' transform='rotate(300.000000, 624.000000, 64.000000)'></polygon>
+<polygon points='636.000000,96.000000 624.000000,90.400002 624.000000,101.599998' fill='currentColor' transform='rotate(120.000000, 624.000000, 96.000000)'></polygon>
+<polygon points='652.000000,64.000000 640.000000,58.400002 640.000000,69.599998' fill='currentColor' transform='rotate(300.000000, 640.000000, 64.000000)'></polygon>
+<polygon points='648.000000,144.000000 636.000000,138.399994 636.000000,149.600006' fill='currentColor' transform='rotate(0.000000, 648.000000, 144.000000)'></polygon>
+<polygon points='668.000000,64.000000 656.000000,58.400002 656.000000,69.599998' fill='currentColor' transform='rotate(300.000000, 656.000000, 64.000000)'></polygon>
+<polygon points='716.000000,32.000000 704.000000,26.400000 704.000000,37.599998' fill='currentColor' transform='rotate(120.000000, 704.000000, 32.000000)'></polygon>
+<polygon points='716.000000,96.000000 704.000000,90.400002 704.000000,101.599998' fill='currentColor' transform='rotate(120.000000, 704.000000, 96.000000)'></polygon>
+<polygon points='704.000000,144.000000 692.000000,138.399994 692.000000,149.600006' fill='currentColor' transform='rotate(0.000000, 704.000000, 144.000000)'></polygon>
+<circle cx='24' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='24' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='24' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='24' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='24' cy='112' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='48' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='48' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='48' cy='112' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='48' cy='144' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='80' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='88' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='88' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='88' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='88' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='104' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='104' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='112' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='112' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='144' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='144' cy='112' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='168' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='168' cy='112' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='184' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='208' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='216' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='240' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='264' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='264' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='264' cy='96' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='280' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='280' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='280' cy='96' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='296' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='296' cy='144' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='312' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='344' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='344' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='344' cy='96' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='352' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='360' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='360' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='360' cy='96' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='376' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='392' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='424' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='440' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='440' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='440' cy='96' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='456' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='456' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='456' cy='96' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='472' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='504' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='520' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='520' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='520' cy='96' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='520' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='536' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='536' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='536' cy='96' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='552' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='576' cy='144' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='592' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='592' cy='96' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='608' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='608' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='608' cy='96' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='624' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='640' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='656' cy='0' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='656' cy='144' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='672' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='672' cy='96' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='688' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='688' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='688' cy='96' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='704' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='712' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='720' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='736' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
 </g>
 </svg>

@@ -1,12 +1,12 @@
 <svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='89' width='80'>
 <g transform='translate(8,16)'>
-<path d='M 0,32 L 32,32' style='fill:none;stroke:#000;'></path>
-<path d='M 32,32 L 64,32' style='fill:none;stroke:#000;'></path>
-<path d='M 32,0 L 32,32' style='fill:none;stroke:#000;'></path>
-<path d='M 32,32 L 32,64' style='fill:none;stroke:#000;'></path>
-<polygon points='8.000000,32.000000 -4.000000,26.400000 -4.000000,37.599998' style='fill:#000' transform='rotate(180.000000, 0.000000, 32.000000)'></polygon>
-<polygon points='40.000000,0.000000 28.000000,-5.600000 28.000000,5.600000' style='fill:#000' transform='rotate(270.000000, 32.000000, 0.000000)'></polygon>
-<polygon points='40.000000,64.000000 28.000000,58.400002 28.000000,69.599998' style='fill:#000' transform='rotate(90.000000, 32.000000, 64.000000)'></polygon>
-<polygon points='72.000000,32.000000 60.000000,26.400000 60.000000,37.599998' style='fill:#000' transform='rotate(0.000000, 64.000000, 32.000000)'></polygon>
+<path d='M 0,32 L 32,32' fill='none' stroke='currentColor'></path>
+<path d='M 32,32 L 64,32' fill='none' stroke='currentColor'></path>
+<path d='M 32,0 L 32,32' fill='none' stroke='currentColor'></path>
+<path d='M 32,32 L 32,64' fill='none' stroke='currentColor'></path>
+<polygon points='8.000000,32.000000 -4.000000,26.400000 -4.000000,37.599998' fill='currentColor' transform='rotate(180.000000, 0.000000, 32.000000)'></polygon>
+<polygon points='40.000000,0.000000 28.000000,-5.600000 28.000000,5.600000' fill='currentColor' transform='rotate(270.000000, 32.000000, 0.000000)'></polygon>
+<polygon points='40.000000,64.000000 28.000000,58.400002 28.000000,69.599998' fill='currentColor' transform='rotate(90.000000, 32.000000, 64.000000)'></polygon>
+<polygon points='72.000000,32.000000 60.000000,26.400000 60.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 64.000000, 32.000000)'></polygon>
 </g>
 </svg>

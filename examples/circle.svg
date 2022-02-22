@@ -1,8 +1,8 @@
 <svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='89' width='64'>
 <g transform='translate(8,16)'>
-<path d='M 32,16 A 16,16 0 0,0 16,32' style='fill:none;stroke:#000;'></path>
-<path d='M 32,16 A 16,16 0 0,1 48,32' style='fill:none;stroke:#000;'></path>
-<path d='M 16,32 A 16,16 0 0,0 32,48' style='fill:none;stroke:#000;'></path>
-<path d='M 48,32 A 16,16 0 0,1 32,48' style='fill:none;stroke:#000;'></path>
+<path d='M 32,16 A 16,16 0 0,0 16,32' fill='none' stroke='currentColor'></path>
+<path d='M 32,16 A 16,16 0 0,1 48,32' fill='none' stroke='currentColor'></path>
+<path d='M 16,32 A 16,16 0 0,0 32,48' fill='none' stroke='currentColor'></path>
+<path d='M 48,32 A 16,16 0 0,1 32,48' fill='none' stroke='currentColor'></path>
 </g>
 </svg>

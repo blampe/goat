@@ -1,180 +1,180 @@
 <svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='121' width='728'>
 <g transform='translate(8,16)'>
-<circle cx='16' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='16' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='16' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='16' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='16' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='32' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='32' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='32' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='32' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='32' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='48' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='48' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='48' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='48' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='48' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='64' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='64' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='64' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='64' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='64' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='80' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='80' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='80' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='80' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='80' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='104' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='104' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='104' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='104' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='104' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='120' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='120' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='120' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='120' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='120' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='136' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='136' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='136' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='136' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='136' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='152' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='152' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='152' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='152' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='152' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='168' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='168' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='168' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='168' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='168' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='192' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='192' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='192' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='192' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='192' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='208' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='208' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='208' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='208' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='208' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='224' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='224' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='224' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='224' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='224' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='240' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='240' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='240' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='240' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='240' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='256' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='256' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='256' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='256' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='256' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='280' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='288' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='288' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='296' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='296' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='296' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='304' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='304' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='312' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='312' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='312' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='320' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='320' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='328' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='328' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='328' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='336' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='336' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='344' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='368' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='376' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='376' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='384' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='384' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='384' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='392' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='392' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='400' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='400' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='400' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='408' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='408' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='416' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='416' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='416' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='424' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='424' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='432' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='456' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='464' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='464' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='472' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='472' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='472' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='480' cy='32' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='480' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='488' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='488' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='488' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='496' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='496' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='504' cy='16' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='504' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='504' cy='80' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='512' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='512' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='520' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='568' cy='16' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='568' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='568' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='584' cy='32' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='616' cy='48' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='616' cy='64' r='6' style='fill:#fff;stroke:#000;'></circle>
-<circle cx='680' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='688' cy='64' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='696' cy='48' r='6' style='fill:#000;stroke:#000;'></circle>
-<circle cx='696' cy='80' r='6' style='fill:#000;stroke:#000;'></circle>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='20' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='36' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='52' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='68' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='552' y='84' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='568' y='68' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='568' y='84' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='584' y='20' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='584' y='52' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='584' y='68' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='584' y='84' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='600' y='20' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='600' y='36' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='600' y='52' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='600' y='68' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='600' y='84' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='616' y='20' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='616' y='36' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='616' y='84' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='648' y='52' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='656' y='36' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='656' y='68' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='664' y='20' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='664' y='52' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='664' y='84' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='672' y='36' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='672' y='68' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='680' y='20' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='680' y='84' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='688' y='36' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='696' y='20' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='704' y='36' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='704' y='68' style='fill:#000;font-size:1em'>·</text>
-<text text-anchor='middle' font-family='Menlo,Lucida Console,monospace' x='712' y='52' style='fill:#000;font-size:1em'>·</text>
+<circle cx='16' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='16' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='16' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='16' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='16' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='32' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='32' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='32' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='32' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='32' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='48' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='48' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='48' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='48' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='48' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='64' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='64' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='64' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='64' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='64' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='80' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='80' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='80' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='80' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='80' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='104' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='104' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='104' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='104' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='104' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='120' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='120' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='120' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='120' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='120' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='136' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='136' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='136' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='136' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='136' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='152' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='152' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='152' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='152' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='152' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='168' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='168' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='168' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='168' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='168' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='192' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='192' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='192' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='192' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='192' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='208' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='208' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='208' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='208' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='208' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='224' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='224' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='224' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='224' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='224' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='240' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='240' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='240' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='240' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='240' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='256' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='256' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='256' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='256' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='256' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='280' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='288' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='288' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='296' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='296' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='296' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='304' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='304' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='312' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='312' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='312' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='320' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='320' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='328' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='328' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='328' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='336' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='336' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='344' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='368' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='376' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='376' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='384' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='384' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='384' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='392' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='392' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='400' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='400' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='400' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='408' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='408' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='416' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='416' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='416' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='424' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='424' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='432' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='456' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='464' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='464' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='472' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='472' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='472' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='480' cy='32' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='480' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='488' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='488' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='488' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='496' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='496' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='504' cy='16' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='504' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='504' cy='80' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='512' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='512' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='520' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='568' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='568' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='568' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='584' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='616' cy='48' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='616' cy='64' r='6' stroke='currentColor' fill='#fff'></circle>
+<circle cx='680' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='688' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='696' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='696' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
+<text text-anchor='middle' x='552' y='20' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='552' y='36' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='552' y='52' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='552' y='68' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='552' y='84' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='568' y='68' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='568' y='84' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='584' y='20' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='584' y='52' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='584' y='68' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='584' y='84' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='600' y='20' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='600' y='36' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='600' y='52' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='600' y='68' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='600' y='84' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='616' y='20' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='616' y='36' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='616' y='84' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='648' y='52' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='656' y='36' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='656' y='68' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='664' y='20' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='664' y='52' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='664' y='84' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='672' y='36' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='672' y='68' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='680' y='20' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='680' y='84' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='688' y='36' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='696' y='20' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='704' y='36' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='704' y='68' fill='currentColor' style='font-size:1em'>·</text>
+<text text-anchor='middle' x='712' y='52' fill='currentColor' style='font-size:1em'>·</text>
 </g>
 </svg>
