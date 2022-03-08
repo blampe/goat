@@ -1,4 +1,4 @@
-module github.com/bep/goat
+module github.com/blampe/goat
 
 go 1.17
 

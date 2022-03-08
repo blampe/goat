@@ -3,10 +3,32 @@
 This is a Go implementation of [markdeep.mini.js]'s ASCII diagram
 generation.
 
+## Update (2022-02-07)
+
+I hacked together GoAT a number of years ago while trying to embed some
+diagrams in a Hugo project I was playing with. Through an odd twist of fate
+GoAT eventually made its way into the upstream Hugo project, and if you're
+using [v0.93.0] you can embed these diagrams natively. Neat!
+
+My original implementation was certainly buggy and not on par with markdeep.
+I'm grateful for the folks who've helped smooth out the rough edges, and I've
+updated this project to reflect the good changes made in the Hugo fork,
+including a long-overdue `go.mod`.
+
+There's a lot I would like to do with this project that I will never get to, so
+instead I recommend you look at these forks:
+
+* [@bep] is the fork currently used by Hugo, which I expect to be more active
+  over time.
+* [@dmacvicar] has improved SVG/PDF rendering, font handling, and CLI
+  experience.
+* [@sw46] has implemented a really wonderful hand-drawn style worth checking
+  out.
+
 ## Usage
 
 ```bash
-$ go get github.com/bep/goat
+$ go get github.com/blampe/goat
 $ goat my-cool-diagram.txt > my-cool-diagram.svg
 ```
 
@@ -170,4 +192,8 @@ Here are some SVGs and the ASCII input they were generated from:
 
 More examples are available [here](examples).
 
+[@bep]: https://github.com/bep/goat/
+[@dmacvicar]: https://github.com/dmacvicar/goat
+[@sw46]: https://github.com/sw46/goat/
 [markdeep.mini.js]: http://casual-effects.com/markdeep/
+[v0.93.0]: https://github.com/gohugoio/hugo/releases/tag/v0.93.0
