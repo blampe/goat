@@ -146,19 +146,19 @@ func (l Line) Draw(out io.Writer) {
 	)
 }
 
-// Draw a solid triable as an SVG polygon element.
+// Draw a solid triangle as an SVG polygon element.
 func (t Triangle) Draw(out io.Writer) {
 	// https://www.w3.org/TR/SVG/shapes.html#PolygonElement
 
 	/*
-		   	+-----+-----+
-		    |    /|\    |
-		    |   / | \   |
-		  x +- / -+- \ -+
-			| /   |   \ |
-			|/    |    \|
-		    +-----+-----+
-		          y
+		  +-----+-----+
+		  |    /|\    |
+		  |   / | \   |
+		x +- / -+- \ -+
+		  | /   |   \ |
+		  |/    |    \|
+		  +-----+-----+
+		        y
 	*/
 
 	x, y := float32(t.start.asPixel().x), float32(t.start.asPixel().y)
