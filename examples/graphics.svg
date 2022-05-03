@@ -1,8 +1,13 @@
 <svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='185' width='712' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
-     svg { color: #323232; }
-   @media (prefers-color-scheme: dark) {
-     svg { color: #C8C8C8; }
+svg {
+   color: #323232;
+}
+@media (prefers-color-scheme: dark) {
+     svg {
+   color: #C8C8C8;
+     }
+}
 </style>
 <g transform='translate(8,16)'>
 <path d='M 40,32 L 104,32' fill='none' stroke='currentColor'></path>
@@ -65,13 +70,13 @@
 <circle cx='288' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='320' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='328' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='376' cy='112' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='376' cy='112' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='408' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='440' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='584' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='640' cy='144' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<circle cx='664' cy='96' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<circle cx='688' cy='144' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='640' cy='144' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='664' cy='96' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='688' cy='144' r='6' stroke='currentColor' fill='none'></circle>
 <text text-anchor='middle' x='16' y='52' fill='currentColor' style='font-size:1em'>1</text>
 <text text-anchor='middle' x='16' y='148' fill='currentColor' style='font-size:1em'>5</text>
 <text text-anchor='middle' x='32' y='20' fill='currentColor' style='font-size:1em'>0</text>

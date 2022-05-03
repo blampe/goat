@@ -1,8 +1,13 @@
 <svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='281' width='680' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
-     svg { color: #323232; }
-   @media (prefers-color-scheme: dark) {
-     svg { color: #C8C8C8; }
+svg {
+   color: #323232;
+}
+@media (prefers-color-scheme: dark) {
+     svg {
+   color: #C8C8C8;
+     }
+}
 </style>
 <g transform='translate(8,16)'>
 <path d='M 344,16 L 368,16' fill='none' stroke='currentColor'></path>
@@ -110,14 +115,14 @@
 <path d='M 472,160 A 16,16 0 0,1 456,176' fill='none' stroke='currentColor'></path>
 <path d='M 504,160 A 16,16 0 0,1 488,176' fill='none' stroke='currentColor'></path>
 <circle cx='152' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='248' cy='160' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<circle cx='256' cy='32' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='248' cy='160' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='256' cy='32' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='288' cy='160' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='360' cy='112' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='360' cy='112' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='408' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='408' cy='192' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='408' cy='192' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='472' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='536' cy='96' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='536' cy='96' r='6' stroke='currentColor' fill='none'></circle>
 <path d='M 472,16 L 472,24' fill='none' stroke='currentColor'></path>
 <path d='M 472,40 L 472,48' fill='none' stroke='currentColor'></path>
 <path d='M 472,24 A 9,9 0 0,1 472,40' fill='none' stroke='currentColor'></path>
