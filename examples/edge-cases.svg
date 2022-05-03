@@ -74,6 +74,6 @@ svg {
 <path d='M 32,64 A 16,16 0 0,1 48,80' fill='none' stroke='currentColor'></path>
 <path d='M 16,80 A 16,16 0 0,0 32,96' fill='none' stroke='currentColor'></path>
 <path d='M 48,80 A 16,16 0 0,1 32,96' fill='none' stroke='currentColor'></path>
-<circle cx='312' cy='64' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='312' cy='64' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
 </g>
 </svg>

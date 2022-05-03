@@ -126,7 +126,7 @@ svg {
 <path d='M 464,160 A 16,16 0 0,1 480,176' fill='none' stroke='currentColor'></path>
 <path d='M 416,224 A 16,16 0 0,0 432,240' fill='none' stroke='currentColor'></path>
 <path d='M 480,224 A 16,16 0 0,1 464,240' fill='none' stroke='currentColor'></path>
-<circle cx='448' cy='224' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='448' cy='224' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
 <text text-anchor='middle' x='48' y='196' fill='currentColor' style='font-size:1em'>W</text>
 <text text-anchor='middle' x='48' y='260' fill='currentColor' style='font-size:1em'>L</text>
 <text text-anchor='middle' x='56' y='196' fill='currentColor' style='font-size:1em'>i</text>

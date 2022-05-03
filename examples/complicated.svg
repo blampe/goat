@@ -234,8 +234,8 @@ svg {
 <path d='M 40,352 A 16,16 0 0,1 24,368' fill='none' stroke='currentColor'></path>
 <path d='M 136,352 A 16,16 0 0,0 152,368' fill='none' stroke='currentColor'></path>
 <path d='M 256,352 A 16,16 0 0,1 240,368' fill='none' stroke='currentColor'></path>
-<circle cx='176' cy='288' r='6' stroke='currentColor' fill='none'></circle>
-<circle cx='232' cy='288' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='176' cy='288' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='232' cy='288' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
 <circle cx='448' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='536' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
 <path d='M 568,48 L 568,56' fill='none' stroke='currentColor'></path>
