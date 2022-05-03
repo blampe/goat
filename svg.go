@@ -12,14 +12,26 @@ type SVG struct {
 	Height int
 }
 
-func (s SVG) String() string {
-	style := `<style type="text/css">
-     svg { color: #323232; }
-   @media (prefers-color-scheme: dark) {
-     svg { color: #C8C8C8; }
-</style>`
-	return fmt.Sprintf("<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d' font-family='Menlo,Lucida Console,monospace'>\n%s\n%s</svg>\n",
-		"diagram",
+func (s SVG) String(svgColorLightScheme string, svgColorDarkScheme string) string {
+	style := fmt.Sprintf(
+		`<style type="text/css">
+svg {
+   color: %s;
+}
+@media (prefers-color-scheme: dark) {
+     svg {
+   color: %s;
+     }
+}
+</style>`,
+		svgColorLightScheme,
+		svgColorDarkScheme)
+
+	return fmt.Sprintf(
+		"<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d' font-family='Menlo,Lucida Console,monospace'>\n" +
+		"%s\n" +
+		"%s</svg>\n",
+		"diagram",  // XX  can this have any effect?
 		"http://www.w3.org/2000/svg",
 		"1.1", s.Height, s.Width, style, s.Body)
 }
@@ -38,9 +50,10 @@ func BuildSVG(src io.Reader) SVG {
 
 // BuildAndWriteSVG reads in a newline-delimited ASCII diagram from src and writes a
 // corresponding SVG diagram to dst.
-func BuildAndWriteSVG(src io.Reader, dst io.Writer) {
+func BuildAndWriteSVG(src io.Reader, dst io.Writer,
+	svgColorLightScheme string, svgColorDarkScheme string) {
 	svg := BuildSVG(src)
-	writeBytes(dst, svg.String())
+	writeBytes(dst, svg.String(svgColorLightScheme, svgColorDarkScheme))
 }
 
 func writeBytes(out io.Writer, format string, args ...interface{}) {
@@ -247,7 +260,7 @@ func (t Triangle) Draw(out io.Writer) {
 
 // Draw a solid circle as an SVG circle element.
 func (c *Circle) Draw(out io.Writer) {
-	fill := "invert(currentColor)"
+	fill := "none"
 
 	if c.bold {
 		fill = "currentColor"
