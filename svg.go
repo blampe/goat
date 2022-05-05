@@ -6,6 +6,8 @@ import (
 	"io"
 )
 
+var HollowCircles bool
+
 type SVG struct {
 	Body   string
 	Width  int
@@ -260,12 +262,15 @@ func (t Triangle) Draw(out io.Writer) {
 
 // Draw a solid circle as an SVG circle element.
 func (c *Circle) Draw(out io.Writer) {
-	fill := "none"
-
+	var fill string
 	if c.bold {
 		fill = "currentColor"
+	} else {
+		fill = "invert(currentColor)"
+		if HollowCircles {
+			fill = "none"
+		}
 	}
-
 	pixel := c.start.asPixel()
 
 	writeBytes(out,
