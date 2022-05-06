@@ -25,7 +25,7 @@ func TestExamplesStableOutput(t *testing.T) {
 			t.Fatal(err)
 		}
 		var out bytes.Buffer
-		BuildAndWriteSVG(in, &out)
+		BuildAndWriteSVG(in, &out, "black", "white")
 		in.Close()
 		if i > 0 && previous != out.String() {
 			c.Fail()
@@ -63,7 +63,10 @@ func TestExamples(t *testing.T) {
 			}
 		}
 
-		BuildAndWriteSVG(in, out)
+		svgColorLightScheme := "#323232"
+		svgColorDarkScheme := "#C8C8C8"
+		BuildAndWriteSVG(in, out, svgColorLightScheme, svgColorDarkScheme)
+
 		in.Close()
 		out.Close()
 
@@ -84,7 +87,7 @@ func BenchmarkComplicated(b *testing.B) {
 	in := getIn(filepath.FromSlash("examples/complicated.txt"))
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		BuildAndWriteSVG(in, io.Discard)
+		BuildAndWriteSVG(in, io.Discard, "black", "white")
 	}
 }
 

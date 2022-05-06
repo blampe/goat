@@ -9,7 +9,7 @@
        sed "s,{{\.Root}},https://cdn.rawgit.com/${USER}/goat/main," README.md.tmpl >README.md
 
     Local preview of home page:
-       sed "s,https://cdn.rawgit.com/blampe/goat/main,.," README.md.tmpl >README.md
+       sed "s,{{.Root}},.," README.md.tmpl >README.md
        # See https://github.github.com/gfm/#introduction
        (echo '<!DOCTYPE html>'; marked -gfm README.md) >README.html
 
@@ -67,7 +67,7 @@ Here are some SVGs and the UTF-8 input they were generated from:
 
 ### Trees
 
-![Trees Example](https://cdn.rawgit.com/blampe/goat/main/examples/trees.svg)
+![Trees Example]({{.Root}}/examples/trees.svg)
 
 ```
           .               .                .               .--- 1          .-- 1     / 1
@@ -81,7 +81,7 @@ Here are some SVGs and the UTF-8 input they were generated from:
 
 ### Overlaps
 
-![Overlaps Example](https://cdn.rawgit.com/blampe/goat/main/examples/overlaps.svg)
+![Overlaps Example]({{.Root}}/examples/overlaps.svg)
 
 ```
            .-.           .-.           .-.           .-.           .-.           .-.
@@ -95,7 +95,7 @@ Here are some SVGs and the UTF-8 input they were generated from:
 
 ### Line Decorations
 
-![Line Decorations Example](https://cdn.rawgit.com/blampe/goat/main/examples/line-decorations.svg)
+![Line Decorations Example]({{.Root}}/examples/line-decorations.svg)
 
 ```
                 ________                            o        *          *   .--------------.
@@ -109,7 +109,7 @@ Here are some SVGs and the UTF-8 input they were generated from:
 
 ### Line Ends
 
-![Line Ends Example](https://cdn.rawgit.com/blampe/goat/main/examples/line-ends.svg)
+![Line Ends Example]({{.Root}}/examples/line-ends.svg)
 
 ```
    o--o    *--o     /  /   *  o  o o o o   * * * *   o o o o   * * * *      o o o o   * * * *
@@ -126,7 +126,7 @@ Here are some SVGs and the UTF-8 input they were generated from:
 
 ### Dot Grids
 
-![Dot Grids Example](https://cdn.rawgit.com/blampe/goat/main/examples/dot-grids.svg)
+![Dot Grids Example]({{.Root}}/examples/dot-grids.svg)
 
 ```
   o o o o o  * * * * *  * * o o *    o o o      * * *      o o o     · * · · ·     · · ·
@@ -139,7 +139,7 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
 
 ### Large Nodes
 
-![Large Node Example](https://cdn.rawgit.com/blampe/goat/main/examples/large-nodes.svg)
+![Large Node Example]({{.Root}}/examples/large-nodes.svg)
 
 ```
    .---.       .-.        .-.       .-.                                       .-.
@@ -154,7 +154,7 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
 
 ### Small Grids
 
-![Small Grids Example](https://cdn.rawgit.com/blampe/goat/main/examples/small-grids.svg)
+![Small Grids Example]({{.Root}}/examples/small-grids.svg)
 
 ```
        ___     ___      .---+---+---+---+---.     .---+---+---+---.  .---.   .---.
@@ -168,7 +168,7 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
 
 ### Big Grids
 
-![Big Grids Example](https://cdn.rawgit.com/blampe/goat/main/examples/big-grids.svg)
+![Big Grids Example]({{.Root}}/examples/big-grids.svg)
 
 ```
     .----.        .----.
@@ -186,7 +186,7 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
 
 ### Complicated
 
-![Complicated Example](https://cdn.rawgit.com/blampe/goat/main/examples/complicated.svg)
+![Complicated Example]({{.Root}}/examples/complicated.svg)
 
 ```
 +-------------------+                           ^                      .---.
