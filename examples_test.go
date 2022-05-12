@@ -45,6 +45,9 @@ func TestExamples(t *testing.T) {
 
 	for _, name := range filenames {
 		in := getIn(name)
+		if testing.Verbose() {
+			t.Logf("\tprocessing %s\n", name)
+		}
 		var out io.WriteCloser
 		if *write {
 			out = getOut(name)
