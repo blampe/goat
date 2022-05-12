@@ -1,21 +1,4 @@
 # GoAT: Go ASCII Tool
-<!--
-  NOTE to maintainers
-  ---
-    SVG examples/ regeneration.
-       go test -run . -v -write
-
-    Github home page README.md, specific to $USER:
-       sed "s,{{\.Root}},https://cdn.rawgit.com/${USER}/goat/main," README.md.tmpl >README.md
-
-    Local preview of home page:
-       sed "s,https://cdn.rawgit.com/blampe/goat/main,.," README.md.tmpl >README.md
-       # See https://github.github.com/gfm/#introduction
-       (echo '<!DOCTYPE html>'; marked -gfm README.md) >README.html
-
-    The @media query from SVG may be verified in Firefox by switching between Themes
-    "Light" and "Dark" in Firefox's "Add-ons Manager".
- -->
 
 This is a Go implementation of [markdeep.mini.js]'s ASCII diagram
 generation.
