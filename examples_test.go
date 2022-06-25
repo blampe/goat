@@ -15,6 +15,7 @@ import (
 
 var write = flag.Bool("write", false, "write examples to disk")
 
+// XX  TXT source file suite is limited to a single file -- "circuits.txt"
 func TestExamplesStableOutput(t *testing.T) {
 	c := qt.New(t)
 
@@ -74,7 +75,15 @@ func TestExamples(t *testing.T) {
 		out.Close()
 
 		if buff != nil {
-			golden := getOutString(name)
+			golden, err := getOutString(name)
+			if err != nil {
+				t.Logf("%s %s:\n\t%s\nConsider:\n\t%s",
+					"Option -write not set, and Error reading",
+					name,
+					err.Error(),
+					"$ go test -run TestExamples -v -args -write")
+				t.FailNow()
+			}
 			if buff.String() != golden {
 				c.Log(buff.Len(), len(golden))
 				c.Fatalf("Content mismatch for %s", name)
@@ -112,13 +121,13 @@ func getOut(filename string) io.WriteCloser {
 	return out
 }
 
-func getOutString(filename string) string {
+func getOutString(filename string) (string, error) {
 	b, err := ioutil.ReadFile(toSVGFilename(filename))
 	if err != nil {
-		panic(err)
+		return "", err
 	}
 	b = bytes.ReplaceAll(b, []byte("\r\n"), []byte("\n"))
-	return string(b)
+	return string(b), nil
 }
 
 func toSVGFilename(filename string) string {

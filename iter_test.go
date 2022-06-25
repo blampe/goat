@@ -9,7 +9,7 @@ import (
 
 var eq = qt.CmpEquals(
 	cmp.Comparer(func(i1, i2 Index) bool {
-		return i1.x == i2.x && i1.y == i2.y
+		return i1.X == i2.X && i1.Y == i2.Y
 	}),
 )
 
@@ -33,7 +33,7 @@ func TestIterators(t *testing.T) {
 			},
 		},
 
-		// LeftRight
+		// leftRight
 		// 1 2
 		// 3 4
 		{

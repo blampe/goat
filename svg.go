@@ -31,8 +31,8 @@ svg {
 
 	return fmt.Sprintf(
 		"<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d' font-family='Menlo,Lucida Console,monospace'>\n" +
-		"%s\n" +
-		"%s</svg>\n",
+			"%s\n" +
+			"%s</svg>\n",
 		"diagram",  // XX  can this have any effect?
 		"http://www.w3.org/2000/svg",
 		"1.1", s.Height, s.Width, style, s.Body)
@@ -44,8 +44,8 @@ func BuildSVG(src io.Reader) SVG {
 	canvas := NewCanvas(src)
 	canvas.WriteSVGBody(&buff)
 	return SVG{
-		Body:   buff.String(),
-		Width:  canvas.widthScreen(),
+		Body:	buff.String(),
+		Width:	canvas.widthScreen(),
 		Height: canvas.heightScreen(),
 	}
 }
@@ -63,7 +63,24 @@ func writeBytes(out io.Writer, format string, args ...interface{}) {
 
 	_, err := out.Write([]byte(bytesOut))
 	if err != nil {
-		panic(nil)
+		panic(err)
+	}
+}
+
+func writeText(out io.Writer, canvas *Canvas) {
+	writeBytes(out,
+		`<style>
+text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+}
+</style>
+`)
+	for _, textObj := range canvas.Text() {
+		// usual, baseline case
+		textObj.Draw(out)
 	}
 }
 
@@ -74,9 +91,9 @@ func (l Line) Draw(out io.Writer) {
 
 	// For cases when a vertical line hits a perpendicular like this:
 	//
-	//   |          |
-	//   |    or    v
-	//  ---        ---
+	//   |		|
+	//   |	  or	v
+	//  ---	       ---
 	//
 	// We need to nudge the vertical line half a vertical cell in the
 	// appropriate direction in order to meet up cleanly with the midline of
@@ -85,72 +102,72 @@ func (l Line) Draw(out io.Writer) {
 	// A diagonal segment all by itself needs to be shifted slightly to line
 	// up with _ baselines:
 	//     _
-	//      \_
+	//	\_
 	//
 	// TODO make this a method on Line to return accurate pixel
 	if l.lonely {
 		switch l.orientation {
 		case NE:
-			start.x -= 4
-			stop.x -= 4
-			start.y += 8
-			stop.y += 8
+			start.X -= 4
+			stop.X -= 4
+			start.Y += 8
+			stop.Y += 8
 		case SE:
-			start.x -= 4
-			stop.x -= 4
-			start.y -= 8
-			stop.y -= 8
+			start.X -= 4
+			stop.X -= 4
+			start.Y -= 8
+			stop.Y -= 8
 		case S:
-			start.y -= 8
-			stop.y -= 8
+			start.Y -= 8
+			stop.Y -= 8
 		}
 
 		// Half steps
 		switch l.chop {
 		case N:
-			stop.y -= 8
+			stop.Y -= 8
 		case S:
-			start.y += 8
+			start.Y += 8
 		}
 	}
 
 	if l.needsNudgingDown {
-		stop.y += 8
+		stop.Y += 8
 		if l.horizontal() {
-			start.y += 8
+			start.Y += 8
 		}
 	}
 
 	if l.needsNudgingLeft {
-		start.x -= 8
+		start.X -= 8
 	}
 
 	if l.needsNudgingRight {
-		stop.x += 8
+		stop.X += 8
 	}
 
 	if l.needsTinyNudgingLeft {
-		start.x -= 4
+		start.X -= 4
 		if l.orientation == NE {
-			start.y += 8
+			start.Y += 8
 		} else if l.orientation == SE {
-			start.y -= 8
+			start.Y -= 8
 		}
 	}
 
 	if l.needsTinyNudgingRight {
-		stop.x += 4
+		stop.X += 4
 		if l.orientation == NE {
-			stop.y -= 8
+			stop.Y -= 8
 		} else if l.orientation == SE {
-			stop.y += 8
+			stop.Y += 8
 		}
 	}
 
 	writeBytes(out,
 		"<path d='M %d,%d L %d,%d' fill='none' stroke='currentColor'></path>\n",
-		start.x, start.y,
-		stop.x, stop.y,
+		start.X, start.Y,
+		stop.X, stop.Y,
 	)
 }
 
@@ -163,13 +180,13 @@ func (t Triangle) Draw(out io.Writer) {
 		  |    /|\    |
 		  |   / | \   |
 		x +- / -+- \ -+
-		  | /   |   \ |
-		  |/    |    \|
+		  | /	|   \ |
+		  |/	|    \|
 		  +-----+-----+
-		        y
+			y
 	*/
 
-	x, y := float32(t.start.asPixel().x), float32(t.start.asPixel().y)
+	x, y := float32(t.start.asPixel().X), float32(t.start.asPixel().Y)
 	r := 0.0
 
 	x0 := x + 8
@@ -272,11 +289,12 @@ func (c *Circle) Draw(out io.Writer) {
 		}
 	}
 	pixel := c.start.asPixel()
-
+	const circleRadius = 6
 	writeBytes(out,
-		"<circle cx='%d' cy='%d' r='6' stroke='currentColor' fill='%s'></circle>\n",
-		pixel.x,
-		pixel.y,
+		"<circle cx='%d' cy='%d' r='%d' stroke='currentColor' fill='%s'></circle>\n",
+		pixel.X,
+		pixel.Y,
+		circleRadius,
 		fill,
 	)
 }
@@ -284,7 +302,7 @@ func (c *Circle) Draw(out io.Writer) {
 // Draw a single text character as an SVG text element.
 func (t Text) Draw(out io.Writer) {
 	p := t.start.asPixel()
-	c := t.contents
+	c := t.str
 
 	opacity := 0
 
@@ -309,7 +327,7 @@ func (t Text) Draw(out io.Writer) {
 	if opacity != 0 {
 		writeBytes(out,
 			"<rect x='%d' y='%d' width='8' height='16' fill='%s'></rect>",
-			p.x-4, p.y-8,
+			p.X-4, p.Y-8,
 			fill,
 		)
 		return
@@ -325,10 +343,11 @@ func (t Text) Draw(out io.Writer) {
 		c = "&lt;"
 	}
 
+	// usual case
 	writeBytes(out,
-		"<text text-anchor='middle' x='%d' y='%d' fill='currentColor' style='font-size:1em'>%s</text>\n",
-		p.x, p.y+4, c,
-	)
+		`<text x='%d' y='%d'>%s</text>
+`,
+		p.X, p.Y+4, c)
 }
 
 // Draw a rounded corner as an SVG elliptical arc element.
