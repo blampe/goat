@@ -16,7 +16,11 @@ do
 done
 
 # SVG examples/ regeneration.
-go test -run . -v -write
+#
+# If the command fails due to expected changes in SVG output, rerun
+# this script with "TEST_ARGS=-write" first on the command line.
+set -vx
+go test -run . -v ${TEST_ARGS}
 
 (cd cmd/goat; go install)
 
@@ -39,4 +43,3 @@ then
     #    "Light" and "Dark" in Firefox's "Add-ons Manager".
     (echo '<!DOCTYPE html>'; marked -gfm README.md) >README.html
 fi
-
