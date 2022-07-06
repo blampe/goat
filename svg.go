@@ -14,7 +14,9 @@ type SVG struct {
 	Height int
 }
 
-func (s SVG) String(svgColorLightScheme string, svgColorDarkScheme string) string {
+// See:
+//    https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme
+func (s SVG) String(svgColorLightScheme, svgColorDarkScheme string) string {
 	style := fmt.Sprintf(
 		`<style type="text/css">
 svg {

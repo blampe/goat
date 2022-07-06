@@ -1,5 +1,6 @@
 package main
 
+// Import ...
 import (
 	"flag"
 	"log"
@@ -8,6 +9,7 @@ import (
 	"github.com/blampe/goat"
 )
 
+// Function init ...
 func init() {
 	log.SetFlags(/*log.Ldate |*/ log.Ltime | log.Lshortfile)
 }

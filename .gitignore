@@ -4,7 +4,8 @@
 vendor
 examples/*.svg
 
-goat
-goat.test
+cmd/tmpl-expand/tmpl-expand
+cmd/goat/goat
+
 *~
-README.html
+*.html

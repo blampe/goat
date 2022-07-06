@@ -11,35 +11,54 @@ type (
 	runeSet map[rune]exists
 )
 
-var reserved = []rune{
-	'-',
-	'_',
-	'|',
-	'v',
-	'^',
-	'>',
-	'<',
-	'o',
-	'*',
-	'+',
-	'.',
-	'\'',
-	'/',
-	'\\',
-	')',
-	'(',
-	' ',   // X SPACE is reserved
-}
-var reservedSet runeSet
 
 // Characters where more than one line segment can come together.
-// XX  Subset of 'reserved[]' -- enforce or show this by construction.
 var jointRunes = []rune{
 	'.',
 	'\'',
 	'+',
 	'*',
 	'o',
+}
+
+var reserved = append(
+	jointRunes,
+	[]rune{
+		'-',
+		'_',
+		'|',
+		'v',
+		'^',
+		'>',
+		'<',
+		'/',
+		'\\',
+		')',
+		'(',
+		' ',   // X SPACE is reserved
+	}...,
+)
+var reservedSet runeSet
+
+var wide = []rune{
+	'o',
+	'*',
+	'v',
+	'>',
+	'<',
+	'^',
+	')',
+	'(',
+	'.',
+}
+var wideSet = makeSet(wide)
+
+func makeSet(runeSlice []rune) (rs runeSet) {
+	rs = make(runeSet)
+	for _, r := range runeSlice {
+		rs[r] = exists{}
+	}
+	return
 }
 
 func init() {
@@ -110,13 +129,6 @@ func (c *Canvas) String() string {
 	return buffer.String()
 }
 
-// XX  ?Make a method of 'runeSet'?
-func inSet(set runeSet, canvasMap map[Index]rune, i Index) (found bool) {
-	r := canvasMap[i]
-	_, found = set[r]
-	return
-}
-
 func (c *Canvas) heightScreen() int {
 	return c.Height*16 + 8 + 1
 }
@@ -125,8 +137,18 @@ func (c *Canvas) widthScreen() int {
 	return (c.Width + 1) * 8
 }
 
-// XX  Ugly semantics -- looks only at c.data[], ignores c.text[].
-//     Returns the null rune (int32) if map lookup fails.
+// XX  DRY with runeAt()
+func inSet(set runeSet, canvasMap map[Index]rune, i Index) (inset bool) {
+	r, inMap := canvasMap[i]
+	if !inMap {
+		return false 	// r == rune(0)
+	}
+	_, inset = set[r]
+	return
+}
+
+// Looks only at c.data[], ignores c.text[].
+// X  Returns the rune for ASCII Space i.e. ' ', in the event that map lookup fails.
 func (c *Canvas) runeAt(i Index) rune {
 	if val, ok := c.data[i]; ok {
 		return val
@@ -144,10 +166,10 @@ func NewCanvas(in io.Reader) (c Canvas) {
 
 	c = Canvas{
 		data:	make(map[Index]rune),
-		text:	make(map[Index]rune),
+		text:	nil,
 	}
 
-	// Fill all the maps of 'Canvas'.
+	// Fill the 'data' map.
 	for scanner.Scan() {
 		lineStr := scanner.Text()
 
@@ -156,7 +178,7 @@ func NewCanvas(in io.Reader) (c Canvas) {
 		//               https://go.dev/ref/spec#For_statements
 		//    But yet, counterintuitively, type of lineStr[_index_] is 'byte'.
 		//               https://go.dev/ref/spec#String_types
-		//  XXXX refactor to use []rune from above.
+		// XXXX  Refactor to use []rune from above.
 		for _, r := range lineStr {
 			//if r > 255 {
 			//	fmt.Printf("linestr=\"%s\"\n", lineStr)
@@ -175,6 +197,8 @@ func NewCanvas(in io.Reader) (c Canvas) {
 
 	c.Width = width
 	c.Height = height
+	c.text = make(map[Index]rune)
+	// Fill the 'text' map, with runes removed from 'data'.
 	c.MoveToText()
 	return
 }
@@ -684,13 +708,23 @@ func (c *Canvas) Triangles() (triangles []Drawable) {
 				o = NW
 			}
 		case 'v':
-			o = S
-			//  /  and \
-			// v	    v
-			if c.runeAt(start.nEast()) == '/' {
+			if c.runeAt(start.north()) == '|' {
+				// |
+				// v
+				o = S
+			} else if c.runeAt(start.nEast()) == '/' {
+				//  /
+				// v
 				o = SW
 			} else if c.runeAt(start.nWest()) == '\\' {
+				//  \
+				//   v
 				o = SE
+			} else {
+				// Conclusion: Meant as a text string 'v', not a triangle
+				//panic("Not sufficient to fix all 'v' troubles.")
+				//continue
+				o = S
 			}
 		case '<':
 			o = W
@@ -926,28 +960,30 @@ func (c *Canvas) isBridge(i Index) Orientation {
 }
 
 func (c *Canvas) shouldMoveToText(i Index) bool {
-	// Returns true if the character at this index of c.data[] is reserved for diagrams.
-	// Characters like "o" need more context (e.g., are other text characters
+	i_r := c.runeAt(i)
+	if i_r == ' ' {
+		// X  Note that c.runeAt(i) returns ' ' if i lies right of all chars on line i.Y
+		return false
+	}
+
+	// Returns true if the character at index 'i' of c.data[] is reserved for diagrams.
+	// Characters like 'o' and 'v' need more context (e.g., are other text characters
 	// nearby) to determine whether they're part of a diagram.
-	isReserved := func(i Index) bool {
-		r, inData := c.data[i]
+	isReserved := func(i Index) (found bool) {
+		i_r, inData := c.data[i]
 		if !inData {
 			// lies off left or right end of line, treat as reserved
 			return true
 		}
-		_, found := reservedSet[r]
-		return found
+		_, found = reservedSet[i_r]
+		return
 	}
 
-	if c.runeAt(i) == ' ' {
-		return false
-	}
-
-	if !inSet(reservedSet, c.data, i) {
+	if !isReserved(i) {
 		return true
 	}
 
-	// This is a reserved character with an incoming line (e.g., "|") above it,
+	// This is a reserved character with an incoming line (e.g., "|") above or below it,
 	// so call it non-text.
 	if c.hasLineAboveOrBelow(i) {
 		return false
@@ -962,24 +998,34 @@ func (c *Canvas) shouldMoveToText(i Index) bool {
 	// reserved characters previously that were counted as text then this
 	// should be as well, e.g., "A----B".
 
-	// 'i' is reserved but surrounded by text and probably part of an existing
-	// word. Use a hash lookup on the left to preserve chains of
-	// reserved-but-text characters like "foo----bar".
-	// XX Fragility: Correctness of hash lookup depends on update of c.text by caller of this code.
-	if _, textLeft := c.text[w]; textLeft || !isReserved(e) {
+	// 'i' is reserved but surrounded by text and probably part of an existing word.
+	// Preserve chains of reserved-but-text characters like "foo----bar".
+	if textLeft := !isReserved(w); textLeft {
+		return true
+	}
+	if textRight := !isReserved(e); textRight {
 		return true
 	}
 
+	crowded := func (l, r Index) bool {
+		return  inSet(wideSet, c.data, l) &&
+			inSet(wideSet, c.data, r)
+	}
+	if crowded(w, i) || crowded(i, e) {
+		return true
+	}
+
+	// If 'i' has anything other than a space to either left or right, treat as non-text.
 	if !(c.runeAt(w) == ' ' && c.runeAt(e) == ' ') {
 		return false
 	}
 
 	// Circles surrounded by whitespace shouldn't be shown as text.
-	if c.runeAt(i) == 'o' || c.runeAt(i) == '*' {
+	if i_r == 'o' || i_r == '*' {
 		return false
 	}
 
-	// 'i' is surrounded by whitespace or text on either side.
+	// 'i' is surrounded by whitespace or text on one side or the other, at two cell's distance.
 	if !isReserved(w.west()) || !isReserved(e.east()) {
 		return true
 	}
@@ -992,9 +1038,9 @@ func (c *Canvas) shouldMoveToText(i Index) bool {
 // horizontal line. This is the context we use to determine if a reserved
 // character is text or not.
 func (c *Canvas) hasLineAboveOrBelow(i Index) bool {
-	r := c.runeAt(i)
+	i_r := c.runeAt(i)
 
-	switch r {
+	switch i_r {
 	case '*', 'o', '+', 'v', '^':
 		return c.partOfDiagonalLine(i) || c.partOfVerticalLine(i)
 	case '|':
