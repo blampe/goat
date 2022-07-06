@@ -14,11 +14,13 @@ import (
 func main() {
 	log.SetFlags(0)
 
-	var inputFilename string
-	var outputFilename string
-	var format string
-	var svgColorLightScheme string
-	var svgColorDarkScheme string
+	var (
+		inputFilename,
+		outputFilename,
+		format,
+		svgColorLightScheme,
+		svgColorDarkScheme string
+	)
 
 	flag.StringVar(&inputFilename, "i", "", "Input filename (default stdin)")
 	flag.StringVar(&outputFilename, "o", "", "Output filename (default stdout for SVG)")
@@ -42,11 +44,6 @@ into it; otherwise, the circle is filled with a computed inverse of the foregrou
 drawing color.`)
 	flag.Parse()
 
-	format = strings.ToLower(format)
-	if format != "svg" {
-		log.Fatalf("unrecognized format: %s", format)
-	}
-
 	input := os.Stdin
 	if inputFilename != "" {
 		if _, err := os.Stat(inputFilename); os.IsNotExist(err) {
@@ -68,8 +65,9 @@ drawing color.`)
 		if err != nil {
 			log.Fatal(err)
 		}
-		// warn the user if he is writing to an extension different to the
+		// Warn the user if he is writing to an extension different to the
 		// file format
+		format := "svg"
 		ext := filepath.Ext(outputFilename)
 		if fmt.Sprintf(".%s", format) != ext {
 			log.Printf("Warning: writing to '%s' with extension '%s' and format %s", outputFilename, ext, strings.ToUpper(format))
@@ -82,10 +80,6 @@ drawing color.`)
 			log.Fatalf("refuse to write binary data to terminal: %s", format)
 		}
 	}
-
-	switch format {
-	case "svg":
-		goat.BuildAndWriteSVG(input, output,
-			svgColorLightScheme, svgColorDarkScheme)
-	}
+	goat.BuildAndWriteSVG(input, output,
+		svgColorLightScheme, svgColorDarkScheme)
 }
