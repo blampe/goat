@@ -8,9 +8,11 @@ import (
 	"github.com/blampe/goat"
 )
 
-func main() {
-	log.SetFlags(0)
+func init() {
+	log.SetFlags(/*log.Ldate |*/ log.Ltime | log.Lshortfile)
+}
 
+func main() {
 	var (
 		inputFilename,
 		outputFilename,

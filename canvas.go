@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"bytes"
 	"io"
-	"sort"
 )
 
 // Characters where more than one line segment can come together.
@@ -53,8 +52,9 @@ func isTriangle(r rune) bool {
 
 // Canvas represents a 2D ASCII rectangle.
 type Canvas struct {
-	Width  int
-	Height int
+	// units of cells
+	Width, Height int
+
 	data   map[Index]rune
 	text   map[Index]rune
 }
@@ -66,10 +66,9 @@ func (c *Canvas) String() string {
 		for w := 0; w < c.Width; w++ {
 			idx := Index{w, h}
 
-			// Grab from our text buffer and if nothing's there try the data
-			// buffer.
-			r := c.text[idx]
-			if r == 0 {
+			// Search 'text' map; if nothing there try the 'data' map.
+			r, ok := c.text[idx]
+			if !ok {
 				r = c.runeAt(idx)
 			}
 
@@ -100,13 +99,12 @@ func (c *Canvas) runeAt(i Index) rune {
 	if val, ok := c.data[i]; ok {
 		return val
 	}
-
 	return ' '
 }
 
 // NewCanvas creates a new canvas with contents read from the given io.Reader.
 // Content should be newline delimited.
-func NewCanvas(in io.Reader) Canvas {
+func NewCanvas(in io.Reader) (c Canvas) {
 	width := 0
 	height := 0
 
@@ -114,6 +112,8 @@ func NewCanvas(in io.Reader) Canvas {
 
 	data := make(map[Index]rune)
 
+	// Fill 'data', an entry Index for each rune of the partial, ragged-right
+	// input grid.
 	for scanner.Scan() {
 		line := scanner.Text()
 
@@ -132,16 +132,16 @@ func NewCanvas(in io.Reader) Canvas {
 		height++
 	}
 
-	text := make(map[Index]rune)
-
-	c := Canvas{
+	c = Canvas{
 		Width:  width,
 		Height: height,
 		data:   data,
-		text:   text,
+		text:   make(map[Index]rune),
 	}
 
-	// Extract everything we detect as text to make diagram parsing easier.
+	// Move contents of every cell that appears to be "text" into a separate map,
+	// from data[] to text[].  So data[] and text[] are an exact partitioning of the
+	// incoming grid-aligned runes.
 	for idx := range leftRight(width, height) {
 		if c.isText(idx) {
 			c.text[idx] = c.runeAt(idx)
@@ -150,8 +150,7 @@ func NewCanvas(in io.Reader) Canvas {
 	for idx := range c.text {
 		delete(c.data, idx)
 	}
-
-	return c
+	return
 }
 
 // Drawable represents anything that can Draw itself.
@@ -844,70 +843,19 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	return NONE
 }
 
-// A wrapper to enable sorting.
-type indexRuneDrawable struct {
-	i Index
-	r rune
-	Drawable
-}
-
 // Text returns a slice of all text characters not belonging to part of the diagram.
-// How these characters are identified is rather complicated.
-func (c *Canvas) Text() []Drawable {
-	newLine := func(i Index, r rune, o Orientation) Drawable {
-		stop := i
-
-		switch o {
-		case NE:
-			stop = i.nEast()
-		case SE:
-			stop = i.sEast()
+// Must be stably sorted, to satisfy regression tests.
+func (c *Canvas) Text() (text []Drawable) {
+	for idx := range leftRight(c.Width, c.Height) {
+		r, found := c.text[idx]
+		if !found {
+			continue
 		}
-
-		l := Line{
-			start:       i,
-			stop:        stop,
-			lonely:      true,
-			orientation: o,
-		}
-
-		return indexRuneDrawable{
-			Drawable: l,
-			i:        i,
-			r:        r,
-		}
+		text = append(text, Text{
+			start: idx,
+			contents: string(r)})
 	}
-
-	text := make([]Drawable, len(c.text))
-	var j int
-
-	for i, r := range c.text {
-		switch r {
-		// Weird unicode edge cases that markdeep handles. These get
-		// substituted with lines.
-		case '╱':
-			text[j] = newLine(i, r, NE)
-		case '╲':
-			text[j] = newLine(i, r, SE)
-		case '╳':
-			text[j] = newLine(i, r, NE)
-		default:
-			text[j] = indexRuneDrawable{Drawable: Text{start: i, contents: string(r)}, i: i, r: r}
-		}
-		j++
-	}
-
-	sort.Slice(text, func(i, j int) bool {
-		ti, tj := text[i].(indexRuneDrawable), text[j].(indexRuneDrawable)
-
-		if ti.i.x == tj.i.x {
-			return ti.i.y < tj.i.y || (ti.i.y == tj.i.y && ti.r < tj.r)
-		}
-
-		return ti.i.x < tj.i.x
-	})
-
-	return text
+	return
 }
 
 // Bridges returns a slice of all bridges, "-)-" or "-(-".

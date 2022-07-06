@@ -2,14 +2,15 @@ package goat
 
 // Index represents a position within an ASCII diagram.
 type Index struct {
-	x int
-	y int
+	// units of cells
+	x, y int
 }
 
-// Pixel represents the on-screen coordinates for an Index.
-type Pixel Index
+// Pixel represents the CSS-pixel coordinates for an Index.
+type Pixel Index  // XX different units -- create separate base type?
 
 func (i *Index) asPixel() Pixel {
+	// TODO  define constants rather than hard-wire width and height of cell
 	return Pixel{x: i.x * 8, y: i.y * 16}
 }
 
