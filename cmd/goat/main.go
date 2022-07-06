@@ -2,11 +2,8 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"log"
 	"os"
-	"path/filepath"
-	"strings"
 
 	"github.com/blampe/goat"
 )
@@ -17,14 +14,12 @@ func main() {
 	var (
 		inputFilename,
 		outputFilename,
-		format,
 		svgColorLightScheme,
 		svgColorDarkScheme string
 	)
 
 	flag.StringVar(&inputFilename, "i", "", "Input filename (default stdin)")
 	flag.StringVar(&outputFilename, "o", "", "Output filename (default stdout for SVG)")
-	flag.StringVar(&format, "f", "svg", "Output format: svg (default: svg)")
 	flag.StringVar(&svgColorLightScheme, "sls", "#000000", `short for -svg-color-light-scheme`)
 	flag.StringVar(&svgColorLightScheme, "svg-color-light-scheme", "#000000",
 		`See help for -svg-color-dark-scheme`)
@@ -64,20 +59,6 @@ drawing color.`)
 		defer output.Close()
 		if err != nil {
 			log.Fatal(err)
-		}
-		// Warn the user if he is writing to an extension different to the
-		// file format
-		format := "svg"
-		ext := filepath.Ext(outputFilename)
-		if fmt.Sprintf(".%s", format) != ext {
-			log.Printf("Warning: writing to '%s' with extension '%s' and format %s", outputFilename, ext, strings.ToUpper(format))
-		}
-	} else {
-		// check that we are not writing binary data to terminal
-		fileInfo, _ := os.Stdout.Stat()
-		isTerminal := (fileInfo.Mode() & os.ModeCharDevice) != 0
-		if isTerminal && format != "svg" {
-			log.Fatalf("refuse to write binary data to terminal: %s", format)
 		}
 	}
 	goat.BuildAndWriteSVG(input, output,
