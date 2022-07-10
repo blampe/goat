@@ -39,18 +39,20 @@ var reserved = append(
 )
 var reservedSet runeSet
 
-var wide = []rune{
+var doubleWideSVG = []rune{
 	'o',
 	'*',
-	'v',
-	'>',
-	'<',
+}
+var wideSVG = []rune{
+	'v',   // X  Input containing " over " needs to be considered text.
+//	'>',   // Uncommenting would get 'o<' and '>o' wrong.  But o> and >o -- never desired to be text?
+//	'<',   // ibid.
 	'^',
 	')',
 	'(',
-	'.',
+	'.',   // Dropping this would cause " v. " to be considered graphics.
 }
-var wideSet = makeSet(wide)
+var wideSVGSet = makeSet(append(doubleWideSVG, wideSVG...))
 
 func makeSet(runeSlice []rune) (rs runeSet) {
 	rs = make(runeSet)
@@ -83,6 +85,7 @@ func isJoint(r rune) bool {
 	return contains(jointRunes, r)
 }
 
+// XX  rename 'isCircle()'?
 func isDot(r rune) bool {
 	return r == 'o' || r == '*'
 }
@@ -108,7 +111,7 @@ func (c *Canvas) widthScreen() int {
 	return (c.Width + 1) * 8
 }
 
-// XX  DRY with runeAt()
+// Arg 'canvasMap' is typically either Canvas.data or Canvas.text
 func inSet(set runeSet, canvasMap map[Index]rune, i Index) (inset bool) {
 	r, inMap := canvasMap[i]
 	if !inMap {
@@ -119,7 +122,8 @@ func inSet(set runeSet, canvasMap map[Index]rune, i Index) (inset bool) {
 }
 
 // Looks only at c.data[], ignores c.text[].
-// X  Returns the rune for ASCII Space i.e. ' ', in the event that map lookup fails.
+// Returns the rune for ASCII Space i.e. ' ', in the event that map lookup fails.
+//  XX  Name 'dataRuneAt()' would be more descriptive, but maybe too bulky.
 func (c *Canvas) runeAt(i Index) rune {
 	if val, ok := c.data[i]; ok {
 		return val
@@ -195,10 +199,13 @@ type Drawable interface {
 	Draw(out io.Writer)
 }
 
-// Line represents a straight segment between two points.
+// Line represents a straight segment between two points 'start' and 'stop', where
+// 'start' is either lesser in X (north-east, east, south-east), or
+//  equal in X and lesser in Y (south).
 type Line struct {
 	start Index
 	stop  Index
+
 	// dashed	    bool
 	needsNudgingDown      bool
 	needsNudgingLeft      bool
@@ -317,8 +324,8 @@ func (c *Canvas) WriteSVGBody(dst io.Writer) {
 		l.Draw(dst)
 	}
 
-	for _, t := range c.Triangles() {
-		t.Draw(dst)
+	for _, tI := range c.Triangles() {
+		tI.Draw(dst)
 	}
 
 	for _, c := range c.RoundedCorners() {
@@ -329,8 +336,8 @@ func (c *Canvas) WriteSVGBody(dst io.Writer) {
 		c.Draw(dst)
 	}
 
-	for _, b := range c.Bridges() {
-		b.Draw(dst)
+	for _, bI := range c.Bridges() {
+		bI.Draw(dst)
 	}
 
 	writeText(dst, c)
@@ -490,7 +497,7 @@ func (c *Canvas) Lines() (lines []Line) {
 	lines = append(lines, verticalLines...)
 	lines = append(lines, diagUpLines...)
 	lines = append(lines, diagDownLines...)
-	lines = append(lines, c.HalfSteps()...)
+	lines = append(lines, c.HalfSteps()...)  // vertical, only
 
 	return
 }
@@ -560,17 +567,14 @@ func (c *Canvas) getLines(
 	segment rune,
 	passThroughs []rune,
 	o Orientation,
-) []Line {
-
-	var lines []Line
-
+) (lines []Line) {
 	// Helper to throw the current line we're tracking on to the slice and
 	// start a new one.
-	snip := func(l Line) Line {
+	snip := func(cl Line) Line {
 		// Only collect lines that actually go somewhere or are isolated
-		// segments.
-		if l.goesSomewhere() {
-			lines = append(lines, l)
+		// segments; otherwise, discard what's been collected so far within 'cl'.
+		if cl.goesSomewhere() {
+			lines = append(lines, cl)
 		}
 
 		return Line{orientation: o}
@@ -649,11 +653,11 @@ func (c *Canvas) getLines(
 
 		lastSeenRune = r
 	}
-
-	return lines
+	return
 }
 
-// Triangles returns a slice of all detectable Triangles.
+// Triangles detects intended triangles -- typically at the end of an intended line --
+// and returns a representational slice composed of types Triangle and Line.
 func (c *Canvas) Triangles() (triangles []Drawable) {
 	o := NONE
 
@@ -695,7 +699,7 @@ func (c *Canvas) Triangles() (triangles []Drawable) {
 			} else {
 				// Conclusion: Meant as a text string 'v', not a triangle
 				//panic("Not sufficient to fix all 'v' troubles.")
-				//continue
+				// continue   XX Already committed to non-text output for this string?
 				o = S
 			}
 		case '<':
@@ -891,7 +895,8 @@ func (c *Canvas) Text() (text []Text) {
 	return
 }
 
-// Bridges returns a slice of all bridges, "-)-" or "-(-".
+// Bridges returns a slice of all bridges, "-)-" or "-(-", composed as a sequence of
+// either type Bridge or type Line.
 func (c *Canvas) Bridges() (bridges []Drawable) {
 	for idx := range leftRight(c.Width, c.Height) {
 		if o := c.isBridge(idx); o != NONE {
@@ -980,8 +985,8 @@ func (c *Canvas) shouldMoveToText(i Index) bool {
 	}
 
 	crowded := func (l, r Index) bool {
-		return  inSet(wideSet, c.data, l) &&
-			inSet(wideSet, c.data, r)
+		return  inSet(wideSVGSet, c.data, l) &&
+			inSet(wideSVGSet, c.data, r)
 	}
 	if crowded(w, i) || crowded(i, e) {
 		return true
