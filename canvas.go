@@ -2,7 +2,6 @@ package goat
 
 import (
 	"bufio"
-	"bytes"
 	"io"
 )
 
@@ -101,34 +100,6 @@ type Canvas struct {
 	text   map[Index]rune
 }
 
-func (c *Canvas) String() string {
-	var buffer bytes.Buffer
-
-	for h := 0; h < c.Height; h++ {
-		for w := 0; w < c.Width; w++ {
-			idx := Index{w, h}
-
-			// Search 'text' map; if nothing there try the 'data' map.
-			r, ok := c.text[idx]
-			if !ok {
-				r = c.runeAt(idx)
-			}
-
-			_, err := buffer.WriteRune(r)
-			if err != nil {
-				continue
-			}
-		}
-
-		err := buffer.WriteByte('\n')
-		if err != nil {
-			continue
-		}
-	}
-
-	return buffer.String()
-}
-
 func (c *Canvas) heightScreen() int {
 	return c.Height*16 + 8 + 1
 }
@@ -158,6 +129,7 @@ func (c *Canvas) runeAt(i Index) rune {
 
 // NewCanvas creates a new canvas with contents read from the given io.Reader.
 // Content should be newline delimited.
+//  XX  Move this to top of file.
 func NewCanvas(in io.Reader) (c Canvas) {
 	width := 0
 	height := 0
