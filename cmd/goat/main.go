@@ -37,10 +37,6 @@ func main() {
 
  See https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 `)
-	flag.BoolVar(&goat.HollowCircles, "hollowcircles", false,
-		`If set, the letter 'o' draws a hollow circle, with strokes possibly extending
-into it; otherwise, the circle is filled with a computed inverse of the foreground
-drawing color.`)
 	flag.Parse()
 
 	input := os.Stdin
