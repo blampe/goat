@@ -206,6 +206,9 @@ type Line struct {
 	start Index
 	stop  Index
 
+	startRune rune
+	stopRune rune
+
 	// dashed	    bool
 	needsNudgingDown      bool
 	needsNudgingLeft      bool
@@ -219,6 +222,7 @@ type Line struct {
 	// N or S. Only useful for half steps - chops of this half of the line.
 	chop Orientation
 
+	// X-major, Y-minor.  Therefore, always one of the compass points NE, E, SE, S.
 	orientation Orientation
 
 	state lineState
@@ -235,17 +239,20 @@ func (l *Line) started() bool {
 	return l.state == _Started
 }
 
-func (l *Line) setStart(i Index) {
+func (c *Canvas) setStart(l *Line, i Index) {
 	if l.state == _Unstarted {
 		l.start = i
+		l.startRune = c.runeAt(i)
 		l.stop = i
+		l.stopRune = c.runeAt(i)
 		l.state = _Started
 	}
 }
 
-func (l *Line) setStop(i Index) {
+func (c *Canvas) setStop(l *Line, i Index) {
 	if l.state == _Started {
 		l.stop = i
+		l.stopRune = c.runeAt(i)
 	}
 }
 
@@ -624,7 +631,7 @@ func (c *Canvas) getLines(
 		switch currentLine.state {
 		case _Unstarted:
 			if shouldKeep {
-				currentLine.setStart(idx)
+				c.setStart(&currentLine, idx)
 			}
 		case _Started:
 			if !shouldKeep {
@@ -634,7 +641,7 @@ func (c *Canvas) getLines(
 				// adjust later in the / and \ cases.
 				if !currentLine.goesSomewhere() && lastSeenRune == segment {
 					if !c.partOfRoundedCorner(currentLine.start) {
-						currentLine.setStop(idx)
+						c.setStop(&currentLine, idx)
 						currentLine.lonely = true
 					}
 				}
@@ -642,12 +649,12 @@ func (c *Canvas) getLines(
 			} else if isPassThrough {
 				// Snip the existing line but include the current pass-through
 				// character because we may be continuing the line.
-				currentLine.setStop(idx)
+				c.setStop(&currentLine, idx)
 				currentLine = snip(currentLine)
-				currentLine.setStart(idx)
+				c.setStart(&currentLine, idx)
 			} else if shouldKeep {
 				// Keep the line going and extend it by this character.
-				currentLine.setStop(idx)
+				c.setStop(&currentLine, idx)
 			}
 		}
 

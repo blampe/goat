@@ -166,6 +166,47 @@ func (l Line) Draw(out io.Writer) {
 		}
 	}
 
+	// If either end is a hollow circle, back off drawing to the edge of the circle,
+	// rather extending as usual to center of the cell.
+	const (
+		ORTHO = 6
+		DIAG_X = 3  // XX  By eye, '3' is a bit too much'; '2' is not enough.
+		DIAG_Y = 5
+	)
+	if (l.startRune == 'o') {
+		switch l.orientation {
+		case NE:
+			start.X += DIAG_X
+			start.Y -= DIAG_Y
+		case E:
+			start.X += ORTHO
+		case SE:
+			start.X += DIAG_X
+			start.Y += DIAG_Y
+		case S:
+			start.Y += ORTHO
+		default:
+			panic("impossible orientation")
+		}
+	}
+	// X  'stopRune' case differs from 'startRune' only by inversion of the arithmetic signs.
+	if (l.stopRune == 'o') {
+		switch l.orientation {
+		case NE:
+			stop.X -= DIAG_X
+			stop.Y += DIAG_Y
+		case E:
+			stop.X -= ORTHO
+		case SE:
+			stop.X -= DIAG_X
+			stop.Y -= DIAG_Y
+		case S:
+			stop.Y -= ORTHO
+		default:
+			panic("impossible orientation")
+		}
+	}
+
 	writeBytes(out,
 		"<path d='M %d,%d L %d,%d' fill='none' stroke='currentColor'></path>\n",
 		start.X, start.Y,
