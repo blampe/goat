@@ -1,3 +1,18 @@
+
+/*
+Package goat formats "ASCII-art" drawings into Github-flavored Markdown.
+
+<goat>
+    Internal Data Flow
+
+                            Canvas{}          WriteSVGBody()       SVG{}	           
+          NewCanvas()   .-----------------.     .-------.     .-------------.
+ ASCII-art    .--.     | data map[x,y]rune |   |         |    |             |  Markdown
+  ---------->|    +--->| text map[x,y]rune |-->|         +--->| Body string +----->
+              '--'     |                   |   |         |    |             |
+                        '-----------------'     '-------'     '-------------'
+</goat>
+*/
 package goat
 
 import (
@@ -133,8 +148,8 @@ func (c *Canvas) runeAt(i Index) rune {
 
 // NewCanvas creates a new canvas with contents read from the given io.Reader.
 // Content should be newline delimited.
-//  XX  Move this to top of file.
 func NewCanvas(in io.Reader) (c Canvas) {
+	//  XX  Move this function to top of file.
 	width := 0
 	height := 0
 
@@ -201,7 +216,7 @@ type Drawable interface {
 
 // Line represents a straight segment between two points 'start' and 'stop', where
 // 'start' is either lesser in X (north-east, east, south-east), or
-//  equal in X and lesser in Y (south).
+// equal in X and lesser in Y (south).
 type Line struct {
 	start Index
 	stop  Index
@@ -302,7 +317,7 @@ type Text struct {
 	str	 string	 // Possibly multiple bytes, from Unicode source of type 'rune'
 }
 
-// Bridge correspondes to combinations of "-)-" or "-(-" and is displayed as
+// Bridge corresponds to combinations of "-)-" or "-(-" and is displayed as
 // the vertical line "hopping over" the horizontal.
 type Bridge struct {
 	start	    Index

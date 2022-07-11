@@ -1,3 +1,4 @@
+// All output is buffered into the object SVG, then written to the output stream.
 package goat
 
 import (
@@ -21,24 +22,24 @@ svg {
    color: %s;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: %s;
-     }
+   svg {
+      color: %s;
+   }
 }
 </style>`,
 		svgColorLightScheme,
 		svgColorDarkScheme)
 
 	return fmt.Sprintf(
-		"<svg class='%s' xmlns='%s' version='%s' height='%d' width='%d' font-family='Menlo,Lucida Console,monospace'>\n" +
+		"<svg xmlns='%s' version='%s' height='%d' width='%d' font-family='Menlo,Lucida Console,monospace'>\n" +
 			"%s\n" +
 			"%s</svg>\n",
-		"diagram",  // XX  can this have any effect?
 		"http://www.w3.org/2000/svg",
 		"1.1", s.Height, s.Width, style, s.Body)
 }
 
-// BuildSVG reads in a newline-delimited ASCII diagram from src and returns an SVG.
+// BuildSVG reads a newline-delimited ASCII diagram from src and returns an
+// initialized SVG struct.
 func BuildSVG(src io.Reader) SVG {
 	var buff bytes.Buffer
 	canvas := NewCanvas(src)
@@ -53,7 +54,7 @@ func BuildSVG(src io.Reader) SVG {
 // BuildAndWriteSVG reads in a newline-delimited ASCII diagram from src and writes a
 // corresponding SVG diagram to dst.
 func BuildAndWriteSVG(src io.Reader, dst io.Writer,
-	svgColorLightScheme string, svgColorDarkScheme string) {
+	svgColorLightScheme, svgColorDarkScheme string) {
 	svg := BuildSVG(src)
 	writeBytes(dst, svg.String(svgColorLightScheme, svgColorDarkScheme))
 }
@@ -70,12 +71,12 @@ func writeBytes(out io.Writer, format string, args ...interface{}) {
 func writeText(out io.Writer, canvas *Canvas) {
 	writeBytes(out,
 		`<style>
-text {
+  text {
        text-anchor: middle;
        font-family: "Menlo","Lucida Console","monospace";
        fill: currentColor;
        font-size: 1em;
-}
+  }
 </style>
 `)
 	for _, textObj := range canvas.Text() {
