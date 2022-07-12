@@ -1,26 +1,24 @@
 # GoAT: Go ASCII Tool
 
-## What **goat** Can Do For You
+## What **GoAT** Can Do For You
 
-* From a chunky ASCII-art source drawing, render to a pretty SVG output file,
-  with (goat)[./cmd/goat] run from the shell command line.
+* From a chunky ASCII-art source drawing, render a pretty SVG output [file](#complicated),
+  with the [goat](./cmd/goat) CLI command.
 
 * Build publication-ready illustrated documentation, in Markdown, directly
   from comments in Go source code.
-  (goatdoc)[./cmd/goatdoc] reformats the output of 'go doc -all' into Github-flavored Markdown.
-  Any embedded goat-format drawings are processed into SVG for inclusion within 
-  the Markdown.
+  The shell command [goatdoc](./cmd/goatdoc) reformats the output of ```go doc -all``` into Github-flavored Markdown, and any embedded goat-format drawings are processed into SVG for inclusion within the Markdown.
 
 ## You Will Also Need
 
-#### Rectangle or Graphical editing capability
+#### Graphical- or Rectangle-oriented text editing capability
 Both **vim** and **emacs** offer useful support.
 In Emacs, see the built-in rectangle-editing commands, and ```picture-mode```.
 
-#### A fixed-pitch font with 2:1 height:width, for your editor and terminal emulator both
-Most fixed-pitch ("monospace") Unicode fonts maintain a 2:1 aspect ratio for all
+#### A fixed-pitch font with 2:1 height:width ratio as presented by your editor and terminal emulator
+Most fixed-pitch or "monospace" Unicode fonts maintain a 2:1 aspect ratio for
 characters in the ASCII range,
-and all **goat** drawing characters are ASCII.
+and all GoAT drawing characters are ASCII.
 However, certain Unicode graphical characters e.g. MIDDLE DOT may be useful, and
 conform to the width of the ASCII range.
 
@@ -29,12 +27,13 @@ Non-standard width characters are not in general composable on the left-right ax
 drawing, because the remainder of the line of text to their right is pushed out of alignment
 with rows above and below.
 
-## Goat Library API
+## The GoAT Library [API]({{.Root}}/API.html)
 
-The core engine of ```goat``` is accessible as a Go package, for inclusion in specialized
-Go code of your own.
-Documented [here]({{.Root}}/API.html).
-The goat library is a Go implementation of [markdeep.mini.js]'s ASCII diagram generation.
+The core engine of ```goat``` is accessible as a Go library package, for inclusion in specialized
+code of your own.
+The [API documentation]({{.Root}}/API.html) also showcases use of ```goatdoc``` to generate illustrated Markdown directly from Go inline comments.
+
+The code implements a subset, and some extensions, of the ASCII diagram generation function of the browser-side Javascript in [Markdeep](http://casual-effects.com/markdeep/).
 
 ## Project Tenets
 
@@ -46,165 +45,77 @@ The goat library is a Go implementation of [markdeep.mini.js]'s ASCII diagram ge
 
 ## TODO
 
-- Dashed lines signaled by `:` or `=`.
-- Bold lines signaled by ???.
+- Dashed lines signaled by `:` or `=`
+- Bold lines signaled by ???
 
 ## Examples
 
-Here are some SVGs, as linked to via HTML <img> elements within the Github-processed Markdown
-output of this README.md, along with the UTF-8 input they were generated from.
+Here are some snippets of 
+GoAT-formatted UTF-8
+and the SVG each can generate.
+The SVG you see below was linked to by
+inline Markdown image references
+([howto](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images),
+[spec](https://github.github.com/gfm/#images)) from
+GoAT's [README.md](README.md), then finally rendered to HTML ```<img>``` elements by Github's Markdown processor
+
 
 ### Trees
-
-![Trees Example]({{.Root}}/examples/trees.svg)
-
 ```
-          .               .                .               .--- 1          .-- 1     / 1
-         / \              |                |           .---+            .-+         +
-        /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
-       +     +        |       |        |       |    ---+            ---+          +
-      / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
-     /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
-     1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
+{{.trees_txt}}
 ```
+![]({{.Root}}/examples/trees.svg)
 
 ### Overlaps
-
-![Overlaps Example]({{.Root}}/examples/overlaps.svg)
-
 ```
-           .-.           .-.           .-.           .-.           .-.           .-.
-          |   |         |   |         |   |         |   |         |   |         |   |
-       .---------.   .--+---+--.   .--+---+--.   .--|   |--.   .--+   +--.   .------|--.
-      |           | |           | |   |   |   | |   |   |   | |           | |   |   |   |
-       '---------'   '--+---+--'   '--+---+--'   '--|   |--'   '--+   +--'   '--|------'
-          |   |         |   |         |   |         |   |         |   |         |   |
-           '-'           '-'           '-'           '-'           '-'           '-'
+{{.overlaps_txt}}
 ```
+![]({{.Root}}/examples/overlaps.svg)
 
 ### Line Decorations
-
-![Line Decorations Example]({{.Root}}/examples/line-decorations.svg)
-
 ```
-                ________                            o        *          *   .--------------.
-   *---+--.    |        |     o   o      |         ^          \        /   |  .----------.  |
-       |   |    '--*   -+-    |   |      v        /            \      /    | |  <------.  | |
-       |    '----->       .---(---'  --->*<---   /      .+->*<--o----'     | |          | | |
-   <--'  ^  ^             |   |                 |      | |  ^    \         |  '--------'  | |
-          \/        *-----'   o     |<----->|   '-----'  |__|     v         '------------'  |
-          /\                                                               *---------------'
+{{.line_decorations_txt}}
 ```
+![]({{.Root}}/examples/line-decorations.svg)
 
 ### Line Ends
-
-![Line Ends Example]({{.Root}}/examples/line-ends.svg)
-
 ```
-   o--o    *--o     /  /   *  o  o o o o   * * * *   o o o o   * * * *      o o o o   * * * *
-   o--*    *--*    v  v   ^  ^   | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /
-   o-->    *-->   *  o   /  /    o * v '   o * v '     o * v \   o * v \  o * v /   o * v /
-   o---    *---
-                                 ^ ^ ^ ^   . . . .   ^ ^ ^ ^   \ \ \ \      ^ ^ ^ ^   / / / /
-   |  |   *  o  \  \   *  o      | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /
-   v  v   ^  ^   v  v   ^  ^     o * v '   o * v '     o * v \   o * v \  o * v /   o * v /
-   *  o   |  |    *  o   \  \
-
-   <--o   <--*   <-->   <---      ---o   ---*   --->   ----      *<--   o<--   -->o   -->*
+{{.line_ends_txt}}
 ```
+![]({{.Root}}/examples/line-ends.svg)
 
 ### Dot Grids
-
-![Dot Grids Example]({{.Root}}/examples/dot-grids.svg)
-
 ```
-  o o o o o  * * * * *  * * o o *    o o o      * * *      o o o     · * · · ·     · · ·
-  o o o o o  * * * * *  o o o o *   o o o o    * * * *    * o * *    · * * · ·    · · · ·
-  o o o o o  * * * * *  o * o o o  o o o o o  * * * * *  o o o o o   · o · · o   · · * * ·
-  o o o o o  * * * * *  o * o o o   o o o o    * * * *    o * o o    · · · · o    · · * ·
-  o o o o o  * * * * *  * * * * o    o o o      * * *      o * o     · · · · ·     · · *
+{{.dot_grids_txt}}
 ```
 Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character, encoded with UTF-8.
+![]({{.Root}}/examples/dot-grids.svg)
 
 ### Large Nodes
-
-![Large Node Example]({{.Root}}/examples/large-nodes.svg)
-
 ```
-   .---.       .-.        .-.       .-.                                       .-.
-   | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.                  | 8 |
-   '---'       '-'        '+'       '-'                    |                  '-'
-                           |         ^                     |                   ^
-                           v         |                     v                   |
-                          .-.      .-+-.        .-.      .-+-.      .-.       .+.       .---.
-                         | 3 +---->| B |<----->| 5 +---->| C +---->| 6 +---->| 7 |<---->| D |
-                          '-'      '---'        '-'      '---'      '-'       '-'       '---'
+{{.large_nodes_txt}}
 ```
+![]({{.Root}}/examples/large-nodes.svg)
 
 ### Small Grids
-
-![Small Grids Example]({{.Root}}/examples/small-grids.svg)
-
+![]({{.Root}}/examples/small-grids.svg)
 ```
-       ___     ___      .---+---+---+---+---.     .---+---+---+---.  .---.   .---.
-   ___/   \___/   \     |   |   |   |   |   |    / \ / \ / \ / \ /   |   +---+   |
-  /   \___/   \___/     +---+---+---+---+---+   +---+---+---+---+    +---+   +---+
-  \___/ b \___/   \     |   |   | b |   |   |    \ / \a/ \b/ \ / \   |   +---+   |
-  / a \___/   \___/     +---+---+---+---+---+     +---+---+---+---+  +---+ b +---+
-  \___/   \___/   \     |   | a |   |   |   |    / \ / \ / \ / \ /   | a +---+   |
-      \___/   \___/     '---+---+---+---+---'   '---+---+---+---'    '---'   '---'
+{{.small_grids_txt}}
 ```
 
 ### Big Grids
-
-![Big Grids Example]({{.Root}}/examples/big-grids.svg)
-
 ```
-    .----.        .----.
-   /      \      /      \            .-----+-----+-----.
-  +        +----+        +----.      |     |     |     |          .-----+-----+-----+-----+
-   \      /      \      /      \     |     |     |     |         /     /     /     /     /
-    +----+   B    +----+        +    +-----+-----+-----+        +-----+-----+-----+-----+
-   /      \      /      \      /     |     |     |     |       /     /     /     /     /
-  +   A    +----+        +----+      |     |  B  |     |      +-----+-----+-----+-----+
-   \      /      \      /      \     +-----+-----+-----+     /     /  A  /  B  /     /
-    '----+        +----+        +    |     |     |     |    +-----+-----+-----+-----+
-          \      /      \      /     |  A  |     |     |   /     /     /     /     /
-           '----'        '----'      '-----+-----+-----'  '-----+-----+-----+-----+
+{{.big_grids_txt}}
 ```
+![]({{.Root}}/examples/big-grids.svg)
 
 ### Complicated
-
-![Complicated Example]({{.Root}}/examples/complicated.svg)
-
 ```
-+-------------------+                           ^                      .---.
-|    A Box          |__.--.__    __.-->         |      .-.             |   |
-|                   |        '--'               v     | * |<---        |   |
-+-------------------+                                  '-'             |   |
-                       Round                                       *---(-. |
-  .-----------------.  .-------.    .----------.         .-------.     | | |
- |   Mixed Rounded  | |         |  / Diagonals  \        |   |   |     | | |
- | & Square Corners |  '--. .--'  /              \       |---+---|     '-)-'       .--------.
- '--+------------+-'  .--. |     '-------+--------'      |   |   |       |        / Search /
-    |            |   |    | '---.        |               '-------'       |       '-+------'
-    |<---------->|   |    |      |       v                Interior                 |     ^
-    '           <---'      '----'   .-----------.              ---.     .---       v     |
- .------------------.  Diag line    | .-------. +---.              \   /           .     |
- |   if (a > b)     +---.      .--->| |       | |    | Curved line  \ /           / \    |
- |   obj->fcn()     |    \    /     | '-------' |<--'                +           /   \   |
- '------------------'     '--'      '--+--------'      .--. .--.     |  .-.     +Done?+-'
-    .---+-----.                        |   ^           |\ | | /|  .--+ |   |     \   /
-    |   |     | Join        \|/        |   | Curved    | \| |/ | |    \    |      \ /
-    |   |     +---->  o    --o--        '-'  Vertical  '--' '--'  '--  '--'        +  .---.
- <--+---+-----'       |     /|\                                                    |  | 3 |
-                      v                             not:line    'quotes'        .-'   '---'
-  .-.             .---+--------.            /            A || B   *bold*       |        ^
- |   |           |   Not a dot  |      <---+---<--    A dash--is not a line    v        |
-  '-'             '---------+--'          /           Nor/is this.            ---
+{{.complicated_txt}}
 ```
+![]({{.Root}}/examples/complicated.svg))
 
-More examples are available [here](examples).
+### More examples [here](examples)
 
 [@bep]: https://github.com/bep/goat/
 [@dmacvicar]: https://github.com/dmacvicar/goat
