@@ -13,8 +13,7 @@ type SVG struct {
 	Height int
 }
 
-// See:
-//    https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme
+// See: https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme
 func (s SVG) String(svgColorLightScheme, svgColorDarkScheme string) string {
 	style := fmt.Sprintf(
 		`<style type="text/css">
@@ -81,12 +80,12 @@ func writeText(out io.Writer, canvas *Canvas) {
 `)
 	for _, textObj := range canvas.Text() {
 		// usual, baseline case
-		textObj.Draw(out)
+		textObj.draw(out)
 	}
 }
 
 // Draw a straight line as an SVG path.
-func (l Line) Draw(out io.Writer) {
+func (l Line) draw(out io.Writer) {
 	start := l.start.asPixel()
 	stop := l.stop.asPixel()
 
@@ -214,7 +213,7 @@ func (l Line) Draw(out io.Writer) {
 }
 
 // Draw a solid triangle as an SVG polygon element.
-func (t Triangle) Draw(out io.Writer) {
+func (t Triangle) draw(out io.Writer) {
 	// https://www.w3.org/TR/SVG/shapes.html#PolygonElement
 
 	/*
@@ -320,7 +319,7 @@ func (t Triangle) Draw(out io.Writer) {
 }
 
 // Draw a solid circle as an SVG circle element.
-func (c *Circle) Draw(out io.Writer) {
+func (c *Circle) draw(out io.Writer) {
 	var fill string
 	if c.bold {
 		fill = "currentColor"
@@ -339,7 +338,7 @@ func (c *Circle) Draw(out io.Writer) {
 }
 
 // Draw a single text character as an SVG text element.
-func (t Text) Draw(out io.Writer) {
+func (t Text) draw(out io.Writer) {
 	p := t.start.asPixel()
 	c := t.str
 
@@ -390,7 +389,7 @@ func (t Text) Draw(out io.Writer) {
 }
 
 // Draw a rounded corner as an SVG elliptical arc element.
-func (c *RoundedCorner) Draw(out io.Writer) {
+func (c *RoundedCorner) draw(out io.Writer) {
 	// https://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands
 
 	x, y := c.start.asPixelXY()
@@ -432,7 +431,7 @@ func (c *RoundedCorner) Draw(out io.Writer) {
 }
 
 // Draw a bridge as an SVG elliptical arc element.
-func (b Bridge) Draw(out io.Writer) {
+func (b Bridge) draw(out io.Writer) {
 	x, y := b.start.asPixelXY()
 	sweepFlag := 1
 

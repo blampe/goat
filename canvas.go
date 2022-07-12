@@ -1,17 +1,26 @@
-
 /*
 Package goat formats "ASCII-art" drawings into Github-flavored Markdown.
 
-<goat>
-    Internal Data Flow
+ <goat>
+ porcelain API  · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
 
-                            Canvas{}          WriteSVGBody()       SVG{}	           
-          NewCanvas()   .-----------------.     .-------.     .-------------.
- ASCII-art    .--.     | data map[x,y]rune |   |         |    |             |  Markdown
-  ---------->|    +--->| text map[x,y]rune |-->|         +--->| Body string +----->
-              '--'     |                   |   |         |    |             |
-                        '-----------------'     '-------'     '-------------'
-</goat>
+                            BuildAndWriteSVG()
+                               .----------.
+     ASCII-art                |            |                      Markdown
+      ----------------------->|            +------------------------->
+                              |            |
+                               '----------'
+
+ deep API   · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+
+                                Canvas{}
+               NewCanvas() .-------------------.  WriteSVGBody()
+                           |                   |    .-------.
+     ASCII-art    .--.     | data map[x,y]rune |   |  SVG{}  |    Markdown
+      ---------->|    +--->| text map[x,y]rune +-->|         +------->
+                  '--'     |                   |   |         |
+                           '-------------------'    '-------'
+ </goat>
 */
 package goat
 
@@ -146,8 +155,8 @@ func (c *Canvas) runeAt(i Index) rune {
 	return ' '
 }
 
-// NewCanvas creates a new canvas with contents read from the given io.Reader.
-// Content should be newline delimited.
+// NewCanvas creates a fully-populated Canvas according to GoAT-formatted text read from
+// an io.Reader, consuming all bytes available.
 func NewCanvas(in io.Reader) (c Canvas) {
 	//  XX  Move this function to top of file.
 	width := 0
@@ -175,6 +184,9 @@ func NewCanvas(in io.Reader) (c Canvas) {
 			//	fmt.Printf("linestr=\"%s\"\n", lineStr)
 			//	fmt.Printf("r == 0x%x\n", r)
 			//}
+			if r == '	' {
+				panic("TAB character found on input")
+			}
 			i := Index{w, height}
 			c.data[i] = r
 			w++
@@ -211,7 +223,7 @@ func (c *Canvas) MoveToText() {
 
 // Drawable represents anything that can Draw itself.
 type Drawable interface {
-	Draw(out io.Writer)
+	draw(out io.Writer)
 }
 
 // Line represents a straight segment between two points 'start' and 'stop', where
@@ -339,27 +351,28 @@ const (
 	W			// West
 )
 
+// WriteSVGBody writes the entire content of a Canvas out to a stream in SVG format.
 func (c *Canvas) WriteSVGBody(dst io.Writer) {
 	writeBytes(dst, "<g transform='translate(8,16)'>\n")
 
 	for _, l := range c.Lines() {
-		l.Draw(dst)
+		l.draw(dst)
 	}
 
 	for _, tI := range c.Triangles() {
-		tI.Draw(dst)
+		tI.draw(dst)
 	}
 
 	for _, c := range c.RoundedCorners() {
-		c.Draw(dst)
+		c.draw(dst)
 	}
 
 	for _, c := range c.Circles() {
-		c.Draw(dst)
+		c.draw(dst)
 	}
 
 	for _, bI := range c.Bridges() {
-		bI.Draw(dst)
+		bI.draw(dst)
 	}
 
 	writeText(dst, c)
