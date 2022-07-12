@@ -1,41 +1,42 @@
 # GoAT: Go ASCII Tool
 
-This is a Go implementation of [markdeep.mini.js]'s ASCII diagram
-generation.
+## What **goat** Can Do For You
 
-## Update (2022-02-07)
+* From a chunky ASCII-art source drawing, render to a pretty SVG output file,
+  with (goat)[./cmd/goat] run from the shell command line.
 
-I hacked together GoAT a number of years ago while trying to embed some
-diagrams in a Hugo project I was playing with. Through an odd twist of fate
-GoAT eventually made its way into the upstream Hugo project, and if you're
-using [v0.93.0] you can embed these diagrams natively. Neat!
+* Build publication-ready illustrated documentation, in Markdown, directly
+  from comments in Go source code.
+  (goatdoc)[./cmd/goatdoc] reformats the output of 'go doc -all' into Github-flavored Markdown.
+  Any embedded goat-format drawings are processed into SVG for inclusion within 
+  the Markdown.
 
-My original implementation was certainly buggy and not on par with markdeep.
-I'm grateful for the folks who've helped smooth out the rough edges, and I've
-updated this project to reflect the good changes made in the Hugo fork,
-including a long-overdue `go.mod`.
+## You Will Also Need
 
-There's a lot I would like to do with this project that I will never get to, so
-instead I recommend you look at these forks:
+#### Rectangle or Graphical editing capability
+Both **vim** and **emacs** offer useful support.
+In Emacs, see the built-in rectangle-editing commands, and ```picture-mode```.
 
-* [@bep] is the fork currently used by Hugo, which I expect to be more active
-  over time.
-* [@dmacvicar] has improved SVG/PNG/PDF rendering.
-* [@sw46] has implemented a really wonderful hand-drawn style worth checking
-  out.
+#### A fixed-pitch font with 2:1 height:width, for your editor and terminal emulator both
+Most fixed-pitch ("monospace") Unicode fonts maintain a 2:1 aspect ratio for all
+characters in the ASCII range,
+and all **goat** drawing characters are ASCII.
+However, certain Unicode graphical characters e.g. MIDDLE DOT may be useful, and
+conform to the width of the ASCII range.
 
-## Usage
+CJK characters on the other hand are typically wider than 2:1.
+Non-standard width characters are not in general composable on the left-right axis within a plain-text
+drawing, because the remainder of the line of text to their right is pushed out of alignment
+with rows above and below.
 
-```bash
-$ go get github.com/blampe/goat
-$ cat my-cool-diagram.txt | goat > my-cool-diagram.svg
-```
+## Goat Library API
 
-By default, the program reads from stdin, unless `-i infile` is given.
+The core engine of ```goat``` is accessible as a Go package, for inclusion in specialized
+Go code of your own.
+Documented [here]({{.Root}}/API.html).
+The goat library is a Go implementation of [markdeep.mini.js]'s ASCII diagram generation.
 
-By default, the program writes to stdout, unless `-o outfile` is given.
-
-## Tenets
+## Project Tenets
 
 1. Utility and ease of integration into existing projects are paramount.
 2. Compatibility with MarkDeep desired, but not required.
@@ -50,7 +51,8 @@ By default, the program writes to stdout, unless `-o outfile` is given.
 
 ## Examples
 
-Here are some SVGs and the UTF-8 input they were generated from:
+Here are some SVGs, as linked to via HTML <img> elements within the Github-processed Markdown
+output of this README.md, along with the UTF-8 input they were generated from.
 
 ### Trees
 
