@@ -1,58 +1,68 @@
 # GoAT: Go ASCII Tool
 
-This is a Go implementation of [markdeep.mini.js]'s ASCII diagram
-generation.
+## What **GoAT** Can Do For You
 
-## Update (2022-02-07)
+* From a chunky ASCII-art source drawing, render a pretty SVG output [file](#complicated),
+  with the [goat](./cmd/goat) CLI command.
 
-I hacked together GoAT a number of years ago while trying to embed some
-diagrams in a Hugo project I was playing with. Through an odd twist of fate
-GoAT eventually made its way into the upstream Hugo project, and if you're
-using [v0.93.0] you can embed these diagrams natively. Neat!
+* Build publication-ready illustrated documentation, in Markdown, directly
+  from comments in Go source code.
+  The shell command [goatdocdown](./cmd/goatdocdown) reformats the output of ```go doc -all``` into Github-flavored Markdown, and any embedded goat-format drawings are processed into SVG for inclusion within the Markdown.
 
-My original implementation was certainly buggy and not on par with markdeep.
-I'm grateful for the folks who've helped smooth out the rough edges, and I've
-updated this project to reflect the good changes made in the Hugo fork,
-including a long-overdue `go.mod`.
+## You Will Also Need
 
-There's a lot I would like to do with this project that I will never get to, so
-instead I recommend you look at these forks:
+#### Graphical- or Rectangle-oriented text editing capability
+Both **vim** and **emacs** offer useful support.
+In Emacs, see the built-in rectangle-editing commands, and ```picture-mode```.
 
-* [@bep] is the fork currently used by Hugo, which I expect to be more active
-  over time.
-* [@dmacvicar] has improved SVG/PNG/PDF rendering.
-* [@sw46] has implemented a really wonderful hand-drawn style worth checking
-  out.
+#### A fixed-pitch font with 2:1 height:width ratio as presented by your editor and terminal emulator
+Most fixed-pitch or "monospace" Unicode fonts maintain a 2:1 aspect ratio for
+characters in the ASCII range,
+and all GoAT drawing characters are ASCII.
+However, certain Unicode graphical characters e.g. MIDDLE DOT may be useful, and
+conform to the width of the ASCII range.
 
-## Usage
+CJK characters on the other hand are typically wider than 2:1.
+Non-standard width characters are not in general composable on the left-right axis within a plain-text
+drawing, because the remainder of the line of text to their right is pushed out of alignment
+with rows above and below.
 
-```bash
-$ go get github.com/blampe/goat
-$ cat my-cool-diagram.txt | goat > my-cool-diagram.svg
-```
+## The GoAT Library [API](./API.md)
 
-By default, the program reads from stdin, unless `-i infile` is given.
+The core engine of ```goat``` is accessible as a Go library package, for inclusion in specialized
+code of your own.
+The [API documentation](./API.md) also showcases use of ```goatdocdown``` to generate illustrated Markdown directly from Go inline comments.
 
-By default, the program writes to stdout, unless `-o outfile` is given or a
-binary format with `-f` is selected.
+The code implements a subset, and some extensions, of the ASCII diagram generation function of the browser-side Javascript in [Markdeep](http://casual-effects.com/markdeep/).
 
-By default, it writes in [SVG] format, unless another format is specified with
-`-f`.
+## Project Tenets
+
+1. Utility and ease of integration into existing projects are paramount.
+2. Compatibility with MarkDeep desired, but not required.
+3. TXT and SVG intelligibility are co-equal in priority.
+4. Composability of TXT not to be sacrificed -- only width-8 characters allowed.
+5. Per-platform support limited to a single widely-available fixed-pitch TXT font. 
 
 ## TODO
 
-- Dashed lines signaled by `:` or `=`.
-- Bold lines signaled by ???.
+- Dashed lines signaled by `:` or `=`
+- Bold lines signaled by ???
 
 ## Examples
 
-Here are some SVGs and the UTF-8 input they were generated from:
+Here are some snippets of 
+GoAT-formatted UTF-8
+and the SVG each can generate.
+The SVG you see below was linked to by
+inline Markdown image references
+([howto](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images),
+[spec](https://github.github.com/gfm/#images)) from
+GoAT's [README.md](README.md), then finally rendered to HTML ```<img>``` elements by Github's Markdown processor
+
 
 ### Trees
-
-![Trees Example](https://cdn.rawgit.com/blampe/goat/main/examples/trees.svg)
-
 ```
+
           .               .                .               .--- 1          .-- 1     / 1
          / \              |                |           .---+            .-+         +
         /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
@@ -60,13 +70,14 @@ Here are some SVGs and the UTF-8 input they were generated from:
       / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
      /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
      1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
+
+
 ```
+![](./examples/trees.svg)
 
 ### Overlaps
-
-![Overlaps Example](https://cdn.rawgit.com/blampe/goat/main/examples/overlaps.svg)
-
 ```
+
            .-.           .-.           .-.           .-.           .-.           .-.
           |   |         |   |         |   |         |   |         |   |         |   |
        .---------.   .--+---+--.   .--+---+--.   .--|   |--.   .--+   +--.   .------|--.
@@ -74,12 +85,11 @@ Here are some SVGs and the UTF-8 input they were generated from:
        '---------'   '--+---+--'   '--+---+--'   '--|   |--'   '--+   +--'   '--|------'
           |   |         |   |         |   |         |   |         |   |         |   |
            '-'           '-'           '-'           '-'           '-'           '-'
+
 ```
+![](./examples/overlaps.svg)
 
 ### Line Decorations
-
-![Line Decorations Example](https://cdn.rawgit.com/blampe/goat/main/examples/line-decorations.svg)
-
 ```
                 ________                            o        *          *   .--------------.
    *---+--.    |        |     o   o      |         ^          \        /   |  .----------.  |
@@ -88,12 +98,11 @@ Here are some SVGs and the UTF-8 input they were generated from:
    <--'  ^  ^             |   |                 |      | |  ^    \         |  '--------'  | |
           \/        *-----'   o     |<----->|   '-----'  |__|     v         '------------'  |
           /\                                                               *---------------'
+
 ```
+![](./examples/line-decorations.svg)
 
 ### Line Ends
-
-![Line Ends Example](https://cdn.rawgit.com/blampe/goat/main/examples/line-ends.svg)
-
 ```
    o--o    *--o     /  /   *  o  o o o o   * * * *   o o o o   * * * *      o o o o   * * * *
    o--*    *--*    v  v   ^  ^   | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /
@@ -105,26 +114,28 @@ Here are some SVGs and the UTF-8 input they were generated from:
    *  o   |  |    *  o   \  \
 
    <--o   <--*   <-->   <---      ---o   ---*   --->   ----      *<--   o<--   -->o   -->*
+
+
 ```
+![](./examples/line-ends.svg)
 
 ### Dot Grids
-
-![Dot Grids Example](https://cdn.rawgit.com/blampe/goat/main/examples/dot-grids.svg)
-
 ```
+
   o o o o o  * * * * *  * * o o *    o o o      * * *      o o o     · * · · ·     · · ·
   o o o o o  * * * * *  o o o o *   o o o o    * * * *    * o * *    · * * · ·    · · · ·
   o o o o o  * * * * *  o * o o o  o o o o o  * * * * *  o o o o o   · o · · o   · · * * ·
   o o o o o  * * * * *  o * o o o   o o o o    * * * *    o * o o    · · · · o    · · * ·
   o o o o o  * * * * *  * * * * o    o o o      * * *      o * o     · · · · ·     · · *
+
+
 ```
 Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character, encoded with UTF-8.
+![](./examples/dot-grids.svg)
 
 ### Large Nodes
-
-![Large Node Example](https://cdn.rawgit.com/blampe/goat/main/examples/large-nodes.svg)
-
 ```
+
    .---.       .-.        .-.       .-.                                       .-.
    | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.                  | 8 |
    '---'       '-'        '+'       '-'                    |                  '-'
@@ -133,12 +144,12 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
                           .-.      .-+-.        .-.      .-+-.      .-.       .+.       .---.
                          | 3 +---->| B |<----->| 5 +---->| C +---->| 6 +---->| 7 |<---->| D |
                           '-'      '---'        '-'      '---'      '-'       '-'       '---'
+
 ```
+![](./examples/large-nodes.svg)
 
 ### Small Grids
-
-![Small Grids Example](https://cdn.rawgit.com/blampe/goat/main/examples/small-grids.svg)
-
+![](./examples/small-grids.svg)
 ```
        ___     ___      .---+---+---+---+---.     .---+---+---+---.  .---.   .---.
    ___/   \___/   \     |   |   |   |   |   |    / \ / \ / \ / \ /   |   +---+   |
@@ -147,12 +158,11 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
   / a \___/   \___/     +---+---+---+---+---+     +---+---+---+---+  +---+ b +---+
   \___/   \___/   \     |   | a |   |   |   |    / \ / \ / \ / \ /   | a +---+   |
       \___/   \___/     '---+---+---+---+---'   '---+---+---+---'    '---'   '---'
+
+
 ```
 
 ### Big Grids
-
-![Big Grids Example](https://cdn.rawgit.com/blampe/goat/main/examples/big-grids.svg)
-
 ```
     .----.        .----.
    /      \      /      \            .-----+-----+-----.
@@ -165,12 +175,12 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
     '----+        +----+        +    |     |     |     |    +-----+-----+-----+-----+
           \      /      \      /     |  A  |     |     |   /     /     /     /     /
            '----'        '----'      '-----+-----+-----'  '-----+-----+-----+-----+
+
+
 ```
+![](./examples/big-grids.svg)
 
 ### Complicated
-
-![Complicated Example](https://cdn.rawgit.com/blampe/goat/main/examples/complicated.svg)
-
 ```
 +-------------------+                           ^                      .---.
 |    A Box          |__.--.__    __.-->         |      .-.             |   |
@@ -196,9 +206,11 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
   .-.             .---+--------.            /            A || B   *bold*       |        ^
  |   |           |   Not a dot  |      <---+---<--    A dash--is not a line    v        |
   '-'             '---------+--'          /           Nor/is this.            ---
-```
 
-More examples are available [here](examples).
+```
+![](./examples/complicated.svg))
+
+### More examples [here](examples)
 
 [@bep]: https://github.com/bep/goat/
 [@dmacvicar]: https://github.com/dmacvicar/goat

@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='153' width='752' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='153' width='752' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #014;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #EDF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -98,17 +98,25 @@ svg {
 <path d='M 568,112 A 16,16 0 0,1 552,128' fill='none' stroke='currentColor'></path>
 <path d='M 616,112 A 16,16 0 0,0 632,128' fill='none' stroke='currentColor'></path>
 <path d='M 648,112 A 16,16 0 0,1 632,128' fill='none' stroke='currentColor'></path>
-<text text-anchor='middle' x='40' y='36' fill='currentColor' style='font-size:1em'>A</text>
-<text text-anchor='middle' x='128' y='36' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='216' y='36' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='216' y='116' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='296' y='36' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='296' y='116' fill='currentColor' style='font-size:1em'>B</text>
-<text text-anchor='middle' x='392' y='116' fill='currentColor' style='font-size:1em'>5</text>
-<text text-anchor='middle' x='472' y='116' fill='currentColor' style='font-size:1em'>C</text>
-<text text-anchor='middle' x='552' y='116' fill='currentColor' style='font-size:1em'>6</text>
-<text text-anchor='middle' x='632' y='36' fill='currentColor' style='font-size:1em'>8</text>
-<text text-anchor='middle' x='632' y='116' fill='currentColor' style='font-size:1em'>7</text>
-<text text-anchor='middle' x='720' y='116' fill='currentColor' style='font-size:1em'>D</text>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='40' y='36'>A</text>
+<text x='128' y='36'>1</text>
+<text x='216' y='36'>2</text>
+<text x='296' y='36'>4</text>
+<text x='632' y='36'>8</text>
+<text x='216' y='116'>3</text>
+<text x='296' y='116'>B</text>
+<text x='392' y='116'>5</text>
+<text x='472' y='116'>C</text>
+<text x='552' y='116'>6</text>
+<text x='632' y='116'>7</text>
+<text x='720' y='116'>D</text>
 </g>
 </svg>

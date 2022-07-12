@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='185' width='712' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='185' width='712' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #014;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #EDF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -22,7 +22,7 @@ svg {
 <path d='M 528,96 L 592,96' fill='none' stroke='currentColor'></path>
 <path d='M 24,128 L 88,128' fill='none' stroke='currentColor'></path>
 <path d='M 288,144 L 440,144' fill='none' stroke='currentColor'></path>
-<path d='M 640,144 L 688,144' fill='none' stroke='currentColor'></path>
+<path d='M 646,144 L 682,144' fill='none' stroke='currentColor'></path>
 <path d='M 24,64 L 24,128' fill='none' stroke='currentColor'></path>
 <path d='M 40,32 L 40,48' fill='none' stroke='currentColor'></path>
 <path d='M 40,80 L 40,96' fill='none' stroke='currentColor'></path>
@@ -39,12 +39,12 @@ svg {
 <path d='M 472,32 L 480,16' fill='none' stroke='currentColor'></path>
 <path d='M 504,128 L 520,96' fill='none' stroke='currentColor'></path>
 <path d='M 592,48 L 616,0' fill='none' stroke='currentColor'></path>
-<path d='M 640,144 L 664,96' fill='none' stroke='currentColor'></path>
+<path d='M 643,139 L 661,101' fill='none' stroke='currentColor'></path>
 <path d='M 328,16 L 368,96' fill='none' stroke='currentColor'></path>
 <path d='M 408,80 L 440,144' fill='none' stroke='currentColor'></path>
 <path d='M 472,32 L 480,48' fill='none' stroke='currentColor'></path>
 <path d='M 560,16 L 584,64' fill='none' stroke='currentColor'></path>
-<path d='M 664,96 L 688,144' fill='none' stroke='currentColor'></path>
+<path d='M 667,101 L 685,139' fill='none' stroke='currentColor'></path>
 <path d='M 40,48 L 40,56' fill='none' stroke='currentColor'></path>
 <path d='M 40,72 L 40,80' fill='none' stroke='currentColor'></path>
 <polygon points='164.000000,128.000000 152.000000,122.400002 152.000000,133.600006' fill='currentColor' transform='rotate(120.000000, 152.000000, 128.000000)'></polygon>
@@ -70,59 +70,67 @@ svg {
 <circle cx='288' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='320' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='328' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='376' cy='112' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='376' cy='112' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='408' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='440' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='584' cy='64' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='640' cy='144' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<circle cx='664' cy='96' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<circle cx='688' cy='144' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<text text-anchor='middle' x='16' y='52' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='16' y='148' fill='currentColor' style='font-size:1em'>5</text>
-<text text-anchor='middle' x='32' y='20' fill='currentColor' style='font-size:1em'>0</text>
-<text text-anchor='middle' x='48' y='84' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='80' y='52' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='80' y='148' fill='currentColor' style='font-size:1em'>6</text>
-<text text-anchor='middle' x='96' y='20' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='112' y='84' fill='currentColor' style='font-size:1em'>7</text>
-<text text-anchor='middle' x='136' y='148' fill='currentColor' style='font-size:1em'>+</text>
-<text text-anchor='middle' x='144' y='148' fill='currentColor' style='font-size:1em'>z</text>
-<text text-anchor='middle' x='160' y='36' fill='currentColor' style='font-size:1em'>+</text>
-<text text-anchor='middle' x='168' y='36' fill='currentColor' style='font-size:1em'>y</text>
-<text text-anchor='middle' x='232' y='100' fill='currentColor' style='font-size:1em'>+</text>
-<text text-anchor='middle' x='240' y='100' fill='currentColor' style='font-size:1em'>x</text>
-<text text-anchor='middle' x='264' y='148' fill='currentColor' style='font-size:1em'>v</text>
-<text text-anchor='middle' x='272' y='148' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='304' y='68' fill='currentColor' style='font-size:1em'>v</text>
-<text text-anchor='middle' x='312' y='20' fill='currentColor' style='font-size:1em'>P</text>
-<text text-anchor='middle' x='312' y='68' fill='currentColor' style='font-size:1em'>0</text>
-<text text-anchor='middle' x='384' y='100' fill='currentColor' style='font-size:1em'>X</text>
-<text text-anchor='middle' x='416' y='68' fill='currentColor' style='font-size:1em'>v</text>
-<text text-anchor='middle' x='424' y='68' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='448' y='20' fill='currentColor' style='font-size:1em'>E</text>
-<text text-anchor='middle' x='456' y='20' fill='currentColor' style='font-size:1em'>y</text>
-<text text-anchor='middle' x='456' y='148' fill='currentColor' style='font-size:1em'>v</text>
-<text text-anchor='middle' x='464' y='20' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='464' y='148' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='544' y='116' fill='currentColor' style='font-size:1em'>R</text>
-<text text-anchor='middle' x='552' y='116' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='560' y='116' fill='currentColor' style='font-size:1em'>f</text>
-<text text-anchor='middle' x='568' y='116' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='576' y='116' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='584' y='116' fill='currentColor' style='font-size:1em'>c</text>
-<text text-anchor='middle' x='592' y='116' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='600' y='116' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='608' y='116' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='616' y='116' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='624' y='36' fill='currentColor' style='font-size:1em'>R</text>
-<text text-anchor='middle' x='632' y='36' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='640' y='36' fill='currentColor' style='font-size:1em'>f</text>
-<text text-anchor='middle' x='648' y='36' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='656' y='36' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='664' y='36' fill='currentColor' style='font-size:1em'>c</text>
-<text text-anchor='middle' x='672' y='36' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='680' y='36' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='688' y='36' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='696' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<circle cx='640' cy='144' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='664' cy='96' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='688' cy='144' r='6' stroke='currentColor' fill='none'></circle>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='32' y='20'>0</text>
+<text x='96' y='20'>3</text>
+<text x='312' y='20'>P</text>
+<text x='448' y='20'>E</text>
+<text x='456' y='20'>y</text>
+<text x='464' y='20'>e</text>
+<text x='160' y='36'>+</text>
+<text x='168' y='36'>y</text>
+<text x='624' y='36'>R</text>
+<text x='632' y='36'>e</text>
+<text x='640' y='36'>f</text>
+<text x='648' y='36'>l</text>
+<text x='656' y='36'>e</text>
+<text x='664' y='36'>c</text>
+<text x='672' y='36'>t</text>
+<text x='680' y='36'>i</text>
+<text x='688' y='36'>o</text>
+<text x='696' y='36'>n</text>
+<text x='16' y='52'>1</text>
+<text x='80' y='52'>2</text>
+<text x='304' y='68'>v</text>
+<text x='312' y='68'>0</text>
+<text x='416' y='68'>v</text>
+<text x='424' y='68'>3</text>
+<text x='48' y='84'>4</text>
+<text x='112' y='84'>7</text>
+<text x='232' y='100'>+</text>
+<text x='240' y='100'>x</text>
+<text x='384' y='100'>X</text>
+<text x='544' y='116'>R</text>
+<text x='552' y='116'>e</text>
+<text x='560' y='116'>f</text>
+<text x='568' y='116'>r</text>
+<text x='576' y='116'>a</text>
+<text x='584' y='116'>c</text>
+<text x='592' y='116'>t</text>
+<text x='600' y='116'>i</text>
+<text x='608' y='116'>o</text>
+<text x='616' y='116'>n</text>
+<text x='16' y='148'>5</text>
+<text x='80' y='148'>6</text>
+<text x='136' y='148'>+</text>
+<text x='144' y='148'>z</text>
+<text x='264' y='148'>v</text>
+<text x='272' y='148'>1</text>
+<text x='456' y='148'>v</text>
+<text x='464' y='148'>2</text>
 </g>
 </svg>

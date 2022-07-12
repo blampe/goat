@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='233' width='728' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='233' width='728' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #014;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #EDF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -89,67 +89,75 @@ svg {
 <path d='M 432,176 A 16,16 0 0,1 448,192' fill='none' stroke='currentColor'></path>
 <path d='M 416,192 A 16,16 0 0,0 432,208' fill='none' stroke='currentColor'></path>
 <path d='M 448,192 A 16,16 0 0,1 432,208' fill='none' stroke='currentColor'></path>
-<text text-anchor='middle' x='40' y='196' fill='currentColor' style='font-size:1em'>P</text>
-<text text-anchor='middle' x='48' y='36' fill='currentColor' style='font-size:1em'>S</text>
-<text text-anchor='middle' x='48' y='116' fill='currentColor' style='font-size:1em'>I</text>
-<text text-anchor='middle' x='48' y='196' fill='currentColor' style='font-size:1em'>R</text>
-<text text-anchor='middle' x='56' y='36' fill='currentColor' style='font-size:1em'>T</text>
-<text text-anchor='middle' x='56' y='116' fill='currentColor' style='font-size:1em'>N</text>
-<text text-anchor='middle' x='56' y='196' fill='currentColor' style='font-size:1em'>O</text>
-<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>A</text>
-<text text-anchor='middle' x='64' y='116' fill='currentColor' style='font-size:1em'>P</text>
-<text text-anchor='middle' x='64' y='196' fill='currentColor' style='font-size:1em'>C</text>
-<text text-anchor='middle' x='72' y='36' fill='currentColor' style='font-size:1em'>R</text>
-<text text-anchor='middle' x='72' y='116' fill='currentColor' style='font-size:1em'>U</text>
-<text text-anchor='middle' x='72' y='196' fill='currentColor' style='font-size:1em'>E</text>
-<text text-anchor='middle' x='80' y='36' fill='currentColor' style='font-size:1em'>T</text>
-<text text-anchor='middle' x='80' y='116' fill='currentColor' style='font-size:1em'>T</text>
-<text text-anchor='middle' x='80' y='196' fill='currentColor' style='font-size:1em'>S</text>
-<text text-anchor='middle' x='88' y='196' fill='currentColor' style='font-size:1em'>S</text>
-<text text-anchor='middle' x='168' y='68' fill='currentColor' style='font-size:1em'>E</text>
-<text text-anchor='middle' x='176' y='68' fill='currentColor' style='font-size:1em'>N</text>
-<text text-anchor='middle' x='184' y='68' fill='currentColor' style='font-size:1em'>D</text>
-<text text-anchor='middle' x='248' y='52' fill='currentColor' style='font-size:1em'>A</text>
-<text text-anchor='middle' x='280' y='68' fill='currentColor' style='font-size:1em'>C</text>
-<text text-anchor='middle' x='280' y='196' fill='currentColor' style='font-size:1em'>P</text>
-<text text-anchor='middle' x='288' y='68' fill='currentColor' style='font-size:1em'>H</text>
-<text text-anchor='middle' x='288' y='196' fill='currentColor' style='font-size:1em'>R</text>
-<text text-anchor='middle' x='296' y='68' fill='currentColor' style='font-size:1em'>O</text>
-<text text-anchor='middle' x='296' y='196' fill='currentColor' style='font-size:1em'>O</text>
-<text text-anchor='middle' x='304' y='68' fill='currentColor' style='font-size:1em'>I</text>
-<text text-anchor='middle' x='304' y='196' fill='currentColor' style='font-size:1em'>C</text>
-<text text-anchor='middle' x='312' y='68' fill='currentColor' style='font-size:1em'>C</text>
-<text text-anchor='middle' x='312' y='196' fill='currentColor' style='font-size:1em'>E</text>
-<text text-anchor='middle' x='320' y='68' fill='currentColor' style='font-size:1em'>E</text>
-<text text-anchor='middle' x='320' y='196' fill='currentColor' style='font-size:1em'>S</text>
-<text text-anchor='middle' x='328' y='196' fill='currentColor' style='font-size:1em'>S</text>
-<text text-anchor='middle' x='360' y='52' fill='currentColor' style='font-size:1em'>B</text>
-<text text-anchor='middle' x='416' y='52' fill='currentColor' style='font-size:1em'>C</text>
-<text text-anchor='middle' x='416' y='84' fill='currentColor' style='font-size:1em'>P</text>
-<text text-anchor='middle' x='424' y='52' fill='currentColor' style='font-size:1em'>O</text>
-<text text-anchor='middle' x='424' y='84' fill='currentColor' style='font-size:1em'>R</text>
-<text text-anchor='middle' x='432' y='52' fill='currentColor' style='font-size:1em'>M</text>
-<text text-anchor='middle' x='432' y='84' fill='currentColor' style='font-size:1em'>O</text>
-<text text-anchor='middle' x='432' y='196' fill='currentColor' style='font-size:1em'>X</text>
-<text text-anchor='middle' x='440' y='52' fill='currentColor' style='font-size:1em'>P</text>
-<text text-anchor='middle' x='440' y='84' fill='currentColor' style='font-size:1em'>C</text>
-<text text-anchor='middle' x='448' y='52' fill='currentColor' style='font-size:1em'>L</text>
-<text text-anchor='middle' x='448' y='84' fill='currentColor' style='font-size:1em'>E</text>
-<text text-anchor='middle' x='456' y='52' fill='currentColor' style='font-size:1em'>E</text>
-<text text-anchor='middle' x='456' y='84' fill='currentColor' style='font-size:1em'>S</text>
-<text text-anchor='middle' x='464' y='52' fill='currentColor' style='font-size:1em'>X</text>
-<text text-anchor='middle' x='464' y='84' fill='currentColor' style='font-size:1em'>S</text>
-<text text-anchor='middle' x='544' y='68' fill='currentColor' style='font-size:1em'>P</text>
-<text text-anchor='middle' x='552' y='68' fill='currentColor' style='font-size:1em'>R</text>
-<text text-anchor='middle' x='560' y='68' fill='currentColor' style='font-size:1em'>E</text>
-<text text-anchor='middle' x='568' y='68' fill='currentColor' style='font-size:1em'>P</text>
-<text text-anchor='middle' x='576' y='68' fill='currentColor' style='font-size:1em'>A</text>
-<text text-anchor='middle' x='584' y='68' fill='currentColor' style='font-size:1em'>R</text>
-<text text-anchor='middle' x='592' y='68' fill='currentColor' style='font-size:1em'>A</text>
-<text text-anchor='middle' x='600' y='68' fill='currentColor' style='font-size:1em'>T</text>
-<text text-anchor='middle' x='608' y='68' fill='currentColor' style='font-size:1em'>I</text>
-<text text-anchor='middle' x='616' y='68' fill='currentColor' style='font-size:1em'>O</text>
-<text text-anchor='middle' x='624' y='68' fill='currentColor' style='font-size:1em'>N</text>
-<text text-anchor='middle' x='696' y='68' fill='currentColor' style='font-size:1em'>X</text>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='48' y='36'>S</text>
+<text x='56' y='36'>T</text>
+<text x='64' y='36'>A</text>
+<text x='72' y='36'>R</text>
+<text x='80' y='36'>T</text>
+<text x='248' y='52'>A</text>
+<text x='360' y='52'>B</text>
+<text x='416' y='52'>C</text>
+<text x='424' y='52'>O</text>
+<text x='432' y='52'>M</text>
+<text x='440' y='52'>P</text>
+<text x='448' y='52'>L</text>
+<text x='456' y='52'>E</text>
+<text x='464' y='52'>X</text>
+<text x='168' y='68'>E</text>
+<text x='176' y='68'>N</text>
+<text x='184' y='68'>D</text>
+<text x='280' y='68'>C</text>
+<text x='288' y='68'>H</text>
+<text x='296' y='68'>O</text>
+<text x='304' y='68'>I</text>
+<text x='312' y='68'>C</text>
+<text x='320' y='68'>E</text>
+<text x='544' y='68'>P</text>
+<text x='552' y='68'>R</text>
+<text x='560' y='68'>E</text>
+<text x='568' y='68'>P</text>
+<text x='576' y='68'>A</text>
+<text x='584' y='68'>R</text>
+<text x='592' y='68'>A</text>
+<text x='600' y='68'>T</text>
+<text x='608' y='68'>I</text>
+<text x='616' y='68'>O</text>
+<text x='624' y='68'>N</text>
+<text x='696' y='68'>X</text>
+<text x='416' y='84'>P</text>
+<text x='424' y='84'>R</text>
+<text x='432' y='84'>O</text>
+<text x='440' y='84'>C</text>
+<text x='448' y='84'>E</text>
+<text x='456' y='84'>S</text>
+<text x='464' y='84'>S</text>
+<text x='48' y='116'>I</text>
+<text x='56' y='116'>N</text>
+<text x='64' y='116'>P</text>
+<text x='72' y='116'>U</text>
+<text x='80' y='116'>T</text>
+<text x='40' y='196'>P</text>
+<text x='48' y='196'>R</text>
+<text x='56' y='196'>O</text>
+<text x='64' y='196'>C</text>
+<text x='72' y='196'>E</text>
+<text x='80' y='196'>S</text>
+<text x='88' y='196'>S</text>
+<text x='280' y='196'>P</text>
+<text x='288' y='196'>R</text>
+<text x='296' y='196'>O</text>
+<text x='304' y='196'>C</text>
+<text x='312' y='196'>E</text>
+<text x='320' y='196'>S</text>
+<text x='328' y='196'>S</text>
+<text x='432' y='196'>X</text>
 </g>
 </svg>
