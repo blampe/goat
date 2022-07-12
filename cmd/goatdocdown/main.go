@@ -1,7 +1,6 @@
 // Copyright 2022 Donald Mullis. All rights reserved.
 
-// XXXX Rename to 'goatdocdown'?   C.f.  https://github.com/robertkrimen/godocdown
-// Command goatdoc transforms the output of `go doc -all` into Github-flavored Markdown.
+// Command goatdocdown transforms the output of `go doc -all` into Github-flavored Markdown.
 //
 // Go comments may contain Goat-format ASCII diagrams, each of which will
 // be processed into an SVG image.
@@ -62,7 +61,7 @@ var (
 //   Scan each non-goat-tagged block for Golang-specific annotations, adding
 //   github-flavored Markdown markup in the style of https://pkg.go.dev/std
 func main() {
-	flag.StringVar(&svgFilesPrefix, "svgfilesprefix", "goatdoc.",
+	flag.StringVar(&svgFilesPrefix, "svgfilesprefix", "goatdocdown.",
 		`Each SVG diagram produced by the goat library receives its
 own file, prefixed with this string, followed by a serial number, followed
 by ".svg".  The names of these files is known to the output Markdown file,
@@ -100,7 +99,7 @@ The line itself is discarded`)
 func writeUsage(out io.Writer, preamble, coda string) {
 	fmt.Fprintf(out, "%s%s", preamble,
   `Usage:
-        go doc -all | goatdoc >$(go list -f {{.Name}}).goatdoc.md
+        go doc -all | goatdocdown >$(go list -f {{.Name}}).goatdocdown.md
 `)
 	flag.PrintDefaults()
 	fmt.Fprintf(out, "%s\n", coda)
@@ -110,7 +109,7 @@ func writeUsage(out io.Writer, preamble, coda string) {
 func UsageDump() {
 	writeUsage(os.Stderr, `
 Be aware of the following limitations, consequences of all Go source passing first
-through 'go doc all', before reaching 'goatdoc':
+through 'go doc all', before reaching 'goatdocdown':
     - The first column of all lines to be included in a drawing must be a SPACE, to
       tell 'go doc' that the line is quoted "code", therefore not to be reflowed.
     - Any sequence of more than one blank line in a 'goat' block will be flattened

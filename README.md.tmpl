@@ -7,7 +7,7 @@
 
 * Build publication-ready illustrated documentation, in Markdown, directly
   from comments in Go source code.
-  The shell command [goatdoc](./cmd/goatdoc) reformats the output of ```go doc -all``` into Github-flavored Markdown, and any embedded goat-format drawings are processed into SVG for inclusion within the Markdown.
+  The shell command [goatdocdown](./cmd/goatdocdown) reformats the output of ```go doc -all``` into Github-flavored Markdown, and any embedded goat-format drawings are processed into SVG for inclusion within the Markdown.
 
 ## You Will Also Need
 
@@ -27,11 +27,11 @@ Non-standard width characters are not in general composable on the left-right ax
 drawing, because the remainder of the line of text to their right is pushed out of alignment
 with rows above and below.
 
-## The GoAT Library [API]({{.Root}}/API.html)
+## The GoAT Library [API]({{.Root}}/API.md)
 
 The core engine of ```goat``` is accessible as a Go library package, for inclusion in specialized
 code of your own.
-The [API documentation]({{.Root}}/API.html) also showcases use of ```goatdoc``` to generate illustrated Markdown directly from Go inline comments.
+The [API documentation]({{.Root}}/API.md) also showcases use of ```goatdocdown``` to generate illustrated Markdown directly from Go inline comments.
 
 The code implements a subset, and some extensions, of the ASCII diagram generation function of the browser-side Javascript in [Markdeep](http://casual-effects.com/markdeep/).
 

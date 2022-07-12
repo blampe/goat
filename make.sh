@@ -52,10 +52,10 @@ go_to_markdown () {
     go doc -all |
          tee ${BASENAME}.go.doc.txt |
     # XX relative path assumes $CWD is the project root dir
-    go run ./cmd/goatdoc -svgfilesprefix=${BASENAME} >${BASENAME}.md
+    go run ./cmd/goatdocdown -svgfilesprefix=${BASENAME} >${BASENAME}.md
 }
 
-# build API.md   XX  rename $(go list -f {{.Name}}).goatdoc.md  ?
+# build API.md   XX  rename $(go list -f {{.Name}}).goatdocdown.md  ?
 go_to_markdown API
 
 if [ ! "$githubuser" ]  # XX  Is this the right test
