@@ -1,7 +1,13 @@
 #! /bin/sh
+#
+# Run all tests, and all pre-compilation build steps.
+# Certain output files should be committed to the SCM archive.
+#
+# Recall that 'go get ...' performs compilation-proper for go, within
+# the user's local environment.
 
 set -e
-#set -x
+set -x
 usage () {
     printf "%s\n\n" "$*"
     printf "usage: %s [-g GitHub_Username] [-w]\n" ${0##*/}
@@ -9,8 +15,6 @@ usage () {
     printf "\t%s\t%s\n" "$*"
     exit 1
 }
-
-build_variant=build
 
 # Define colors for SVG ~foreground~ seen on Github front page.
 svg_color_dark_scheme="#EDF"
@@ -22,8 +26,7 @@ while getopts hg:iw flag
 do
     case $flag in
         h)  usage "";;
-        g)  githubuser=${OPTARG};;  # XXXX  At present only controls local debug output via `marked`
-        i)  build_variant="install";;
+        g)  githubuser=${OPTARG};;  # XX  At present only controls local debug output via `marked`
 	w)  TEST_ARGS=${TEST_ARGS}" -write";;
         \?) usage "unrecognized option flag";;
     esac
@@ -39,41 +42,26 @@ go test -run . -v \
    -svg-color-light-scheme ${svg_color_light_scheme} \
    ${TEST_ARGS}
 
-(cd cmd/goat; go ${build_variant})
+# build README.md
+go run ./cmd/tmpl-expand Root="." <README.md.tmpl >README.md \
+   $(bash -c 'echo ./examples/{trees,overlaps,line-decorations,line-ends,dot-grids,large-nodes,small-grids,big-grids,complicated}.{txt,svg}')
 
-if [ ! "$githubuser" ]
+go_to_markdown () {
+    BASENAME=$1
+    # input is a scan of the Go package in $CWD
+    go doc -all |
+         tee ${BASENAME}.go.doc.txt |
+    # XX relative path assumes $CWD is the project root dir
+    go run ./cmd/goatdoc -svgfilesprefix=${BASENAME} >${BASENAME}.md
+}
+
+# build API.md   XX  rename $(go list -f {{.Name}}).goatdoc.md  ?
+go_to_markdown API
+
+if [ ! "$githubuser" ]  # XX  Is this the right test
 then
-    # Build README.html for local inspection.
-    # See https://github.github.com/gfm/#introduction
-    #
-    # The @media query from SVG may be verified in Firefox by switching between Themes
-    #    "Light" and "Dark" in Firefox's "Add-ons Manager".
-    (
-	printf '
-<!DOCTYPE html>
-<style>
-	 html {
-	      color: %s;
-	      background-color: %s;
-	  }
-     @media (prefers-color-scheme: dark) {
-	 html {
-	      color: %s;
-	      background-color: %s;
-	 }
-     }
-     a[href] {
-     	  color: currentColor;
-     }
-</style>
-' ${svg_color_light_scheme} white \
-  ${svg_color_dark_scheme} black
-
-     marked -gfm README.md) >README.html
+    # Render to HTML, for local inspection.
+  ./markdown_to_html.sh README.md >README.html
+  ./markdown_to_html.sh CHANGELOG.md >CHANGELOG.html
+  ./markdown_to_html.sh API.md >API.html
 fi
-
-# '-d' writes ./awkvars.out 
- <cmd/goat/main.go awk '
- 		   /^[/][*]goat$/ || /^goat[*][/]$/ {p += 1; next}
-		    p%2 == 1 {print}' |
-     ./cmd/goat/goat -sls 'purple' -sds '#F82' >cmd/goat/main.svg
