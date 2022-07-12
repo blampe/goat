@@ -1,19 +1,21 @@
 // Copyright 2022 Donald Mullis. All rights reserved.
 
-// XXXX Rename to 'goatdocdown'?
+// XXXX Rename to 'goatdocdown'?   C.f.  https://github.com/robertkrimen/godocdown
 // Command goatdoc transforms the output of `go doc -all` into Github-flavored Markdown.
 //
-// XXXX Package-level overview comments
 // Go comments may contain Goat-format ASCII diagrams, each of which will
 // be processed into an SVG image.
 //
 // If a package is implemented by more than one .go file, and more than one contain
-// a package-level comment, all are included in the output of 'go doc -all'.
-//  X Order of inclusion appears to be alphabetical by file name.
-// An alternative is to create a file "doc.go" centralizing all per-package commentary.
+// a package-level comment, 'go doc -all' includes all of them in its output.
+// Order of inclusion appears to be alphabetical by file name.
+// The alphabetical sensitivity may be worked around by creating a single-purpose
+// file "doc.go", and allowing no per-package commentary in other files.
 //
 //  XX  An alternative implementation strategy would be to build upon Go's standard
 //      library package https://pkg.go.dev/go/doc
+//
+//  XXX Weaknesses of current implementation: See warning to user in the Usage message.
 package main
 
 import (
@@ -43,6 +45,9 @@ var (
 	svgFilesPrefix,
 	svgColorLightScheme,
 	svgColorDarkScheme string
+
+	beginRegex,
+	endRegex string
 )
 
 // Split input stream from 'go doc' into blocks, either goat-tagged or not.
@@ -71,6 +76,12 @@ which specifies links to them.
 		`short for -svg-color-dark-scheme`)
 	flag.StringVar(&svgColorDarkScheme, "svg-color-dark-scheme", svgColorDarkSchemeDefault,
 		`See help for command 'goat'`)
+	flag.StringVar(&beginRegex, "goat-begin-re", `<goat>`,
+		`UTF-8-art follows the input line matching this pattern.
+The line itself is discarded`)
+	flag.StringVar(&endRegex, "goat-end-re", `</goat>`,
+		`UTF-8-art precedes the input line matching this pattern.
+The line itself is discarded`)
 
 	flag.Usage = func() {
 		UsageDump()
@@ -86,24 +97,36 @@ which specifies links to them.
 	formatBody(scanner)
 }
 
-var usageAbstract = `
-Each SVG file produced contains a CSS @media 'prefers-color-scheme' query;
-this is to support use within web pages that use a similar query to
-switch between light and dark immediately upon the browser user demanding a different
-color schema.
-`
-func writeUsage(out io.Writer, preamble string) {
+func writeUsage(out io.Writer, preamble, coda string) {
 	fmt.Fprintf(out, "%s%s", preamble,
   `Usage:
         go doc -all | goatdoc >$(go list -f {{.Name}}).goatdoc.md
 `)
 	flag.PrintDefaults()
-	fmt.Fprintf(out, "%s\n", usageAbstract)
+	fmt.Fprintf(out, "%s\n", coda)
 }
 
 // Comment preceding global function UsageDump().
 func UsageDump() {
-	writeUsage(os.Stderr, "")
+	writeUsage(os.Stderr, `
+Be aware of the following limitations, consequences of all Go source passing first
+through 'go doc all', before reaching 'goatdoc':
+    - The first column of all lines to be included in a drawing must be a SPACE, to
+      tell 'go doc' that the line is quoted "code", therefore not to be reflowed.
+    - Any sequence of more than one blank line in a 'goat' block will be flattened
+      to a single blank line (by 'go doc').
+
+`, `
+Each SVG file produced contains a CSS @media 'prefers-color-scheme' query; this
+supports use within web pages that use a similar @media query to switch between
+light and dark immediately upon the browser user demanding a different color
+schema.
+
+An SVG must perform its own @media query when it resides in a file of its own,
+included at run time through an <img> element link, because it is then a
+"replaced element", which cannot inherit any state from the HTML surrounding the
+<img> element.
+`)
 }
 
 type mapping struct {
@@ -125,8 +148,8 @@ func formatHeader(scanner *bufio.Scanner) {
 		packageImportLine = mapping{
 			re: regexp.MustCompile(`^package .* // import`),
 		}
-		goatStart = mapping{
-			re: regexp.MustCompile(`^<goat>`),
+		goatBegin = mapping{
+			re: regexp.MustCompile(beginRegex),
 		}
 	)
 
@@ -148,7 +171,7 @@ func formatHeader(scanner *bufio.Scanner) {
 			break
 		}
 		// Check for Goat diagram lines
-		if goatStart.re.MatchString(line) {
+		if goatBegin.re.MatchString(line) {
 			formatGoat(scanner)
 			continue
 		}
@@ -161,7 +184,7 @@ func formatGoat(scanner *bufio.Scanner) {
 	var (
 		buff bytes.Buffer
 		goatEnd = mapping{
-			re: regexp.MustCompile(`</goat>`),
+			re: regexp.MustCompile(endRegex),
 		}
 	)
 	for scanner.Scan() {
@@ -190,7 +213,7 @@ func formatGoat(scanner *bufio.Scanner) {
 		buff.WriteString(line)
 		buff.WriteRune('\n')
 	}
-	panic("Found opening <goat>; failed to find closing </goat>.")
+	panic("Found opening " + beginRegex + "; failed to find closing " + endRegex)
 }
 
 func formatBody(scanner *bufio.Scanner) {
