@@ -26,6 +26,10 @@ instead I recommend you look at these forks:
  * [@sw46] has implemented a really wonderful hand-drawn style worth checking
    out.
 
+TODO
+ - Dashed lines signaled by `:` or `=`
+ - Bold lines signaled by ???
+
 ### Changed
 
 * Merges changes made by @bep and @dmacvicar in their forks. This includes
