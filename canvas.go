@@ -1,17 +1,27 @@
-
 /*
 Package goat formats "ASCII-art" drawings into Github-flavored Markdown.
 
-<goat>
-    Internal Data Flow
+ <goat>
+ porcelain API
+                            BuildAndWriteSVG()
+                               .----------.
+     ASCII-art                |            |                      Markdown
+      ----------------------->|            +------------------------->
+                              |            |
+                               '----------'
 
-                            Canvas{}          WriteSVGBody()       SVG{}	           
-          NewCanvas()   .-----------------.     .-------.     .-------------.
- ASCII-art    .--.     | data map[x,y]rune |   |         |    |             |  Markdown
-  ---------->|    +--->| text map[x,y]rune |-->|         +--->| Body string +----->
-              '--'     |                   |   |         |    |             |
-                        '-----------------'     '-------'     '-------------'
-</goat>
+
+   ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·
+
+ plumbing API
+                                Canvas{}
+               NewCanvas() .-------------------.  WriteSVGBody()
+                           |                   |    .-------.
+     ASCII-art    .--.     | data map[x,y]rune |   |  SVG{}  |    Markdown
+      ---------->|    +--->| text map[x,y]rune +-->|         +------->
+                  '--'     |                   |   |         |
+                           '-------------------'    '-------'
+ </goat>
 */
 package goat
 

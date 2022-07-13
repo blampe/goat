@@ -17,8 +17,8 @@ usage () {
 }
 
 # Define colors for SVG ~foreground~ seen on Github front page.
-svg_color_dark_scheme="#EDF"
-svg_color_light_scheme="#014"
+svg_color_dark_scheme="#EEF"
+svg_color_light_scheme="#011"
 
 TEST_ARGS=
 
@@ -36,32 +36,30 @@ done
 #
 # If the command fails due to expected changes in SVG output, rerun
 # this script with "TEST_ARGS=-write" first on the command line.
-# XX  Better not to fail if the .txt source has changed.
+# X  Results are used as "golden" standard for GitHub-side regression tests --
+#    so arguments here must not conflict with those in "test.yml".
 go test -run . -v \
-   -svg-color-dark-scheme ${svg_color_dark_scheme} \
-   -svg-color-light-scheme ${svg_color_light_scheme} \
    ${TEST_ARGS}
 
 # build README.md
 go run ./cmd/tmpl-expand Root="." <README.md.tmpl >README.md \
    $(bash -c 'echo ./examples/{trees,overlaps,line-decorations,line-ends,dot-grids,large-nodes,small-grids,big-grids,complicated}.{txt,svg}')
 
-go_to_markdown () {
-    BASENAME=$1
-    # input is a scan of the Go package in $CWD
-    go doc -all |
-         tee ${BASENAME}.go.doc.txt |
-    # XX relative path assumes $CWD is the project root dir
-    go run ./cmd/goatdoc -svgfilesprefix=${BASENAME} >${BASENAME}.md
-}
-
-# build API.md   XX  rename $(go list -f {{.Name}}).goatdoc.md  ?
-go_to_markdown API
+# '-d' writes ./awkvars.out
+cat *.go |
+    awk '
+        /[<]goat[>]/ {p = 1; next}
+        /[<][/]goat[>]/ {p = 0; next}
+        p > 0 {print}' |
+    tee goat.txt |
+    go run ./cmd/goat \
+	-svg-color-dark-scheme ${svg_color_dark_scheme} \
+	-svg-color-light-scheme ${svg_color_light_scheme} \
+	>goat.svg
 
 if [ ! "$githubuser" ]  # XX  Is this the right test
 then
     # Render to HTML, for local inspection.
   ./markdown_to_html.sh README.md >README.html
   ./markdown_to_html.sh CHANGELOG.md >CHANGELOG.html
-  ./markdown_to_html.sh API.md >API.html
 fi
