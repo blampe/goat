@@ -31,7 +31,7 @@ type (
 // General args
 var (
 	writeMarkdown = flag.Bool("markdown", false,
-		`Write out usage doc in Github-flavored Markdown format`)
+		`Reformat -help usage message into Github-flavored Markdown`)
 
 	exitStatus int
 )

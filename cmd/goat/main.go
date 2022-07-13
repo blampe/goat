@@ -56,7 +56,7 @@ func main() {
 	if outputFilename != "" {
 		var err error
 		output, err = os.Create(outputFilename)
-		defer output.Close()
+		defer output.Close()          // XX  Move outside 'if' -- close os.Stdout as well?
 		if err != nil {
 			log.Fatal(err)
 		}
