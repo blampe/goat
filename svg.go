@@ -2,7 +2,6 @@
 package goat
 
 import (
-	"bytes"
 	"fmt"
 	"io"
 )
@@ -35,27 +34,6 @@ svg {
 			"%s</svg>\n",
 		"http://www.w3.org/2000/svg",
 		"1.1", s.Height, s.Width, style, s.Body)
-}
-
-// BuildSVG reads a newline-delimited ASCII diagram from src and returns an
-// initialized SVG struct.
-func BuildSVG(src io.Reader) SVG {
-	var buff bytes.Buffer
-	canvas := NewCanvas(src)
-	canvas.WriteSVGBody(&buff)
-	return SVG{
-		Body:	buff.String(),
-		Width:	canvas.widthScreen(),
-		Height: canvas.heightScreen(),
-	}
-}
-
-// BuildAndWriteSVG reads in a newline-delimited ASCII diagram from src and writes a
-// corresponding SVG diagram to dst.
-func BuildAndWriteSVG(src io.Reader, dst io.Writer,
-	svgColorLightScheme, svgColorDarkScheme string) {
-	svg := BuildSVG(src)
-	writeBytes(dst, svg.String(svgColorLightScheme, svgColorDarkScheme))
 }
 
 func writeBytes(out io.Writer, format string, args ...interface{}) {
