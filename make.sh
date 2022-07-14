@@ -20,17 +20,28 @@ usage () {
 svg_color_dark_scheme="#EEF"
 svg_color_light_scheme="#011"
 
+GOMOD=$(go env GOMOD)
+from_username=${GOMOD##*github.com/}
+githubuser=${from_username%%/*}
+
 TEST_ARGS=
 
 while getopts hg:iw flag
 do
     case $flag in
         h)  usage "";;
-        g)  githubuser=${OPTARG};;  # XX  At present only controls local debug output via `marked`
+        g)  githubuser=${OPTARG};;  # Override guess based on GOMOD
 	w)  TEST_ARGS=${TEST_ARGS}" -write";;
         \?) usage "unrecognized option flag";;
     esac
 done
+
+tmpl_expand () {
+    go run ./cmd/tmpl-expand Root="." GithubUser=${githubuser} "$@"
+}
+
+#tmpl_expand <go.tmpl.mod >go.mod
+#tmpl_expand <./cmd/goat/main.tmpl.go >./cmd/goat/main.go
 
 # SVG examples/ regeneration.
 #
@@ -42,7 +53,7 @@ go test -run . -v \
    ${TEST_ARGS}
 
 # build README.md
-go run ./cmd/tmpl-expand Root="." <README.md.tmpl >README.md \
+tmpl_expand <README.md.tmpl >README.md \
    $(bash -c 'echo ./examples/{trees,overlaps,line-decorations,line-ends,dot-grids,large-nodes,small-grids,big-grids,complicated}.{txt,svg}')
 
 # '-d' writes ./awkvars.out
@@ -57,9 +68,6 @@ cat *.go |
 	-svg-color-light-scheme ${svg_color_light_scheme} \
 	>goat.svg
 
-if [ ! "$githubuser" ]  # XX  Is this the right test
-then
-    # Render to HTML, for local inspection.
-  ./markdown_to_html.sh README.md >README.html
-  ./markdown_to_html.sh CHANGELOG.md >CHANGELOG.html
-fi
+# Render to HTML, for local inspection.
+./markdown_to_html.sh README.md >README.html
+./markdown_to_html.sh CHANGELOG.md >CHANGELOG.html
