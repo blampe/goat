@@ -1,10 +1,6 @@
-module github.com/blampe/goat
+module github.com/dmullis/goat
 
 go 1.17
-
-replace (
-	github.com/blampe/goat => /
-)
 
 require (
 	github.com/frankban/quicktest v1.14.2

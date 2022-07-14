@@ -9,10 +9,10 @@ import (
 	// X Note that go.sum contains this:
 	//
 	//     replace (
-	//         github.com/blampe/goat => /
+	//         github.com/dmullis/goat => /
 	//     )
 	// X X  This is not good enough for 'go get -u github.com/<other-user/goat'
-	"github.com/blampe/goat"
+	"github.com/dmullis/goat"
 )
 
 // Function init ...
