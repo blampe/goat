@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='281' width='680' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='281' width='680' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #000000;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #FFFFFF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -17,7 +17,7 @@ svg {
 <path d='M 296,80 L 408,80' fill='none' stroke='currentColor'></path>
 <path d='M 128,96 L 256,96' fill='none' stroke='currentColor'></path>
 <path d='M 152,112 L 312,112' fill='none' stroke='currentColor'></path>
-<path d='M 360,112 L 408,112' fill='none' stroke='currentColor'></path>
+<path d='M 366,112 L 408,112' fill='none' stroke='currentColor'></path>
 <path d='M 408,112 L 472,112' fill='none' stroke='currentColor'></path>
 <path d='M 344,128 L 368,128' fill='none' stroke='currentColor'></path>
 <path d='M 576,128 L 592,128' fill='none' stroke='currentColor'></path>
@@ -26,16 +26,16 @@ svg {
 <path d='M 208,144 L 232,144' fill='none' stroke='currentColor'></path>
 <path d='M 384,144 L 408,144' fill='none' stroke='currentColor'></path>
 <path d='M 408,144 L 432,144' fill='none' stroke='currentColor'></path>
-<path d='M 464,144 L 488,144' fill='none' stroke='currentColor'></path>
+<path d='M 472,144 L 488,144' fill='none' stroke='currentColor'></path>
 <path d='M 608,144 L 648,144' fill='none' stroke='currentColor'></path>
-<path d='M 248,160 L 288,160' fill='none' stroke='currentColor'></path>
+<path d='M 254,160 L 288,160' fill='none' stroke='currentColor'></path>
 <path d='M 288,160 L 312,160' fill='none' stroke='currentColor'></path>
 <path d='M 344,160 L 368,160' fill='none' stroke='currentColor'></path>
 <path d='M 504,160 L 536,160' fill='none' stroke='currentColor'></path>
 <path d='M 576,160 L 592,160' fill='none' stroke='currentColor'></path>
 <path d='M 128,176 L 184,176' fill='none' stroke='currentColor'></path>
 <path d='M 208,176 L 232,176' fill='none' stroke='currentColor'></path>
-<path d='M 472,176 L 488,176' fill='none' stroke='currentColor'></path>
+<path d='M 464,176 L 488,176' fill='none' stroke='currentColor'></path>
 <path d='M 288,256 L 408,256' fill='none' stroke='currentColor'></path>
 <path d='M 256,8 L 296,8' fill='none' stroke='currentColor'></path>
 <path d='M 296,24 L 344,24' fill='none' stroke='currentColor'></path>
@@ -54,7 +54,7 @@ svg {
 <path d='M 388,232 L 428,232' fill='none' stroke='currentColor'></path>
 <path d='M 152,112 L 152,144' fill='none' stroke='currentColor'></path>
 <path d='M 208,144 L 208,176' fill='none' stroke='currentColor'></path>
-<path d='M 256,16 L 256,32' fill='none' stroke='currentColor'></path>
+<path d='M 256,16 L 256,26' fill='none' stroke='currentColor'></path>
 <path d='M 256,80 L 256,96' fill='none' stroke='currentColor'></path>
 <path d='M 288,160 L 288,256' fill='none' stroke='currentColor'></path>
 <path d='M 296,8 L 296,24' fill='none' stroke='currentColor'></path>
@@ -64,18 +64,18 @@ svg {
 <path d='M 344,128 L 344,160' fill='none' stroke='currentColor'></path>
 <path d='M 408,80 L 408,96' fill='none' stroke='currentColor'></path>
 <path d='M 408,128 L 408,144' fill='none' stroke='currentColor'></path>
-<path d='M 408,176 L 408,192' fill='none' stroke='currentColor'></path>
+<path d='M 408,176 L 408,186' fill='none' stroke='currentColor'></path>
 <path d='M 408,240 L 408,256' fill='none' stroke='currentColor'></path>
 <path d='M 472,0 L 472,16' fill='none' stroke='currentColor'></path>
 <path d='M 472,48 L 472,112' fill='none' stroke='currentColor'></path>
 <path d='M 536,32 L 536,48' fill='none' stroke='currentColor'></path>
-<path d='M 536,96 L 536,128' fill='none' stroke='currentColor'></path>
-<path d='M 236,72 L 256,32' fill='none' stroke='currentColor'></path>
-<path d='M 388,232 L 408,192' fill='none' stroke='currentColor'></path>
-<path d='M 536,96 L 556,56' fill='none' stroke='currentColor'></path>
-<path d='M 256,32 L 276,72' fill='none' stroke='currentColor'></path>
-<path d='M 408,192 L 428,232' fill='none' stroke='currentColor'></path>
-<path d='M 516,56 L 536,96' fill='none' stroke='currentColor'></path>
+<path d='M 536,102 L 536,128' fill='none' stroke='currentColor'></path>
+<path d='M 236,72 L 253,37' fill='none' stroke='currentColor'></path>
+<path d='M 388,232 L 405,197' fill='none' stroke='currentColor'></path>
+<path d='M 539,91 L 556,56' fill='none' stroke='currentColor'></path>
+<path d='M 259,37 L 276,72' fill='none' stroke='currentColor'></path>
+<path d='M 411,197 L 428,232' fill='none' stroke='currentColor'></path>
+<path d='M 516,56 L 533,91' fill='none' stroke='currentColor'></path>
 <path d='M 184,144 L 184,152' fill='none' stroke='currentColor'></path>
 <path d='M 184,168 L 184,176' fill='none' stroke='currentColor'></path>
 <path d='M 208,144 L 208,152' fill='none' stroke='currentColor'></path>
@@ -96,6 +96,7 @@ svg {
 <path d='M 408,168 L 408,176' fill='none' stroke='currentColor'></path>
 <path d='M 408,232 L 408,240' fill='none' stroke='currentColor'></path>
 <path d='M 432,144 L 432,152' fill='none' stroke='currentColor'></path>
+<path d='M 464,168 L 464,176' fill='none' stroke='currentColor'></path>
 <path d='M 536,48 L 536,56' fill='none' stroke='currentColor'></path>
 <path d='M 536,128 L 536,136' fill='none' stroke='currentColor'></path>
 <path d='M 536,152 L 536,160' fill='none' stroke='currentColor'></path>
@@ -105,33 +106,42 @@ svg {
 <path d='M 560,128 A 16,16 0 0,1 576,144' fill='none' stroke='currentColor'></path>
 <path d='M 592,128 A 16,16 0 0,1 608,144' fill='none' stroke='currentColor'></path>
 <path d='M 232,144 A 16,16 0 0,1 248,160' fill='none' stroke='currentColor'></path>
-<path d='M 448,144 A 16,16 0 0,1 464,160' fill='none' stroke='currentColor'></path>
 <path d='M 488,144 A 16,16 0 0,1 504,160' fill='none' stroke='currentColor'></path>
 <path d='M 384,144 A 16,16 0 0,1 368,160' fill='none' stroke='currentColor'></path>
 <path d='M 576,144 A 16,16 0 0,1 560,160' fill='none' stroke='currentColor'></path>
 <path d='M 608,144 A 16,16 0 0,1 592,160' fill='none' stroke='currentColor'></path>
 <path d='M 248,160 A 16,16 0 0,1 232,176' fill='none' stroke='currentColor'></path>
-<path d='M 464,160 A 16,16 0 0,1 448,176' fill='none' stroke='currentColor'></path>
-<path d='M 472,160 A 16,16 0 0,1 456,176' fill='none' stroke='currentColor'></path>
 <path d='M 504,160 A 16,16 0 0,1 488,176' fill='none' stroke='currentColor'></path>
 <circle cx='152' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='248' cy='160' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<circle cx='256' cy='32' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='248' cy='160' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='256' cy='32' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='288' cy='160' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='360' cy='112' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='360' cy='112' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='408' cy='144' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='408' cy='192' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='408' cy='192' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='472' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='536' cy='96' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='536' cy='96' r='6' stroke='currentColor' fill='none'></circle>
 <path d='M 472,16 L 472,24' fill='none' stroke='currentColor'></path>
 <path d='M 472,40 L 472,48' fill='none' stroke='currentColor'></path>
 <path d='M 472,24 A 9,9 0 0,1 472,40' fill='none' stroke='currentColor'></path>
 <path d='M 408,96 L 408,104' fill='none' stroke='currentColor'></path>
 <path d='M 408,120 L 408,128' fill='none' stroke='currentColor'></path>
 <path d='M 408,104 A 9,9 0 0,1 408,120' fill='none' stroke='currentColor'></path>
-<text text-anchor='middle' x='112' y='100' fill='currentColor' style='font-size:1em'>A</text>
-<text text-anchor='middle' x='112' y='148' fill='currentColor' style='font-size:1em'>B</text>
-<text text-anchor='middle' x='112' y='180' fill='currentColor' style='font-size:1em'>C</text>
-<text text-anchor='middle' x='664' y='148' fill='currentColor' style='font-size:1em'>Y</text>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='112' y='100'>A</text>
+<text x='112' y='148'>B</text>
+<text x='456' y='148'>.</text>
+<text x='464' y='148'>.</text>
+<text x='664' y='148'>Y</text>
+<text x='464' y='164'>)</text>
+<text x='472' y='164'>)</text>
+<text x='112' y='180'>C</text>
 </g>
 </svg>

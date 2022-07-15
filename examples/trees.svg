@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='153' width='712' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='153' width='712' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #000000;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #FFFFFF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -74,29 +74,37 @@ svg {
 <path d='M 608,80 A 16,16 0 0,0 592,96' fill='none' stroke='currentColor'></path>
 <path d='M 568,80 A 16,16 0 0,0 584,96' fill='none' stroke='currentColor'></path>
 <path d='M 592,96 A 16,16 0 0,0 608,112' fill='none' stroke='currentColor'></path>
-<text text-anchor='middle' x='40' y='116' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='72' y='116' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='88' y='116' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='120' y='116' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='160' y='116' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='192' y='116' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='224' y='116' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='256' y='116' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='296' y='116' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='328' y='116' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='360' y='116' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='392' y='116' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='512' y='20' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='512' y='52' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='512' y='84' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='512' y='116' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='632' y='20' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='632' y='52' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='632' y='84' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='632' y='116' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='696' y='20' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='696' y='52' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='696' y='84' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='696' y='116' fill='currentColor' style='font-size:1em'>4</text>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='512' y='20'>1</text>
+<text x='632' y='20'>1</text>
+<text x='696' y='20'>1</text>
+<text x='512' y='52'>2</text>
+<text x='632' y='52'>2</text>
+<text x='696' y='52'>2</text>
+<text x='512' y='84'>3</text>
+<text x='632' y='84'>3</text>
+<text x='696' y='84'>3</text>
+<text x='40' y='116'>1</text>
+<text x='72' y='116'>2</text>
+<text x='88' y='116'>3</text>
+<text x='120' y='116'>4</text>
+<text x='160' y='116'>1</text>
+<text x='192' y='116'>2</text>
+<text x='224' y='116'>3</text>
+<text x='256' y='116'>4</text>
+<text x='296' y='116'>1</text>
+<text x='328' y='116'>2</text>
+<text x='360' y='116'>3</text>
+<text x='392' y='116'>4</text>
+<text x='512' y='116'>4</text>
+<text x='632' y='116'>4</text>
+<text x='696' y='116'>4</text>
 </g>
 </svg>

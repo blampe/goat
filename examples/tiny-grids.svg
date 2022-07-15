@@ -1,260 +1,232 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='89' width='704' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='393' width='152' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #000000;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #FFFFFF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
-<path d='M 624,0 L 640,0' fill='none' stroke='currentColor'></path>
-<path d='M 640,0 L 656,0' fill='none' stroke='currentColor'></path>
-<path d='M 656,0 L 672,0' fill='none' stroke='currentColor'></path>
-<path d='M 672,0 L 688,0' fill='none' stroke='currentColor'></path>
-<path d='M 624,16 L 640,16' fill='none' stroke='currentColor'></path>
-<path d='M 640,16 L 656,16' fill='none' stroke='currentColor'></path>
-<path d='M 656,16 L 672,16' fill='none' stroke='currentColor'></path>
-<path d='M 672,16 L 688,16' fill='none' stroke='currentColor'></path>
-<path d='M 624,32 L 640,32' fill='none' stroke='currentColor'></path>
-<path d='M 640,32 L 656,32' fill='none' stroke='currentColor'></path>
-<path d='M 656,32 L 672,32' fill='none' stroke='currentColor'></path>
-<path d='M 672,32 L 688,32' fill='none' stroke='currentColor'></path>
-<path d='M 624,48 L 640,48' fill='none' stroke='currentColor'></path>
-<path d='M 640,48 L 656,48' fill='none' stroke='currentColor'></path>
-<path d='M 656,48 L 672,48' fill='none' stroke='currentColor'></path>
-<path d='M 672,48 L 688,48' fill='none' stroke='currentColor'></path>
-<path d='M 624,64 L 640,64' fill='none' stroke='currentColor'></path>
-<path d='M 640,64 L 656,64' fill='none' stroke='currentColor'></path>
-<path d='M 656,64 L 672,64' fill='none' stroke='currentColor'></path>
-<path d='M 672,64 L 688,64' fill='none' stroke='currentColor'></path>
-<path d='M 496,8 L 592,8' fill='none' stroke='currentColor'></path>
-<path d='M 496,24 L 520,24' fill='none' stroke='currentColor'></path>
-<path d='M 520,24 L 544,24' fill='none' stroke='currentColor'></path>
-<path d='M 544,24 L 568,24' fill='none' stroke='currentColor'></path>
-<path d='M 568,24 L 592,24' fill='none' stroke='currentColor'></path>
-<path d='M 496,40 L 520,40' fill='none' stroke='currentColor'></path>
-<path d='M 520,40 L 544,40' fill='none' stroke='currentColor'></path>
-<path d='M 544,40 L 568,40' fill='none' stroke='currentColor'></path>
-<path d='M 568,40 L 592,40' fill='none' stroke='currentColor'></path>
-<path d='M 496,56 L 520,56' fill='none' stroke='currentColor'></path>
-<path d='M 520,56 L 544,56' fill='none' stroke='currentColor'></path>
-<path d='M 544,56 L 568,56' fill='none' stroke='currentColor'></path>
-<path d='M 568,56 L 592,56' fill='none' stroke='currentColor'></path>
-<path d='M 496,72 L 520,72' fill='none' stroke='currentColor'></path>
-<path d='M 520,72 L 544,72' fill='none' stroke='currentColor'></path>
-<path d='M 544,72 L 568,72' fill='none' stroke='currentColor'></path>
-<path d='M 568,72 L 592,72' fill='none' stroke='currentColor'></path>
-<path d='M 496,16 L 496,64' fill='none' stroke='currentColor'></path>
-<path d='M 520,16 L 520,64' fill='none' stroke='currentColor'></path>
-<path d='M 544,16 L 544,64' fill='none' stroke='currentColor'></path>
-<path d='M 568,16 L 568,64' fill='none' stroke='currentColor'></path>
-<path d='M 592,16 L 592,64' fill='none' stroke='currentColor'></path>
-<path d='M 624,0 L 624,16' fill='none' stroke='currentColor'></path>
-<path d='M 624,16 L 624,32' fill='none' stroke='currentColor'></path>
-<path d='M 624,32 L 624,48' fill='none' stroke='currentColor'></path>
-<path d='M 624,48 L 624,64' fill='none' stroke='currentColor'></path>
-<path d='M 640,0 L 640,16' fill='none' stroke='currentColor'></path>
-<path d='M 640,16 L 640,32' fill='none' stroke='currentColor'></path>
-<path d='M 640,32 L 640,48' fill='none' stroke='currentColor'></path>
-<path d='M 640,48 L 640,64' fill='none' stroke='currentColor'></path>
-<path d='M 656,0 L 656,16' fill='none' stroke='currentColor'></path>
-<path d='M 656,16 L 656,32' fill='none' stroke='currentColor'></path>
-<path d='M 656,32 L 656,48' fill='none' stroke='currentColor'></path>
-<path d='M 656,48 L 656,64' fill='none' stroke='currentColor'></path>
-<path d='M 672,0 L 672,16' fill='none' stroke='currentColor'></path>
-<path d='M 672,16 L 672,32' fill='none' stroke='currentColor'></path>
-<path d='M 672,32 L 672,48' fill='none' stroke='currentColor'></path>
-<path d='M 672,48 L 672,64' fill='none' stroke='currentColor'></path>
-<path d='M 688,0 L 688,16' fill='none' stroke='currentColor'></path>
-<path d='M 688,16 L 688,32' fill='none' stroke='currentColor'></path>
-<path d='M 688,32 L 688,48' fill='none' stroke='currentColor'></path>
-<path d='M 688,48 L 688,64' fill='none' stroke='currentColor'></path>
-<path d='M 496,8 L 496,16' fill='none' stroke='currentColor'></path>
-<path d='M 496,64 L 496,72' fill='none' stroke='currentColor'></path>
-<path d='M 520,8 L 520,16' fill='none' stroke='currentColor'></path>
-<path d='M 520,64 L 520,72' fill='none' stroke='currentColor'></path>
-<path d='M 544,8 L 544,16' fill='none' stroke='currentColor'></path>
-<path d='M 544,64 L 544,72' fill='none' stroke='currentColor'></path>
-<path d='M 568,8 L 568,16' fill='none' stroke='currentColor'></path>
-<path d='M 568,64 L 568,72' fill='none' stroke='currentColor'></path>
-<path d='M 592,8 L 592,16' fill='none' stroke='currentColor'></path>
-<path d='M 592,64 L 592,72' fill='none' stroke='currentColor'></path>
-<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>┌</text>
-<text text-anchor='middle' x='8' y='20' fill='currentColor' style='font-size:1em'>├</text>
-<text text-anchor='middle' x='8' y='36' fill='currentColor' style='font-size:1em'>├</text>
-<text text-anchor='middle' x='8' y='52' fill='currentColor' style='font-size:1em'>├</text>
-<text text-anchor='middle' x='8' y='68' fill='currentColor' style='font-size:1em'>└</text>
-<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='16' y='20' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='16' y='36' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='16' y='52' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='16' y='68' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='24' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='24' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='24' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='24' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='24' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='32' y='20' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='32' y='36' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='32' y='52' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='32' y='68' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='40' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='40' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='40' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='40' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='40' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='48' y='20' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='48' y='36' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='48' y='52' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='48' y='68' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='56' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='56' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='56' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='56' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='64' y='20' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='64' y='52' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='64' y='68' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='72' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='72' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='72' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='72' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='20' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='36' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='52' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='68' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>┐</text>
-<text text-anchor='middle' x='88' y='20' fill='currentColor' style='font-size:1em'>┤</text>
-<text text-anchor='middle' x='88' y='36' fill='currentColor' style='font-size:1em'>┤</text>
-<text text-anchor='middle' x='88' y='52' fill='currentColor' style='font-size:1em'>┤</text>
-<text text-anchor='middle' x='88' y='68' fill='currentColor' style='font-size:1em'>┘</text>
-<rect x='108' y='-8' width='8' height='16' fill='currentColor'></rect><rect x='108' y='24' width='8' height='16' fill='currentColor'></rect><rect x='108' y='56' width='8' height='16' fill='currentColor'></rect><rect x='116' y='-8' width='8' height='16' fill='currentColor'></rect><rect x='116' y='24' width='8' height='16' fill='currentColor'></rect><rect x='116' y='56' width='8' height='16' fill='currentColor'></rect><rect x='124' y='8' width='8' height='16' fill='currentColor'></rect><rect x='124' y='40' width='8' height='16' fill='currentColor'></rect><rect x='132' y='8' width='8' height='16' fill='currentColor'></rect><rect x='132' y='40' width='8' height='16' fill='currentColor'></rect><rect x='140' y='-8' width='8' height='16' fill='currentColor'></rect><rect x='140' y='24' width='8' height='16' fill='currentColor'></rect><rect x='140' y='56' width='8' height='16' fill='currentColor'></rect><rect x='148' y='-8' width='8' height='16' fill='currentColor'></rect><rect x='148' y='24' width='8' height='16' fill='currentColor'></rect><rect x='148' y='56' width='8' height='16' fill='currentColor'></rect><rect x='156' y='8' width='8' height='16' fill='currentColor'></rect><rect x='156' y='40' width='8' height='16' fill='currentColor'></rect><rect x='164' y='8' width='8' height='16' fill='currentColor'></rect><rect x='164' y='40' width='8' height='16' fill='currentColor'></rect><rect x='172' y='-8' width='8' height='16' fill='currentColor'></rect><rect x='172' y='24' width='8' height='16' fill='currentColor'></rect><rect x='172' y='56' width='8' height='16' fill='currentColor'></rect><rect x='180' y='-8' width='8' height='16' fill='currentColor'></rect><rect x='180' y='24' width='8' height='16' fill='currentColor'></rect><rect x='180' y='56' width='8' height='16' fill='currentColor'></rect><text text-anchor='middle' x='208' y='36' fill='currentColor' style='font-size:1em'>⬢</text>
-<text text-anchor='middle' x='216' y='20' fill='currentColor' style='font-size:1em'>⬢</text>
-<text text-anchor='middle' x='216' y='52' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='224' y='4' fill='currentColor' style='font-size:1em'>⬢</text>
-<text text-anchor='middle' x='224' y='36' fill='currentColor' style='font-size:1em'>⬢</text>
-<text text-anchor='middle' x='224' y='68' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='232' y='20' fill='currentColor' style='font-size:1em'>⬢</text>
-<text text-anchor='middle' x='232' y='52' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='240' y='4' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='240' y='36' fill='currentColor' style='font-size:1em'>⬢</text>
-<text text-anchor='middle' x='240' y='68' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='248' y='20' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='248' y='52' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='256' y='4' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='256' y='36' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='256' y='68' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='264' y='20' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='264' y='52' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='272' y='36' fill='currentColor' style='font-size:1em'>⬡</text>
-<text text-anchor='middle' x='304' y='4' fill='currentColor' style='font-size:1em'>┌</text>
-<text text-anchor='middle' x='304' y='20' fill='currentColor' style='font-size:1em'>├</text>
-<text text-anchor='middle' x='304' y='36' fill='currentColor' style='font-size:1em'>├</text>
-<text text-anchor='middle' x='304' y='52' fill='currentColor' style='font-size:1em'>├</text>
-<text text-anchor='middle' x='304' y='68' fill='currentColor' style='font-size:1em'>└</text>
-<text text-anchor='middle' x='312' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='312' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='312' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='312' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='312' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='320' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='320' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='320' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='320' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='320' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='328' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='328' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='328' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='328' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='328' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='336' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='336' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='336' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='336' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='336' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='344' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='344' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='344' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='344' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='344' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='352' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='352' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='352' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='352' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='352' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='360' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='360' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='360' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='360' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='360' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='368' y='4' fill='currentColor' style='font-size:1em'>┬</text>
-<text text-anchor='middle' x='368' y='20' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='368' y='36' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='368' y='52' fill='currentColor' style='font-size:1em'>┼</text>
-<text text-anchor='middle' x='368' y='68' fill='currentColor' style='font-size:1em'>┴</text>
-<text text-anchor='middle' x='376' y='4' fill='currentColor' style='font-size:1em'>┐</text>
-<text text-anchor='middle' x='376' y='20' fill='currentColor' style='font-size:1em'>┤</text>
-<text text-anchor='middle' x='376' y='36' fill='currentColor' style='font-size:1em'>┤</text>
-<text text-anchor='middle' x='376' y='52' fill='currentColor' style='font-size:1em'>┤</text>
-<text text-anchor='middle' x='376' y='68' fill='currentColor' style='font-size:1em'>┘</text>
-<text text-anchor='middle' x='400' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='400' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='400' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='400' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='400' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='408' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='408' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='408' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='408' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='408' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='416' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='416' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='416' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='416' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='416' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='424' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='424' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='424' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='424' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='424' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='432' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='432' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='432' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='432' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='432' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='440' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='440' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='440' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='440' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='440' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='448' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='448' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='448' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='448' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='448' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='456' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='456' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='456' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='456' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='456' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='464' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='464' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='464' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='464' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='464' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='472' y='4' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='472' y='20' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='472' y='36' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='472' y='52' fill='currentColor' style='font-size:1em'>⁚</text>
-<text text-anchor='middle' x='472' y='68' fill='currentColor' style='font-size:1em'>⁚</text>
+<path d='M 24,288 L 40,288' fill='none' stroke='currentColor'></path>
+<path d='M 40,288 L 56,288' fill='none' stroke='currentColor'></path>
+<path d='M 56,288 L 72,288' fill='none' stroke='currentColor'></path>
+<path d='M 72,288 L 88,288' fill='none' stroke='currentColor'></path>
+<path d='M 24,304 L 40,304' fill='none' stroke='currentColor'></path>
+<path d='M 40,304 L 56,304' fill='none' stroke='currentColor'></path>
+<path d='M 56,304 L 72,304' fill='none' stroke='currentColor'></path>
+<path d='M 72,304 L 88,304' fill='none' stroke='currentColor'></path>
+<path d='M 24,320 L 40,320' fill='none' stroke='currentColor'></path>
+<path d='M 40,320 L 56,320' fill='none' stroke='currentColor'></path>
+<path d='M 56,320 L 72,320' fill='none' stroke='currentColor'></path>
+<path d='M 72,320 L 88,320' fill='none' stroke='currentColor'></path>
+<path d='M 24,336 L 40,336' fill='none' stroke='currentColor'></path>
+<path d='M 40,336 L 56,336' fill='none' stroke='currentColor'></path>
+<path d='M 56,336 L 72,336' fill='none' stroke='currentColor'></path>
+<path d='M 72,336 L 88,336' fill='none' stroke='currentColor'></path>
+<path d='M 24,352 L 40,352' fill='none' stroke='currentColor'></path>
+<path d='M 40,352 L 56,352' fill='none' stroke='currentColor'></path>
+<path d='M 56,352 L 72,352' fill='none' stroke='currentColor'></path>
+<path d='M 72,352 L 88,352' fill='none' stroke='currentColor'></path>
+<path d='M 8,200 L 104,200' fill='none' stroke='currentColor'></path>
+<path d='M 8,216 L 32,216' fill='none' stroke='currentColor'></path>
+<path d='M 32,216 L 56,216' fill='none' stroke='currentColor'></path>
+<path d='M 56,216 L 80,216' fill='none' stroke='currentColor'></path>
+<path d='M 80,216 L 104,216' fill='none' stroke='currentColor'></path>
+<path d='M 8,232 L 32,232' fill='none' stroke='currentColor'></path>
+<path d='M 32,232 L 56,232' fill='none' stroke='currentColor'></path>
+<path d='M 56,232 L 80,232' fill='none' stroke='currentColor'></path>
+<path d='M 80,232 L 104,232' fill='none' stroke='currentColor'></path>
+<path d='M 8,248 L 32,248' fill='none' stroke='currentColor'></path>
+<path d='M 32,248 L 56,248' fill='none' stroke='currentColor'></path>
+<path d='M 56,248 L 80,248' fill='none' stroke='currentColor'></path>
+<path d='M 80,248 L 104,248' fill='none' stroke='currentColor'></path>
+<path d='M 8,264 L 32,264' fill='none' stroke='currentColor'></path>
+<path d='M 32,264 L 56,264' fill='none' stroke='currentColor'></path>
+<path d='M 56,264 L 80,264' fill='none' stroke='currentColor'></path>
+<path d='M 80,264 L 104,264' fill='none' stroke='currentColor'></path>
+<path d='M 8,208 L 8,256' fill='none' stroke='currentColor'></path>
+<path d='M 24,288 L 24,304' fill='none' stroke='currentColor'></path>
+<path d='M 24,304 L 24,320' fill='none' stroke='currentColor'></path>
+<path d='M 24,320 L 24,336' fill='none' stroke='currentColor'></path>
+<path d='M 24,336 L 24,352' fill='none' stroke='currentColor'></path>
+<path d='M 32,208 L 32,256' fill='none' stroke='currentColor'></path>
+<path d='M 40,288 L 40,304' fill='none' stroke='currentColor'></path>
+<path d='M 40,304 L 40,320' fill='none' stroke='currentColor'></path>
+<path d='M 40,320 L 40,336' fill='none' stroke='currentColor'></path>
+<path d='M 40,336 L 40,352' fill='none' stroke='currentColor'></path>
+<path d='M 56,208 L 56,256' fill='none' stroke='currentColor'></path>
+<path d='M 56,288 L 56,304' fill='none' stroke='currentColor'></path>
+<path d='M 56,304 L 56,320' fill='none' stroke='currentColor'></path>
+<path d='M 56,320 L 56,336' fill='none' stroke='currentColor'></path>
+<path d='M 56,336 L 56,352' fill='none' stroke='currentColor'></path>
+<path d='M 72,288 L 72,304' fill='none' stroke='currentColor'></path>
+<path d='M 72,304 L 72,320' fill='none' stroke='currentColor'></path>
+<path d='M 72,320 L 72,336' fill='none' stroke='currentColor'></path>
+<path d='M 72,336 L 72,352' fill='none' stroke='currentColor'></path>
+<path d='M 80,208 L 80,256' fill='none' stroke='currentColor'></path>
+<path d='M 88,288 L 88,304' fill='none' stroke='currentColor'></path>
+<path d='M 88,304 L 88,320' fill='none' stroke='currentColor'></path>
+<path d='M 88,320 L 88,336' fill='none' stroke='currentColor'></path>
+<path d='M 88,336 L 88,352' fill='none' stroke='currentColor'></path>
+<path d='M 104,208 L 104,256' fill='none' stroke='currentColor'></path>
+<path d='M 120,16 L 120,352' fill='none' stroke='currentColor'></path>
+<path d='M 8,200 L 8,208' fill='none' stroke='currentColor'></path>
+<path d='M 8,256 L 8,264' fill='none' stroke='currentColor'></path>
+<path d='M 32,200 L 32,208' fill='none' stroke='currentColor'></path>
+<path d='M 32,256 L 32,264' fill='none' stroke='currentColor'></path>
+<path d='M 56,200 L 56,208' fill='none' stroke='currentColor'></path>
+<path d='M 56,256 L 56,264' fill='none' stroke='currentColor'></path>
+<path d='M 80,200 L 80,208' fill='none' stroke='currentColor'></path>
+<path d='M 80,256 L 80,264' fill='none' stroke='currentColor'></path>
+<path d='M 104,200 L 104,208' fill='none' stroke='currentColor'></path>
+<path d='M 104,256 L 104,264' fill='none' stroke='currentColor'></path>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='0' y='4'>0</text>
+<text x='8' y='4'>1</text>
+<text x='16' y='4'>2</text>
+<text x='24' y='4'>3</text>
+<text x='32' y='4'>4</text>
+<text x='40' y='4'>5</text>
+<text x='48' y='4'>6</text>
+<text x='56' y='4'>7</text>
+<text x='64' y='4'>8</text>
+<text x='72' y='4'>9</text>
+<text x='80' y='4'>0</text>
+<text x='88' y='4'>1</text>
+<text x='96' y='4'>2</text>
+<text x='104' y='4'>3</text>
+<text x='112' y='4'>4</text>
+<text x='120' y='4'>5</text>
+<text x='8' y='20'>┌</text>
+<text x='16' y='20'>─</text>
+<text x='24' y='20'>┬</text>
+<text x='32' y='20'>─</text>
+<text x='40' y='20'>┬</text>
+<text x='48' y='20'>─</text>
+<text x='56' y='20'>┬</text>
+<text x='64' y='20'>─</text>
+<text x='72' y='20'>┬</text>
+<text x='80' y='20'>─</text>
+<text x='88' y='20'>┐</text>
+<text x='8' y='36'>├</text>
+<text x='16' y='36'>─</text>
+<text x='24' y='36'>┼</text>
+<text x='32' y='36'>─</text>
+<text x='40' y='36'>┼</text>
+<text x='48' y='36'>─</text>
+<text x='56' y='36'>┼</text>
+<text x='64' y='36'>─</text>
+<text x='72' y='36'>┼</text>
+<text x='80' y='36'>─</text>
+<text x='88' y='36'>┤</text>
+<text x='8' y='52'>├</text>
+<text x='16' y='52'>─</text>
+<text x='24' y='52'>┼</text>
+<text x='32' y='52'>─</text>
+<text x='40' y='52'>┼</text>
+<text x='48' y='52'>─</text>
+<text x='56' y='52'>┼</text>
+<text x='64' y='52'>─</text>
+<text x='72' y='52'>┼</text>
+<text x='80' y='52'>─</text>
+<text x='88' y='52'>┤</text>
+<text x='8' y='68'>├</text>
+<text x='16' y='68'>─</text>
+<text x='24' y='68'>┼</text>
+<text x='32' y='68'>─</text>
+<text x='40' y='68'>┼</text>
+<text x='48' y='68'>─</text>
+<text x='56' y='68'>┼</text>
+<text x='64' y='68'>─</text>
+<text x='72' y='68'>┼</text>
+<text x='80' y='68'>─</text>
+<text x='88' y='68'>┤</text>
+<text x='8' y='84'>└</text>
+<text x='16' y='84'>─</text>
+<text x='24' y='84'>┴</text>
+<text x='32' y='84'>─</text>
+<text x='40' y='84'>┴</text>
+<text x='48' y='84'>─</text>
+<text x='56' y='84'>┴</text>
+<text x='64' y='84'>─</text>
+<text x='72' y='84'>┴</text>
+<text x='80' y='84'>─</text>
+<text x='88' y='84'>┘</text>
+<text x='16' y='116'>┌</text>
+<text x='24' y='116'>┬</text>
+<text x='32' y='116'>┬</text>
+<text x='40' y='116'>┬</text>
+<text x='48' y='116'>┬</text>
+<text x='56' y='116'>┬</text>
+<text x='64' y='116'>┬</text>
+<text x='72' y='116'>┬</text>
+<text x='80' y='116'>┬</text>
+<text x='88' y='116'>┐</text>
+<text x='16' y='132'>├</text>
+<text x='24' y='132'>┼</text>
+<text x='32' y='132'>┼</text>
+<text x='40' y='132'>┼</text>
+<text x='48' y='132'>┼</text>
+<text x='56' y='132'>┼</text>
+<text x='64' y='132'>┼</text>
+<text x='72' y='132'>┼</text>
+<text x='80' y='132'>┼</text>
+<text x='88' y='132'>┤</text>
+<text x='16' y='148'>├</text>
+<text x='24' y='148'>┼</text>
+<text x='32' y='148'>┼</text>
+<text x='40' y='148'>┼</text>
+<text x='48' y='148'>┼</text>
+<text x='56' y='148'>┼</text>
+<text x='64' y='148'>┼</text>
+<text x='72' y='148'>┼</text>
+<text x='80' y='148'>┼</text>
+<text x='88' y='148'>┤</text>
+<text x='16' y='164'>├</text>
+<text x='24' y='164'>┼</text>
+<text x='32' y='164'>┼</text>
+<text x='40' y='164'>┼</text>
+<text x='48' y='164'>┼</text>
+<text x='56' y='164'>┼</text>
+<text x='64' y='164'>┼</text>
+<text x='72' y='164'>┼</text>
+<text x='80' y='164'>┼</text>
+<text x='88' y='164'>┤</text>
+<text x='16' y='180'>└</text>
+<text x='24' y='180'>┴</text>
+<text x='32' y='180'>┴</text>
+<text x='40' y='180'>┴</text>
+<text x='48' y='180'>┴</text>
+<text x='56' y='180'>┴</text>
+<text x='64' y='180'>┴</text>
+<text x='72' y='180'>┴</text>
+<text x='80' y='180'>┴</text>
+<text x='88' y='180'>┘</text>
+<text x='0' y='372'>0</text>
+<text x='8' y='372'>1</text>
+<text x='16' y='372'>2</text>
+<text x='24' y='372'>3</text>
+<text x='32' y='372'>4</text>
+<text x='40' y='372'>5</text>
+<text x='48' y='372'>6</text>
+<text x='56' y='372'>7</text>
+<text x='64' y='372'>8</text>
+<text x='72' y='372'>9</text>
+<text x='80' y='372'>0</text>
+<text x='88' y='372'>1</text>
+<text x='96' y='372'>2</text>
+<text x='104' y='372'>3</text>
+<text x='112' y='372'>4</text>
+<text x='120' y='372'>5</text>
 </g>
 </svg>

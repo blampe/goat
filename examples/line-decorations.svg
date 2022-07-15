@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='121' width='752' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='121' width='752' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #000000;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #FFFFFF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -24,8 +24,8 @@ svg {
 <path d='M 296,48 L 320,48' fill='none' stroke='currentColor'></path>
 <path d='M 336,48 L 360,48' fill='none' stroke='currentColor'></path>
 <path d='M 456,48 L 472,48' fill='none' stroke='currentColor'></path>
-<path d='M 488,48 L 512,48' fill='none' stroke='currentColor'></path>
-<path d='M 512,48 L 552,48' fill='none' stroke='currentColor'></path>
+<path d='M 488,48 L 506,48' fill='none' stroke='currentColor'></path>
+<path d='M 518,48 L 552,48' fill='none' stroke='currentColor'></path>
 <path d='M 24,64 L 40,64' fill='none' stroke='currentColor'></path>
 <path d='M 632,64 L 688,64' fill='none' stroke='currentColor'></path>
 <path d='M 160,80 L 208,80' fill='none' stroke='currentColor'></path>
@@ -38,9 +38,9 @@ svg {
 <path d='M 56,16 L 56,48' fill='none' stroke='currentColor'></path>
 <path d='M 192,16 L 192,32' fill='none' stroke='currentColor'></path>
 <path d='M 208,48 L 208,80' fill='none' stroke='currentColor'></path>
-<path d='M 240,16 L 240,32' fill='none' stroke='currentColor'></path>
-<path d='M 240,64 L 240,80' fill='none' stroke='currentColor'></path>
-<path d='M 272,16 L 272,48' fill='none' stroke='currentColor'></path>
+<path d='M 240,22 L 240,32' fill='none' stroke='currentColor'></path>
+<path d='M 240,64 L 240,74' fill='none' stroke='currentColor'></path>
+<path d='M 272,22 L 272,48' fill='none' stroke='currentColor'></path>
 <path d='M 288,72 L 288,88' fill='none' stroke='currentColor'></path>
 <path d='M 328,16 L 328,32' fill='none' stroke='currentColor'></path>
 <path d='M 352,72 L 352,88' fill='none' stroke='currentColor'></path>
@@ -55,8 +55,8 @@ svg {
 <path d='M 384,64 L 408,16' fill='none' stroke='currentColor'></path>
 <path d='M 552,48 L 576,0' fill='none' stroke='currentColor'></path>
 <path d='M 72,64 L 88,96' fill='none' stroke='currentColor'></path>
-<path d='M 488,0 L 512,48' fill='none' stroke='currentColor'></path>
-<path d='M 512,48 L 528,80' fill='none' stroke='currentColor'></path>
+<path d='M 488,0 L 509,43' fill='none' stroke='currentColor'></path>
+<path d='M 515,53 L 528,80' fill='none' stroke='currentColor'></path>
 <path d='M 120,8 L 120,16' fill='none' stroke='currentColor'></path>
 <path d='M 192,8 L 192,16' fill='none' stroke='currentColor'></path>
 <path d='M 456,80 L 456,88' fill='none' stroke='currentColor'></path>
@@ -96,18 +96,26 @@ svg {
 <circle cx='24' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='152' cy='32' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='160' cy='80' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='240' cy='16' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<circle cx='240' cy='80' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
-<circle cx='272' cy='16' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='240' cy='16' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='240' cy='80' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='272' cy='16' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='328' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='416' cy='0' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='416' cy='0' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='480' cy='48' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='488' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
-<circle cx='512' cy='48' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='512' cy='48' r='6' stroke='currentColor' fill='none'></circle>
 <circle cx='576' cy='0' r='6' stroke='currentColor' fill='currentColor'></circle>
 <circle cx='600' cy='96' r='6' stroke='currentColor' fill='currentColor'></circle>
 <path d='M 240,32 L 240,40' fill='none' stroke='currentColor'></path>
 <path d='M 240,56 L 240,64' fill='none' stroke='currentColor'></path>
 <path d='M 240,40 A 9,9 0 0,0 240,56' fill='none' stroke='currentColor'></path>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
 </g>
 </svg>

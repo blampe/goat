@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='153' width='352' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='153' width='352' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #000000;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #FFFFFF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -74,6 +74,14 @@ svg {
 <path d='M 32,64 A 16,16 0 0,1 48,80' fill='none' stroke='currentColor'></path>
 <path d='M 16,80 A 16,16 0 0,0 32,96' fill='none' stroke='currentColor'></path>
 <path d='M 48,80 A 16,16 0 0,1 32,96' fill='none' stroke='currentColor'></path>
-<circle cx='312' cy='64' r='6' stroke='currentColor' fill='invert(currentColor)'></circle>
+<circle cx='312' cy='64' r='6' stroke='currentColor' fill='none'></circle>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
 </g>
 </svg>
