@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/dmullis/goat"
+	"github.com/blampe/goat"
 )
 
 // Function init ...

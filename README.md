@@ -37,7 +37,7 @@ with rows above and below.
 
 ## Installation
 ```
-$ go install github.com/dmullis/goat/cmd/goat@latest
+$ go install github.com/blampe/goat/cmd/goat@latest
 ```
 
 ## Examples
