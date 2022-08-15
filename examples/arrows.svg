@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='89' width='80' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='89' width='80' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #000000;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #FFFFFF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -18,5 +18,13 @@ svg {
 <polygon points='40.000000,0.000000 28.000000,-5.600000 28.000000,5.600000' fill='currentColor' transform='rotate(270.000000, 32.000000, 0.000000)'></polygon>
 <polygon points='40.000000,64.000000 28.000000,58.400002 28.000000,69.599998' fill='currentColor' transform='rotate(90.000000, 32.000000, 64.000000)'></polygon>
 <polygon points='72.000000,32.000000 60.000000,26.400000 60.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 64.000000, 32.000000)'></polygon>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
 </g>
 </svg>

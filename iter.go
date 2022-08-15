@@ -23,7 +23,7 @@ func leftRight(width int, height int) chan Index {
 	// Transpose an upDown order.
 	go func() {
 		for i := range upDown(height, width) {
-			c <- Index{i.y, i.x}
+			c <- Index{i.Y, i.X}   // X  transpose x and y
 		}
 
 		close(c)

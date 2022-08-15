@@ -13,8 +13,15 @@ import (
 	qt "github.com/frankban/quicktest"
 )
 
-var write = flag.Bool("write", false, "write examples to disk")
+var (
+	write = flag.Bool("write", false, "write examples to disk")
+	svgColorLightScheme = flag.String("svg-color-light-scheme", "#000000",
+		`See help for cmd/goat`)
+	svgColorDarkScheme = flag.String("svg-color-dark-scheme", "#FFFFFF",
+		`See help for cmd/goat`)
+)
 
+// XX  TXT source file suite is limited to a single file -- "circuits.txt"
 func TestExamplesStableOutput(t *testing.T) {
 	c := qt.New(t)
 
@@ -36,15 +43,18 @@ func TestExamplesStableOutput(t *testing.T) {
 }
 
 func TestExamples(t *testing.T) {
-	c := qt.New(t)
-
 	filenames, err := filepath.Glob(filepath.Join(basePath, "*.txt"))
-	c.Assert(err, qt.IsNil)
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	var buff *bytes.Buffer
 
 	for _, name := range filenames {
 		in := getIn(name)
+		if testing.Verbose() {
+			t.Logf("\tprocessing %s\n", name)
+		}
 		var out io.WriteCloser
 		if *write {
 			out = getOut(name)
@@ -63,19 +73,27 @@ func TestExamples(t *testing.T) {
 			}
 		}
 
-		svgColorLightScheme := "#323232"
-		svgColorDarkScheme := "#C8C8C8"
-		BuildAndWriteSVG(in, out, svgColorLightScheme, svgColorDarkScheme)
+		BuildAndWriteSVG(in, out, *svgColorLightScheme, *svgColorDarkScheme)
 
 		in.Close()
 		out.Close()
 
 		if buff != nil {
-			golden := getOutString(name)
+			golden, err := getOutString(name)
+			if err != nil {
+				t.Log(err)
+			}
 			if buff.String() != golden {
-				c.Log(buff.Len(), len(golden))
-				c.Fatalf("Content mismatch for %s", name)
-
+				// XX  Skip this if the modification timestamp of the .txt file
+				//     source is fresher than the .svg?
+				t.Log(buff.Len(), len(golden))
+				t.Logf("Content mismatch for %s", toSVGFilename(name))
+				t.Logf("%s %s:\n\t%s\nConsider:\n\t%s",
+					"Option -write not set, and Error reading",
+					name,
+					err.Error(),
+					"$ go test -run TestExamples -v -args -write")
+				t.FailNow()
 			}
 			in.Close()
 			out.Close()
@@ -109,13 +127,13 @@ func getOut(filename string) io.WriteCloser {
 	return out
 }
 
-func getOutString(filename string) string {
+func getOutString(filename string) (string, error) {
 	b, err := ioutil.ReadFile(toSVGFilename(filename))
 	if err != nil {
-		panic(err)
+		return "", err
 	}
 	b = bytes.ReplaceAll(b, []byte("\r\n"), []byte("\n"))
-	return string(b)
+	return string(b), nil
 }
 
 func toSVGFilename(filename string) string {

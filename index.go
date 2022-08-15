@@ -2,50 +2,53 @@ package goat
 
 // Index represents a position within an ASCII diagram.
 type Index struct {
-	x int
-	y int
+	// units of cells
+	X, Y int
 }
 
-// Pixel represents the on-screen coordinates for an Index.
-type Pixel Index
+// pixel represents the CSS-pixel coordinates for an Index.
+type pixel Index  // XX different units -- create separate base type?
 
-func (i *Index) asPixel() Pixel {
-	return Pixel{x: i.x * 8, y: i.y * 16}
+func (i *Index) asPixel() pixel {
+	// TODO  define constants rather than hard-wire width and height of cell
+	return pixel{
+		X: i.X * 8,
+		Y: i.Y * 16}
 }
 
 func (i *Index) asPixelXY() (int, int) {
 	p := i.asPixel()
-	return p.x, p.y
+	return p.X, p.Y
 }
 
 func (i *Index) east() Index {
-	return Index{i.x + 1, i.y}
+	return Index{i.X + 1, i.Y}
 }
 
 func (i *Index) west() Index {
-	return Index{i.x - 1, i.y}
+	return Index{i.X - 1, i.Y}
 }
 
 func (i *Index) north() Index {
-	return Index{i.x, i.y - 1}
+	return Index{i.X, i.Y - 1}
 }
 
 func (i *Index) south() Index {
-	return Index{i.x, i.y + 1}
+	return Index{i.X, i.Y + 1}
 }
 
 func (i *Index) nWest() Index {
-	return Index{i.x - 1, i.y - 1}
+	return Index{i.X - 1, i.Y - 1}
 }
 
 func (i *Index) nEast() Index {
-	return Index{i.x + 1, i.y - 1}
+	return Index{i.X + 1, i.Y - 1}
 }
 
 func (i *Index) sWest() Index {
-	return Index{i.x - 1, i.y + 1}
+	return Index{i.X - 1, i.Y + 1}
 }
 
 func (i *Index) sEast() Index {
-	return Index{i.x + 1, i.y + 1}
+	return Index{i.X + 1, i.Y + 1}
 }

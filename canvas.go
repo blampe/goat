@@ -2,34 +2,76 @@ package goat
 
 import (
 	"bufio"
-	"bytes"
 	"io"
-	"sort"
 )
 
-// Characters where more than one line segment can come together.
-var jointRunes = []rune{'.', '\'', '+', '*', 'o'}
+type (
+	exists struct{}
+	runeSet map[rune]exists
+)
 
-var reservedRunes = map[rune]bool{
-	'-':  true,
-	'_':  true,
-	'|':  true,
-	'v':  true,
-	'^':  true,
-	'>':  true,
-	'<':  true,
-	'o':  true,
-	'*':  true,
-	'+':  true,
-	'.':  true,
-	'\'': true,
-	'/':  true,
-	'\\': true,
-	')':  true,
-	'(':  true,
-	' ':  true,
+
+// Characters where more than one line segment can come together.
+var jointRunes = []rune{
+	'.',
+	'\'',
+	'+',
+	'*',
+	'o',
 }
 
+var reserved = append(
+	jointRunes,
+	[]rune{
+		'-',
+		'_',
+		'|',
+		'v',
+		'^',
+		'>',
+		'<',
+		'/',
+		'\\',
+		')',
+		'(',
+		' ',   // X SPACE is reserved
+	}...,
+)
+var reservedSet runeSet
+
+var doubleWideSVG = []rune{
+	'o',
+	'*',
+}
+var wideSVG = []rune{
+	'v',   // X  Input containing " over " needs to be considered text.
+//	'>',   // Uncommenting would get 'o<' and '>o' wrong.  But o> and >o -- never desired to be text?
+//	'<',   // ibid.
+	'^',
+	')',
+	'(',
+	'.',   // Dropping this would cause " v. " to be considered graphics.
+}
+var wideSVGSet = makeSet(append(doubleWideSVG, wideSVG...))
+
+func makeSet(runeSlice []rune) (rs runeSet) {
+	rs = make(runeSet)
+	for _, r := range runeSlice {
+		rs[r] = exists{}
+	}
+	return
+}
+
+func init() {
+	// Recall that ranging over a 'string' type extracts values of type 'rune'.
+
+	reservedSet = make(runeSet)
+	for _, r := range reserved {
+		reservedSet[r] = exists{}
+	}
+}
+
+// XX  linear search of slice -- alternative to a map test
 func contains(in []rune, r rune) bool {
 	for _, v := range in {
 		if r == v {
@@ -43,6 +85,7 @@ func isJoint(r rune) bool {
 	return contains(jointRunes, r)
 }
 
+// XX  rename 'isCircle()'?
 func isDot(r rune) bool {
 	return r == 'o' || r == '*'
 }
@@ -53,39 +96,11 @@ func isTriangle(r rune) bool {
 
 // Canvas represents a 2D ASCII rectangle.
 type Canvas struct {
-	Width  int
-	Height int
+	// units of cells
+	Width, Height int
+
 	data   map[Index]rune
 	text   map[Index]rune
-}
-
-func (c *Canvas) String() string {
-	var buffer bytes.Buffer
-
-	for h := 0; h < c.Height; h++ {
-		for w := 0; w < c.Width; w++ {
-			idx := Index{w, h}
-
-			// Grab from our text buffer and if nothing's there try the data
-			// buffer.
-			r := c.text[idx]
-			if r == 0 {
-				r = c.runeAt(idx)
-			}
-
-			_, err := buffer.WriteRune(r)
-			if err != nil {
-				continue
-			}
-		}
-
-		err := buffer.WriteByte('\n')
-		if err != nil {
-			continue
-		}
-	}
-
-	return buffer.String()
 }
 
 func (c *Canvas) heightScreen() int {
@@ -96,33 +111,60 @@ func (c *Canvas) widthScreen() int {
 	return (c.Width + 1) * 8
 }
 
+// Arg 'canvasMap' is typically either Canvas.data or Canvas.text
+func inSet(set runeSet, canvasMap map[Index]rune, i Index) (inset bool) {
+	r, inMap := canvasMap[i]
+	if !inMap {
+		return false 	// r == rune(0)
+	}
+	_, inset = set[r]
+	return
+}
+
+// Looks only at c.data[], ignores c.text[].
+// Returns the rune for ASCII Space i.e. ' ', in the event that map lookup fails.
+//  XX  Name 'dataRuneAt()' would be more descriptive, but maybe too bulky.
 func (c *Canvas) runeAt(i Index) rune {
 	if val, ok := c.data[i]; ok {
 		return val
 	}
-
 	return ' '
 }
 
-// NewCanvas creates a new canvas with contents read from the given io.Reader.
-// Content should be newline delimited.
-func NewCanvas(in io.Reader) Canvas {
+// NewCanvas creates a fully-populated Canvas according to GoAT-formatted text read from
+// an io.Reader, consuming all bytes available.
+func NewCanvas(in io.Reader) (c Canvas) {
+	//  XX  Move this function to top of file.
 	width := 0
 	height := 0
 
 	scanner := bufio.NewScanner(in)
 
-	data := make(map[Index]rune)
+	c = Canvas{
+		data:	make(map[Index]rune),
+		text:	nil,
+	}
 
+	// Fill the 'data' map.
 	for scanner.Scan() {
-		line := scanner.Text()
+		lineStr := scanner.Text()
 
 		w := 0
-		// Can't use index here because it corresponds to unicode offsets
-		// instead of logical characters.
-		for _, c := range line {
-			idx := Index{x: w, y: height}
-			data[idx] = rune(c)
+		// X  Type of second value assigned from "for ... range" operator over a string is "rune".
+		//               https://go.dev/ref/spec#For_statements
+		//    But yet, counterintuitively, type of lineStr[_index_] is 'byte'.
+		//               https://go.dev/ref/spec#String_types
+		// XXXX  Refactor to use []rune from above.
+		for _, r := range lineStr {
+			//if r > 255 {
+			//	fmt.Printf("linestr=\"%s\"\n", lineStr)
+			//	fmt.Printf("r == 0x%x\n", r)
+			//}
+			if r == '	' {
+				panic("TAB character found on input")
+			}
+			i := Index{w, height}
+			c.data[i] = r
 			w++
 		}
 
@@ -132,38 +174,45 @@ func NewCanvas(in io.Reader) Canvas {
 		height++
 	}
 
-	text := make(map[Index]rune)
+	c.Width = width
+	c.Height = height
+	c.text = make(map[Index]rune)
+	// Fill the 'text' map, with runes removed from 'data'.
+	c.MoveToText()
+	return
+}
 
-	c := Canvas{
-		Width:  width,
-		Height: height,
-		data:   data,
-		text:   text,
-	}
-
-	// Extract everything we detect as text to make diagram parsing easier.
-	for idx := range leftRight(width, height) {
-		if c.isText(idx) {
-			c.text[idx] = c.runeAt(idx)
+// Move contents of every cell that appears, according to a tricky set of rules,
+// to be "text", into a separate map: from data[] to text[].
+// So data[] and text[] are an exact partitioning of the
+// incoming grid-aligned runes.
+func (c *Canvas) MoveToText() {
+	for i := range leftRight(c.Width, c.Height) {
+		if c.shouldMoveToText(i) {
+			c.text[i] = c.runeAt(i)	// c.runeAt() Reads from c.data[]
 		}
 	}
-	for idx := range c.text {
-		delete(c.data, idx)
+	for i := range c.text {
+		delete(c.data, i)
 	}
-
-	return c
 }
 
 // Drawable represents anything that can Draw itself.
 type Drawable interface {
-	Draw(out io.Writer)
+	draw(out io.Writer)
 }
 
-// Line represents a straight segment between two points.
+// Line represents a straight segment between two points 'start' and 'stop', where
+// 'start' is either lesser in X (north-east, east, south-east), or
+// equal in X and lesser in Y (south).
 type Line struct {
 	start Index
 	stop  Index
-	// dashed           bool
+
+	startRune rune
+	stopRune rune
+
+	// dashed	    bool
 	needsNudgingDown      bool
 	needsNudgingLeft      bool
 	needsNudgingRight     bool
@@ -176,6 +225,7 @@ type Line struct {
 	// N or S. Only useful for half steps - chops of this half of the line.
 	chop Orientation
 
+	// X-major, Y-minor.  Therefore, always one of the compass points NE, E, SE, S.
 	orientation Orientation
 
 	state lineState
@@ -192,17 +242,20 @@ func (l *Line) started() bool {
 	return l.state == _Started
 }
 
-func (l *Line) setStart(i Index) {
+func (c *Canvas) setStart(l *Line, i Index) {
 	if l.state == _Unstarted {
 		l.start = i
+		l.startRune = c.runeAt(i)
 		l.stop = i
+		l.stopRune = c.runeAt(i)
 		l.state = _Started
 	}
 }
 
-func (l *Line) setStop(i Index) {
+func (c *Canvas) setStop(l *Line, i Index) {
 	if l.state == _Started {
 		l.stop = i
+		l.stopRune = c.runeAt(i)
 	}
 }
 
@@ -222,10 +275,12 @@ func (l *Line) diagonal() bool {
 	return l.orientation == NE || l.orientation == SE || l.orientation == SW || l.orientation == NW
 }
 
+// XX  drop names 'start' below
+
 // Triangle corresponds to "^", "v", "<" and ">" runes in the absence of
 // surrounding alphanumerics.
 type Triangle struct {
-	start        Index
+	start	     Index
 	orientation  Orientation
 	needsNudging bool
 }
@@ -239,21 +294,21 @@ type Circle struct {
 
 // RoundedCorner corresponds to combinations of "-." or "-'".
 type RoundedCorner struct {
-	start       Index
+	start	    Index
 	orientation Orientation
 }
 
 // Text corresponds to any runes not reserved for diagrams, or reserved runes
 // surrounded by alphanumerics.
 type Text struct {
-	start    Index
-	contents string
+	start	 Index
+	str	 string	 // Possibly multiple bytes, from Unicode source of type 'rune'
 }
 
-// Bridge correspondes to combinations of "-)-" or "-(-" and is displayed as
+// Bridge corresponds to combinations of "-)-" or "-(-" and is displayed as
 // the vertical line "hopping over" the horizontal.
 type Bridge struct {
-	start       Index
+	start	    Index
 	orientation Orientation
 }
 
@@ -262,49 +317,48 @@ type Orientation int
 
 const (
 	NONE Orientation = iota // No orientation; no structure present.
-	N                       // North
-	NE                      // Northeast
-	NW                      // Northwest
-	S                       // South
-	SE                      // Southeast
-	SW                      // Southwest
-	E                       // East
-	W                       // West
+	N			// North
+	NE			// Northeast
+	NW			// Northwest
+	S			// South
+	SE			// Southeast
+	SW			// Southwest
+	E			// East
+	W			// West
 )
 
+// WriteSVGBody writes the entire content of a Canvas out to a stream in SVG format.
 func (c *Canvas) WriteSVGBody(dst io.Writer) {
 	writeBytes(dst, "<g transform='translate(8,16)'>\n")
 
 	for _, l := range c.Lines() {
-		l.Draw(dst)
+		l.draw(dst)
 	}
 
-	for _, t := range c.Triangles() {
-		t.Draw(dst)
+	for _, tI := range c.Triangles() {
+		tI.draw(dst)
 	}
 
 	for _, c := range c.RoundedCorners() {
-		c.Draw(dst)
+		c.draw(dst)
 	}
 
 	for _, c := range c.Circles() {
-		c.Draw(dst)
+		c.draw(dst)
 	}
 
-	for _, b := range c.Bridges() {
-		b.Draw(dst)
+	for _, bI := range c.Bridges() {
+		bI.draw(dst)
 	}
 
-	for _, t := range c.Text() {
-		t.Draw(dst)
-	}
+	writeText(dst, c)
 
 	writeBytes(dst, "</g>\n")
 }
 
 // Lines returns a slice of all Line drawables that we can detect -- in all
 // possible orientations.
-func (c *Canvas) Lines() []Line {
+func (c *Canvas) Lines() (lines []Line) {
 	horizontalMidlines := c.getLinesForSegment('-')
 
 	diagUpLines := c.getLinesForSegment('/')
@@ -399,13 +453,13 @@ func (c *Canvas) Lines() []Line {
 		}
 
 		//     _
-		// _/   \
+		// _/	\
 		if c.runeAt(l.stop.east()) == '/' || c.runeAt(l.stop.sEast()) == '\\' {
 			horizontalBaselines[i].needsTinyNudgingRight = true
 		}
 
-		//       _
-		// \_   /
+		//	 _
+		// \_	/
 		if c.runeAt(l.start.west()) == '\\' || c.runeAt(l.start.sWest()) == '/' {
 			horizontalBaselines[i].needsTinyNudgingLeft = true
 		}
@@ -449,31 +503,27 @@ func (c *Canvas) Lines() []Line {
 
 	verticalLines := c.getLinesForSegment('|')
 
-	var lines []Line
-
 	lines = append(lines, horizontalMidlines...)
 	lines = append(lines, horizontalBaselines...)
 	lines = append(lines, verticalLines...)
 	lines = append(lines, diagUpLines...)
 	lines = append(lines, diagDownLines...)
-	lines = append(lines, c.HalfSteps()...)
+	lines = append(lines, c.HalfSteps()...)  // vertical, only
 
-	return lines
+	return
 }
 
 func newHalfStep(i Index, chop Orientation) Line {
 	return Line{
-		start:       i,
-		stop:        i.south(),
-		lonely:      true,
-		chop:        chop,
+		start:	     i,
+		stop:	     i.south(),
+		lonely:	     true,
+		chop:	     chop,
 		orientation: S,
 	}
 }
 
-func (c *Canvas) HalfSteps() []Line {
-	var lines []Line
-
+func (c *Canvas) HalfSteps() (lines []Line) {
 	for idx := range upDown(c.Width, c.Height) {
 		if o := c.partOfHalfStep(idx); o != NONE {
 			lines = append(
@@ -482,8 +532,7 @@ func (c *Canvas) HalfSteps() []Line {
 			)
 		}
 	}
-
-	return lines
+	return
 }
 
 func (c *Canvas) getLinesForSegment(segment rune) []Line {
@@ -529,17 +578,14 @@ func (c *Canvas) getLines(
 	segment rune,
 	passThroughs []rune,
 	o Orientation,
-) []Line {
-
-	var lines []Line
-
+) (lines []Line) {
 	// Helper to throw the current line we're tracking on to the slice and
 	// start a new one.
-	snip := func(l Line) Line {
+	snip := func(cl Line) Line {
 		// Only collect lines that actually go somewhere or are isolated
-		// segments.
-		if l.goesSomewhere() {
-			lines = append(lines, l)
+		// segments; otherwise, discard what's been collected so far within 'cl'.
+		if cl.goesSomewhere() {
+			lines = append(lines, cl)
 		}
 
 		return Line{orientation: o}
@@ -589,7 +635,7 @@ func (c *Canvas) getLines(
 		switch currentLine.state {
 		case _Unstarted:
 			if shouldKeep {
-				currentLine.setStart(idx)
+				c.setStart(&currentLine, idx)
 			}
 		case _Started:
 			if !shouldKeep {
@@ -599,7 +645,7 @@ func (c *Canvas) getLines(
 				// adjust later in the / and \ cases.
 				if !currentLine.goesSomewhere() && lastSeenRune == segment {
 					if !c.partOfRoundedCorner(currentLine.start) {
-						currentLine.setStop(idx)
+						c.setStop(&currentLine, idx)
 						currentLine.lonely = true
 					}
 				}
@@ -607,25 +653,23 @@ func (c *Canvas) getLines(
 			} else if isPassThrough {
 				// Snip the existing line but include the current pass-through
 				// character because we may be continuing the line.
-				currentLine.setStop(idx)
+				c.setStop(&currentLine, idx)
 				currentLine = snip(currentLine)
-				currentLine.setStart(idx)
+				c.setStart(&currentLine, idx)
 			} else if shouldKeep {
 				// Keep the line going and extend it by this character.
-				currentLine.setStop(idx)
+				c.setStop(&currentLine, idx)
 			}
 		}
 
 		lastSeenRune = r
 	}
-
-	return lines
+	return
 }
 
-// Triangles returns a slice of all detectable Triangles.
-func (c *Canvas) Triangles() []Drawable {
-	var triangles []Drawable
-
+// Triangles detects intended triangles -- typically at the end of an intended line --
+// and returns a representational slice composed of types Triangle and Line.
+func (c *Canvas) Triangles() (triangles []Drawable) {
 	o := NONE
 
 	for idx := range upDown(c.Width, c.Height) {
@@ -638,26 +682,36 @@ func (c *Canvas) Triangles() []Drawable {
 			continue
 		}
 
-		// Identify our orientation and nudge the triangle to touch any
+		// Identify orientation and nudge the triangle to touch any
 		// adjacent walls.
 		switch r {
 		case '^':
 			o = N
 			//  ^  and ^
-			// /        \
+			// /	    \
 			if c.runeAt(start.sWest()) == '/' {
 				o = NE
 			} else if c.runeAt(start.sEast()) == '\\' {
 				o = NW
 			}
 		case 'v':
-			o = S
-			//  /  and \
-			// v        v
-			if c.runeAt(start.nEast()) == '/' {
+			if c.runeAt(start.north()) == '|' {
+				// |
+				// v
+				o = S
+			} else if c.runeAt(start.nEast()) == '/' {
+				//  /
+				// v
 				o = SW
 			} else if c.runeAt(start.nWest()) == '\\' {
+				//  \
+				//   v
 				o = SE
+			} else {
+				// Conclusion: Meant as a text string 'v', not a triangle
+				//panic("Not sufficient to fix all 'v' troubles.")
+				// continue   XX Already committed to non-text output for this string?
+				o = S
 			}
 		case '<':
 			o = W
@@ -682,8 +736,8 @@ func (c *Canvas) Triangles() []Drawable {
 				triangles = append(
 					triangles,
 					Line{
-						start:       start.nWest(),
-						stop:        start,
+						start:	     start.nWest(),
+						stop:	     start,
 						orientation: SE,
 					},
 				)
@@ -695,8 +749,8 @@ func (c *Canvas) Triangles() []Drawable {
 				triangles = append(
 					triangles,
 					Line{
-						start:       start,
-						stop:        start.nEast(),
+						start:	     start,
+						stop:	     start.nEast(),
 						orientation: NE,
 					},
 				)
@@ -714,8 +768,8 @@ func (c *Canvas) Triangles() []Drawable {
 				triangles = append(
 					triangles,
 					Line{
-						start:       start,
-						stop:        start.sEast(),
+						start:	     start,
+						stop:	     start.sEast(),
 						orientation: SE,
 					},
 				)
@@ -727,8 +781,8 @@ func (c *Canvas) Triangles() []Drawable {
 				triangles = append(
 					triangles,
 					Line{
-						start:       start.sWest(),
-						stop:        start,
+						start:	     start.sWest(),
+						stop:	     start,
 						orientation: NE,
 					},
 				)
@@ -748,20 +802,17 @@ func (c *Canvas) Triangles() []Drawable {
 		triangles = append(
 			triangles,
 			Triangle{
-				start:        start,
+				start:	      start,
 				orientation:  o,
 				needsNudging: needsNudging,
 			},
 		)
 	}
-
-	return triangles
+	return
 }
 
 // Circles returns a slice of all 'o' and '*' characters not considered text.
-func (c *Canvas) Circles() []Circle {
-	var circles []Circle
-
+func (c *Canvas) Circles() (circles []Circle) {
 	for idx := range upDown(c.Width, c.Height) {
 		// TODO INCOMING
 		if c.runeAt(idx) == 'o' {
@@ -770,14 +821,11 @@ func (c *Canvas) Circles() []Circle {
 			circles = append(circles, Circle{start: idx, bold: true})
 		}
 	}
-
-	return circles
+	return
 }
 
 // RoundedCorners returns a slice of all curvy corners in the diagram.
-func (c *Canvas) RoundedCorners() []RoundedCorner {
-	var corners []RoundedCorner
-
+func (c *Canvas) RoundedCorners() (corners []RoundedCorner) {
 	for idx := range leftRight(c.Width, c.Height) {
 		if o := c.isRoundedCorner(idx); o != NONE {
 			corners = append(
@@ -786,8 +834,7 @@ func (c *Canvas) RoundedCorners() []RoundedCorner {
 			)
 		}
 	}
-
-	return corners
+	return
 }
 
 // For . and ' characters this will return a non-NONE orientation if the
@@ -818,25 +865,25 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	}
 
 	//  .- or  .-
-	// |      +
+	// |	  +
 	if opensDown && dashRight && isVerticalSegment(lowerLeft) {
 		return NW
 	}
 
 	// -. or -.  or -.  or _.  or -.
-	//   |     +      )      )      o
+	//   |	   +	  )	 )	o
 	if opensDown && dashLeft && isVerticalSegment(lowerRight) {
 		return NE
 	}
 
-	//   | or   + or   | or   + or   + or_ )
-	// -'     -'     +'     +'     ++     '
+	//   | or   + or   | or	  + or	 + or_ )
+	// -'	  -'	 +'	+'     ++     '
 	if opensUp && dashLeft && isVerticalSegment(upperRight) {
 		return SE
 	}
 
 	// |  or +
-	//  '-    '-
+	//  '-	  '-
 	if opensUp && dashRight && isVerticalSegment(upperLeft) {
 		return SW
 	}
@@ -844,76 +891,24 @@ func (c *Canvas) isRoundedCorner(i Index) Orientation {
 	return NONE
 }
 
-// A wrapper to enable sorting.
-type indexRuneDrawable struct {
-	i Index
-	r rune
-	Drawable
-}
-
 // Text returns a slice of all text characters not belonging to part of the diagram.
-// How these characters are identified is rather complicated.
-func (c *Canvas) Text() []Drawable {
-	newLine := func(i Index, r rune, o Orientation) Drawable {
-		stop := i
-
-		switch o {
-		case NE:
-			stop = i.nEast()
-		case SE:
-			stop = i.sEast()
+// Must be stably sorted, to satisfy regression tests.
+func (c *Canvas) Text() (text []Text) {
+	for idx := range leftRight(c.Width, c.Height) {
+		r, found := c.text[idx]
+		if !found {
+			continue
 		}
-
-		l := Line{
-			start:       i,
-			stop:        stop,
-			lonely:      true,
-			orientation: o,
-		}
-
-		return indexRuneDrawable{
-			Drawable: l,
-			i:        i,
-			r:        r,
-		}
+		text = append(text, Text{
+			start: idx,
+			str: string(r)})
 	}
-
-	text := make([]Drawable, len(c.text))
-	var j int
-
-	for i, r := range c.text {
-		switch r {
-		// Weird unicode edge cases that markdeep handles. These get
-		// substituted with lines.
-		case '╱':
-			text[j] = newLine(i, r, NE)
-		case '╲':
-			text[j] = newLine(i, r, SE)
-		case '╳':
-			text[j] = newLine(i, r, NE)
-		default:
-			text[j] = indexRuneDrawable{Drawable: Text{start: i, contents: string(r)}, i: i, r: r}
-		}
-		j++
-	}
-
-	sort.Slice(text, func(i, j int) bool {
-		ti, tj := text[i].(indexRuneDrawable), text[j].(indexRuneDrawable)
-
-		if ti.i.x == tj.i.x {
-			return ti.i.y < tj.i.y || (ti.i.y == tj.i.y && ti.r < tj.r)
-		}
-
-		return ti.i.x < tj.i.x
-	})
-
-	return text
+	return
 }
 
-// Bridges returns a slice of all bridges, "-)-" or "-(-".
-func (c *Canvas) Bridges() []Drawable {
-	var bridges []Drawable
-
+// Bridges returns a slice of all bridges, "-)-" or "-(-", composed as a sequence of
+// either type Bridge or type Line.
+func (c *Canvas) Bridges() (bridges []Drawable) {
 	for idx := range leftRight(c.Width, c.Height) {
 		if o := c.isBridge(idx); o != NONE {
 			bridges = append(
@@ -921,14 +916,13 @@ func (c *Canvas) Bridges() []Drawable {
 				newHalfStep(idx.north(), S),
 				newHalfStep(idx.south(), N),
 				Bridge{
-					start:       idx,
+					start:	     idx,
 					orientation: o,
 				},
 			)
 		}
 	}
-
-	return bridges
+	return
 }
 
 // -)- or -(- or
@@ -953,25 +947,38 @@ func (c *Canvas) isBridge(i Index) Orientation {
 	return NONE
 }
 
-func (c *Canvas) isText(i Index) bool {
-	// Short circuit, we already saw this index and called it text.
-	if _, isText := c.text[i]; isText {
-		return true
-	}
-
-	if c.runeAt(i) == ' ' {
+func (c *Canvas) shouldMoveToText(i Index) bool {
+	i_r := c.runeAt(i)
+	if i_r == ' ' {
+		// X  Note that c.runeAt(i) returns ' ' if i lies right of all chars on line i.Y
 		return false
 	}
 
-	if !c.isReserved(i) {
+	// Returns true if the character at index 'i' of c.data[] is reserved for diagrams.
+	// Characters like 'o' and 'v' need more context (e.g., are other text characters
+	// nearby) to determine whether they're part of a diagram.
+	isReserved := func(i Index) (found bool) {
+		i_r, inData := c.data[i]
+		if !inData {
+			// lies off left or right end of line, treat as reserved
+			return true
+		}
+		_, found = reservedSet[i_r]
+		return
+	}
+
+	if !isReserved(i) {
 		return true
 	}
 
-	// This is a reserved character with an incoming line (e.g., "|") above it,
+	// This is a reserved character with an incoming line (e.g., "|") above or below it,
 	// so call it non-text.
 	if c.hasLineAboveOrBelow(i) {
 		return false
 	}
+
+	w := i.west()
+	e := i.east()
 
 	// Reserved characters like "o" or "*" with letters sitting next to them
 	// are probably text.
@@ -979,49 +986,49 @@ func (c *Canvas) isText(i Index) bool {
 	// reserved characters previously that were counted as text then this
 	// should be as well, e.g., "A----B".
 
-	// We're reserved but surrounded by text and probably part of an existing
-	// word. Use a hash lookup on the left to preserve chains of
-	// reserved-but-text characters like "foo----bar".
-	if _, textLeft := c.text[i.west()]; textLeft || !c.isReserved(i.east()) {
+	// 'i' is reserved but surrounded by text and probably part of an existing word.
+	// Preserve chains of reserved-but-text characters like "foo----bar".
+	if textLeft := !isReserved(w); textLeft {
+		return true
+	}
+	if textRight := !isReserved(e); textRight {
 		return true
 	}
 
-	w := i.west()
-	e := i.east()
+	crowded := func (l, r Index) bool {
+		return  inSet(wideSVGSet, c.data, l) &&
+			inSet(wideSVGSet, c.data, r)
+	}
+	if crowded(w, i) || crowded(i, e) {
+		return true
+	}
 
+	// If 'i' has anything other than a space to either left or right, treat as non-text.
 	if !(c.runeAt(w) == ' ' && c.runeAt(e) == ' ') {
 		return false
 	}
 
 	// Circles surrounded by whitespace shouldn't be shown as text.
-	if c.runeAt(i) == 'o' || c.runeAt(i) == '*' {
+	if i_r == 'o' || i_r == '*' {
 		return false
 	}
 
-	// We're surrounded by whitespace + text on either side.
-	if !c.isReserved(w.west()) || !c.isReserved(e.east()) {
+	// 'i' is surrounded by whitespace or text on one side or the other, at two cell's distance.
+	if !isReserved(w.west()) || !isReserved(e.east()) {
 		return true
 	}
 
 	return false
 }
 
-// Returns true if the character at this index is not reserved for diagrams.
-// Characters like "o" need more context (e.g., are other text characters
-// nearby) to determine whether they're part of a diagram.
-func (c *Canvas) isReserved(i Index) bool {
-	r := c.runeAt(i)
-	_, isReserved := reservedRunes[r]
-	return isReserved
-}
 
 // Returns true if it looks like this character belongs to anything besides a
 // horizontal line. This is the context we use to determine if a reserved
 // character is text or not.
 func (c *Canvas) hasLineAboveOrBelow(i Index) bool {
-	r := c.runeAt(i)
+	i_r := c.runeAt(i)
 
-	switch r {
+	switch i_r {
 	case '*', 'o', '+', 'v', '^':
 		return c.partOfDiagonalLine(i) || c.partOfVerticalLine(i)
 	case '|':
@@ -1126,18 +1133,18 @@ func (c *Canvas) partOfHalfStep(i Index) Orientation {
 
 	switch r {
 	case '\'':
-		//  _      _
-		//   '-  -'
+		//  _	   _
+		//   '-	 -'
 		if (nw == '_' && e == '-') || (w == '-' && ne == '_') {
 			return N
 		}
 	case '.':
-		// _.-  -._
+		// _.-	-._
 		if (w == '-' && e == '_') || (w == '_' && e == '-') {
 			return S
 		}
 	case '|':
-		//// _   _
+		//// _	 _
 		////  | |
 		if n != '|' && (ne == '_' || nw == '_') {
 			return N

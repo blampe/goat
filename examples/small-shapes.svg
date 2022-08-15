@@ -1,12 +1,12 @@
-<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='105' width='760' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='105' width='760' font-family='Menlo,Lucida Console,monospace'>
 <style type="text/css">
 svg {
-   color: #323232;
+   color: #000000;
 }
 @media (prefers-color-scheme: dark) {
-     svg {
-   color: #C8C8C8;
-     }
+   svg {
+      color: #FFFFFF;
+   }
 }
 </style>
 <g transform='translate(8,16)'>
@@ -41,10 +41,9 @@ svg {
 <path d='M 656,32 L 656,48' fill='none' stroke='currentColor'></path>
 <path d='M 672,16 L 672,32' fill='none' stroke='currentColor'></path>
 <path d='M 696,16 L 696,32' fill='none' stroke='currentColor'></path>
-<path d='M 696,32 L 696,48' fill='none' stroke='currentColor'></path>
-<path d='M 704,48 L 704,80' fill='none' stroke='currentColor'></path>
+<path d='M 704,64 L 704,80' fill='none' stroke='currentColor'></path>
 <path d='M 720,56 L 720,72' fill='none' stroke='currentColor'></path>
-<path d='M 728,0 L 728,32' fill='none' stroke='currentColor'></path>
+<path d='M 728,16 L 728,32' fill='none' stroke='currentColor'></path>
 <path d='M 744,56 L 744,72' fill='none' stroke='currentColor'></path>
 <path d='M 4,40 L 16,16' fill='none' stroke='currentColor'></path>
 <path d='M 40,64 L 52,40' fill='none' stroke='currentColor'></path>
@@ -84,5 +83,17 @@ svg {
 <path d='M 200,48 A 16,16 0 0,1 184,64' fill='none' stroke='currentColor'></path>
 <path d='M 496,48 A 16,16 0 0,0 512,64' fill='none' stroke='currentColor'></path>
 <path d='M 544,48 A 16,16 0 0,1 528,64' fill='none' stroke='currentColor'></path>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='728' y='4'>.</text>
+<text x='736' y='4'>.</text>
+<text x='696' y='52'>.</text>
+<text x='704' y='52'>.</text>
 </g>
 </svg>
