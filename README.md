@@ -141,7 +141,6 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
 ![](./examples/large-nodes.svg)
 
 ### Small Grids
-![](./examples/small-grids.svg)
 ```
        ___     ___      .---+---+---+---+---.     .---+---+---+---.  .---.   .---.
    ___/   \___/   \     |   |   |   |   |   |    / \ / \ / \ / \ /   |   +---+   |
@@ -153,6 +152,7 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
 
 
 ```
+![](./examples/small-grids.svg)
 
 ### Big Grids
 ```
