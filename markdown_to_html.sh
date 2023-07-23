@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-#  For local test of markdown generation, use a standalone Markdown-to-HTML processer.
+#  For local test of markdown generation, use a standalone Markdown-to-HTML processor.
 
 set -e
 #set -x
