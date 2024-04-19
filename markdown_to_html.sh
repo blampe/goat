@@ -1,6 +1,16 @@
 #! /bin/sh
 #
-#  For local test of markdown generation, use a standalone Markdown-to-HTML processer.
+#  For local test of markdown generation, use a standalone Markdown-to-HTML processor.
+#
+# XX XX   Plan for support of Goat diagrams embedded in Markdown locally
+#         generated for production e.g. upload to a non-GH server:
+#       1. Go filter preprocesses .md file.
+#       2. Filter extracts and renders Goat diagrams to out-of-line** SVG files.
+#       3. Filter replaces inline ASCII Goat diagram with relative link to SVG.
+#
+#     **  SVG content unlike PNG et al. is of course natively ASCII, but GFM apparently
+#         nevertheless will not accept it inline, embedded.
+#           c.f. https://github.github.com/gfm/#images
 
 set -e
 #set -x
@@ -8,8 +18,16 @@ set -e
 svg_color_light_scheme="#320"
 svg_color_dark_scheme="#FEE"
 
-# XX An alternative to 'marked', for consideration:
-#       https://github.com/gomarkdown/mdtohtml
+# X Alternatives to 'marked':
+#   -  https://github.com/yuin/goldmark
+#          X X  https://github.com/abhinav/goldmark-toc
+#                => Respin this very script as a Go CLI app, incorporating above libraries.
+#   -  https://github.com/remarkjs/remark
+#          XX  Coded in JS.
+#          - https://github.com/remarkjs/remark-toc
+#   -  https://github.com/gomarkdown/markdown
+#          XX  No Table-Of-Contents support found.
+#          - CLI: https://github.com/gomarkdown/mdtohtml
 
 # See https://github.github.com/gfm/#introduction
 #
