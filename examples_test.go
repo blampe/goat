@@ -14,7 +14,7 @@ import (
 )
 
 var (
-	write = flag.Bool("write", false, "write examples to disk")
+	write = flag.Bool("write", false, "write examples to disk")  // XX rename: more descriptive
 	svgColorLightScheme = flag.String("svg-color-light-scheme", "#000000",
 		`See help for cmd/goat`)
 	svgColorDarkScheme = flag.String("svg-color-dark-scheme", "#FFFFFF",
@@ -49,12 +49,12 @@ func TestExamples(t *testing.T) {
 	}
 
 	var buff *bytes.Buffer
-
+	if write == nil {
+		t.Logf("Verifying output of current build against earlier .svg files in examples/.\n")
+	}
+	var failures int
 	for _, name := range filenames {
 		in := getIn(name)
-		if testing.Verbose() {
-			t.Logf("\tprocessing %s\n", name)
-		}
 		var out io.WriteCloser
 		if *write {
 			out = getOut(name)
@@ -88,16 +88,24 @@ func TestExamples(t *testing.T) {
 				//     source is fresher than the .svg?
 				t.Log(buff.Len(), len(golden))
 				t.Logf("Content mismatch for %s", toSVGFilename(name))
-				t.Logf("%s %s:\n\t%s\nConsider:\n\t%s",
-					"Option -write not set, and Error reading",
-					name,
-					err.Error(),
-					"$ go test -run TestExamples -v -args -write")
-				t.FailNow()
+				failures++
+			} else {
+				if testing.Verbose() {
+					t.Logf("Verified contents of SVG file %s\n",
+						toSVGFilename(name))
+				}
 			}
 			in.Close()
 			out.Close()
 		}
+	}
+	if failures > 0 {
+		t.Logf(`Failed to verify contents of %d .svg files
+Consider:
+	%s`,
+			failures,
+			"$ go test -run TestExamples -v -args -write")
+		t.FailNow()
 	}
 }
 
@@ -132,6 +140,7 @@ func getOutString(filename string) (string, error) {
 	if err != nil {
 		return "", err
 	}
+	// XX  Why are there RETURN characters in contents of the .SVG files?
 	b = bytes.ReplaceAll(b, []byte("\r\n"), []byte("\n"))
 	return string(b), nil
 }
