@@ -1,0 +1,12 @@
+
+ _
+|_|
+
+double-draw
+
+
+ _
+| |
+|_|
+
+gap at abutting line ends
