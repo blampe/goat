@@ -1,7 +1,23 @@
+<!-- XX Move this file down to .github/, because its contents are GitHub-specific. -->
+
 # GoAT: Go ASCII Tool
 
-<!-- Github-specific status icons-->
-![](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
+<!-- Github-specific status icon
+
+     Github requires explicitly binding a repository owner's username in the text of a README,
+     implying that a badge in README.md cannot both reflect the status of a test Action after a
+	 contributor pushes to his pull request branch, and
+	 the run of that same test Action after the upstream owner merges the pull request
+	 into his 'main' branch.  See:
+
+	    https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge
+
+	GitHub Community forum shows numerous similar issues with badges:
+	  https://github.com/orgs/community/discussions/categories/actions?discussions_q=is%3Aopen+category%3AActions++badge.svg
+
+	  => CONCLUSION: Don't use badges. Instead, pay attention to Action result status.
+  -->
+<!-- ![](https://github.com/{{.Github_Repository_Owner}}/goat/actions/workflows/test.yml/badge.svg) -->
 
 ## What **GoAT** Can Do For You
 
@@ -42,7 +58,7 @@ with rows above and below.
 
 ## Installation
 ```
-    $ go install github.com/{{.GithubUser}}/goat/cmd/goat@latest
+    $ go install github.com/{{.Github_Repository_Owner}}/goat/cmd/goat@latest
 ```
 <!-- https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections#creating-a-collapsed-section -->
 
@@ -133,12 +149,12 @@ The core engine of ```goat``` is accessible as a Go library package, for inclusi
 code of your own.
 The code implements a subset, and some extensions, of the ASCII diagram generation function of the browser-side Javascript in [Markdeep](http://casual-effects.com/markdeep/).
 
-A nicely formatted reference may be found at [pkg.go.dev](https://pkg.go.dev/github.com/{{.GithubUser}}/goat).
+A nicely formatted reference may be found at [pkg.go.dev](https://pkg.go.dev/github.com/{{.Github_Repository_Owner}}/goat).
 
 ### Installation
 
 ```
-    $ go get -u github.com/{{.GithubUser}}/goat/
+    $ go get -u github.com/{{.Github_Repository_Owner}}/goat/
 ```
 ### Library Data Flow
 ![]({{.Root}}/goat.svg)
@@ -150,13 +166,13 @@ source file [./goat.go](./goat.go).
 
 <!--
  XX XX  May need a Github Action to do this substitution at "push" time.
-[![resource non-responsive](https://pkg.go.dev/badge/github.com/{{.GithubUser}}/goat)](https://pkg.go.dev/github.com/{{.GithubUser}}/goat)
+[![resource non-responsive](https://pkg.go.dev/badge/github.com/{{.Github_Repository_Owner}}/goat)](https://pkg.go.dev/github.com/{{.Github_Repository_Owner}}/goat)
 -->
 
 <!--
  The scraping of GitHub by godocs.io (see https://sr.ht) does NOT include README.md;
  whereas Google's pkg.go.dev does do so, and apparently runs its own variant of GFM processing :-/ 
-[![resource non-responsive](https://godocs.io/github.com/{{.GithubUser}}/goat?status.svg)](https://godocs.io/github.com/{{.GithubUser}}/goat)
+[![resource non-responsive](https://godocs.io/github.com/{{.Github_Repository_Owner}}/goat?status.svg)](https://godocs.io/github.com/{{.Github_Repository_Owner}}/goat)
 -->
 
 ### Project Tenets
