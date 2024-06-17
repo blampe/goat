@@ -1,0 +1,150 @@
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='809' width='128' font-family='Menlo,Lucida Console,monospace'>
+<style type="text/css">
+svg {
+   color: #000000;
+}
+@media (prefers-color-scheme: dark) {
+   svg {
+      color-scheme: dark; /* ask the browser for a dark background */
+      color: #FFFFFF;
+   }
+}
+</style>
+<g transform='translate(8,16)'>
+<path d='M 0,0 L 2,0' fill='none' stroke='currentColor'></path>
+<path d='M 0,96 L 8,96' fill='none' stroke='currentColor'></path>
+<path d='M 48,96 L 56,96' fill='none' stroke='currentColor'></path>
+<path d='M 0,128 L 8,128' fill='none' stroke='currentColor'></path>
+<path d='M 64,128 L 72,128' fill='none' stroke='currentColor'></path>
+<path d='M 16,176 L 48,176' fill='none' stroke='currentColor'></path>
+<path d='M 16,192 L 48,192' fill='none' stroke='currentColor'></path>
+<path d='M 16,224 L 48,224' fill='none' stroke='currentColor'></path>
+<path d='M 16,240 L 48,240' fill='none' stroke='currentColor'></path>
+<path d='M 16,288 L 40,288' fill='none' stroke='currentColor'></path>
+<path d='M 16,304 L 40,304' fill='none' stroke='currentColor'></path>
+<path d='M 16,336 L 40,336' fill='none' stroke='currentColor'></path>
+<path d='M 16,352 L 40,352' fill='none' stroke='currentColor'></path>
+<path d='M 16,400 L 32,400' fill='none' stroke='currentColor'></path>
+<path d='M 16,416 L 32,416' fill='none' stroke='currentColor'></path>
+<path d='M 16,448 L 32,448' fill='none' stroke='currentColor'></path>
+<path d='M 16,464 L 32,464' fill='none' stroke='currentColor'></path>
+<path d='M 24,720 L 32,720' fill='none' stroke='currentColor'></path>
+<path d='M 24,784 L 32,784' fill='none' stroke='currentColor'></path>
+<path d='M 0,640 L 0,672' fill='none' stroke='currentColor'></path>
+<path d='M 0,736 L 0,768' fill='none' stroke='currentColor'></path>
+<path d='M 8,640 L 8,672' fill='none' stroke='currentColor'></path>
+<path d='M 8,736 L 8,768' fill='none' stroke='currentColor'></path>
+<polygon points='8.000000,640.000000 -4.000000,634.400024 -4.000000,645.599976' fill='currentColor' transform='rotate(270.000000, 0.000000, 640.000000)'></polygon>
+<polygon points='8.000000,672.000000 -4.000000,666.400024 -4.000000,677.599976' fill='currentColor' transform='rotate(90.000000, 0.000000, 672.000000)'></polygon>
+<polygon points='8.000000,736.000000 -4.000000,730.400024 -4.000000,741.599976' fill='currentColor' transform='rotate(270.000000, 0.000000, 736.000000)'></polygon>
+<polygon points='8.000000,768.000000 -4.000000,762.400024 -4.000000,773.599976' fill='currentColor' transform='rotate(90.000000, 0.000000, 768.000000)'></polygon>
+<polygon points='16.000000,64.000000 4.000000,58.400002 4.000000,69.599998' fill='currentColor' transform='rotate(180.000000, 8.000000, 64.000000)'></polygon>
+<polygon points='8.000000,96.000000 -4.000000,90.400002 -4.000000,101.599998' fill='currentColor' transform='rotate(0.000000, 8.000000, 96.000000)'></polygon>
+<polygon points='16.000000,128.000000 4.000000,122.400002 4.000000,133.600006' fill='currentColor' transform='rotate(0.000000, 8.000000, 128.000000)'></polygon>
+<polygon points='16.000000,640.000000 4.000000,634.400024 4.000000,645.599976' fill='currentColor' transform='rotate(270.000000, 8.000000, 640.000000)'></polygon>
+<polygon points='16.000000,672.000000 4.000000,666.400024 4.000000,677.599976' fill='currentColor' transform='rotate(90.000000, 8.000000, 672.000000)'></polygon>
+<polygon points='16.000000,736.000000 4.000000,730.400024 4.000000,741.599976' fill='currentColor' transform='rotate(270.000000, 8.000000, 736.000000)'></polygon>
+<polygon points='16.000000,768.000000 4.000000,762.400024 4.000000,773.599976' fill='currentColor' transform='rotate(90.000000, 8.000000, 768.000000)'></polygon>
+<polygon points='24.000000,176.000000 12.000000,170.399994 12.000000,181.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 176.000000)'></polygon>
+<polygon points='24.000000,192.000000 12.000000,186.399994 12.000000,197.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 192.000000)'></polygon>
+<polygon points='16.000000,224.000000 4.000000,218.399994 4.000000,229.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 224.000000)'></polygon>
+<polygon points='16.000000,240.000000 4.000000,234.399994 4.000000,245.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 240.000000)'></polygon>
+<polygon points='24.000000,288.000000 12.000000,282.399994 12.000000,293.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 288.000000)'></polygon>
+<polygon points='24.000000,304.000000 12.000000,298.399994 12.000000,309.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 304.000000)'></polygon>
+<polygon points='16.000000,336.000000 4.000000,330.399994 4.000000,341.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 336.000000)'></polygon>
+<polygon points='16.000000,352.000000 4.000000,346.399994 4.000000,357.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 352.000000)'></polygon>
+<polygon points='24.000000,400.000000 12.000000,394.399994 12.000000,405.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 400.000000)'></polygon>
+<polygon points='24.000000,416.000000 12.000000,410.399994 12.000000,421.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 416.000000)'></polygon>
+<polygon points='16.000000,448.000000 4.000000,442.399994 4.000000,453.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 448.000000)'></polygon>
+<polygon points='16.000000,464.000000 4.000000,458.399994 4.000000,469.600006' fill='currentColor' transform='rotate(180.000000, 16.000000, 464.000000)'></polygon>
+<polygon points='24.000000,512.000000 12.000000,506.399994 12.000000,517.599976' fill='currentColor' transform='rotate(180.000000, 16.000000, 512.000000)'></polygon>
+<polygon points='24.000000,528.000000 12.000000,522.400024 12.000000,533.599976' fill='currentColor' transform='rotate(180.000000, 16.000000, 528.000000)'></polygon>
+<polygon points='16.000000,560.000000 4.000000,554.400024 4.000000,565.599976' fill='currentColor' transform='rotate(180.000000, 16.000000, 560.000000)'></polygon>
+<polygon points='16.000000,576.000000 4.000000,570.400024 4.000000,581.599976' fill='currentColor' transform='rotate(180.000000, 16.000000, 576.000000)'></polygon>
+<polygon points='32.000000,512.000000 20.000000,506.399994 20.000000,517.599976' fill='currentColor' transform='rotate(0.000000, 24.000000, 512.000000)'></polygon>
+<polygon points='32.000000,528.000000 20.000000,522.400024 20.000000,533.599976' fill='currentColor' transform='rotate(0.000000, 24.000000, 528.000000)'></polygon>
+<polygon points='24.000000,560.000000 12.000000,554.400024 12.000000,565.599976' fill='currentColor' transform='rotate(0.000000, 24.000000, 560.000000)'></polygon>
+<polygon points='24.000000,576.000000 12.000000,570.400024 12.000000,581.599976' fill='currentColor' transform='rotate(0.000000, 24.000000, 576.000000)'></polygon>
+<polygon points='40.000000,400.000000 28.000000,394.399994 28.000000,405.600006' fill='currentColor' transform='rotate(0.000000, 32.000000, 400.000000)'></polygon>
+<polygon points='40.000000,416.000000 28.000000,410.399994 28.000000,421.600006' fill='currentColor' transform='rotate(0.000000, 32.000000, 416.000000)'></polygon>
+<polygon points='32.000000,448.000000 20.000000,442.399994 20.000000,453.600006' fill='currentColor' transform='rotate(0.000000, 32.000000, 448.000000)'></polygon>
+<polygon points='32.000000,464.000000 20.000000,458.399994 20.000000,469.600006' fill='currentColor' transform='rotate(0.000000, 32.000000, 464.000000)'></polygon>
+<polygon points='48.000000,288.000000 36.000000,282.399994 36.000000,293.600006' fill='currentColor' transform='rotate(0.000000, 40.000000, 288.000000)'></polygon>
+<polygon points='48.000000,304.000000 36.000000,298.399994 36.000000,309.600006' fill='currentColor' transform='rotate(0.000000, 40.000000, 304.000000)'></polygon>
+<polygon points='40.000000,336.000000 28.000000,330.399994 28.000000,341.600006' fill='currentColor' transform='rotate(0.000000, 40.000000, 336.000000)'></polygon>
+<polygon points='40.000000,352.000000 28.000000,346.399994 28.000000,357.600006' fill='currentColor' transform='rotate(0.000000, 40.000000, 352.000000)'></polygon>
+<polygon points='56.000000,64.000000 44.000000,58.400002 44.000000,69.599998' fill='currentColor' transform='rotate(0.000000, 48.000000, 64.000000)'></polygon>
+<polygon points='48.000000,96.000000 36.000000,90.400002 36.000000,101.599998' fill='currentColor' transform='rotate(180.000000, 48.000000, 96.000000)'></polygon>
+<polygon points='56.000000,176.000000 44.000000,170.399994 44.000000,181.600006' fill='currentColor' transform='rotate(0.000000, 48.000000, 176.000000)'></polygon>
+<polygon points='56.000000,192.000000 44.000000,186.399994 44.000000,197.600006' fill='currentColor' transform='rotate(0.000000, 48.000000, 192.000000)'></polygon>
+<polygon points='48.000000,224.000000 36.000000,218.399994 36.000000,229.600006' fill='currentColor' transform='rotate(0.000000, 48.000000, 224.000000)'></polygon>
+<polygon points='48.000000,240.000000 36.000000,234.399994 36.000000,245.600006' fill='currentColor' transform='rotate(0.000000, 48.000000, 240.000000)'></polygon>
+<polygon points='72.000000,128.000000 60.000000,122.400002 60.000000,133.600006' fill='currentColor' transform='rotate(180.000000, 64.000000, 128.000000)'></polygon>
+<polygon points='96.000000,400.000000 84.000000,394.399994 84.000000,405.600006' fill='currentColor' transform='rotate(180.000000, 88.000000, 400.000000)'></polygon>
+<polygon points='96.000000,416.000000 84.000000,410.399994 84.000000,421.600006' fill='currentColor' transform='rotate(180.000000, 88.000000, 416.000000)'></polygon>
+<polygon points='88.000000,448.000000 76.000000,442.399994 76.000000,453.600006' fill='currentColor' transform='rotate(180.000000, 88.000000, 448.000000)'></polygon>
+<polygon points='88.000000,464.000000 76.000000,458.399994 76.000000,469.600006' fill='currentColor' transform='rotate(180.000000, 88.000000, 464.000000)'></polygon>
+<polygon points='112.000000,400.000000 100.000000,394.399994 100.000000,405.600006' fill='currentColor' transform='rotate(0.000000, 104.000000, 400.000000)'></polygon>
+<polygon points='112.000000,416.000000 100.000000,410.399994 100.000000,421.600006' fill='currentColor' transform='rotate(0.000000, 104.000000, 416.000000)'></polygon>
+<polygon points='104.000000,448.000000 92.000000,442.399994 92.000000,453.600006' fill='currentColor' transform='rotate(0.000000, 104.000000, 448.000000)'></polygon>
+<polygon points='104.000000,464.000000 92.000000,458.399994 92.000000,469.600006' fill='currentColor' transform='rotate(0.000000, 104.000000, 464.000000)'></polygon>
+<circle cx='8' cy='0' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='8' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='8' cy='224' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='8' cy='240' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='8' cy='336' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='8' cy='352' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='8' cy='448' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='8' cy='464' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='8' cy='560' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='8' cy='576' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='16' cy='64' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='16' cy='96' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='24' cy='16' r='6' stroke='currentColor' fill='currentColor'></circle>
+<circle cx='32' cy='560' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='32' cy='576' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='40' cy='16' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='40' cy='64' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='40' cy='96' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='40' cy='448' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='40' cy='464' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='48' cy='336' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='48' cy='352' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='56' cy='16' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='56' cy='224' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='56' cy='240' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='80' cy='448' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='80' cy='464' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='112' cy='448' r='6' stroke='currentColor' fill='none'></circle>
+<circle cx='112' cy='464' r='6' stroke='currentColor' fill='none'></circle>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='8' y='36'>0</text>
+<text x='16' y='36'>1</text>
+<text x='24' y='36'>2</text>
+<text x='32' y='36'>3</text>
+<text x='40' y='36'>4</text>
+<text x='48' y='36'>5</text>
+<text x='56' y='36'>6</text>
+<text x='24' y='132'>x</text>
+<text x='48' y='132'>x</text>
+<text x='24' y='148'>x</text>
+<text x='32' y='148'>x</text>
+<text x='40' y='148'>x</text>
+<text x='48' y='148'>x</text>
+<text x='0' y='628'>o</text>
+<text x='8' y='628'>o</text>
+<text x='0' y='692'>o</text>
+<text x='8' y='692'>o</text>
+<text x='0' y='724'>*</text>
+<text x='8' y='724'>*</text>
+<text x='0' y='788'>*</text>
+<text x='8' y='788'>*</text>
+</g>
+</svg>
