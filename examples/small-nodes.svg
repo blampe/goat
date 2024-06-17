@@ -5,6 +5,7 @@ svg {
 }
 @media (prefers-color-scheme: dark) {
    svg {
+      color-scheme: dark; /* ask the browser for a dark background */
       color: #FFFFFF;
    }
 }
