@@ -14,7 +14,8 @@ import (
 )
 
 var (
-	write = flag.Bool("write", false, "write examples to disk")  // XX rename: more descriptive
+	regenerate = flag.Bool("regenerate",
+		false, "regenerate reference SVG output files")
 	svgColorLightScheme = flag.String("svg-color-light-scheme", "#000000",
 		`See help for cmd/goat`)
 	svgColorDarkScheme = flag.String("svg-color-dark-scheme", "#FFFFFF",
@@ -49,14 +50,14 @@ func TestExamples(t *testing.T) {
 	}
 
 	var buff *bytes.Buffer
-	if write == nil {
-		t.Logf("Verifying output of current build against earlier .svg files in examples/.\n")
+	if regenerate == nil {
+		t.Logf("Verifying equality of current SVG with examples/ references.\n")
 	}
 	var failures int
 	for _, name := range filenames {
 		in := getIn(name)
 		var out io.WriteCloser
-		if *write {
+		if *regenerate {
 			out = getOut(name)
 		} else {
 			if buff == nil {
@@ -83,15 +84,26 @@ func TestExamples(t *testing.T) {
 			if err != nil {
 				t.Log(err)
 			}
-			if buff.String() != golden {
-				// XX  Skip this if the modification timestamp of the .txt file
-				//     source is fresher than the .svg?
-				t.Log(buff.Len(), len(golden))
-				t.Logf("Content mismatch for %s", toSVGFilename(name))
+			if newStr := buff.String(); newStr != golden {
+				// Skip complaint if the modification timestamp of the .txt file
+				// source is fresher than that of the .svg?
+				//   => NO, Any .txt difference might be an editing mistake.
+
+				t.Logf("Content mismatch for %s. Length was %d, expected %d",
+					toSVGFilename(name), buff.Len(), len(golden))
+				for i:=0; i<min(len(golden), len(newStr)); i++ {
+					if newStr[i] != golden[i] {
+						t.Logf("Differing runes at offset %d: new='%#v' reference='%#v'\n",
+							i, newStr[i], golden[i])
+						break
+					}
+				}
+				t.Logf("Generated contents do not match existing %s",
+					toSVGFilename(name))
 				failures++
 			} else {
 				if testing.Verbose() {
-					t.Logf("Verified contents of SVG file %s\n",
+					t.Logf("Existing and generated contents match %s\n",
 						toSVGFilename(name))
 				}
 			}
@@ -104,7 +116,7 @@ func TestExamples(t *testing.T) {
 Consider:
 	%s`,
 			failures,
-			"$ go test -run TestExamples -v -args -write")
+			"$ go test -run TestExamples -v -args -regenerate")
 		t.FailNow()
 	}
 }
@@ -119,24 +131,24 @@ func BenchmarkComplicated(b *testing.B) {
 
 const basePath string = "examples"
 
-func getIn(filename string) io.ReadCloser {
-	in, err := os.Open(filename)
+func getIn(txtFilename string) io.ReadCloser {
+	in, err := os.Open(txtFilename)
 	if err != nil {
 		panic(err)
 	}
 	return in
 }
 
-func getOut(filename string) io.WriteCloser {
-	out, err := os.Create(toSVGFilename(filename))
+func getOut(txtFilename string) io.WriteCloser {
+	out, err := os.Create(toSVGFilename(txtFilename))
 	if err != nil {
 		panic(err)
 	}
 	return out
 }
 
-func getOutString(filename string) (string, error) {
-	b, err := ioutil.ReadFile(toSVGFilename(filename))
+func getOutString(txtFilename string) (string, error) {
+	b, err := ioutil.ReadFile(toSVGFilename(txtFilename))
 	if err != nil {
 		return "", err
 	}
@@ -145,6 +157,6 @@ func getOutString(filename string) (string, error) {
 	return string(b), nil
 }
 
-func toSVGFilename(filename string) string {
-	return strings.TrimSuffix(filename, filepath.Ext(filename)) + ".svg"
+func toSVGFilename(txtFilename string) string {
+	return strings.TrimSuffix(txtFilename, filepath.Ext(txtFilename)) + ".svg"
 }
