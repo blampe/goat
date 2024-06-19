@@ -87,3 +87,5 @@ go run ./cmd/goat <examples/trees.txt \
 #  X `tac` is a slightly sleazy way to get the .txt/.svg pairs listed in the
 #     source/dest order as required by tmpl_expand.
 tmpl_expand <README.md.tmpl >README.md $(git-ls-files examples | tac)
+
+printf "\nTo install in local GOPATH:\n\t%s\n" "go install ./cmd/goat"
