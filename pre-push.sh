@@ -12,14 +12,14 @@ set -x
 usage () {
     set +x
     printf "%s\n\n" "$*"
-    printf "usage: %s [-w]\n" ${0##*/}
-    printf "\t%s\t%s\n" ""
-    printf "\t%s\t%s\n" "$*"
+    printf "usage: %s [-w]\n" "${0##*/}"
+    printf "\t%s\n" ""
+    printf "\t%s\n" "$*"
     exit 1
 }
 
 TEST_ARGS=
-while getopts hg:iw flag
+while getopts h:w flag
 do
     case $flag in
         h)  usage "";;
@@ -36,7 +36,7 @@ GITHUB_REPOSITORY_OWNER=$USER
 CURRENT_BRANCH_NAME=$(git-branch --show-current)
 # If the current branch name contains the GitHub username of the owner of the upstream repo,
 # assume the intention is to prepare and push a pull request.
-if [ $(expr $CURRENT_BRANCH_NAME : ".*$UPSTREAM_OWNER") != 0 ]
+if [ $(expr "$CURRENT_BRANCH_NAME" : ".*$UPSTREAM_OWNER") != 0 ]
 then
     GITHUB_REPOSITORY_OWNER=$UPSTREAM_OWNER
 fi
