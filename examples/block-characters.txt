@@ -1,0 +1,3 @@
+Special cases supported by Markdeep:
+
+▉ ▓ ▒ ░

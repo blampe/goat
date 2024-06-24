@@ -1,0 +1,69 @@
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='201' width='208' font-family='Menlo,Lucida Console,monospace'>
+<style type="text/css">
+svg {
+   color: #000000;
+}
+@media (prefers-color-scheme: dark) {
+   svg {
+      color-scheme: dark; /* ask the browser for a dark background */
+      color: #FFFFFF;
+   }
+}
+</style>
+<g transform='translate(8,16)'>
+<path d='M 0,24 L 16,24' fill='none' stroke='currentColor'></path>
+<path d='M 0,40 L 16,40' fill='none' stroke='currentColor'></path>
+<path d='M 0,120 L 16,120' fill='none' stroke='currentColor'></path>
+<path d='M 0,152 L 16,152' fill='none' stroke='currentColor'></path>
+<path d='M 0,24 L 0,40' fill='none' stroke='currentColor'></path>
+<path d='M 0,128 L 0,144' fill='none' stroke='currentColor'></path>
+<path d='M 16,24 L 16,40' fill='none' stroke='currentColor'></path>
+<path d='M 16,128 L 16,144' fill='none' stroke='currentColor'></path>
+<path d='M 0,24 L 0,32' fill='none' stroke='currentColor'></path>
+<path d='M 0,120 L 0,128' fill='none' stroke='currentColor'></path>
+<path d='M 0,144 L 0,152' fill='none' stroke='currentColor'></path>
+<path d='M 16,24 L 16,32' fill='none' stroke='currentColor'></path>
+<path d='M 16,120 L 16,128' fill='none' stroke='currentColor'></path>
+<path d='M 16,144 L 16,152' fill='none' stroke='currentColor'></path>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='0' y='68'>d</text>
+<text x='8' y='68'>o</text>
+<text x='16' y='68'>u</text>
+<text x='24' y='68'>b</text>
+<text x='32' y='68'>l</text>
+<text x='40' y='68'>e</text>
+<text x='48' y='68'>-</text>
+<text x='56' y='68'>d</text>
+<text x='64' y='68'>r</text>
+<text x='72' y='68'>a</text>
+<text x='80' y='68'>w</text>
+<text x='0' y='180'>g</text>
+<text x='8' y='180'>a</text>
+<text x='16' y='180'>p</text>
+<text x='32' y='180'>a</text>
+<text x='40' y='180'>t</text>
+<text x='56' y='180'>a</text>
+<text x='64' y='180'>b</text>
+<text x='72' y='180'>u</text>
+<text x='80' y='180'>t</text>
+<text x='88' y='180'>t</text>
+<text x='96' y='180'>i</text>
+<text x='104' y='180'>n</text>
+<text x='112' y='180'>g</text>
+<text x='128' y='180'>l</text>
+<text x='136' y='180'>i</text>
+<text x='144' y='180'>n</text>
+<text x='152' y='180'>e</text>
+<text x='168' y='180'>e</text>
+<text x='176' y='180'>n</text>
+<text x='184' y='180'>d</text>
+<text x='192' y='180'>s</text>
+</g>
+</svg>

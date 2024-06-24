@@ -1,0 +1,106 @@
+UNICODE characters        XXXX  Fold all this into examples/unicode.txt
+---
+
+joints:
+ .'+*o
+
+reserved:
+ -_ |v^><*+/\)(
+
+ordinary, ASCII:
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789012345
+
+ordinary, Unicode:
+
+┌─┬┐·¤¨´«»¯ ¦­
+×÷øØ ±¡
+┘┘┘┘┘┘┘┘┘┘┘       BOX DRAWINGS LIGHT ...
+│││││││││││
+║║║║║║║║║║║       BOX DRAWINGS LIGHT DOUBLE ...
+╚╚╚╚╚╚╚╚╚╚╚
+═══════════
+01234567890
+
+
+Non-standard dimensions in fonts:
+    Liberation Mono
+    Noto Mono Regular
+₀₁₂₃₄₅₆₇₈₉
+⁰¹²³⁴⁵⁶⁷⁸⁹
+αβγδεζηθικλμνξοπρςστυφχψω
+
+
+Non-standard dimensions in fonts:
+    DejaVu Sans Mono
+    FreeMono
+    Ubuntu Mono
+    MonoSpace
+⎔
+⬣
+✹
+╱
+╲╲╲╲╲╲╲╲╲
+╳╳╳╳╳╳╳╳╳
+0123456789012345
+
+Non-standard weight -- unusable?
+╴╴╴╴╴╴╴╴╴╴
+╶╶╶╶╶╶╶╶╶╶
+╵╵╵╵╵╵╵╵╵╵
+╱╱╱╱╱╱╱╱╱╱
+01234567890
+
+
+ALTERNATIVE TOOLS
+---
+### Non-graphical ASCII source: Mermaid, Pikchr ...
+
+### Graphical ASCII source: Asciiflow and Textik
+Unlike Goat, Asciiflow and Textik offer online graphical editors.
+Diagrams are exported from the browser session as graphical UNICODE or ASCII.
+
+Follow-on maintenance of the diagrams of course requires import from a project's code/doc archive.
+Asciiflow accomplishes this by Ctl-V "paste".
+Textik however has no import method. (https://github.com/astashov/tixi/issues/15)
+
+Goat but not Asciiflow nor Textik contain support for:
+  1. Rendering to a smoothed SVG output.
+  2. Diagonal lines.
+  3. Rounded corners.
+
+Asciiflow.com (but not Goat) exports drawn lines as the graphical Unicode
+characters BOX DRAWINGS LIGHT ...
+
+These have widths equal to those of simple ASCII characters in the standard Unix system fonts.
+  - https://www.freedesktop.org/wiki/Software/fontconfig/
+  - $ apt show fontconfig
+
+Unfortunately, Asciiflow exports certain arrowheads as Unicode characters e.g. "BLACK UP-POINTING
+ TRIANGLE" having non-standard width in the popular GNU/Linux system font "Ubuntu Mono Regular".
+
+                      ┌───────────────────────►
+                      │
+                      │
+                ┌─────┼──────────────┐                       ▲
+                │     │              │                       │
+                └─────┼──────────────┘                       │
+                      │                                      │
+                      │                                      │
+┌──────────────────┐                                         │
+│                  │                                         │
+│    sdokpoasjkfpo ├─────────────────────────────────────────┘
+└──────────────────┘
+
+▲▲▲▲▲▲▲
+01234567890
+
+"BOX DRAWINGS LIGHT DOUBLE ..." also have standard widths (not used by Asciiflow).
+
+║║║║║║║║║║║
+╚╚╚╚╚╚╚╚╚╚╚
+═══════════
+
+Textik.com has more limited drawing characters, but does maintain multi-cell
+geometry structure within its editor.
