@@ -372,19 +372,20 @@ func (c *Canvas) getLinesForSegment(segment rune) []Line {
 		return nil
 	}
 
-	return c.getLines(iter, segment, passThroughs, orientation)
+	return c.getLines(segment, iter, orientation, passThroughs)
 }
 
-// ci: the order that we traverse locations on the canvas.
-// segment: the primary character we're tracking for this line.
-// passThroughs: characters the line segment is allowed to be drawn underneath
-// (without terminating the line).
+// segment: the primary character expected along a continuing Line
+// ci: the order that the loop below traverse locations on the canvas.
 // orientation: the orientation for this line.
+// passThroughs: characters that will produce a mark that the line segment
+//     is allowed to be drawn either through or, in the case of 'o', "underneath" --
+//     without terminating the line.
 func (c *Canvas) getLines(
-	ci canvasIterator,
 	segment rune,
-	passThroughs []rune,
+	ci canvasIterator,
 	o Orientation,
+	passThroughs []rune,
 ) (lines []Line) {
 	// Helper to throw the current line we're tracking on to the slice and
 	// start a new one.
@@ -401,6 +402,7 @@ func (c *Canvas) getLines(
 	currentLine := Line{orientation: o}
 	lastSeenRune := ' '
 
+	// X  Purpose of the '+1' overscan is to reset lastSeenRune to ' ' upon wrapping the minor axis.
 	for idx := range ci(c.Width+1, c.Height+1) {
 		r := c.runeAt(idx)
 
