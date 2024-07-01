@@ -12,8 +12,8 @@ type (
 
 // Characters where more than one line segment can come together.
 var jointRunes = []rune{
-	'.',
-	'\'',
+	'.',     // possible ...    top corner of a 90 degree angle, or curve
+	'\'',    // possible ... bottom corner of a 90 degree angle, or curve
 	'+',
 	'*',
 	'o',
@@ -84,7 +84,7 @@ func isJoint(r rune) bool {
 	return contains(jointRunes, r)
 }
 
-// XX  rename 'isCircle()'?
+// XX  rename 'isSpot()'?
 func isDot(r rune) bool {
 	return r == 'o' || r == '*'
 }
