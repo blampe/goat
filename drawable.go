@@ -441,6 +441,10 @@ func (c *Canvas) getLines(
 			currentLine = snip(currentLine)
 		}
 
+		if o == S && (r == '.' || lastSeenRune == '\'') {
+			currentLine = snip(currentLine)
+		}
+
 		switch currentLine.state {
 		case _Unstarted:
 			if shouldKeep {
