@@ -2,7 +2,9 @@ package goat
 
 import (
 	"bufio"
+	"log"
 	"io"
+	"os"
 )
 
 type (
@@ -156,14 +158,19 @@ func NewCanvas(in io.Reader) (c Canvas) {
 		//               https://go.dev/ref/spec#For_statements
 		//    But yet, counterintuitively, type of lineStr[_index_] is 'byte'.
 		//               https://go.dev/ref/spec#String_types
-		// XXXX  Refactor to use []rune from above.
 		for _, r := range lineStr {
 			//if r > 255 {
 			//	fmt.Printf("linestr=\"%s\"\n", lineStr)
 			//	fmt.Printf("r == 0x%x\n", r)
 			//}
 			if r == '	' {
-				panic("TAB character found on input")
+				file, isFile := in.(*os.File)
+				fileName := "unknown"
+				if isFile {
+					fileName = file.Name()
+				}
+				log.Panicf("\n\tFound TAB in %s, row %d, column %d\n",
+					fileName, height+1, w)
 			}
 			i := Index{w, height}
 			c.data[i] = r
