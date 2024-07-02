@@ -105,7 +105,7 @@ svg {
 <path d='M 152,816 L 152,848' fill='none' stroke='currentColor'></path>
 <path d='M 160,896 L 160,912' fill='none' stroke='currentColor'></path>
 <path d='M 160,912 L 160,928' fill='none' stroke='currentColor'></path>
-<path d='M 200,816 L 200,848' fill='none' stroke='currentColor'></path>
+<path d='M 200,816 L 200,832' fill='none' stroke='currentColor'></path>
 <path d='M 4,792 L 20,760' fill='none' stroke='currentColor'></path>
 <path d='M 44,792 L 60,760' fill='none' stroke='currentColor'></path>
 <path d='M 16,1504 L 24,1488' fill='none' stroke='currentColor'></path>
