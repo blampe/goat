@@ -17,7 +17,7 @@
 
 	  => CONCLUSION: Don't use badges. Instead, pay attention to Action result status.
   -->
-<!-- ![](https://github.com/blampe/goat/actions/workflows/test.yml/badge.svg) -->
+<!-- ![](https://github.com/dmullis/goat/actions/workflows/test.yml/badge.svg) -->
 
 ## What **GoAT** Can Do For You
 
@@ -58,7 +58,7 @@ with rows above and below.
 
 ## Installation
 ```
-    $ go install github.com/blampe/goat/cmd/goat@latest
+    $ go install github.com/dmullis/goat/cmd/goat@latest
 ```
 <!-- https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections#creating-a-collapsed-section -->
 
@@ -176,14 +176,39 @@ Note that '·' above is not ASCII, but rather Unicode, the MIDDLE DOT character,
 
 ### Small Grids
 ```
-       ___     ___      .---+---+---+---+---.     .---+---+---+---.  .---.   .---.   .---. .---.    .-.   .-.  0
-   ___/   \___/   \     |   |   |   |   |   |    / \ / \ / \ / \ /   |   +---+   |   | A | | B |   | A | | B | 1
-  /   \___/   \___/     +---+---+---+---+---+   +---+---+---+---+    +---+   +---+   '---' '---'    '-'   '-'  2
-  \___/ b \___/   \     |   |   | b |   |   |    \ / \a/ \b/ \ / \   |   +---+   |   .---. .---.    .-.   .-.  3
-  / a \___/   \___/     +---+---+---+---+---+     +---+---+---+---+  +---+ b +---+   | C | | D |   | C | | D | 4
-  \___/   \___/   \     |   | a |   |   |   |    / \ / \ / \ / \ /   | a +---+   |   '---' '---'    '-'   '-'  5
-      \___/   \___/     '---+---+---+---+---'   '---+---+---+---'    '---'   '---'   0123456789012345678901234 6
+     ___     ___      .---+---+---+---+---.     .---+---+---+---.
+ ___/   \___/   \     |   |   |   |   |   |    / \ / \ / \ / \ /
+/   \___/   \___/     +---+---+---+---+---+   +---+---+---+---+
+\___/ b \___/   \     |   |   | b |   |   |    \ / \a/ \b/ \ / \
+/ a \___/   \___/     +---+---+---+---+---+     +---+---+---+---+
+\___/   \___/   \     |   | a |   |   |   |    / \ / \ / \ / \ /
+    \___/   \___/     '---+---+---+---+---'   '---+---+---+---'
 
+.---.   .---.   +--+  +-+  +-+ .-.  .--.    .-.      +-+  +--+  .-.  .--.
+|   |   |   |   |  |  | |  | | | |  |  |   |   |     | |  |  |  | |  |  |
++---+   +---+   +--+  +-+  | | | |  |  |   |   |     +-+  +--+  '-'  '--'
+|   +---+   |   |  |  | |  | | | |  |  |   |   |
++---+ b +---+   +--+  +-+  | | | |  |  |   |   |
+| a +---+   |   |  |  | |  | | | |  |  |   |   |
+'---'   '---'   +--+  +-+  +-+ '-'  '--'    '-'
+
++---+ .---. .---.
+| B | | E | | F |
++---+ '---' '---'
+.---. +---+ .---.
+| D | | G | | H |
+'---' +---+ '---'
+0123456789012345678901232
+
+Not Supported:
+                              .---+---+---.
++---+    .-.   .-.  0     |   | a |   | b |
+| A |   | A | | B | 1    +++  +--++-+-++--+
++---+    '-'   '-'  2    | |  |  |  |  |  |
++---+    .-.   .-.  3    +-+  +--++-+-++--+
+| C |   | C | | D | 4    | |  |   |   |   |
++---+    '-'   '-'  5    +++  '---+---+---'
+0123434567890123456       |
 
 ```
 ![](//examples/small-grids.svg)
@@ -244,12 +269,12 @@ The core engine of ```goat``` is accessible as a Go library package, for inclusi
 code of your own.
 The code implements a subset, and some extensions, of the ASCII diagram generation function of the browser-side Javascript in [Markdeep](http://casual-effects.com/markdeep/).
 
-A nicely formatted reference may be found at [pkg.go.dev](https://pkg.go.dev/github.com/blampe/goat).
+A nicely formatted reference may be found at [pkg.go.dev](https://pkg.go.dev/github.com/dmullis/goat).
 
 ### Installation
 
 ```
-    $ go get -u github.com/blampe/goat/
+    $ go get -u github.com/dmullis/goat/
 ```
 ### Library Data Flow
 ![](//goat.svg)
@@ -261,13 +286,13 @@ source file [./goat.go](./goat.go).
 
 <!--
  XX XX  May need a Github Action to do this substitution at "push" time.
-[![resource non-responsive](https://pkg.go.dev/badge/github.com/blampe/goat)](https://pkg.go.dev/github.com/blampe/goat)
+[![resource non-responsive](https://pkg.go.dev/badge/github.com/dmullis/goat)](https://pkg.go.dev/github.com/dmullis/goat)
 -->
 
 <!--
  The scraping of GitHub by godocs.io (see https://sr.ht) does NOT include README.md;
  whereas Google's pkg.go.dev does do so, and apparently runs its own variant of GFM processing :-/ 
-[![resource non-responsive](https://godocs.io/github.com/blampe/goat?status.svg)](https://godocs.io/github.com/blampe/goat)
+[![resource non-responsive](https://godocs.io/github.com/dmullis/goat?status.svg)](https://godocs.io/github.com/dmullis/goat)
 -->
 
 ### Project Tenets
