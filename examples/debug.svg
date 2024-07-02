@@ -1,0 +1,73 @@
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='553' width='64' font-family='Menlo,Lucida Console,monospace'>
+<style type="text/css">
+svg {
+   color: #000000;
+}
+@media (prefers-color-scheme: dark) {
+   svg {
+      color-scheme: dark; /* ask the browser for a dark background */
+      color: #FFFFFF;
+   }
+}
+</style>
+<g transform='translate(8,16)'>
+<path d='M 8,288 L 24,288' fill='none' stroke='currentColor'></path>
+<path d='M 32,288 L 48,288' fill='none' stroke='currentColor'></path>
+<path d='M 8,352 L 24,352' fill='none' stroke='currentColor'></path>
+<path d='M 32,352 L 48,352' fill='none' stroke='currentColor'></path>
+<path d='M 0,416 L 16,416' fill='none' stroke='currentColor'></path>
+<path d='M 16,416 L 32,416' fill='none' stroke='currentColor'></path>
+<path d='M 32,416 L 48,416' fill='none' stroke='currentColor'></path>
+<path d='M 0,480 L 16,480' fill='none' stroke='currentColor'></path>
+<path d='M 16,480 L 32,480' fill='none' stroke='currentColor'></path>
+<path d='M 32,480 L 48,480' fill='none' stroke='currentColor'></path>
+<path d='M 6,528 L 8,528' fill='none' stroke='currentColor'></path>
+<path d='M 16,392 L 16,408' fill='none' stroke='currentColor'></path>
+<path d='M 16,424 L 16,440' fill='none' stroke='currentColor'></path>
+<path d='M 16,456 L 16,472' fill='none' stroke='currentColor'></path>
+<path d='M 16,488 L 16,504' fill='none' stroke='currentColor'></path>
+<path d='M 24,264 L 24,280' fill='none' stroke='currentColor'></path>
+<path d='M 24,296 L 24,312' fill='none' stroke='currentColor'></path>
+<path d='M 24,328 L 24,344' fill='none' stroke='currentColor'></path>
+<path d='M 24,360 L 24,376' fill='none' stroke='currentColor'></path>
+<path d='M 32,264 L 32,280' fill='none' stroke='currentColor'></path>
+<path d='M 32,296 L 32,312' fill='none' stroke='currentColor'></path>
+<path d='M 32,328 L 32,344' fill='none' stroke='currentColor'></path>
+<path d='M 32,360 L 32,376' fill='none' stroke='currentColor'></path>
+<path d='M 32,392 L 32,408' fill='none' stroke='currentColor'></path>
+<path d='M 32,424 L 32,440' fill='none' stroke='currentColor'></path>
+<path d='M 32,456 L 32,472' fill='none' stroke='currentColor'></path>
+<path d='M 32,488 L 32,504' fill='none' stroke='currentColor'></path>
+<circle cx='0' cy='528' r='6' stroke='currentColor' fill='none'></circle>
+<path d='M 16,400 L 16,408' fill='none' stroke='currentColor'></path>
+<path d='M 16,424 L 16,432' fill='none' stroke='currentColor'></path>
+<path d='M 16,408 A 9,9 0 0,1 16,424' fill='none' stroke='currentColor'></path>
+<path d='M 32,400 L 32,408' fill='none' stroke='currentColor'></path>
+<path d='M 32,424 L 32,432' fill='none' stroke='currentColor'></path>
+<path d='M 32,408 A 9,9 0 0,1 32,424' fill='none' stroke='currentColor'></path>
+<path d='M 16,464 L 16,472' fill='none' stroke='currentColor'></path>
+<path d='M 16,488 L 16,496' fill='none' stroke='currentColor'></path>
+<path d='M 16,472 A 9,9 0 0,0 16,488' fill='none' stroke='currentColor'></path>
+<path d='M 32,464 L 32,472' fill='none' stroke='currentColor'></path>
+<path d='M 32,488 L 32,496' fill='none' stroke='currentColor'></path>
+<path d='M 32,472 A 9,9 0 0,0 32,488' fill='none' stroke='currentColor'></path>
+<style>
+  text {
+       text-anchor: middle;
+       font-family: "Menlo","Lucida Console","monospace";
+       fill: currentColor;
+       font-size: 1em;
+  }
+</style>
+<text x='8' y='148'>a</text>
+<text x='16' y='148'>(</text>
+<text x='24' y='148'>)</text>
+<text x='8' y='180'>a</text>
+<text x='16' y='180'>(</text>
+<text x='24' y='180'>)</text>
+<text x='8' y='212'>(</text>
+<text x='16' y='212'>)</text>
+<text x='8' y='244'>(</text>
+<text x='16' y='244'>)</text>
+</g>
+</svg>

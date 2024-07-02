@@ -1,0 +1,31 @@
+Input TXT patterns supported by MarkDeep, but not by Goat.
+
+
+Hollow circles
+
+  o
+
+  Rendered to SVG as a "hollow" circle, transparent to background.
+  Goat-specific alternative rendering options are available on the command line.
+
+
+Alternative TXT patterns to indicate double-width circles:
+   
+     .-.
+    |   |     Goat and MarkDeep
+     '-'
+
+     +-+
+    +   +     MarkDeep only 
+     +-+     
+  
+     +-+  
+    |   |     MarkDeep only 
+     +-+ 
+
+
+Parallel arcs         
+
+    _..---.     
+    __))   )-        MarkDeep only
+     ''---'

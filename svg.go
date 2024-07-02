@@ -21,6 +21,7 @@ svg {
 }
 @media (prefers-color-scheme: dark) {
    svg {
+      color-scheme: dark; /* ask the browser for a dark background */
       color: %s;
    }
 }
@@ -102,10 +103,13 @@ func (l Line) draw(out io.Writer) {
 
 		// Half steps
 		switch l.chop {
+		case NONE:
 		case N:
 			stop.Y -= 8
 		case S:
 			start.Y += 8
+		default:
+			panic("impossible 'chop' orientation")
 		}
 	}
 

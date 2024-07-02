@@ -2,7 +2,9 @@
 .DS_Store
 
 vendor
-examples/*.svg
+
+# Hiding the SVG output files introduces friction when adding a new TXT,SVG pair to the test suite.
+#    examples/*.svg
 
 cmd/tmpl-expand/tmpl-expand
 cmd/goat/goat
