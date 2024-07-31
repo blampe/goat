@@ -42,8 +42,7 @@ then
 fi
 
 tmpl_expand () {
-    # XX  Root="/" resolves to root of the repo -- consider dropping the variable.
-    go run ./cmd/tmpl-expand Root="/" Github_Repository_Owner=${GITHUB_REPOSITORY_OWNER} "$@"
+    go run ./cmd/tmpl-expand Github_Repository_Owner=${GITHUB_REPOSITORY_OWNER} "$@"
 }
 
 #tmpl_expand <go.tmpl.mod >go.mod
