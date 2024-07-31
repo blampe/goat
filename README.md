@@ -17,7 +17,7 @@
 
 	  => CONCLUSION: Don't use badges. Instead, pay attention to Action result status.
   -->
-<!-- ![](https://github.com/dmullis/goat/actions/workflows/test.yml/badge.svg) -->
+<!-- ![](https://github.com/blampe/goat/actions/workflows/test.yml/badge.svg) -->
 
 ## What **GoAT** Can Do For You
 
@@ -58,7 +58,7 @@ with rows above and below.
 
 ## Installation
 ```
-    $ go install github.com/dmullis/goat/cmd/goat@latest
+    $ go install github.com/blampe/goat/cmd/goat@latest
 ```
 <!-- https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections#creating-a-collapsed-section -->
 
@@ -269,30 +269,30 @@ The core engine of ```goat``` is accessible as a Go library package, for inclusi
 code of your own.
 The code implements a subset, and some extensions, of the ASCII diagram generation function of the browser-side Javascript in [Markdeep](http://casual-effects.com/markdeep/).
 
-A nicely formatted reference may be found at [pkg.go.dev](https://pkg.go.dev/github.com/dmullis/goat).
+A nicely formatted reference may be found at [pkg.go.dev](https://pkg.go.dev/github.com/blampe/goat).
 
 ### Installation
 
 ```
-    $ go get -u github.com/dmullis/goat/
+    $ go get -u github.com/blampe/goat/
 ```
 ### Library Data Flow
 ![](//goat.svg)
 
-The diagram above was derived by [./make.sh](./make.sh) from ASCII-art in the Go
+The diagram above was derived by [./pre-push.sh](./pre-push.sh) from ASCII-art in the Go
 source file [./goat.go](./goat.go).
 
 #### Auto-formatted API docs
 
 <!--
  XX XX  May need a Github Action to do this substitution at "push" time.
-[![resource non-responsive](https://pkg.go.dev/badge/github.com/dmullis/goat)](https://pkg.go.dev/github.com/dmullis/goat)
+[![resource non-responsive](https://pkg.go.dev/badge/github.com/blampe/goat)](https://pkg.go.dev/github.com/blampe/goat)
 -->
 
 <!--
  The scraping of GitHub by godocs.io (see https://sr.ht) does NOT include README.md;
  whereas Google's pkg.go.dev does do so, and apparently runs its own variant of GFM processing :-/ 
-[![resource non-responsive](https://godocs.io/github.com/dmullis/goat?status.svg)](https://godocs.io/github.com/dmullis/goat)
+[![resource non-responsive](https://godocs.io/github.com/blampe/goat?status.svg)](https://godocs.io/github.com/blampe/goat)
 -->
 
 ### Project Tenets
