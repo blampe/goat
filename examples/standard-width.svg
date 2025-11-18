@@ -1,4 +1,4 @@
-<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='1705' width='792' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="792" height="1705" viewBox="0 0 792 1705" font-family="Menlo,Lucida Console,monospace">
 <style type="text/css">
 svg {
    color: #000000;
@@ -1984,4 +1984,5 @@ svg {
 <text x='280' y='1684'>r</text>
 <text x='288' y='1684'>.</text>
 </g>
+
 </svg>
