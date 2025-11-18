@@ -38,6 +38,9 @@ func main() {
  See https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 `)
 	flag.Parse()
+	if flag.NArg() > 0 {
+		log.Fatalf("Superfluous arguments found on command line: %v", flag.Args())
+	}
 
 	input := os.Stdin
 	if inputFilename != "" {
