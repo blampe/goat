@@ -30,11 +30,15 @@ svg {
 		svgColorDarkScheme)
 
 	return fmt.Sprintf(
-		"<svg xmlns='%s' version='%s' height='%d' width='%d' font-family='Menlo,Lucida Console,monospace'>\n" +
-			"%s\n" +
-			"%s</svg>\n",
-		"http://www.w3.org/2000/svg",
-		"1.1", s.Height, s.Width, style, s.Body)
+`<svg xmlns="%s" version="%s" width="%d" height="%d" viewBox="0 0 %d %d" font-family="Menlo,Lucida Console,monospace">
+%s
+%s
+</svg>
+`,
+
+		"http://www.w3.org/2000/svg", "1.1", s.Width, s.Height, s.Width, s.Height,
+		style,
+		s.Body)
 }
 
 func writeBytes(out io.Writer, format string, args ...interface{}) {
