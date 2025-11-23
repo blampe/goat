@@ -1,4 +1,4 @@
-<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='281' width='600' font-family='Menlo,Lucida Console,monospace'>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="281" viewBox="0 0 600 281" font-family="Menlo,Lucida Console,monospace">
 <style type="text/css">
 svg {
    color: #011;
@@ -237,4 +237,5 @@ svg {
 <text x='352' y='228'>n</text>
 <text x='360' y='228'>e</text>
 </g>
+
 </svg>
