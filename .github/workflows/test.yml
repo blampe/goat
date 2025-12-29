@@ -26,5 +26,5 @@ jobs:
       - name: Test Library API For Regressions and Remote Build
         run: |
              cd ./ascii; go test -race -v .
-             cd ./utf8;  go test -race -v .
-             cd ./svg;  go test -race -v .
+             cd ../utf8;  go test -race -v .
+             cd ../svg;  go test -race -v .
