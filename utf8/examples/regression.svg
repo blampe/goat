@@ -1,0 +1,1533 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="912" height="2154"
+    viewBox="0 0 912 2154">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    polyline, path {
+        fill: none;
+    }
+
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        fill: currentColor; stroke: currentColor;
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        color: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            color: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines-vertical'>
+    <polyline class="path" points="0,792 0,808"/>
+    <polyline class="path" points="0,1080 0,1096"/>
+    <polyline class="path" points="0,1120 0,1128"/>
+    <polyline class="path" points="0,1144 0,1152"/>
+    <polyline class="path" points="0,1176 0,1192"/>
+    <polyline class="path" points="0,1208 0,1224"/>
+    <polyline class="path" points="8,52 8,76"/>
+    <polyline class="path" points="8,792 8,808"/>
+    <polyline class="path" points="8,864 8,880"/>
+    <polyline class="path" points="8,932 8,936"/>
+    <polyline class="path" points="8,952 8,968"/>
+    <polyline class="path" points="8,984 8,988"/>
+    <polyline class="path" points="8,1080 8,1096"/>
+    <polyline class="path" points="8,1120 8,1128"/>
+    <polyline class="path" points="8,1144 8,1152"/>
+    <polyline class="path" points="8,1176 8,1192"/>
+    <polyline class="path" points="8,1208 8,1224"/>
+    <polyline class="path" points="8,1320 8,1336"/>
+    <polyline class="path" points="8,1376 8,1536"/>
+    <polyline class="path" points="16,792 16,808"/>
+    <polyline class="path" points="16,864 16,880"/>
+    <polyline class="path" points="16,1080 16,1096"/>
+    <polyline class="path" points="16,1120 16,1128"/>
+    <polyline class="path" points="16,1144 16,1152"/>
+    <polyline class="path" points="16,1176 16,1192"/>
+    <polyline class="path" points="16,1208 16,1224"/>
+    <polyline class="path" points="24,568 24,584"/>
+    <polyline class="path" points="24,792 24,808"/>
+    <polyline class="path" points="24,1080 24,1096"/>
+    <polyline class="path" points="24,1120 24,1128"/>
+    <polyline class="path" points="24,1144 24,1152"/>
+    <polyline class="path" points="24,1176 24,1192"/>
+    <polyline class="path" points="24,1208 24,1224"/>
+    <polyline class="path" points="32,792 32,808"/>
+    <polyline class="path" points="32,1080 32,1096"/>
+    <polyline class="path" points="32,1120 32,1128"/>
+    <polyline class="path" points="32,1144 32,1152"/>
+    <polyline class="path" points="32,1176 32,1192"/>
+    <polyline class="path" points="32,1208 32,1224"/>
+    <polyline class="path" points="40,792 40,808"/>
+    <polyline class="path" points="40,932 40,936"/>
+    <polyline class="path" points="40,952 40,968"/>
+    <polyline class="path" points="40,984 40,988"/>
+    <polyline class="path" points="40,1080 40,1096"/>
+    <polyline class="path" points="40,1120 40,1128"/>
+    <polyline class="path" points="40,1144 40,1152"/>
+    <polyline class="path" points="40,1176 40,1192"/>
+    <polyline class="path" points="40,1208 40,1224"/>
+    <polyline class="path" points="40,1320 40,1336"/>
+    <polyline class="path" points="40,1504 40,1536"/>
+    <polyline class="path" points="48,792 48,808"/>
+    <polyline class="path" points="48,864 48,880"/>
+    <polyline class="path" points="48,1080 48,1096"/>
+    <polyline class="path" points="48,1120 48,1128"/>
+    <polyline class="path" points="48,1144 48,1152"/>
+    <polyline class="path" points="48,1176 48,1192"/>
+    <polyline class="path" points="48,1208 48,1224"/>
+    <polyline class="path" points="56,616 56,664"/>
+    <polyline class="path" points="56,792 56,808"/>
+    <polyline class="path" points="56,864 56,880"/>
+    <polyline class="path" points="56,1080 56,1096"/>
+    <polyline class="path" points="56,1120 56,1128"/>
+    <polyline class="path" points="56,1144 56,1152"/>
+    <polyline class="path" points="56,1176 56,1192"/>
+    <polyline class="path" points="56,1208 56,1224"/>
+    <polyline class="path" points="56,1376 56,1416"/>
+    <polyline class="path" points="56,1520 56,1536"/>
+    <polyline class="path" points="64,792 64,808"/>
+    <polyline class="path" points="64,864 64,880"/>
+    <polyline class="path" points="64,1080 64,1096"/>
+    <polyline class="path" points="64,1120 64,1128"/>
+    <polyline class="path" points="64,1144 64,1152"/>
+    <polyline class="path" points="64,1176 64,1192"/>
+    <polyline class="path" points="64,1208 64,1224"/>
+    <polyline class="path" points="64,1328 64,1336"/>
+    <polyline class="path" points="72,568 72,584"/>
+    <polyline class="path" points="72,792 72,808"/>
+    <polyline class="path" points="72,864 72,880"/>
+    <polyline class="path" points="72,932 72,936"/>
+    <polyline class="path" points="72,984 72,988"/>
+    <polyline class="path" points="72,1080 72,1096"/>
+    <polyline class="path" points="72,1120 72,1128"/>
+    <polyline class="path" points="72,1144 72,1152"/>
+    <polyline class="path" points="72,1176 72,1192"/>
+    <polyline class="path" points="72,1208 72,1224"/>
+    <polyline class="path" points="80,864 80,880"/>
+    <polyline class="path" points="80,932 80,936"/>
+    <polyline class="path" points="80,984 80,988"/>
+    <polyline class="path" points="88,864 88,880"/>
+    <polyline class="path" points="88,932 88,936"/>
+    <polyline class="path" points="88,984 88,988"/>
+    <polyline class="path" points="88,1320 88,1328"/>
+    <polyline class="path" points="96,864 96,880"/>
+    <polyline class="path" points="96,932 96,936"/>
+    <polyline class="path" points="96,984 96,988"/>
+    <polyline class="path" points="104,864 104,880"/>
+    <polyline class="path" points="104,932 104,936"/>
+    <polyline class="path" points="104,984 104,988"/>
+    <polyline class="path" points="112,932 112,936"/>
+    <polyline class="path" points="112,984 112,988"/>
+    <polyline class="path" points="120,932 120,936"/>
+    <polyline class="path" points="120,984 120,988"/>
+    <polyline class="path" points="128,932 128,936"/>
+    <polyline class="path" points="128,984 128,988"/>
+    <polyline class="path" points="136,1376 136,1504"/>
+    <polyline class="path" points="200,1376 200,1536"/>
+    <polyline class="path" points="208,1608 208,1640"/>
+    <polyline class="path" points="208,1640 208,1656"/>
+    <polyline class="path" points="208,1656 208,1688"/>
+    <polyline class="path" points="208,1748 208,1768"/>
+    <polyline class="path" points="208,1768 208,1784"/>
+    <polyline class="path" points="208,1784 208,1804"/>
+    <polyline class="path" points="208,1876 208,1896"/>
+    <polyline class="path" points="208,1896 208,1912"/>
+    <polyline class="path" points="208,1912 208,1932"/>
+    <polyline class="path" points="216,1464 216,1496"/>
+    <polyline class="path" points="216,1496 216,1528"/>
+    <polyline class="path" points="224,1464 224,1496"/>
+    <polyline class="path" points="224,1496 224,1528"/>
+    <polyline class="path" points="256,1456 256,1488"/>
+    <polyline class="path" points="288,1440 288,1488"/>
+    <polyline class="path" points="328,1624 328,1672"/>
+    <polyline class="path" points="328,1764 328,1788"/>
+    <polyline class="path" points="344,1440 344,1448"/>
+    <polyline class="path" points="344,1464 344,1472"/>
+    <polyline class="path" points="344,1508 344,1512"/>
+    <polyline class="path" points="344,1528 344,1532"/>
+    <polyline class="path" points="352,1432 352,1480"/>
+    <polyline class="path" points="352,1496 352,1544"/>
+    <polyline class="path" points="352,1892 352,1916"/>
+    <polyline class="path" points="360,1440 360,1448"/>
+    <polyline class="path" points="360,1464 360,1472"/>
+    <polyline class="path" points="360,1508 360,1512"/>
+    <polyline class="path" points="360,1528 360,1532"/>
+    <polyline class="path" points="424,1624 424,1672"/>
+    <polyline class="path" points="432,1408 432,1432"/>
+    <polyline class="path" points="432,1448 432,1464"/>
+    <polyline class="path" points="432,1464 432,1472"/>
+    <polyline class="path" points="432,1508 432,1528"/>
+    <polyline class="path" points="432,1544 432,1560"/>
+    <polyline class="path" points="432,1560 432,1564"/>
+    <polyline class="path" points="448,1400 448,1432"/>
+    <polyline class="path" points="448,1432 448,1448"/>
+    <polyline class="path" points="448,1448 448,1480"/>
+    <polyline class="path" points="448,1496 448,1528"/>
+    <polyline class="path" points="448,1528 448,1544"/>
+    <polyline class="path" points="448,1544 448,1576"/>
+    <polyline class="path" points="464,1408 464,1432"/>
+    <polyline class="path" points="464,1448 464,1464"/>
+    <polyline class="path" points="464,1464 464,1472"/>
+    <polyline class="path" points="464,1508 464,1528"/>
+    <polyline class="path" points="464,1544 464,1560"/>
+    <polyline class="path" points="464,1560 464,1564"/>
+    <polyline class="path" points="496,1892 496,1916"/>
+    <polyline class="path" points="504,1648 504,1672"/>
+    <polyline class="path" points="536,1508 536,1512"/>
+    <polyline class="path" points="536,1560 536,1564"/>
+    <polyline class="path" points="552,1496 552,1528"/>
+    <polyline class="path" points="552,1528 552,1544"/>
+    <polyline class="path" points="552,1544 552,1576"/>
+    <polyline class="path" points="568,1508 568,1512"/>
+    <polyline class="path" points="568,1560 568,1564"/>
+    <polyline class="path" points="584,1624 584,1672"/>
+    <polyline class="path" points="672,1624 672,1656"/>
+    <polyline class="path" points="760,1640 760,1648"/>
+    <polyline class="path" points="864,1648 864,1672"/>
+  </g>
+  <g id='lines-horizontal'>
+    <polyline class="path" points="12,16 20,16"/>
+    <polyline class="path" points="34,576 44,576"/>
+    <polyline class="path" points="44,576 52,576"/>
+    <polyline class="path" points="52,576 62,576"/>
+    <polyline class="path" points="44,608 52,608"/>
+    <polyline class="path" points="52,608 60,608"/>
+    <polyline class="path" points="60,608 68,608"/>
+    <polyline class="path" points="44,672 52,672"/>
+    <polyline class="path" points="52,672 60,672"/>
+    <polyline class="path" points="60,672 68,672"/>
+    <polyline class="path" points="-4,816 4,816"/>
+    <polyline class="path" points="4,816 12,816"/>
+    <polyline class="path" points="12,816 20,816"/>
+    <polyline class="path" points="20,816 28,816"/>
+    <polyline class="path" points="28,816 36,816"/>
+    <polyline class="path" points="36,816 44,816"/>
+    <polyline class="path" points="44,816 52,816"/>
+    <polyline class="path" points="52,816 60,816"/>
+    <polyline class="path" points="60,816 68,816"/>
+    <polyline class="path" points="68,816 76,816"/>
+    <polyline class="path" points="8,864 16,864"/>
+    <polyline class="path" points="48,864 56,864"/>
+    <polyline class="path" points="64,864 72,864"/>
+    <polyline class="path" points="80,864 88,864"/>
+    <polyline class="path" points="96,864 104,864"/>
+    <polyline class="path" points="8,880 16,880"/>
+    <polyline class="path" points="48,880 56,880"/>
+    <polyline class="path" points="64,880 72,880"/>
+    <polyline class="path" points="80,880 88,880"/>
+    <polyline class="path" points="96,880 104,880"/>
+    <polyline class="path" points="20,928 28,928"/>
+    <polyline class="path" points="20,992 28,992"/>
+    <polyline class="path" points="-4,1088 4,1088"/>
+    <polyline class="path" points="4,1088 12,1088"/>
+    <polyline class="path" points="12,1088 20,1088"/>
+    <polyline class="path" points="20,1088 28,1088"/>
+    <polyline class="path" points="28,1088 36,1088"/>
+    <polyline class="path" points="36,1088 44,1088"/>
+    <polyline class="path" points="44,1088 52,1088"/>
+    <polyline class="path" points="52,1088 60,1088"/>
+    <polyline class="path" points="60,1088 68,1088"/>
+    <polyline class="path" points="68,1088 76,1088"/>
+    <polyline class="path" points="-4,1120 4,1120"/>
+    <polyline class="path" points="4,1120 12,1120"/>
+    <polyline class="path" points="12,1120 20,1120"/>
+    <polyline class="path" points="20,1120 28,1120"/>
+    <polyline class="path" points="28,1120 36,1120"/>
+    <polyline class="path" points="36,1120 44,1120"/>
+    <polyline class="path" points="44,1120 52,1120"/>
+    <polyline class="path" points="52,1120 60,1120"/>
+    <polyline class="path" points="60,1120 68,1120"/>
+    <polyline class="path" points="68,1120 76,1120"/>
+    <polyline class="path" points="-4,1152 4,1152"/>
+    <polyline class="path" points="4,1152 12,1152"/>
+    <polyline class="path" points="12,1152 20,1152"/>
+    <polyline class="path" points="20,1152 28,1152"/>
+    <polyline class="path" points="28,1152 36,1152"/>
+    <polyline class="path" points="36,1152 44,1152"/>
+    <polyline class="path" points="44,1152 52,1152"/>
+    <polyline class="path" points="52,1152 60,1152"/>
+    <polyline class="path" points="60,1152 68,1152"/>
+    <polyline class="path" points="68,1152 76,1152"/>
+    <polyline class="path" points="-4,1184 0,1184"/>
+    <polyline class="path" points="4,1184 8,1184"/>
+    <polyline class="path" points="12,1184 16,1184"/>
+    <polyline class="path" points="20,1184 24,1184"/>
+    <polyline class="path" points="28,1184 32,1184"/>
+    <polyline class="path" points="36,1184 40,1184"/>
+    <polyline class="path" points="44,1184 48,1184"/>
+    <polyline class="path" points="52,1184 56,1184"/>
+    <polyline class="path" points="60,1184 64,1184"/>
+    <polyline class="path" points="68,1184 72,1184"/>
+    <polyline class="path" points="0,1216 76,1216"/>
+    <polyline class="path" points="4,1328 8,1328"/>
+    <polyline class="path" points="40,1328 44,1328"/>
+    <polyline class="path" points="60,1328 68,1328"/>
+    <polyline class="path" points="84,1328 92,1328"/>
+    <polyline class="path" points="8,1376 200,1376"/>
+    <polyline class="path" points="200,1408 262,1408"/>
+    <polyline class="path" points="432,1408 444,1408"/>
+    <polyline class="path" points="452,1408 460,1408"/>
+    <polyline class="path" points="460,1408 464,1408"/>
+    <polyline class="path" points="242,1440 252,1440"/>
+    <polyline class="path" points="252,1440 260,1440"/>
+    <polyline class="path" points="260,1440 268,1440"/>
+    <polyline class="path" points="268,1440 276,1440"/>
+    <polyline class="path" points="276,1440 284,1440"/>
+    <polyline class="path" points="284,1440 288,1440"/>
+    <polyline class="path" points="344,1440 348,1440"/>
+    <polyline class="path" points="356,1440 360,1440"/>
+    <polyline class="path" points="434,1440 444,1440"/>
+    <polyline class="path" points="444,1440 452,1440"/>
+    <polyline class="path" points="452,1440 462,1440"/>
+    <polyline class="path" points="200,1456 256,1456"/>
+    <polyline class="path" points="346,1456 358,1456"/>
+    <polyline class="path" points="344,1472 348,1472"/>
+    <polyline class="path" points="356,1472 360,1472"/>
+    <polyline class="path" points="432,1472 444,1472"/>
+    <polyline class="path" points="452,1472 460,1472"/>
+    <polyline class="path" points="460,1472 464,1472"/>
+    <polyline class="path" points="256,1488 288,1488"/>
+    <polyline class="path" points="8,1504 224,1504"/>
+    <polyline class="path" points="436,1504 444,1504"/>
+    <polyline class="path" points="452,1504 460,1504"/>
+    <polyline class="path" points="540,1504 548,1504"/>
+    <polyline class="path" points="556,1504 564,1504"/>
+    <polyline class="path" points="8,1520 56,1520"/>
+    <polyline class="path" points="346,1520 358,1520"/>
+    <polyline class="path" points="8,1536 200,1536"/>
+    <polyline class="path" points="434,1536 444,1536"/>
+    <polyline class="path" points="444,1536 452,1536"/>
+    <polyline class="path" points="452,1536 462,1536"/>
+    <polyline class="path" points="538,1536 548,1536"/>
+    <polyline class="path" points="548,1536 556,1536"/>
+    <polyline class="path" points="556,1536 566,1536"/>
+    <polyline class="path" points="436,1568 444,1568"/>
+    <polyline class="path" points="452,1568 460,1568"/>
+    <polyline class="path" points="540,1568 548,1568"/>
+    <polyline class="path" points="556,1568 564,1568"/>
+    <polyline class="path" points="186,1648 196,1648"/>
+    <polyline class="path" points="196,1648 204,1648"/>
+    <polyline class="path" points="204,1648 212,1648"/>
+    <polyline class="path" points="212,1648 220,1648"/>
+    <polyline class="path" points="220,1648 230,1648"/>
+    <polyline class="path" points="314,1648 324,1648"/>
+    <polyline class="path" points="324,1648 332,1648"/>
+    <polyline class="path" points="332,1648 342,1648"/>
+    <polyline class="path" points="410,1648 420,1648"/>
+    <polyline class="path" points="420,1648 428,1648"/>
+    <polyline class="path" points="428,1648 438,1648"/>
+    <polyline class="path" points="498,1648 510,1648"/>
+    <polyline class="path" points="570,1648 580,1648"/>
+    <polyline class="path" points="580,1648 588,1648"/>
+    <polyline class="path" points="588,1648 598,1648"/>
+    <polyline class="path" points="658,1648 668,1648"/>
+    <polyline class="path" points="668,1648 676,1648"/>
+    <polyline class="path" points="676,1648 686,1648"/>
+    <polyline class="path" points="746,1648 756,1648"/>
+    <polyline class="path" points="756,1648 764,1648"/>
+    <polyline class="path" points="764,1648 774,1648"/>
+    <polyline class="path" points="850,1648 860,1648"/>
+    <polyline class="path" points="860,1648 868,1648"/>
+    <polyline class="path" points="868,1648 878,1648"/>
+    <polyline class="path" points="188,1776 196,1776"/>
+    <polyline class="path" points="196,1776 204,1776"/>
+    <polyline class="path" points="204,1776 212,1776"/>
+    <polyline class="path" points="212,1776 220,1776"/>
+    <polyline class="path" points="220,1776 228,1776"/>
+    <polyline class="path" points="316,1776 324,1776"/>
+    <polyline class="path" points="324,1776 332,1776"/>
+    <polyline class="path" points="332,1776 340,1776"/>
+    <polyline class="path" points="188,1904 196,1904"/>
+    <polyline class="path" points="196,1904 204,1904"/>
+    <polyline class="path" points="204,1904 212,1904"/>
+    <polyline class="path" points="212,1904 220,1904"/>
+    <polyline class="path" points="220,1904 228,1904"/>
+    <polyline class="path" points="340,1904 348,1904"/>
+    <polyline class="path" points="348,1904 356,1904"/>
+    <polyline class="path" points="356,1904 364,1904"/>
+    <polyline class="path" points="492,1904 500,1904"/>
+  </g>
+  <g id='triangles'>
+    <polygon points="3,320 -1.5,317.9 -1.5,322.1" transform="rotate(180, 0, 320)" class="arrowhead"></polygon>
+    <polygon points="3,336 -1.5,333.9 -1.5,338.1" transform="rotate(0, 0, 336)" class="arrowhead"></polygon>
+    <polygon points="7,352 2.5,349.9 2.5,354.1" transform="rotate(270, 0, 352)" class="arrowhead"></polygon>
+    <polygon points="7,368 2.5,365.9 2.5,370.1" transform="rotate(90, 0, 368)" class="arrowhead"></polygon>
+    <polygon points="3,400 -1.5,397.9 -1.5,402.1" transform="rotate(180, 0, 400)" class="arrowhead"></polygon>
+    <polygon points="11,320 6.5,317.9 6.5,322.1" transform="rotate(180, 8, 320)" class="arrowhead"></polygon>
+    <polygon points="11,336 6.5,333.9 6.5,338.1" transform="rotate(0, 8, 336)" class="arrowhead"></polygon>
+    <polygon points="15,352 10.5,349.9 10.5,354.1" transform="rotate(270, 8, 352)" class="arrowhead"></polygon>
+    <polygon points="15,368 10.5,365.9 10.5,370.1" transform="rotate(90, 8, 368)" class="arrowhead"></polygon>
+    <polygon points="11,400 6.5,397.9 6.5,402.1" transform="rotate(0, 8, 400)" class="arrowhead"></polygon>
+    <polygon points="11,432 6.5,429.9 6.5,434.1" transform="rotate(180, 8, 432)" class="arrowhead"></polygon>
+    <polygon points="11,704 6.5,701.9 6.5,706.1" transform="rotate(180, 8, 704)" class="arrowhead"></polygon>
+    <polygon points="11,752 6.5,749.9 6.5,754.1" transform="rotate(180, 8, 752)" class="arrowhead"></polygon>
+    <polygon points="19,320 14.5,317.9 14.5,322.1" transform="rotate(180, 16, 320)" class="arrowhead"></polygon>
+    <polygon points="19,336 14.5,333.9 14.5,338.1" transform="rotate(0, 16, 336)" class="arrowhead"></polygon>
+    <polygon points="23,352 18.5,349.9 18.5,354.1" transform="rotate(270, 16, 352)" class="arrowhead"></polygon>
+    <polygon points="23,368 18.5,365.9 18.5,370.1" transform="rotate(90, 16, 368)" class="arrowhead"></polygon>
+    <polygon points="23,400 18.5,397.9 18.5,402.1" transform="rotate(270, 16, 400)" class="arrowhead"></polygon>
+    <polygon points="19,432 14.5,429.9 14.5,434.1" transform="rotate(0, 16, 432)" class="arrowhead"></polygon>
+    <polygon points="19,448 14.5,445.9 14.5,450.1" transform="rotate(180, 16, 448)" class="arrowhead"></polygon>
+    <polygon points="19,480 14.5,477.9 14.5,482.1" transform="rotate(180, 16, 480)" class="arrowhead"></polygon>
+    <polygon points="19,1328 14.5,1325.9 14.5,1330.1" transform="rotate(0, 16, 1328)" class="arrowhead"></polygon>
+    <polygon points="27,320 22.5,317.9 22.5,322.1" transform="rotate(180, 24, 320)" class="arrowhead"></polygon>
+    <polygon points="27,336 22.5,333.9 22.5,338.1" transform="rotate(0, 24, 336)" class="arrowhead"></polygon>
+    <polygon points="31,352 26.5,349.9 26.5,354.1" transform="rotate(270, 24, 352)" class="arrowhead"></polygon>
+    <polygon points="31,368 26.5,365.9 26.5,370.1" transform="rotate(90, 24, 368)" class="arrowhead"></polygon>
+    <polygon points="31,400 26.5,397.9 26.5,402.1" transform="rotate(90, 24, 400)" class="arrowhead"></polygon>
+    <polygon points="31,432 26.5,429.9 26.5,434.1" transform="rotate(270, 24, 432)" class="arrowhead"></polygon>
+    <polygon points="27,448 22.5,445.9 22.5,450.1" transform="rotate(0, 24, 448)" class="arrowhead"></polygon>
+    <polygon points="27,480 22.5,477.9 22.5,482.1" transform="rotate(0, 24, 480)" class="arrowhead"></polygon>
+    <polygon points="27,704 22.5,701.9 22.5,706.1" transform="rotate(0, 24, 704)" class="arrowhead"></polygon>
+    <polygon points="27,720 22.5,717.9 22.5,722.1" transform="rotate(180, 24, 720)" class="arrowhead"></polygon>
+    <polygon points="35,320 30.5,317.9 30.5,322.1" transform="rotate(180, 32, 320)" class="arrowhead"></polygon>
+    <polygon points="35,336 30.5,333.9 30.5,338.1" transform="rotate(0, 32, 336)" class="arrowhead"></polygon>
+    <polygon points="39,352 34.5,349.9 34.5,354.1" transform="rotate(270, 32, 352)" class="arrowhead"></polygon>
+    <polygon points="39,368 34.5,365.9 34.5,370.1" transform="rotate(90, 32, 368)" class="arrowhead"></polygon>
+    <polygon points="35,400 30.5,397.9 30.5,402.1" transform="rotate(180, 32, 400)" class="arrowhead"></polygon>
+    <polygon points="39,432 34.5,429.9 34.5,434.1" transform="rotate(90, 32, 432)" class="arrowhead"></polygon>
+    <polygon points="39,448 34.5,445.9 34.5,450.1" transform="rotate(270, 32, 448)" class="arrowhead"></polygon>
+    <polygon points="39,480 34.5,477.9 34.5,482.1" transform="rotate(270, 32, 480)" class="arrowhead"></polygon>
+    <polygon points="35,496 30.5,493.9 30.5,498.1" transform="rotate(180, 32, 496)" class="arrowhead"></polygon>
+    <polygon points="35,528 30.5,525.9 30.5,530.1" transform="rotate(180, 32, 528)" class="arrowhead"></polygon>
+    <polygon points="35,576 30.5,573.9 30.5,578.1" transform="rotate(180, 32, 576)" class="arrowhead"></polygon>
+    <polygon points="35,752 30.5,749.9 30.5,754.1" transform="rotate(0, 32, 752)" class="arrowhead"></polygon>
+    <polygon points="35,1328 30.5,1325.9 30.5,1330.1" transform="rotate(180, 32, 1328)" class="arrowhead"></polygon>
+    <polygon points="43,320 38.5,317.9 38.5,322.1" transform="rotate(180, 40, 320)" class="arrowhead"></polygon>
+    <polygon points="43,336 38.5,333.9 38.5,338.1" transform="rotate(0, 40, 336)" class="arrowhead"></polygon>
+    <polygon points="47,352 42.5,349.9 42.5,354.1" transform="rotate(270, 40, 352)" class="arrowhead"></polygon>
+    <polygon points="47,368 42.5,365.9 42.5,370.1" transform="rotate(90, 40, 368)" class="arrowhead"></polygon>
+    <polygon points="43,400 38.5,397.9 38.5,402.1" transform="rotate(0, 40, 400)" class="arrowhead"></polygon>
+    <polygon points="43,432 38.5,429.9 38.5,434.1" transform="rotate(180, 40, 432)" class="arrowhead"></polygon>
+    <polygon points="47,448 42.5,445.9 42.5,450.1" transform="rotate(90, 40, 448)" class="arrowhead"></polygon>
+    <polygon points="47,480 42.5,477.9 42.5,482.1" transform="rotate(90, 40, 480)" class="arrowhead"></polygon>
+    <polygon points="43,496 38.5,493.9 38.5,498.1" transform="rotate(0, 40, 496)" class="arrowhead"></polygon>
+    <polygon points="43,528 38.5,525.9 38.5,530.1" transform="rotate(0, 40, 528)" class="arrowhead"></polygon>
+    <polygon points="47,704 42.5,701.9 42.5,706.1" transform="rotate(270, 40, 704)" class="arrowhead"></polygon>
+    <polygon points="43,720 38.5,717.9 38.5,722.1" transform="rotate(0, 40, 720)" class="arrowhead"></polygon>
+    <polygon points="47,752 42.5,749.9 42.5,754.1" transform="rotate(270, 40, 752)" class="arrowhead"></polygon>
+    <polygon points="51,320 46.5,317.9 46.5,322.1" transform="rotate(180, 48, 320)" class="arrowhead"></polygon>
+    <polygon points="51,336 46.5,333.9 46.5,338.1" transform="rotate(0, 48, 336)" class="arrowhead"></polygon>
+    <polygon points="55,352 50.5,349.9 50.5,354.1" transform="rotate(270, 48, 352)" class="arrowhead"></polygon>
+    <polygon points="55,368 50.5,365.9 50.5,370.1" transform="rotate(90, 48, 368)" class="arrowhead"></polygon>
+    <polygon points="55,400 50.5,397.9 50.5,402.1" transform="rotate(270, 48, 400)" class="arrowhead"></polygon>
+    <polygon points="51,432 46.5,429.9 46.5,434.1" transform="rotate(0, 48, 432)" class="arrowhead"></polygon>
+    <polygon points="51,448 46.5,445.9 46.5,450.1" transform="rotate(180, 48, 448)" class="arrowhead"></polygon>
+    <polygon points="51,480 46.5,477.9 46.5,482.1" transform="rotate(180, 48, 480)" class="arrowhead"></polygon>
+    <polygon points="55,496 50.5,493.9 50.5,498.1" transform="rotate(270, 48, 496)" class="arrowhead"></polygon>
+    <polygon points="55,528 50.5,525.9 50.5,530.1" transform="rotate(270, 48, 528)" class="arrowhead"></polygon>
+    <polygon points="59,320 54.5,317.9 54.5,322.1" transform="rotate(180, 56, 320)" class="arrowhead"></polygon>
+    <polygon points="59,336 54.5,333.9 54.5,338.1" transform="rotate(0, 56, 336)" class="arrowhead"></polygon>
+    <polygon points="63,352 58.5,349.9 58.5,354.1" transform="rotate(270, 56, 352)" class="arrowhead"></polygon>
+    <polygon points="63,368 58.5,365.9 58.5,370.1" transform="rotate(90, 56, 368)" class="arrowhead"></polygon>
+    <polygon points="63,400 58.5,397.9 58.5,402.1" transform="rotate(90, 56, 400)" class="arrowhead"></polygon>
+    <polygon points="63,432 58.5,429.9 58.5,434.1" transform="rotate(270, 56, 432)" class="arrowhead"></polygon>
+    <polygon points="59,448 54.5,445.9 54.5,450.1" transform="rotate(0, 56, 448)" class="arrowhead"></polygon>
+    <polygon points="59,480 54.5,477.9 54.5,482.1" transform="rotate(0, 56, 480)" class="arrowhead"></polygon>
+    <polygon points="63,496 58.5,493.9 58.5,498.1" transform="rotate(90, 56, 496)" class="arrowhead"></polygon>
+    <polygon points="63,528 58.5,525.9 58.5,530.1" transform="rotate(90, 56, 528)" class="arrowhead"></polygon>
+    <polygon points="59,544 54.5,541.9 54.5,546.1" transform="rotate(180, 56, 544)" class="arrowhead"></polygon>
+    <polygon points="63,624 58.5,621.9 58.5,626.1" transform="rotate(270, 56, 624)" class="arrowhead"></polygon>
+    <polygon points="63,656 58.5,653.9 58.5,658.1" transform="rotate(90, 56, 656)" class="arrowhead"></polygon>
+    <polygon points="63,704 58.5,701.9 58.5,706.1" transform="rotate(90, 56, 704)" class="arrowhead"></polygon>
+    <polygon points="63,720 58.5,717.9 58.5,722.1" transform="rotate(270, 56, 720)" class="arrowhead"></polygon>
+    <polygon points="63,1408 58.5,1405.9 58.5,1410.1" transform="rotate(90, 56, 1408)" class="arrowhead"></polygon>
+    <polygon points="67,320 62.5,317.9 62.5,322.1" transform="rotate(180, 64, 320)" class="arrowhead"></polygon>
+    <polygon points="67,336 62.5,333.9 62.5,338.1" transform="rotate(0, 64, 336)" class="arrowhead"></polygon>
+    <polygon points="71,352 66.5,349.9 66.5,354.1" transform="rotate(270, 64, 352)" class="arrowhead"></polygon>
+    <polygon points="71,368 66.5,365.9 66.5,370.1" transform="rotate(90, 64, 368)" class="arrowhead"></polygon>
+    <polygon points="67,400 62.5,397.9 62.5,402.1" transform="rotate(180, 64, 400)" class="arrowhead"></polygon>
+    <polygon points="71,432 66.5,429.9 66.5,434.1" transform="rotate(90, 64, 432)" class="arrowhead"></polygon>
+    <polygon points="71,448 66.5,445.9 66.5,450.1" transform="rotate(270, 64, 448)" class="arrowhead"></polygon>
+    <polygon points="71,480 66.5,477.9 66.5,482.1" transform="rotate(270, 64, 480)" class="arrowhead"></polygon>
+    <polygon points="67,496 62.5,493.9 62.5,498.1" transform="rotate(180, 64, 496)" class="arrowhead"></polygon>
+    <polygon points="67,528 62.5,525.9 62.5,530.1" transform="rotate(180, 64, 528)" class="arrowhead"></polygon>
+    <polygon points="67,544 62.5,541.9 62.5,546.1" transform="rotate(0, 64, 544)" class="arrowhead"></polygon>
+    <polygon points="67,576 62.5,573.9 62.5,578.1" transform="rotate(0, 64, 576)" class="arrowhead"></polygon>
+    <polygon points="71,752 66.5,749.9 66.5,754.1" transform="rotate(90, 64, 752)" class="arrowhead"></polygon>
+    <polygon points="71,1312 66.5,1309.9 66.5,1314.1" transform="rotate(90, 64, 1312)" class="arrowhead"></polygon>
+    <polygon points="75,320 70.5,317.9 70.5,322.1" transform="rotate(180, 72, 320)" class="arrowhead"></polygon>
+    <polygon points="75,336 70.5,333.9 70.5,338.1" transform="rotate(0, 72, 336)" class="arrowhead"></polygon>
+    <polygon points="79,352 74.5,349.9 74.5,354.1" transform="rotate(270, 72, 352)" class="arrowhead"></polygon>
+    <polygon points="79,368 74.5,365.9 74.5,370.1" transform="rotate(90, 72, 368)" class="arrowhead"></polygon>
+    <polygon points="75,400 70.5,397.9 70.5,402.1" transform="rotate(0, 72, 400)" class="arrowhead"></polygon>
+    <polygon points="75,432 70.5,429.9 70.5,434.1" transform="rotate(180, 72, 432)" class="arrowhead"></polygon>
+    <polygon points="79,448 74.5,445.9 74.5,450.1" transform="rotate(90, 72, 448)" class="arrowhead"></polygon>
+    <polygon points="79,480 74.5,477.9 74.5,482.1" transform="rotate(90, 72, 480)" class="arrowhead"></polygon>
+    <polygon points="75,496 70.5,493.9 70.5,498.1" transform="rotate(0, 72, 496)" class="arrowhead"></polygon>
+    <polygon points="75,528 70.5,525.9 70.5,530.1" transform="rotate(0, 72, 528)" class="arrowhead"></polygon>
+    <polygon points="79,544 74.5,541.9 74.5,546.1" transform="rotate(270, 72, 544)" class="arrowhead"></polygon>
+    <polygon points="75,704 70.5,701.9 70.5,706.1" transform="rotate(180, 72, 704)" class="arrowhead"></polygon>
+    <polygon points="79,720 74.5,717.9 74.5,722.1" transform="rotate(90, 72, 720)" class="arrowhead"></polygon>
+    <polygon points="75,752 70.5,749.9 70.5,754.1" transform="rotate(180, 72, 752)" class="arrowhead"></polygon>
+    <polygon points="87,400 82.5,397.9 82.5,402.1" transform="rotate(270, 80, 400)" class="arrowhead"></polygon>
+    <polygon points="83,432 78.5,429.9 78.5,434.1" transform="rotate(0, 80, 432)" class="arrowhead"></polygon>
+    <polygon points="83,448 78.5,445.9 78.5,450.1" transform="rotate(180, 80, 448)" class="arrowhead"></polygon>
+    <polygon points="83,480 78.5,477.9 78.5,482.1" transform="rotate(180, 80, 480)" class="arrowhead"></polygon>
+    <polygon points="87,496 82.5,493.9 82.5,498.1" transform="rotate(270, 80, 496)" class="arrowhead"></polygon>
+    <polygon points="87,528 82.5,525.9 82.5,530.1" transform="rotate(270, 80, 528)" class="arrowhead"></polygon>
+    <polygon points="87,544 82.5,541.9 82.5,546.1" transform="rotate(90, 80, 544)" class="arrowhead"></polygon>
+    <polygon points="95,400 90.5,397.9 90.5,402.1" transform="rotate(90, 88, 400)" class="arrowhead"></polygon>
+    <polygon points="95,432 90.5,429.9 90.5,434.1" transform="rotate(270, 88, 432)" class="arrowhead"></polygon>
+    <polygon points="91,448 86.5,445.9 86.5,450.1" transform="rotate(0, 88, 448)" class="arrowhead"></polygon>
+    <polygon points="91,480 86.5,477.9 86.5,482.1" transform="rotate(0, 88, 480)" class="arrowhead"></polygon>
+    <polygon points="95,496 90.5,493.9 90.5,498.1" transform="rotate(90, 88, 496)" class="arrowhead"></polygon>
+    <polygon points="95,528 90.5,525.9 90.5,530.1" transform="rotate(90, 88, 528)" class="arrowhead"></polygon>
+    <polygon points="91,544 86.5,541.9 86.5,546.1" transform="rotate(180, 88, 544)" class="arrowhead"></polygon>
+    <polygon points="91,704 86.5,701.9 86.5,706.1" transform="rotate(0, 88, 704)" class="arrowhead"></polygon>
+    <polygon points="91,720 86.5,717.9 86.5,722.1" transform="rotate(180, 88, 720)" class="arrowhead"></polygon>
+    <polygon points="95,1344 90.5,1341.9 90.5,1346.1" transform="rotate(270, 88, 1344)" class="arrowhead"></polygon>
+    <polygon points="103,432 98.5,429.9 98.5,434.1" transform="rotate(90, 96, 432)" class="arrowhead"></polygon>
+    <polygon points="103,448 98.5,445.9 98.5,450.1" transform="rotate(270, 96, 448)" class="arrowhead"></polygon>
+    <polygon points="103,480 98.5,477.9 98.5,482.1" transform="rotate(270, 96, 480)" class="arrowhead"></polygon>
+    <polygon points="99,496 94.5,493.9 94.5,498.1" transform="rotate(180, 96, 496)" class="arrowhead"></polygon>
+    <polygon points="99,528 94.5,525.9 94.5,530.1" transform="rotate(180, 96, 528)" class="arrowhead"></polygon>
+    <polygon points="99,544 94.5,541.9 94.5,546.1" transform="rotate(0, 96, 544)" class="arrowhead"></polygon>
+    <polygon points="99,752 94.5,749.9 94.5,754.1" transform="rotate(0, 96, 752)" class="arrowhead"></polygon>
+    <polygon points="111,448 106.5,445.9 106.5,450.1" transform="rotate(90, 104, 448)" class="arrowhead"></polygon>
+    <polygon points="111,480 106.5,477.9 106.5,482.1" transform="rotate(90, 104, 480)" class="arrowhead"></polygon>
+    <polygon points="107,496 102.5,493.9 102.5,498.1" transform="rotate(0, 104, 496)" class="arrowhead"></polygon>
+    <polygon points="107,528 102.5,525.9 102.5,530.1" transform="rotate(0, 104, 528)" class="arrowhead"></polygon>
+    <polygon points="111,544 106.5,541.9 106.5,546.1" transform="rotate(270, 104, 544)" class="arrowhead"></polygon>
+    <polygon points="111,704 106.5,701.9 106.5,706.1" transform="rotate(270, 104, 704)" class="arrowhead"></polygon>
+    <polygon points="107,720 102.5,717.9 102.5,722.1" transform="rotate(0, 104, 720)" class="arrowhead"></polygon>
+    <polygon points="111,752 106.5,749.9 106.5,754.1" transform="rotate(270, 104, 752)" class="arrowhead"></polygon>
+    <polygon points="119,496 114.5,493.9 114.5,498.1" transform="rotate(270, 112, 496)" class="arrowhead"></polygon>
+    <polygon points="119,528 114.5,525.9 114.5,530.1" transform="rotate(270, 112, 528)" class="arrowhead"></polygon>
+    <polygon points="119,544 114.5,541.9 114.5,546.1" transform="rotate(90, 112, 544)" class="arrowhead"></polygon>
+    <polygon points="127,496 122.5,493.9 122.5,498.1" transform="rotate(90, 120, 496)" class="arrowhead"></polygon>
+    <polygon points="127,528 122.5,525.9 122.5,530.1" transform="rotate(90, 120, 528)" class="arrowhead"></polygon>
+    <polygon points="123,544 118.5,541.9 118.5,546.1" transform="rotate(180, 120, 544)" class="arrowhead"></polygon>
+    <polygon points="127,704 122.5,701.9 122.5,706.1" transform="rotate(90, 120, 704)" class="arrowhead"></polygon>
+    <polygon points="127,720 122.5,717.9 122.5,722.1" transform="rotate(270, 120, 720)" class="arrowhead"></polygon>
+    <polygon points="131,544 126.5,541.9 126.5,546.1" transform="rotate(0, 128, 544)" class="arrowhead"></polygon>
+    <polygon points="135,752 130.5,749.9 130.5,754.1" transform="rotate(90, 128, 752)" class="arrowhead"></polygon>
+    <polygon points="143,544 138.5,541.9 138.5,546.1" transform="rotate(270, 136, 544)" class="arrowhead"></polygon>
+    <polygon points="139,704 134.5,701.9 134.5,706.1" transform="rotate(180, 136, 704)" class="arrowhead"></polygon>
+    <polygon points="143,720 138.5,717.9 138.5,722.1" transform="rotate(90, 136, 720)" class="arrowhead"></polygon>
+    <polygon points="139,752 134.5,749.9 134.5,754.1" transform="rotate(180, 136, 752)" class="arrowhead"></polygon>
+    <polygon points="151,544 146.5,541.9 146.5,546.1" transform="rotate(90, 144, 544)" class="arrowhead"></polygon>
+    <polygon points="155,704 150.5,701.9 150.5,706.1" transform="rotate(0, 152, 704)" class="arrowhead"></polygon>
+    <polygon points="155,720 150.5,717.9 150.5,722.1" transform="rotate(180, 152, 720)" class="arrowhead"></polygon>
+    <polygon points="163,752 158.5,749.9 158.5,754.1" transform="rotate(0, 160, 752)" class="arrowhead"></polygon>
+    <polygon points="175,704 170.5,701.9 170.5,706.1" transform="rotate(270, 168, 704)" class="arrowhead"></polygon>
+    <polygon points="171,720 166.5,717.9 166.5,722.1" transform="rotate(0, 168, 720)" class="arrowhead"></polygon>
+    <polygon points="175,752 170.5,749.9 170.5,754.1" transform="rotate(270, 168, 752)" class="arrowhead"></polygon>
+    <polygon points="191,704 186.5,701.9 186.5,706.1" transform="rotate(90, 184, 704)" class="arrowhead"></polygon>
+    <polygon points="191,720 186.5,717.9 186.5,722.1" transform="rotate(270, 184, 720)" class="arrowhead"></polygon>
+    <polygon points="187,1648 182.5,1645.9 182.5,1650.1" transform="rotate(180, 184, 1648)" class="arrowhead"></polygon>
+    <polygon points="199,752 194.5,749.9 194.5,754.1" transform="rotate(90, 192, 752)" class="arrowhead"></polygon>
+    <polygon points="207,720 202.5,717.9 202.5,722.1" transform="rotate(90, 200, 720)" class="arrowhead"></polygon>
+    <polygon points="207,752 202.5,749.9 202.5,754.1" transform="rotate(270, 200, 752)" class="arrowhead"></polygon>
+    <polygon points="215,1616 210.5,1613.9 210.5,1618.1" transform="rotate(270, 208, 1616)" class="arrowhead"></polygon>
+    <polygon points="215,1680 210.5,1677.9 210.5,1682.1" transform="rotate(90, 208, 1680)" class="arrowhead"></polygon>
+    <polygon points="223,1472 218.5,1469.9 218.5,1474.1" transform="rotate(270, 216, 1472)" class="arrowhead"></polygon>
+    <polygon points="223,1520 218.5,1517.9 218.5,1522.1" transform="rotate(90, 216, 1520)" class="arrowhead"></polygon>
+    <polygon points="231,752 226.5,749.9 226.5,754.1" transform="rotate(270, 224, 752)" class="arrowhead"></polygon>
+    <polygon points="231,1472 226.5,1469.9 226.5,1474.1" transform="rotate(270, 224, 1472)" class="arrowhead"></polygon>
+    <polygon points="231,1520 226.5,1517.9 226.5,1522.1" transform="rotate(90, 224, 1520)" class="arrowhead"></polygon>
+    <polygon points="239,752 234.5,749.9 234.5,754.1" transform="rotate(90, 232, 752)" class="arrowhead"></polygon>
+    <polygon points="235,1648 230.5,1645.9 230.5,1650.1" transform="rotate(0, 232, 1648)" class="arrowhead"></polygon>
+    <polygon points="243,1440 238.5,1437.9 238.5,1442.1" transform="rotate(180, 240, 1440)" class="arrowhead"></polygon>
+    <polygon points="267,1408 262.5,1405.9 262.5,1410.1" transform="rotate(0, 264, 1408)" class="arrowhead"></polygon>
+    <polygon points="315,1648 310.5,1645.9 310.5,1650.1" transform="rotate(180, 312, 1648)" class="arrowhead"></polygon>
+    <polygon points="335,1632 330.5,1629.9 330.5,1634.1" transform="rotate(270, 328, 1632)" class="arrowhead"></polygon>
+    <polygon points="335,1664 330.5,1661.9 330.5,1666.1" transform="rotate(90, 328, 1664)" class="arrowhead"></polygon>
+    <polygon points="347,1456 342.5,1453.9 342.5,1458.1" transform="rotate(180, 344, 1456)" class="arrowhead"></polygon>
+    <polygon points="347,1520 342.5,1517.9 342.5,1522.1" transform="rotate(180, 344, 1520)" class="arrowhead"></polygon>
+    <polygon points="347,1648 342.5,1645.9 342.5,1650.1" transform="rotate(0, 344, 1648)" class="arrowhead"></polygon>
+    <polygon points="359,1440 354.5,1437.9 354.5,1442.1" transform="rotate(270, 352, 1440)" class="arrowhead"></polygon>
+    <polygon points="359,1472 354.5,1469.9 354.5,1474.1" transform="rotate(90, 352, 1472)" class="arrowhead"></polygon>
+    <polygon points="359,1504 354.5,1501.9 354.5,1506.1" transform="rotate(270, 352, 1504)" class="arrowhead"></polygon>
+    <polygon points="359,1536 354.5,1533.9 354.5,1538.1" transform="rotate(90, 352, 1536)" class="arrowhead"></polygon>
+    <polygon points="363,1456 358.5,1453.9 358.5,1458.1" transform="rotate(0, 360, 1456)" class="arrowhead"></polygon>
+    <polygon points="363,1520 358.5,1517.9 358.5,1522.1" transform="rotate(0, 360, 1520)" class="arrowhead"></polygon>
+    <polygon points="411,1648 406.5,1645.9 406.5,1650.1" transform="rotate(180, 408, 1648)" class="arrowhead"></polygon>
+    <polygon points="431,1632 426.5,1629.9 426.5,1634.1" transform="rotate(270, 424, 1632)" class="arrowhead"></polygon>
+    <polygon points="431,1664 426.5,1661.9 426.5,1666.1" transform="rotate(90, 424, 1664)" class="arrowhead"></polygon>
+    <polygon points="435,1440 430.5,1437.9 430.5,1442.1" transform="rotate(180, 432, 1440)" class="arrowhead"></polygon>
+    <polygon points="435,1536 430.5,1533.9 430.5,1538.1" transform="rotate(180, 432, 1536)" class="arrowhead"></polygon>
+    <polygon points="443,1648 438.5,1645.9 438.5,1650.1" transform="rotate(0, 440, 1648)" class="arrowhead"></polygon>
+    <polygon points="455,1408 450.5,1405.9 450.5,1410.1" transform="rotate(270, 448, 1408)" class="arrowhead"></polygon>
+    <polygon points="455,1472 450.5,1469.9 450.5,1474.1" transform="rotate(90, 448, 1472)" class="arrowhead"></polygon>
+    <polygon points="455,1504 450.5,1501.9 450.5,1506.1" transform="rotate(270, 448, 1504)" class="arrowhead"></polygon>
+    <polygon points="455,1568 450.5,1565.9 450.5,1570.1" transform="rotate(90, 448, 1568)" class="arrowhead"></polygon>
+    <polygon points="467,1440 462.5,1437.9 462.5,1442.1" transform="rotate(0, 464, 1440)" class="arrowhead"></polygon>
+    <polygon points="467,1536 462.5,1533.9 462.5,1538.1" transform="rotate(0, 464, 1536)" class="arrowhead"></polygon>
+    <polygon points="499,1648 494.5,1645.9 494.5,1650.1" transform="rotate(180, 496, 1648)" class="arrowhead"></polygon>
+    <polygon points="511,1664 506.5,1661.9 506.5,1666.1" transform="rotate(90, 504, 1664)" class="arrowhead"></polygon>
+    <polygon points="515,1648 510.5,1645.9 510.5,1650.1" transform="rotate(0, 512, 1648)" class="arrowhead"></polygon>
+    <polygon points="539,1536 534.5,1533.9 534.5,1538.1" transform="rotate(180, 536, 1536)" class="arrowhead"></polygon>
+    <polygon points="559,1504 554.5,1501.9 554.5,1506.1" transform="rotate(270, 552, 1504)" class="arrowhead"></polygon>
+    <polygon points="559,1568 554.5,1565.9 554.5,1570.1" transform="rotate(90, 552, 1568)" class="arrowhead"></polygon>
+    <polygon points="571,1536 566.5,1533.9 566.5,1538.1" transform="rotate(0, 568, 1536)" class="arrowhead"></polygon>
+    <polygon points="571,1648 566.5,1645.9 566.5,1650.1" transform="rotate(180, 568, 1648)" class="arrowhead"></polygon>
+    <polygon points="591,1632 586.5,1629.9 586.5,1634.1" transform="rotate(270, 584, 1632)" class="arrowhead"></polygon>
+    <polygon points="591,1664 586.5,1661.9 586.5,1666.1" transform="rotate(90, 584, 1664)" class="arrowhead"></polygon>
+    <polygon points="603,1648 598.5,1645.9 598.5,1650.1" transform="rotate(0, 600, 1648)" class="arrowhead"></polygon>
+    <polygon points="659,1648 654.5,1645.9 654.5,1650.1" transform="rotate(180, 656, 1648)" class="arrowhead"></polygon>
+    <polygon points="679,1632 674.5,1629.9 674.5,1634.1" transform="rotate(270, 672, 1632)" class="arrowhead"></polygon>
+    <polygon points="691,1648 686.5,1645.9 686.5,1650.1" transform="rotate(0, 688, 1648)" class="arrowhead"></polygon>
+    <polygon points="747,1648 742.5,1645.9 742.5,1650.1" transform="rotate(180, 744, 1648)" class="arrowhead"></polygon>
+    <polygon points="779,1648 774.5,1645.9 774.5,1650.1" transform="rotate(0, 776, 1648)" class="arrowhead"></polygon>
+    <polygon points="851,1648 846.5,1645.9 846.5,1650.1" transform="rotate(180, 848, 1648)" class="arrowhead"></polygon>
+    <polygon points="871,1664 866.5,1661.9 866.5,1666.1" transform="rotate(90, 864, 1664)" class="arrowhead"></polygon>
+    <polygon points="883,1648 878.5,1645.9 878.5,1650.1" transform="rotate(0, 880, 1648)" class="arrowhead"></polygon>
+  </g>
+  <g id='roundedCorners'>
+    <path class="path" d="M 12,928 A 4,4 0 0,0 8,932"></path>
+    <path class="path" d="M 36,928 A 4,4 0 0,1 40,932"></path>
+    <path class="path" d="M 76,928 A 4,4 0 0,0 72,932"></path>
+    <path class="path" d="M 76,928 A 4,4 0 0,1 80,932"></path>
+    <path class="path" d="M 92,928 A 4,4 0 0,0 88,932"></path>
+    <path class="path" d="M 92,928 A 4,4 0 0,1 96,932"></path>
+    <path class="path" d="M 108,928 A 4,4 0 0,0 104,932"></path>
+    <path class="path" d="M 108,928 A 4,4 0 0,1 112,932"></path>
+    <path class="path" d="M 124,928 A 4,4 0 0,0 120,932"></path>
+    <path class="path" d="M 124,928 A 4,4 0 0,1 128,932"></path>
+    <path class="path" d="M 8,988 A 4,4 0 0,0 12,992"></path>
+    <path class="path" d="M 40,988 A 4,4 0 0,1 36,992"></path>
+    <path class="path" d="M 72,988 A 4,4 0 0,0 76,992"></path>
+    <path class="path" d="M 80,988 A 4,4 0 0,1 76,992"></path>
+    <path class="path" d="M 88,988 A 4,4 0 0,0 92,992"></path>
+    <path class="path" d="M 96,988 A 4,4 0 0,1 92,992"></path>
+    <path class="path" d="M 104,988 A 4,4 0 0,0 108,992"></path>
+    <path class="path" d="M 112,988 A 4,4 0 0,1 108,992"></path>
+    <path class="path" d="M 120,988 A 4,4 0 0,0 124,992"></path>
+    <path class="path" d="M 128,988 A 4,4 0 0,1 124,992"></path>
+    <path class="path" d="M 348,1504 A 4,4 0 0,0 344,1508"></path>
+    <path class="path" d="M 356,1504 A 4,4 0 0,1 360,1508"></path>
+    <path class="path" d="M 436,1504 A 4,4 0 0,0 432,1508"></path>
+    <path class="path" d="M 460,1504 A 4,4 0 0,1 464,1508"></path>
+    <path class="path" d="M 540,1504 A 4,4 0 0,0 536,1508"></path>
+    <path class="path" d="M 564,1504 A 4,4 0 0,1 568,1508"></path>
+    <path class="path" d="M 344,1532 A 4,4 0 0,0 348,1536"></path>
+    <path class="path" d="M 360,1532 A 4,4 0 0,1 356,1536"></path>
+    <path class="path" d="M 432,1564 A 4,4 0 0,0 436,1568"></path>
+    <path class="path" d="M 464,1564 A 4,4 0 0,1 460,1568"></path>
+    <path class="path" d="M 536,1564 A 4,4 0 0,0 540,1568"></path>
+    <path class="path" d="M 568,1564 A 4,4 0 0,1 564,1568"></path>
+  </g>
+  <g id='circles'>
+    <circle cx="0" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="8" cy="16" r="4" class="hollow"></circle>
+    <circle cx="8" cy="48" r="4" class="hollow"></circle>
+    <circle cx="8" cy="80" r="4" class="hollow"></circle>
+    <circle cx="8" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="16" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="24" cy="16" r="4" class="hollow"></circle>
+    <circle cx="24" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="32" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="40" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="48" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="56" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="64" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="72" cy="2032" r="4" class="hollow"></circle>
+    <circle cx="80" cy="2032" r="4" class="filled"></circle>
+    <circle cx="88" cy="2032" r="4" class="filled"></circle>
+    <circle cx="96" cy="2032" r="4" class="filled"></circle>
+    <circle cx="104" cy="2032" r="4" class="filled"></circle>
+    <circle cx="112" cy="2032" r="4" class="filled"></circle>
+    <circle cx="120" cy="2032" r="4" class="filled"></circle>
+    <circle cx="128" cy="2032" r="4" class="filled"></circle>
+    <circle cx="136" cy="2032" r="4" class="filled"></circle>
+    <circle cx="144" cy="2032" r="4" class="filled"></circle>
+    <circle cx="152" cy="2032" r="4" class="filled"></circle>
+    <circle cx="184" cy="1776" r="4" class="filled"></circle>
+    <circle cx="184" cy="1904" r="4" class="hollow"></circle>
+    <circle cx="208" cy="1744" r="4" class="filled"></circle>
+    <circle cx="208" cy="1808" r="4" class="filled"></circle>
+    <circle cx="208" cy="1872" r="4" class="hollow"></circle>
+    <circle cx="208" cy="1936" r="4" class="hollow"></circle>
+    <circle cx="232" cy="1776" r="4" class="filled"></circle>
+    <circle cx="232" cy="1904" r="4" class="hollow"></circle>
+    <circle cx="312" cy="1776" r="4" class="filled"></circle>
+    <circle cx="328" cy="1760" r="4" class="filled"></circle>
+    <circle cx="328" cy="1792" r="4" class="filled"></circle>
+    <circle cx="336" cy="1904" r="4" class="hollow"></circle>
+    <circle cx="344" cy="1776" r="4" class="filled"></circle>
+    <circle cx="352" cy="1888" r="4" class="hollow"></circle>
+    <circle cx="352" cy="1920" r="4" class="hollow"></circle>
+    <circle cx="368" cy="1904" r="4" class="hollow"></circle>
+    <circle cx="392" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="424" cy="1616" r="4" class="hollow"></circle>
+    <circle cx="424" cy="1680" r="4" class="hollow"></circle>
+    <circle cx="456" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="480" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="488" cy="1904" r="4" class="hollow"></circle>
+    <circle cx="496" cy="1888" r="4" class="hollow"></circle>
+    <circle cx="496" cy="1920" r="4" class="hollow"></circle>
+    <circle cx="504" cy="1680" r="4" class="hollow"></circle>
+    <circle cx="504" cy="1904" r="4" class="hollow"></circle>
+    <circle cx="528" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="552" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="584" cy="1616" r="4" class="hollow"></circle>
+    <circle cx="584" cy="1680" r="4" class="hollow"></circle>
+    <circle cx="616" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="640" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="672" cy="1616" r="4" class="hollow"></circle>
+    <circle cx="704" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="728" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="792" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="832" cy="1648" r="4" class="hollow"></circle>
+    <circle cx="864" cy="1680" r="4" class="hollow"></circle>
+    <circle cx="896" cy="1648" r="4" class="hollow"></circle>
+  </g>
+  <g id='text'>
+    <text x="0" y="116">-</text>
+    <text x="8" y="116">-</text>
+    <text x="16" y="116">-</text>
+    <text x="0" y="148">0</text>
+    <text x="8" y="148">1</text>
+    <text x="16" y="148">2</text>
+    <text x="24" y="148">3</text>
+    <text x="32" y="148">4</text>
+    <text x="40" y="148">5</text>
+    <text x="48" y="148">6</text>
+    <text x="56" y="148">7</text>
+    <text x="64" y="148">8</text>
+    <text x="72" y="148">9</text>
+    <text x="80" y="148">0</text>
+    <text x="88" y="148">1</text>
+    <text x="96" y="148">2</text>
+    <text x="104" y="148">3</text>
+    <text x="112" y="148">4</text>
+    <text x="120" y="148">5</text>
+    <text x="128" y="148">6</text>
+    <text x="136" y="148">7</text>
+    <text x="144" y="148">8</text>
+    <text x="152" y="148">9</text>
+    <text x="160" y="148">0</text>
+    <text x="168" y="148">1</text>
+    <text x="176" y="148">2</text>
+    <text x="184" y="148">3</text>
+    <text x="192" y="148">4</text>
+    <text x="200" y="148">5</text>
+    <text x="208" y="148">6</text>
+    <text x="216" y="148">7</text>
+    <text x="224" y="148">8</text>
+    <text x="232" y="148">9</text>
+    <text x="240" y="148">0</text>
+    <text x="248" y="148">1</text>
+    <text x="256" y="148">2</text>
+    <text x="264" y="148">3</text>
+    <text x="272" y="148">4</text>
+    <text x="280" y="148">5</text>
+    <text x="288" y="148">6</text>
+    <text x="296" y="148">7</text>
+    <text x="304" y="148">8</text>
+    <text x="312" y="148">9</text>
+    <text x="320" y="148">0</text>
+    <text x="328" y="148">1</text>
+    <text x="336" y="148">2</text>
+    <text x="344" y="148">3</text>
+    <text x="352" y="148">4</text>
+    <text x="360" y="148">5</text>
+    <text x="368" y="148">6</text>
+    <text x="376" y="148">7</text>
+    <text x="384" y="148">8</text>
+    <text x="392" y="148">9</text>
+    <text x="400" y="148">0</text>
+    <text x="408" y="148">1</text>
+    <text x="416" y="148">2</text>
+    <text x="424" y="148">3</text>
+    <text x="432" y="148">4</text>
+    <text x="440" y="148">5</text>
+    <text x="448" y="148">6</text>
+    <text x="456" y="148">7</text>
+    <text x="464" y="148">8</text>
+    <text x="472" y="148">9</text>
+    <text x="480" y="148">0</text>
+    <text x="488" y="148">1</text>
+    <text x="496" y="148">2</text>
+    <text x="504" y="148">3</text>
+    <text x="512" y="148">4</text>
+    <text x="520" y="148">5</text>
+    <text x="528" y="148">6</text>
+    <text x="536" y="148">7</text>
+    <text x="544" y="148">8</text>
+    <text x="552" y="148">9</text>
+    <text x="560" y="148">0</text>
+    <text x="568" y="148">1</text>
+    <text x="576" y="148">2</text>
+    <text x="584" y="148">3</text>
+    <text x="592" y="148">4</text>
+    <text x="600" y="148">5</text>
+    <text x="608" y="148">6</text>
+    <text x="616" y="148">7</text>
+    <text x="624" y="148">8</text>
+    <text x="632" y="148">9</text>
+    <text x="0" y="180">m</text>
+    <text x="8" y="180">o</text>
+    <text x="16" y="180">n</text>
+    <text x="24" y="180">o</text>
+    <text x="32" y="180">s</text>
+    <text x="40" y="180">p</text>
+    <text x="48" y="180">a</text>
+    <text x="56" y="180">c</text>
+    <text x="64" y="180">e</text>
+    <text x="80" y="180">r</text>
+    <text x="88" y="180">e</text>
+    <text x="96" y="180">g</text>
+    <text x="104" y="180">u</text>
+    <text x="112" y="180">l</text>
+    <text x="120" y="180">a</text>
+    <text x="128" y="180">r</text>
+    <text x="16" y="196">1</text>
+    <text x="24" y="196">1</text>
+    <text x="32" y="196">,</text>
+    <text x="40" y="196">1</text>
+    <text x="48" y="196">2</text>
+    <text x="56" y="196">:</text>
+    <text x="72" y="196">g</text>
+    <text x="80" y="196">o</text>
+    <text x="88" y="196">o</text>
+    <text x="96" y="196">d</text>
+    <text x="0" y="212">U</text>
+    <text x="8" y="212">b</text>
+    <text x="16" y="212">u</text>
+    <text x="24" y="212">n</text>
+    <text x="32" y="212">t</text>
+    <text x="40" y="212">u</text>
+    <text x="56" y="212">M</text>
+    <text x="64" y="212">o</text>
+    <text x="72" y="212">n</text>
+    <text x="80" y="212">o</text>
+    <text x="96" y="212">R</text>
+    <text x="104" y="212">e</text>
+    <text x="112" y="212">g</text>
+    <text x="120" y="212">u</text>
+    <text x="128" y="212">l</text>
+    <text x="136" y="212">a</text>
+    <text x="144" y="212">r</text>
+    <text x="16" y="228">1</text>
+    <text x="24" y="228">2</text>
+    <text x="32" y="228">,</text>
+    <text x="40" y="228">1</text>
+    <text x="48" y="228">3</text>
+    <text x="56" y="228">:</text>
+    <text x="72" y="228">a</text>
+    <text x="80" y="228">r</text>
+    <text x="88" y="228">r</text>
+    <text x="96" y="228">o</text>
+    <text x="104" y="228">w</text>
+    <text x="112" y="228">s</text>
+    <text x="128" y="228">t</text>
+    <text x="136" y="228">o</text>
+    <text x="144" y="228">o</text>
+    <text x="160" y="228">n</text>
+    <text x="168" y="228">a</text>
+    <text x="176" y="228">r</text>
+    <text x="184" y="228">r</text>
+    <text x="192" y="228">o</text>
+    <text x="200" y="228">w</text>
+    <text x="0" y="244">N</text>
+    <text x="8" y="244">o</text>
+    <text x="16" y="244">t</text>
+    <text x="24" y="244">o</text>
+    <text x="40" y="244">S</text>
+    <text x="48" y="244">a</text>
+    <text x="56" y="244">n</text>
+    <text x="64" y="244">s</text>
+    <text x="80" y="244">M</text>
+    <text x="88" y="244">o</text>
+    <text x="96" y="244">n</text>
+    <text x="104" y="244">o</text>
+    <text x="112" y="244">:</text>
+    <text x="16" y="260">1</text>
+    <text x="24" y="260">2</text>
+    <text x="32" y="260">:</text>
+    <text x="48" y="260">g</text>
+    <text x="56" y="260">o</text>
+    <text x="64" y="260">o</text>
+    <text x="72" y="260">d</text>
+    <text x="0" y="276">T</text>
+    <text x="8" y="276">L</text>
+    <text x="16" y="276">W</text>
+    <text x="24" y="276">G</text>
+    <text x="40" y="276">M</text>
+    <text x="48" y="276">o</text>
+    <text x="56" y="276">n</text>
+    <text x="64" y="276">o</text>
+    <text x="16" y="292">1</text>
+    <text x="24" y="292">2</text>
+    <text x="32" y="292">,</text>
+    <text x="40" y="292">1</text>
+    <text x="48" y="292">3</text>
+    <text x="56" y="292">:</text>
+    <text x="72" y="292">a</text>
+    <text x="80" y="292">l</text>
+    <text x="88" y="292">l</text>
+    <text x="104" y="292">b</text>
+    <text x="112" y="292">o</text>
+    <text x="120" y="292">x</text>
+    <text x="136" y="292">c</text>
+    <text x="144" y="292">h</text>
+    <text x="152" y="292">a</text>
+    <text x="160" y="292">r</text>
+    <text x="168" y="292">s</text>
+    <text x="184" y="292">t</text>
+    <text x="192" y="292">o</text>
+    <text x="200" y="292">o</text>
+    <text x="216" y="292">n</text>
+    <text x="224" y="292">a</text>
+    <text x="232" y="292">r</text>
+    <text x="240" y="292">r</text>
+    <text x="248" y="292">o</text>
+    <text x="256" y="292">w</text>
+    <text x="88" y="644">X</text>
+    <text x="96" y="644">X</text>
+    <text x="112" y="644">X</text>
+    <text x="120" y="644">X</text>
+    <text x="144" y="644">S</text>
+    <text x="152" y="644">h</text>
+    <text x="160" y="644">o</text>
+    <text x="168" y="644">u</text>
+    <text x="176" y="644">l</text>
+    <text x="184" y="644">d</text>
+    <text x="200" y="644">o</text>
+    <text x="208" y="644">u</text>
+    <text x="216" y="644">t</text>
+    <text x="224" y="644">p</text>
+    <text x="232" y="644">u</text>
+    <text x="240" y="644">t</text>
+    <text x="256" y="644">"</text>
+    <text x="264" y="644">p</text>
+    <text x="272" y="644">u</text>
+    <text x="280" y="644">s</text>
+    <text x="288" y="644">h</text>
+    <text x="296" y="644">"</text>
+    <text x="312" y="644">a</text>
+    <text x="320" y="644">r</text>
+    <text x="328" y="644">r</text>
+    <text x="336" y="644">o</text>
+    <text x="344" y="644">w</text>
+    <text x="352" y="644">h</text>
+    <text x="360" y="644">e</text>
+    <text x="368" y="644">a</text>
+    <text x="376" y="644">d</text>
+    <text x="384" y="644">s</text>
+    <text x="400" y="644">t</text>
+    <text x="408" y="644">o</text>
+    <text x="416" y="644">w</text>
+    <text x="424" y="644">a</text>
+    <text x="432" y="644">r</text>
+    <text x="440" y="644">d</text>
+    <text x="456" y="644">t</text>
+    <text x="464" y="644">h</text>
+    <text x="472" y="644">e</text>
+    <text x="488" y="644">p</text>
+    <text x="496" y="644">e</text>
+    <text x="504" y="644">r</text>
+    <text x="512" y="644">p</text>
+    <text x="520" y="644">e</text>
+    <text x="528" y="644">n</text>
+    <text x="536" y="644">d</text>
+    <text x="544" y="644">i</text>
+    <text x="552" y="644">c</text>
+    <text x="560" y="644">u</text>
+    <text x="568" y="644">l</text>
+    <text x="576" y="644">a</text>
+    <text x="584" y="644">r</text>
+    <text x="592" y="644">s</text>
+    <text x="600" y="644">,</text>
+    <text x="616" y="644">m</text>
+    <text x="624" y="644">i</text>
+    <text x="632" y="644">r</text>
+    <text x="640" y="644">r</text>
+    <text x="648" y="644">o</text>
+    <text x="656" y="644">r</text>
+    <text x="664" y="644">i</text>
+    <text x="672" y="644">n</text>
+    <text x="680" y="644">g</text>
+    <text x="696" y="644">t</text>
+    <text x="704" y="644">h</text>
+    <text x="712" y="644">e</text>
+    <text x="728" y="644">h</text>
+    <text x="736" y="644">o</text>
+    <text x="744" y="644">r</text>
+    <text x="752" y="644">i</text>
+    <text x="760" y="644">z</text>
+    <text x="768" y="644">o</text>
+    <text x="776" y="644">n</text>
+    <text x="784" y="644">t</text>
+    <text x="792" y="644">a</text>
+    <text x="800" y="644">l</text>
+    <text x="816" y="644">c</text>
+    <text x="824" y="644">a</text>
+    <text x="832" y="644">s</text>
+    <text x="840" y="644">e</text>
+    <text x="848" y="644">?</text>
+    <text x="0" y="788">0</text>
+    <text x="8" y="788">1</text>
+    <text x="16" y="788">2</text>
+    <text x="24" y="788">3</text>
+    <text x="32" y="788">4</text>
+    <text x="40" y="788">5</text>
+    <text x="48" y="788">6</text>
+    <text x="56" y="788">7</text>
+    <text x="64" y="788">8</text>
+    <text x="72" y="788">9</text>
+    <text x="152" y="804">B</text>
+    <text x="160" y="804">O</text>
+    <text x="168" y="804">X</text>
+    <text x="184" y="804">D</text>
+    <text x="192" y="804">R</text>
+    <text x="200" y="804">A</text>
+    <text x="208" y="804">W</text>
+    <text x="216" y="804">I</text>
+    <text x="224" y="804">N</text>
+    <text x="232" y="804">G</text>
+    <text x="240" y="804">S</text>
+    <text x="256" y="804">L</text>
+    <text x="264" y="804">I</text>
+    <text x="272" y="804">G</text>
+    <text x="280" y="804">H</text>
+    <text x="288" y="804">T</text>
+    <text x="304" y="804">V</text>
+    <text x="312" y="804">E</text>
+    <text x="320" y="804">R</text>
+    <text x="328" y="804">T</text>
+    <text x="336" y="804">I</text>
+    <text x="344" y="804">C</text>
+    <text x="352" y="804">A</text>
+    <text x="360" y="804">L</text>
+    <text x="152" y="820">B</text>
+    <text x="160" y="820">O</text>
+    <text x="168" y="820">X</text>
+    <text x="184" y="820">D</text>
+    <text x="192" y="820">R</text>
+    <text x="200" y="820">A</text>
+    <text x="208" y="820">W</text>
+    <text x="216" y="820">I</text>
+    <text x="224" y="820">N</text>
+    <text x="232" y="820">G</text>
+    <text x="240" y="820">S</text>
+    <text x="256" y="820">L</text>
+    <text x="264" y="820">I</text>
+    <text x="272" y="820">G</text>
+    <text x="280" y="820">H</text>
+    <text x="288" y="820">T</text>
+    <text x="304" y="820">H</text>
+    <text x="312" y="820">O</text>
+    <text x="320" y="820">R</text>
+    <text x="328" y="820">I</text>
+    <text x="336" y="820">Z</text>
+    <text x="344" y="820">O</text>
+    <text x="352" y="820">N</text>
+    <text x="360" y="820">T</text>
+    <text x="368" y="820">A</text>
+    <text x="376" y="820">L</text>
+    <text x="0" y="852">B</text>
+    <text x="8" y="852">O</text>
+    <text x="16" y="852">X</text>
+    <text x="32" y="852">D</text>
+    <text x="40" y="852">R</text>
+    <text x="48" y="852">A</text>
+    <text x="56" y="852">W</text>
+    <text x="64" y="852">I</text>
+    <text x="72" y="852">N</text>
+    <text x="80" y="852">G</text>
+    <text x="88" y="852">S</text>
+    <text x="104" y="852">L</text>
+    <text x="112" y="852">I</text>
+    <text x="120" y="852">G</text>
+    <text x="128" y="852">H</text>
+    <text x="136" y="852">T</text>
+    <text x="0" y="916">B</text>
+    <text x="8" y="916">O</text>
+    <text x="16" y="916">X</text>
+    <text x="32" y="916">D</text>
+    <text x="40" y="916">R</text>
+    <text x="48" y="916">A</text>
+    <text x="56" y="916">W</text>
+    <text x="64" y="916">I</text>
+    <text x="72" y="916">N</text>
+    <text x="80" y="916">G</text>
+    <text x="88" y="916">S</text>
+    <text x="104" y="916">L</text>
+    <text x="112" y="916">I</text>
+    <text x="120" y="916">G</text>
+    <text x="128" y="916">H</text>
+    <text x="136" y="916">T</text>
+    <text x="152" y="916">A</text>
+    <text x="160" y="916">R</text>
+    <text x="168" y="916">C</text>
+    <text x="0" y="1028">B</text>
+    <text x="8" y="1028">O</text>
+    <text x="16" y="1028">X</text>
+    <text x="32" y="1028">D</text>
+    <text x="40" y="1028">R</text>
+    <text x="48" y="1028">A</text>
+    <text x="56" y="1028">W</text>
+    <text x="64" y="1028">I</text>
+    <text x="72" y="1028">N</text>
+    <text x="80" y="1028">G</text>
+    <text x="88" y="1028">S</text>
+    <text x="104" y="1028">D</text>
+    <text x="112" y="1028">O</text>
+    <text x="120" y="1028">U</text>
+    <text x="128" y="1028">B</text>
+    <text x="136" y="1028">L</text>
+    <text x="144" y="1028">E</text>
+    <text x="8" y="1044">╔</text>
+    <text x="16" y="1044">╗</text>
+    <text x="24" y="1044">╔</text>
+    <text x="32" y="1044">╗</text>
+    <text x="8" y="1060">╝</text>
+    <text x="16" y="1060">╚</text>
+    <text x="24" y="1060">╝</text>
+    <text x="32" y="1060">╚</text>
+    <text x="104" y="1092">B</text>
+    <text x="112" y="1092">O</text>
+    <text x="120" y="1092">X</text>
+    <text x="136" y="1092">D</text>
+    <text x="144" y="1092">R</text>
+    <text x="152" y="1092">A</text>
+    <text x="160" y="1092">W</text>
+    <text x="168" y="1092">I</text>
+    <text x="176" y="1092">N</text>
+    <text x="184" y="1092">G</text>
+    <text x="192" y="1092">S</text>
+    <text x="208" y="1092">L</text>
+    <text x="216" y="1092">I</text>
+    <text x="224" y="1092">G</text>
+    <text x="232" y="1092">H</text>
+    <text x="240" y="1092">T</text>
+    <text x="256" y="1092">V</text>
+    <text x="264" y="1092">E</text>
+    <text x="272" y="1092">R</text>
+    <text x="280" y="1092">T</text>
+    <text x="288" y="1092">I</text>
+    <text x="296" y="1092">C</text>
+    <text x="304" y="1092">A</text>
+    <text x="312" y="1092">L</text>
+    <text x="328" y="1092">A</text>
+    <text x="336" y="1092">N</text>
+    <text x="344" y="1092">D</text>
+    <text x="360" y="1092">H</text>
+    <text x="368" y="1092">O</text>
+    <text x="376" y="1092">R</text>
+    <text x="384" y="1092">I</text>
+    <text x="392" y="1092">Z</text>
+    <text x="400" y="1092">O</text>
+    <text x="408" y="1092">N</text>
+    <text x="416" y="1092">T</text>
+    <text x="424" y="1092">A</text>
+    <text x="432" y="1092">L</text>
+    <text x="0" y="1252">╱</text>
+    <text x="8" y="1252">╱</text>
+    <text x="16" y="1252">╱</text>
+    <text x="24" y="1252">╱</text>
+    <text x="32" y="1252">╱</text>
+    <text x="40" y="1252">╱</text>
+    <text x="48" y="1252">╱</text>
+    <text x="56" y="1252">╱</text>
+    <text x="64" y="1252">╱</text>
+    <text x="72" y="1252">╱</text>
+    <text x="104" y="1252">B</text>
+    <text x="112" y="1252">O</text>
+    <text x="120" y="1252">X</text>
+    <text x="136" y="1252">D</text>
+    <text x="144" y="1252">R</text>
+    <text x="152" y="1252">A</text>
+    <text x="160" y="1252">W</text>
+    <text x="168" y="1252">I</text>
+    <text x="176" y="1252">N</text>
+    <text x="184" y="1252">G</text>
+    <text x="192" y="1252">S</text>
+    <text x="208" y="1252">L</text>
+    <text x="216" y="1252">I</text>
+    <text x="224" y="1252">G</text>
+    <text x="232" y="1252">H</text>
+    <text x="240" y="1252">T</text>
+    <text x="256" y="1252">D</text>
+    <text x="264" y="1252">I</text>
+    <text x="272" y="1252">A</text>
+    <text x="280" y="1252">G</text>
+    <text x="288" y="1252">O</text>
+    <text x="296" y="1252">N</text>
+    <text x="304" y="1252">A</text>
+    <text x="312" y="1252">L</text>
+    <text x="328" y="1252">.</text>
+    <text x="336" y="1252">.</text>
+    <text x="344" y="1252">.</text>
+    <text x="0" y="1268">╲</text>
+    <text x="8" y="1268">╲</text>
+    <text x="16" y="1268">╲</text>
+    <text x="24" y="1268">╲</text>
+    <text x="32" y="1268">╲</text>
+    <text x="40" y="1268">╲</text>
+    <text x="48" y="1268">╲</text>
+    <text x="56" y="1268">╲</text>
+    <text x="64" y="1268">╲</text>
+    <text x="72" y="1268">╲</text>
+    <text x="0" y="1284">╳</text>
+    <text x="8" y="1284">╳</text>
+    <text x="16" y="1284">╳</text>
+    <text x="24" y="1284">╳</text>
+    <text x="32" y="1284">╳</text>
+    <text x="40" y="1284">╳</text>
+    <text x="48" y="1284">╳</text>
+    <text x="56" y="1284">╳</text>
+    <text x="64" y="1284">╳</text>
+    <text x="72" y="1284">╳</text>
+    <text x="384" y="1380">╱</text>
+    <text x="392" y="1380">╲</text>
+    <text x="16" y="1396">t</text>
+    <text x="24" y="1396">i</text>
+    <text x="32" y="1396">g</text>
+    <text x="40" y="1396">h</text>
+    <text x="48" y="1396">t</text>
+    <text x="384" y="1396">╲</text>
+    <text x="392" y="1396">╱</text>
+    <text x="144" y="1412">t</text>
+    <text x="152" y="1412">i</text>
+    <text x="160" y="1412">g</text>
+    <text x="168" y="1412">h</text>
+    <text x="176" y="1412">t</text>
+    <text x="184" y="1412">l</text>
+    <text x="192" y="1412">y</text>
+    <text x="24" y="1444">‹</text>
+    <text x="32" y="1444">L</text>
+    <text x="40" y="1444">o</text>
+    <text x="48" y="1444">r</text>
+    <text x="56" y="1444">e</text>
+    <text x="64" y="1444">m</text>
+    <text x="80" y="1444">i</text>
+    <text x="88" y="1444">p</text>
+    <text x="96" y="1444">s</text>
+    <text x="104" y="1444">u</text>
+    <text x="112" y="1444">m</text>
+    <text x="120" y="1444">›</text>
+    <text x="144" y="1444">t</text>
+    <text x="152" y="1444">i</text>
+    <text x="160" y="1444">g</text>
+    <text x="168" y="1444">h</text>
+    <text x="176" y="1444">t</text>
+    <text x="184" y="1444">l</text>
+    <text x="192" y="1444">y</text>
+    <text x="24" y="1460">·</text>
+    <text x="32" y="1460">L</text>
+    <text x="40" y="1460">o</text>
+    <text x="48" y="1460">r</text>
+    <text x="56" y="1460">e</text>
+    <text x="64" y="1460">m</text>
+    <text x="72" y="1460"> </text>
+    <text x="80" y="1460">i</text>
+    <text x="88" y="1460">p</text>
+    <text x="96" y="1460">s</text>
+    <text x="104" y="1460">u</text>
+    <text x="112" y="1460">m</text>
+    <text x="120" y="1460">·</text>
+    <text x="72" y="1524">a</text>
+    <text x="80" y="1524">b</text>
+    <text x="88" y="1524">c</text>
+    <text x="104" y="1524">·</text>
+    <text x="112" y="1524">l</text>
+    <text x="120" y="1524">m</text>
+    <text x="128" y="1524">n</text>
+    <text x="144" y="1524">‹</text>
+    <text x="152" y="1524">x</text>
+    <text x="160" y="1524">›</text>
+    <text x="168" y="1524">y</text>
+    <text x="176" y="1524">z</text>
+    <text x="184" y="1524">·</text>
+    <text x="0" y="1572">A</text>
+    <text x="8" y="1572">s</text>
+    <text x="16" y="1572">c</text>
+    <text x="24" y="1572">i</text>
+    <text x="32" y="1572">i</text>
+    <text x="48" y="1572">v</text>
+    <text x="56" y="1572">s</text>
+    <text x="64" y="1572">.</text>
+    <text x="80" y="1572">B</text>
+    <text x="88" y="1572">o</text>
+    <text x="96" y="1572">x</text>
+    <text x="112" y="1572">c</text>
+    <text x="120" y="1572">h</text>
+    <text x="128" y="1572">a</text>
+    <text x="136" y="1572">r</text>
+    <text x="144" y="1572">a</text>
+    <text x="152" y="1572">c</text>
+    <text x="160" y="1572">t</text>
+    <text x="168" y="1572">e</text>
+    <text x="176" y="1572">r</text>
+    <text x="184" y="1572">s</text>
+    <text x="80" y="1604">X</text>
+    <text x="208" y="1604">X</text>
+    <text x="80" y="1620">^</text>
+    <text x="328" y="1620">X</text>
+    <text x="80" y="1636">|</text>
+    <text x="40" y="1652">X</text>
+    <text x="56" y="1652">&lt;</text>
+    <text x="64" y="1652">-</text>
+    <text x="72" y="1652">-</text>
+    <text x="80" y="1652">*</text>
+    <text x="88" y="1652">-</text>
+    <text x="96" y="1652">-</text>
+    <text x="104" y="1652">&gt;</text>
+    <text x="120" y="1652">X</text>
+    <text x="168" y="1652">X</text>
+    <text x="248" y="1652">X</text>
+    <text x="296" y="1652">X</text>
+    <text x="360" y="1652">X</text>
+    <text x="80" y="1668">|</text>
+    <text x="80" y="1684">v</text>
+    <text x="328" y="1684">X</text>
+    <text x="80" y="1700">X</text>
+    <text x="208" y="1700">X</text>
+    <text x="80" y="1732">X</text>
+    <text x="208" y="1732">X</text>
+    <text x="80" y="1748">^</text>
+    <text x="328" y="1748">X</text>
+    <text x="80" y="1764">|</text>
+    <text x="40" y="1780">X</text>
+    <text x="56" y="1780">&lt;</text>
+    <text x="64" y="1780">-</text>
+    <text x="72" y="1780">-</text>
+    <text x="80" y="1780">*</text>
+    <text x="88" y="1780">-</text>
+    <text x="96" y="1780">-</text>
+    <text x="104" y="1780">&gt;</text>
+    <text x="120" y="1780">X</text>
+    <text x="168" y="1780">X</text>
+    <text x="248" y="1780">X</text>
+    <text x="296" y="1780">X</text>
+    <text x="360" y="1780">X</text>
+    <text x="80" y="1796">|</text>
+    <text x="80" y="1812">v</text>
+    <text x="328" y="1812">X</text>
+    <text x="80" y="1828">X</text>
+    <text x="208" y="1828">X</text>
+    <text x="80" y="1860">X</text>
+    <text x="208" y="1860">X</text>
+    <text x="80" y="1876">^</text>
+    <text x="352" y="1876">X</text>
+    <text x="496" y="1876">X</text>
+    <text x="80" y="1892">|</text>
+    <text x="40" y="1908">X</text>
+    <text x="56" y="1908">&lt;</text>
+    <text x="64" y="1908">-</text>
+    <text x="72" y="1908">-</text>
+    <text x="80" y="1908">*</text>
+    <text x="88" y="1908">-</text>
+    <text x="96" y="1908">-</text>
+    <text x="104" y="1908">&gt;</text>
+    <text x="120" y="1908">X</text>
+    <text x="168" y="1908">X</text>
+    <text x="248" y="1908">X</text>
+    <text x="320" y="1908">X</text>
+    <text x="384" y="1908">X</text>
+    <text x="472" y="1908">X</text>
+    <text x="520" y="1908">X</text>
+    <text x="80" y="1924">|</text>
+    <text x="80" y="1940">v</text>
+    <text x="352" y="1940">X</text>
+    <text x="496" y="1940">X</text>
+    <text x="80" y="1956">X</text>
+    <text x="208" y="1956">X</text>
+    <text x="0" y="2004">R</text>
+    <text x="8" y="2004">e</text>
+    <text x="16" y="2004">g</text>
+    <text x="24" y="2004">a</text>
+    <text x="32" y="2004">r</text>
+    <text x="40" y="2004">d</text>
+    <text x="48" y="2004">e</text>
+    <text x="56" y="2004">d</text>
+    <text x="72" y="2004">a</text>
+    <text x="80" y="2004">s</text>
+    <text x="96" y="2004">t</text>
+    <text x="104" y="2004">e</text>
+    <text x="112" y="2004">x</text>
+    <text x="120" y="2004">t</text>
+    <text x="136" y="2004">b</text>
+    <text x="144" y="2004">y</text>
+    <text x="160" y="2004">A</text>
+    <text x="168" y="2004">s</text>
+    <text x="176" y="2004">c</text>
+    <text x="184" y="2004">i</text>
+    <text x="192" y="2004">i</text>
+    <text x="200" y="2004">f</text>
+    <text x="208" y="2004">l</text>
+    <text x="216" y="2004">o</text>
+    <text x="224" y="2004">w</text>
+    <text x="232" y="2004">:</text>
+    <text x="160" y="2036">◌</text>
+    <text x="168" y="2036">◌</text>
+    <text x="176" y="2036">◌</text>
+    <text x="184" y="2036">◌</text>
+    <text x="192" y="2036">◌</text>
+    <text x="200" y="2036">◌</text>
+    <text x="208" y="2036">◌</text>
+    <text x="216" y="2036">◌</text>
+    <text x="224" y="2036">◌</text>
+    <text x="232" y="2036">◌</text>
+    <text x="320" y="2036">◙</text>
+    <text x="328" y="2036">◙</text>
+    <text x="336" y="2036">◙</text>
+    <text x="344" y="2036">◙</text>
+    <text x="352" y="2036">◙</text>
+    <text x="360" y="2036">◙</text>
+    <text x="368" y="2036">◙</text>
+    <text x="376" y="2036">◙</text>
+    <text x="384" y="2036">◙</text>
+    <text x="392" y="2036">◙</text>
+    <text x="0" y="2052">◻</text>
+    <text x="8" y="2052">◻</text>
+    <text x="16" y="2052">◻</text>
+    <text x="24" y="2052">◻</text>
+    <text x="32" y="2052">◻</text>
+    <text x="40" y="2052">◻</text>
+    <text x="48" y="2052">◻</text>
+    <text x="56" y="2052">◻</text>
+    <text x="64" y="2052">◻</text>
+    <text x="72" y="2052">◻</text>
+    <text x="80" y="2052">◼</text>
+    <text x="88" y="2052">◼</text>
+    <text x="96" y="2052">◼</text>
+    <text x="104" y="2052">◼</text>
+    <text x="112" y="2052">◼</text>
+    <text x="120" y="2052">◼</text>
+    <text x="128" y="2052">◼</text>
+    <text x="136" y="2052">◼</text>
+    <text x="144" y="2052">◼</text>
+    <text x="152" y="2052">◼</text>
+    <text x="160" y="2052">⬚</text>
+    <text x="168" y="2052">⬚</text>
+    <text x="176" y="2052">⬚</text>
+    <text x="184" y="2052">⬚</text>
+    <text x="192" y="2052">⬚</text>
+    <text x="200" y="2052">⬚</text>
+    <text x="208" y="2052">⬚</text>
+    <text x="216" y="2052">⬚</text>
+    <text x="224" y="2052">⬚</text>
+    <text x="232" y="2052">⬚</text>
+    <text x="240" y="2052">▢</text>
+    <text x="248" y="2052">▢</text>
+    <text x="256" y="2052">▢</text>
+    <text x="264" y="2052">▢</text>
+    <text x="272" y="2052">▢</text>
+    <text x="280" y="2052">▢</text>
+    <text x="288" y="2052">▢</text>
+    <text x="296" y="2052">▢</text>
+    <text x="304" y="2052">▢</text>
+    <text x="312" y="2052">▢</text>
+    <text x="0" y="2068">0</text>
+    <text x="8" y="2068">1</text>
+    <text x="16" y="2068">2</text>
+    <text x="24" y="2068">3</text>
+    <text x="32" y="2068">4</text>
+    <text x="40" y="2068">5</text>
+    <text x="48" y="2068">6</text>
+    <text x="56" y="2068">7</text>
+    <text x="64" y="2068">8</text>
+    <text x="72" y="2068">9</text>
+    <text x="80" y="2068">0</text>
+    <text x="88" y="2068">1</text>
+    <text x="96" y="2068">2</text>
+    <text x="104" y="2068">3</text>
+    <text x="112" y="2068">4</text>
+    <text x="120" y="2068">5</text>
+    <text x="128" y="2068">6</text>
+    <text x="136" y="2068">7</text>
+    <text x="144" y="2068">8</text>
+    <text x="152" y="2068">9</text>
+    <text x="160" y="2068">0</text>
+    <text x="168" y="2068">1</text>
+    <text x="176" y="2068">2</text>
+    <text x="184" y="2068">3</text>
+    <text x="192" y="2068">4</text>
+    <text x="200" y="2068">5</text>
+    <text x="208" y="2068">6</text>
+    <text x="216" y="2068">7</text>
+    <text x="224" y="2068">8</text>
+    <text x="232" y="2068">9</text>
+    <text x="240" y="2068">0</text>
+    <text x="248" y="2068">1</text>
+    <text x="256" y="2068">2</text>
+    <text x="264" y="2068">3</text>
+    <text x="272" y="2068">4</text>
+    <text x="280" y="2068">5</text>
+    <text x="288" y="2068">6</text>
+    <text x="296" y="2068">7</text>
+    <text x="304" y="2068">8</text>
+    <text x="312" y="2068">9</text>
+    <text x="0" y="2100">O</text>
+    <text x="8" y="2100">v</text>
+    <text x="16" y="2100">e</text>
+    <text x="24" y="2100">r</text>
+    <text x="32" y="2100">l</text>
+    <text x="40" y="2100">y</text>
+    <text x="56" y="2100">t</text>
+    <text x="64" y="2100">a</text>
+    <text x="72" y="2100">l</text>
+    <text x="80" y="2100">l</text>
+    <text x="88" y="2100">:</text>
+    <text x="0" y="2116">↓</text>
+    <text x="8" y="2116">↓</text>
+    <text x="16" y="2116">↓</text>
+    <text x="24" y="2116">↓</text>
+    <text x="32" y="2116">↓</text>
+    <text x="40" y="2116">↓</text>
+    <text x="48" y="2116">↓</text>
+    <text x="56" y="2116">↓</text>
+    <text x="64" y="2116">↓</text>
+    <text x="72" y="2116">↓</text>
+    <text x="80" y="2116">🠛</text>
+    <text x="88" y="2116">🠛</text>
+    <text x="96" y="2116">🠛</text>
+    <text x="104" y="2116">🠛</text>
+    <text x="112" y="2116">🠛</text>
+    <text x="120" y="2116">🠛</text>
+    <text x="128" y="2116">🠛</text>
+    <text x="136" y="2116">🠛</text>
+    <text x="144" y="2116">🠛</text>
+    <text x="152" y="2116">🠛</text>
+    <text x="160" y="2116">🠛</text>
+    <text x="0" y="2132">￬</text>
+    <text x="8" y="2132">￬</text>
+    <text x="16" y="2132">￬</text>
+    <text x="24" y="2132">￬</text>
+    <text x="32" y="2132">￬</text>
+    <text x="40" y="2132">￬</text>
+    <text x="48" y="2132">￬</text>
+    <text x="56" y="2132">￬</text>
+    <text x="64" y="2132">￬</text>
+    <text x="72" y="2132">￬</text>
+    <text x="80" y="2132">￬</text>
+  </g>
+</g>
+</svg>

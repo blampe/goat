@@ -11,7 +11,7 @@ jobs:
   build:
     strategy:
       matrix:
-        go-version: [1.21.x]
+        go-version: [1.25.x]
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
@@ -23,5 +23,8 @@ jobs:
       - name: Check Out Code
         uses: actions/checkout@v4
 
-      - name: Test Library API For Regressions
-        run: go test -race -v .
+      - name: Test Library API For Regressions and Remote Build
+        run: |
+             cd ./ascii; go test -race -v .
+             cd ./utf8;  go test -race -v .
+             cd ./svg;  go test -race -v .

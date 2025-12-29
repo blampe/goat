@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="720" height="138"
+    viewBox="0 0 720 138">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    polyline, path {
+        fill: none;
+    }
+
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        fill: currentColor; stroke: currentColor;
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        color: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            color: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="64,48 128,48"/>
+    <polyline class="path" points="176,48 192,48"/>
+    <polyline class="path" points="192,48 224,48"/>
+    <polyline class="path" points="224,48 240,48"/>
+    <polyline class="path" points="288,48 304,48"/>
+    <polyline class="path" points="304,48 336,48"/>
+    <polyline class="path" points="336,48 352,48"/>
+    <polyline class="path" points="400,48 408,48"/>
+    <polyline class="path" points="456,48 464,48"/>
+    <polyline class="path" points="512,48 528,48"/>
+    <polyline class="path" points="560,48 576,48"/>
+    <polyline class="path" points="624,48 664,48"/>
+    <polyline class="path" points="680,48 688,48"/>
+    <polyline class="path" points="64,80 128,80"/>
+    <polyline class="path" points="176,80 192,80"/>
+    <polyline class="path" points="192,80 224,80"/>
+    <polyline class="path" points="224,80 240,80"/>
+    <polyline class="path" points="288,80 304,80"/>
+    <polyline class="path" points="304,80 336,80"/>
+    <polyline class="path" points="336,80 352,80"/>
+    <polyline class="path" points="400,80 408,80"/>
+    <polyline class="path" points="456,80 464,80"/>
+    <polyline class="path" points="512,80 528,80"/>
+    <polyline class="path" points="560,80 576,80"/>
+    <polyline class="path" points="624,80 632,80"/>
+    <polyline class="path" points="648,80 688,80"/>
+    <polyline class="path" points="192,32 192,48"/>
+    <polyline class="path" points="192,80 192,96"/>
+    <polyline class="path" points="224,32 224,48"/>
+    <polyline class="path" points="224,80 224,96"/>
+    <polyline class="path" points="304,32 304,48"/>
+    <polyline class="path" points="304,48 304,80"/>
+    <polyline class="path" points="304,80 304,96"/>
+    <polyline class="path" points="336,32 336,48"/>
+    <polyline class="path" points="336,48 336,80"/>
+    <polyline class="path" points="336,80 336,96"/>
+    <polyline class="path" points="416,32 416,96"/>
+    <polyline class="path" points="448,32 448,96"/>
+    <polyline class="path" points="528,32 528,48"/>
+    <polyline class="path" points="528,80 528,96"/>
+    <polyline class="path" points="560,32 560,48"/>
+    <polyline class="path" points="560,80 560,96"/>
+    <polyline class="path" points="640,64 640,96"/>
+    <polyline class="path" points="672,32 672,64"/>
+    <polyline class="path" points="80,32 80,40"/>
+    <polyline class="path" points="80,88 80,96"/>
+    <polyline class="path" points="112,32 112,40"/>
+    <polyline class="path" points="112,88 112,96"/>
+    <polyline class="path" points="640,32 640,40"/>
+    <polyline class="path" points="640,56 640,64"/>
+    <polyline class="path" points="672,64 672,72"/>
+    <polyline class="path" points="672,88 672,96"/>
+  </g>
+  <g id='triangles'>
+  </g>
+  <g id='roundedCorners'>
+    <path class="path" d="M 96,16 A 16,16 0 0,0 80,32"></path>
+    <path class="path" d="M 96,16 A 16,16 0 0,1 112,32"></path>
+    <path class="path" d="M 208,16 A 16,16 0 0,0 192,32"></path>
+    <path class="path" d="M 208,16 A 16,16 0 0,1 224,32"></path>
+    <path class="path" d="M 320,16 A 16,16 0 0,0 304,32"></path>
+    <path class="path" d="M 320,16 A 16,16 0 0,1 336,32"></path>
+    <path class="path" d="M 432,16 A 16,16 0 0,0 416,32"></path>
+    <path class="path" d="M 432,16 A 16,16 0 0,1 448,32"></path>
+    <path class="path" d="M 544,16 A 16,16 0 0,0 528,32"></path>
+    <path class="path" d="M 544,16 A 16,16 0 0,1 560,32"></path>
+    <path class="path" d="M 656,16 A 16,16 0 0,0 640,32"></path>
+    <path class="path" d="M 656,16 A 16,16 0 0,1 672,32"></path>
+    <path class="path" d="M 64,48 A 16,16 0 0,0 48,64"></path>
+    <path class="path" d="M 128,48 A 16,16 0 0,1 144,64"></path>
+    <path class="path" d="M 176,48 A 16,16 0 0,0 160,64"></path>
+    <path class="path" d="M 240,48 A 16,16 0 0,1 256,64"></path>
+    <path class="path" d="M 288,48 A 16,16 0 0,0 272,64"></path>
+    <path class="path" d="M 352,48 A 16,16 0 0,1 368,64"></path>
+    <path class="path" d="M 400,48 A 16,16 0 0,0 384,64"></path>
+    <path class="path" d="M 464,48 A 16,16 0 0,1 480,64"></path>
+    <path class="path" d="M 512,48 A 16,16 0 0,0 496,64"></path>
+    <path class="path" d="M 576,48 A 16,16 0 0,1 592,64"></path>
+    <path class="path" d="M 624,48 A 16,16 0 0,0 608,64"></path>
+    <path class="path" d="M 688,48 A 16,16 0 0,1 704,64"></path>
+    <path class="path" d="M 48,64 A 16,16 0 0,0 64,80"></path>
+    <path class="path" d="M 144,64 A 16,16 0 0,1 128,80"></path>
+    <path class="path" d="M 160,64 A 16,16 0 0,0 176,80"></path>
+    <path class="path" d="M 256,64 A 16,16 0 0,1 240,80"></path>
+    <path class="path" d="M 272,64 A 16,16 0 0,0 288,80"></path>
+    <path class="path" d="M 368,64 A 16,16 0 0,1 352,80"></path>
+    <path class="path" d="M 384,64 A 16,16 0 0,0 400,80"></path>
+    <path class="path" d="M 480,64 A 16,16 0 0,1 464,80"></path>
+    <path class="path" d="M 496,64 A 16,16 0 0,0 512,80"></path>
+    <path class="path" d="M 592,64 A 16,16 0 0,1 576,80"></path>
+    <path class="path" d="M 608,64 A 16,16 0 0,0 624,80"></path>
+    <path class="path" d="M 704,64 A 16,16 0 0,1 688,80"></path>
+    <path class="path" d="M 80,96 A 16,16 0 0,0 96,112"></path>
+    <path class="path" d="M 112,96 A 16,16 0 0,1 96,112"></path>
+    <path class="path" d="M 192,96 A 16,16 0 0,0 208,112"></path>
+    <path class="path" d="M 224,96 A 16,16 0 0,1 208,112"></path>
+    <path class="path" d="M 304,96 A 16,16 0 0,0 320,112"></path>
+    <path class="path" d="M 336,96 A 16,16 0 0,1 320,112"></path>
+    <path class="path" d="M 416,96 A 16,16 0 0,0 432,112"></path>
+    <path class="path" d="M 448,96 A 16,16 0 0,1 432,112"></path>
+    <path class="path" d="M 528,96 A 16,16 0 0,0 544,112"></path>
+    <path class="path" d="M 560,96 A 16,16 0 0,1 544,112"></path>
+    <path class="path" d="M 640,96 A 16,16 0 0,0 656,112"></path>
+    <path class="path" d="M 672,96 A 16,16 0 0,1 656,112"></path>
+  </g>
+  <g id='circles'>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+</g>
+</g>
+</svg>

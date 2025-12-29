@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="88" height="170"
+    viewBox="0 0 88 170">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    polyline, path {
+        fill: none;
+    }
+
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        fill: currentColor; stroke: currentColor;
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        color: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            color: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines-vertical'>
+    <polyline class="path" points="8,16 8,64"/>
+    <polyline class="path" points="8,84 8,92"/>
+    <polyline class="path" points="16,16 16,64"/>
+    <polyline class="path" points="16,84 16,92"/>
+    <polyline class="path" points="24,104 24,152"/>
+    <polyline class="path" points="32,16 32,64"/>
+  </g>
+  <g id='lines-horizontal'>
+    <polyline class="path" points="8,16 32,16"/>
+    <polyline class="path" points="8,32 32,32"/>
+    <polyline class="path" points="8,64 32,64"/>
+    <polyline class="path" points="18,128 30,128"/>
+    <polyline class="path" points="60,128 68,128"/>
+  </g>
+  <g id='triangles'>
+    <polygon points="19,128 14.5,125.9 14.5,130.1" transform="rotate(180, 16, 128)" class="arrowhead"></polygon>
+    <polygon points="31,112 26.5,109.9 26.5,114.1" transform="rotate(270, 24, 112)" class="arrowhead"></polygon>
+    <polygon points="31,144 26.5,141.9 26.5,146.1" transform="rotate(90, 24, 144)" class="arrowhead"></polygon>
+    <polygon points="35,128 30.5,125.9 30.5,130.1" transform="rotate(0, 32, 128)" class="arrowhead"></polygon>
+  </g>
+  <g id='roundedCorners'>
+    <path class="path" d="M 12,80 A 4,4 0 0,0 8,84"></path>
+    <path class="path" d="M 12,80 A 4,4 0 0,1 16,84"></path>
+    <path class="path" d="M 8,92 A 4,4 0 0,0 12,96"></path>
+    <path class="path" d="M 16,92 A 4,4 0 0,1 12,96"></path>
+  </g>
+  <g id='circles'>
+    <circle cx="56" cy="128" r="4" class="filled"></circle>
+    <circle cx="72" cy="128" r="4" class="hollow"></circle>
+  </g>
+  <g id='text'>
+  </g>
+</g>
+</svg>

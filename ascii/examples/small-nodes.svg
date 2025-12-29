@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="624" height="250"
+    viewBox="0 0 624 250">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    polyline, path {
+        fill: none;
+    }
+
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        fill: currentColor; stroke: currentColor;
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        color: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            color: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="192,32 240,32"/>
+    <polyline class="path" points="256,32 296,32"/>
+    <polyline class="path" points="312,32 346,32"/>
+    <polyline class="path" points="358,32 440,32"/>
+    <polyline class="path" points="0,48 72,48"/>
+    <polyline class="path" points="88,48 152,48"/>
+    <polyline class="path" points="6,96 48,96"/>
+    <polyline class="path" points="62,96 96,96"/>
+    <polyline class="path" points="112,96 152,96"/>
+    <polyline class="path" points="312,96 344,96"/>
+    <polyline class="path" points="360,96 400,96"/>
+    <polyline class="path" points="414,96 448,96"/>
+    <polyline class="path" points="456,96 496,96"/>
+    <polyline class="path" points="510,96 544,96"/>
+    <polyline class="path" points="560,96 600,96"/>
+    <polyline class="path" points="0,64 0,90"/>
+    <polyline class="path" points="160,54 160,80"/>
+    <polyline class="path" points="304,48 304,80"/>
+    <polyline class="path" points="352,48 352,96"/>
+    <polyline class="path" points="456,48 456,80"/>
+    <polyline class="path" points="552,48 552,90"/>
+    <polyline class="path" points="64,80 77,53"/>
+    <polyline class="path" points="88,64 101,91"/>
+  </g>
+  <g id='triangles'>
+    <polygon points="8,64 -4,58.4 -4,69.6" transform="rotate(270, 0, 64)" class="arrowhead"></polygon>
+    <polygon points="48,96 36,90.4 36,101.6" transform="rotate(0, 48, 96)" class="arrowhead"></polygon>
+    <polygon points="76,80 64,74.4 64,85.6" transform="rotate(120, 64, 80)" class="arrowhead"></polygon>
+    <polygon points="72,48 60,42.4 60,53.6" transform="rotate(0, 72, 48)" class="arrowhead"></polygon>
+    <polygon points="88,48 76,42.4 76,53.6" transform="rotate(180, 88, 48)" class="arrowhead"></polygon>
+    <polygon points="100,64 88,58.4 88,69.6" transform="rotate(240, 88, 64)" class="arrowhead"></polygon>
+    <polygon points="96,96 84,90.4 84,101.6" transform="rotate(0, 96, 96)" class="arrowhead"></polygon>
+    <polygon points="112,96 100,90.4 100,101.6" transform="rotate(180, 112, 96)" class="arrowhead"></polygon>
+    <polygon points="152,48 140,42.4 140,53.6" transform="rotate(0, 152, 48)" class="arrowhead"></polygon>
+    <polygon points="152,96 140,90.4 140,101.6" transform="rotate(0, 152, 96)" class="arrowhead"></polygon>
+    <polygon points="168,80 156,74.4 156,85.6" transform="rotate(90, 160, 80)" class="arrowhead"></polygon>
+    <polygon points="240,32 228,26.4 228,37.6" transform="rotate(0, 240, 32)" class="arrowhead"></polygon>
+    <polygon points="256,32 244,26.4 244,37.6" transform="rotate(180, 256, 32)" class="arrowhead"></polygon>
+    <polygon points="296,32 284,26.4 284,37.6" transform="rotate(0, 296, 32)" class="arrowhead"></polygon>
+    <polygon points="312,48 300,42.4 300,53.6" transform="rotate(270, 304, 48)" class="arrowhead"></polygon>
+    <polygon points="312,80 300,74.4 300,85.6" transform="rotate(90, 304, 80)" class="arrowhead"></polygon>
+    <polygon points="312,32 300,26.4 300,37.6" transform="rotate(180, 312, 32)" class="arrowhead"></polygon>
+    <polygon points="312,96 300,90.4 300,101.6" transform="rotate(180, 312, 96)" class="arrowhead"></polygon>
+    <polygon points="344,96 332,90.4 332,101.6" transform="rotate(0, 344, 96)" class="arrowhead"></polygon>
+    <polygon points="360,48 348,42.4 348,53.6" transform="rotate(270, 352, 48)" class="arrowhead"></polygon>
+    <polygon points="360,96 348,90.4 348,101.6" transform="rotate(180, 360, 96)" class="arrowhead"></polygon>
+    <polygon points="400,96 388,90.4 388,101.6" transform="rotate(0, 400, 96)" class="arrowhead"></polygon>
+    <polygon points="448,96 436,90.4 436,101.6" transform="rotate(0, 448, 96)" class="arrowhead"></polygon>
+    <polygon points="464,80 452,74.4 452,85.6" transform="rotate(90, 456, 80)" class="arrowhead"></polygon>
+    <polygon points="496,96 484,90.4 484,101.6" transform="rotate(0, 496, 96)" class="arrowhead"></polygon>
+    <polygon points="544,96 532,90.4 532,101.6" transform="rotate(0, 544, 96)" class="arrowhead"></polygon>
+    <polygon points="560,48 548,42.4 548,53.6" transform="rotate(270, 552, 48)" class="arrowhead"></polygon>
+    <polygon points="560,96 548,90.4 548,101.6" transform="rotate(180, 560, 96)" class="arrowhead"></polygon>
+    <polygon points="600,96 588,90.4 588,101.6" transform="rotate(0, 600, 96)" class="arrowhead"></polygon>
+  </g>
+  <g id='roundedCorners'>
+    <path class="path" d="M 440,32 A 16,16 0 0,1 456,48"></path>
+  </g>
+  <g id='circles'>
+    <circle cx="0" cy="48" r="6" class="filled"></circle>
+    <circle cx="0" cy="96" r="6" class="hollow"></circle>
+    <circle cx="56" cy="96" r="6" class="hollow"></circle>
+    <circle cx="80" cy="48" r="6" class="hollow"></circle>
+    <circle cx="104" cy="96" r="6" class="hollow"></circle>
+    <circle cx="160" cy="48" r="6" class="hollow"></circle>
+    <circle cx="160" cy="96" r="6" class="filled"></circle>
+    <circle cx="192" cy="32" r="6" class="filled"></circle>
+    <circle cx="248" cy="32" r="6" class="hollow"></circle>
+    <circle cx="304" cy="32" r="6" class="hollow"></circle>
+    <circle cx="304" cy="96" r="6" class="hollow"></circle>
+    <circle cx="352" cy="32" r="6" class="hollow"></circle>
+    <circle cx="352" cy="96" r="6" class="filled"></circle>
+    <circle cx="408" cy="96" r="6" class="hollow"></circle>
+    <circle cx="456" cy="96" r="6" class="filled"></circle>
+    <circle cx="504" cy="96" r="6" class="hollow"></circle>
+    <circle cx="552" cy="32" r="6" class="hollow"></circle>
+    <circle cx="552" cy="96" r="6" class="hollow"></circle>
+    <circle cx="608" cy="96" r="6" class="filled"></circle>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+    <text x="192" y="20">A</text>
+    <text x="248" y="20">1</text>
+    <text x="304" y="20">2</text>
+    <text x="352" y="20">4</text>
+    <text x="552" y="20">8</text>
+    <text x="0" y="36">A</text>
+    <text x="80" y="36">B</text>
+    <text x="160" y="36">C</text>
+    <text x="0" y="116">D</text>
+    <text x="56" y="116">E</text>
+    <text x="104" y="116">F</text>
+    <text x="160" y="116">G</text>
+    <text x="304" y="116">3</text>
+    <text x="352" y="116">B</text>
+    <text x="408" y="116">5</text>
+    <text x="456" y="116">C</text>
+    <text x="504" y="116">6</text>
+    <text x="552" y="116">7</text>
+    <text x="608" y="116">D</text>
+</g>
+</g>
+</svg>

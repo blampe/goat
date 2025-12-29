@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="152" height="394"
+    viewBox="0 0 152 394">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    polyline, path {
+        fill: none;
+    }
+
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        fill: currentColor; stroke: currentColor;
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        color: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            color: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="24,288 40,288"/>
+    <polyline class="path" points="40,288 56,288"/>
+    <polyline class="path" points="56,288 72,288"/>
+    <polyline class="path" points="72,288 88,288"/>
+    <polyline class="path" points="24,304 40,304"/>
+    <polyline class="path" points="40,304 56,304"/>
+    <polyline class="path" points="56,304 72,304"/>
+    <polyline class="path" points="72,304 88,304"/>
+    <polyline class="path" points="24,320 40,320"/>
+    <polyline class="path" points="40,320 56,320"/>
+    <polyline class="path" points="56,320 72,320"/>
+    <polyline class="path" points="72,320 88,320"/>
+    <polyline class="path" points="24,336 40,336"/>
+    <polyline class="path" points="40,336 56,336"/>
+    <polyline class="path" points="56,336 72,336"/>
+    <polyline class="path" points="72,336 88,336"/>
+    <polyline class="path" points="24,352 40,352"/>
+    <polyline class="path" points="40,352 56,352"/>
+    <polyline class="path" points="56,352 72,352"/>
+    <polyline class="path" points="72,352 88,352"/>
+    <polyline class="path" points="8,200 104,200"/>
+    <polyline class="path" points="8,216 32,216"/>
+    <polyline class="path" points="32,216 56,216"/>
+    <polyline class="path" points="56,216 80,216"/>
+    <polyline class="path" points="80,216 104,216"/>
+    <polyline class="path" points="8,232 32,232"/>
+    <polyline class="path" points="32,232 56,232"/>
+    <polyline class="path" points="56,232 80,232"/>
+    <polyline class="path" points="80,232 104,232"/>
+    <polyline class="path" points="8,248 32,248"/>
+    <polyline class="path" points="32,248 56,248"/>
+    <polyline class="path" points="56,248 80,248"/>
+    <polyline class="path" points="80,248 104,248"/>
+    <polyline class="path" points="8,264 32,264"/>
+    <polyline class="path" points="32,264 56,264"/>
+    <polyline class="path" points="56,264 80,264"/>
+    <polyline class="path" points="80,264 104,264"/>
+    <polyline class="path" points="8,208 8,256"/>
+    <polyline class="path" points="24,288 24,304"/>
+    <polyline class="path" points="24,304 24,320"/>
+    <polyline class="path" points="24,320 24,336"/>
+    <polyline class="path" points="24,336 24,352"/>
+    <polyline class="path" points="32,208 32,256"/>
+    <polyline class="path" points="40,288 40,304"/>
+    <polyline class="path" points="40,304 40,320"/>
+    <polyline class="path" points="40,320 40,336"/>
+    <polyline class="path" points="40,336 40,352"/>
+    <polyline class="path" points="56,208 56,256"/>
+    <polyline class="path" points="56,288 56,304"/>
+    <polyline class="path" points="56,304 56,320"/>
+    <polyline class="path" points="56,320 56,336"/>
+    <polyline class="path" points="56,336 56,352"/>
+    <polyline class="path" points="72,288 72,304"/>
+    <polyline class="path" points="72,304 72,320"/>
+    <polyline class="path" points="72,320 72,336"/>
+    <polyline class="path" points="72,336 72,352"/>
+    <polyline class="path" points="80,208 80,256"/>
+    <polyline class="path" points="88,288 88,304"/>
+    <polyline class="path" points="88,304 88,320"/>
+    <polyline class="path" points="88,320 88,336"/>
+    <polyline class="path" points="88,336 88,352"/>
+    <polyline class="path" points="104,208 104,256"/>
+    <polyline class="path" points="120,16 120,352"/>
+    <polyline class="path" points="8,200 8,208"/>
+    <polyline class="path" points="8,256 8,264"/>
+    <polyline class="path" points="32,200 32,208"/>
+    <polyline class="path" points="32,256 32,264"/>
+    <polyline class="path" points="56,200 56,208"/>
+    <polyline class="path" points="56,256 56,264"/>
+    <polyline class="path" points="80,200 80,208"/>
+    <polyline class="path" points="80,256 80,264"/>
+    <polyline class="path" points="104,200 104,208"/>
+    <polyline class="path" points="104,256 104,264"/>
+  </g>
+  <g id='triangles'>
+  </g>
+  <g id='roundedCorners'>
+  </g>
+  <g id='circles'>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+    <text x="0" y="4">0</text>
+    <text x="8" y="4">1</text>
+    <text x="16" y="4">2</text>
+    <text x="24" y="4">3</text>
+    <text x="32" y="4">4</text>
+    <text x="40" y="4">5</text>
+    <text x="48" y="4">6</text>
+    <text x="56" y="4">7</text>
+    <text x="64" y="4">8</text>
+    <text x="72" y="4">9</text>
+    <text x="80" y="4">0</text>
+    <text x="88" y="4">1</text>
+    <text x="96" y="4">2</text>
+    <text x="104" y="4">3</text>
+    <text x="112" y="4">4</text>
+    <text x="120" y="4">5</text>
+    <text x="8" y="20">┌</text>
+    <text x="16" y="20">─</text>
+    <text x="24" y="20">┬</text>
+    <text x="32" y="20">─</text>
+    <text x="40" y="20">┬</text>
+    <text x="48" y="20">─</text>
+    <text x="56" y="20">┬</text>
+    <text x="64" y="20">─</text>
+    <text x="72" y="20">┬</text>
+    <text x="80" y="20">─</text>
+    <text x="88" y="20">┐</text>
+    <text x="8" y="36">├</text>
+    <text x="16" y="36">─</text>
+    <text x="24" y="36">┼</text>
+    <text x="32" y="36">─</text>
+    <text x="40" y="36">┼</text>
+    <text x="48" y="36">─</text>
+    <text x="56" y="36">┼</text>
+    <text x="64" y="36">─</text>
+    <text x="72" y="36">┼</text>
+    <text x="80" y="36">─</text>
+    <text x="88" y="36">┤</text>
+    <text x="8" y="52">├</text>
+    <text x="16" y="52">─</text>
+    <text x="24" y="52">┼</text>
+    <text x="32" y="52">─</text>
+    <text x="40" y="52">┼</text>
+    <text x="48" y="52">─</text>
+    <text x="56" y="52">┼</text>
+    <text x="64" y="52">─</text>
+    <text x="72" y="52">┼</text>
+    <text x="80" y="52">─</text>
+    <text x="88" y="52">┤</text>
+    <text x="8" y="68">├</text>
+    <text x="16" y="68">─</text>
+    <text x="24" y="68">┼</text>
+    <text x="32" y="68">─</text>
+    <text x="40" y="68">┼</text>
+    <text x="48" y="68">─</text>
+    <text x="56" y="68">┼</text>
+    <text x="64" y="68">─</text>
+    <text x="72" y="68">┼</text>
+    <text x="80" y="68">─</text>
+    <text x="88" y="68">┤</text>
+    <text x="8" y="84">└</text>
+    <text x="16" y="84">─</text>
+    <text x="24" y="84">┴</text>
+    <text x="32" y="84">─</text>
+    <text x="40" y="84">┴</text>
+    <text x="48" y="84">─</text>
+    <text x="56" y="84">┴</text>
+    <text x="64" y="84">─</text>
+    <text x="72" y="84">┴</text>
+    <text x="80" y="84">─</text>
+    <text x="88" y="84">┘</text>
+    <text x="16" y="116">┌</text>
+    <text x="24" y="116">┬</text>
+    <text x="32" y="116">┬</text>
+    <text x="40" y="116">┬</text>
+    <text x="48" y="116">┬</text>
+    <text x="56" y="116">┬</text>
+    <text x="64" y="116">┬</text>
+    <text x="72" y="116">┬</text>
+    <text x="80" y="116">┬</text>
+    <text x="88" y="116">┐</text>
+    <text x="16" y="132">├</text>
+    <text x="24" y="132">┼</text>
+    <text x="32" y="132">┼</text>
+    <text x="40" y="132">┼</text>
+    <text x="48" y="132">┼</text>
+    <text x="56" y="132">┼</text>
+    <text x="64" y="132">┼</text>
+    <text x="72" y="132">┼</text>
+    <text x="80" y="132">┼</text>
+    <text x="88" y="132">┤</text>
+    <text x="16" y="148">├</text>
+    <text x="24" y="148">┼</text>
+    <text x="32" y="148">┼</text>
+    <text x="40" y="148">┼</text>
+    <text x="48" y="148">┼</text>
+    <text x="56" y="148">┼</text>
+    <text x="64" y="148">┼</text>
+    <text x="72" y="148">┼</text>
+    <text x="80" y="148">┼</text>
+    <text x="88" y="148">┤</text>
+    <text x="16" y="164">├</text>
+    <text x="24" y="164">┼</text>
+    <text x="32" y="164">┼</text>
+    <text x="40" y="164">┼</text>
+    <text x="48" y="164">┼</text>
+    <text x="56" y="164">┼</text>
+    <text x="64" y="164">┼</text>
+    <text x="72" y="164">┼</text>
+    <text x="80" y="164">┼</text>
+    <text x="88" y="164">┤</text>
+    <text x="16" y="180">└</text>
+    <text x="24" y="180">┴</text>
+    <text x="32" y="180">┴</text>
+    <text x="40" y="180">┴</text>
+    <text x="48" y="180">┴</text>
+    <text x="56" y="180">┴</text>
+    <text x="64" y="180">┴</text>
+    <text x="72" y="180">┴</text>
+    <text x="80" y="180">┴</text>
+    <text x="88" y="180">┘</text>
+    <text x="0" y="372">0</text>
+    <text x="8" y="372">1</text>
+    <text x="16" y="372">2</text>
+    <text x="24" y="372">3</text>
+    <text x="32" y="372">4</text>
+    <text x="40" y="372">5</text>
+    <text x="48" y="372">6</text>
+    <text x="56" y="372">7</text>
+    <text x="64" y="372">8</text>
+    <text x="72" y="372">9</text>
+    <text x="80" y="372">0</text>
+    <text x="88" y="372">1</text>
+    <text x="96" y="372">2</text>
+    <text x="104" y="372">3</text>
+    <text x="112" y="372">4</text>
+    <text x="120" y="372">5</text>
+</g>
+</g>
+</svg>

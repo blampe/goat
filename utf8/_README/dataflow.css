@@ -1,0 +1,52 @@
+a.utf8-art {
+    goat-anchor-marks: "₁₁";
+    goat-anchor-href: "https://developer.mozilla.org/en-US/docs/Glossary/UTF-8";
+}
+a.css-art {
+    goat-anchor-marks: "₂₂";
+    goat-anchor-href: "https://developer.mozilla.org/en-US/docs/Web/CSS";
+}
+a.svg-art {
+    goat-anchor-marks: "₃₃";
+    goat-anchor-href: "https://developer.mozilla.org/en-US/docs/Web/SVG";
+}
+a.ascii-art,
+a.utf8-art,
+a.svg-art {
+    text-decoration-line: underline;
+    fill: var(--red);
+}
+
+text {
+    fill: var(--grey);
+}
+
+.path {
+    stroke: var(--blue);
+}
+@media (prefers-color-scheme: dark) {
+    .path {
+	stroke: var(--yellow);
+    }
+}
+
+.arrowhead {
+    stroke-width: 3;  /* intrude into left and right neighbors */
+    color: var(--cyan);
+}
+
+circle.filled {
+    fill: var(--orange);
+    stroke: none;
+}
+circle.hollow {
+    stroke: var(--violet);
+    stroke-width: 2;
+}
+
+
+a.ascii-art:hover,
+a.utf8-art:hover,
+a.svg-art:hover {
+    outline: dotted 2px;
+}

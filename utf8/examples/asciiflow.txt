@@ -1,0 +1,34 @@
+
+ ┌─────┬─────────┬───────┐
+ │tight│         │       │
+ │     ▼         │tightly├───────►
+ │               │       │
+ │ ‹Lorem ipsum› │tightly│◄─────────┐
+ │ ·Lorem ipsum· │       ├──────╮ X │
+ │               │       │  ▲X  │   │
+ │               │       │ ▲│   ╰───┘
+ ├───┬───────────┴───────┼─┼┤
+ ├───┼─┐ abc ·lmn ‹x›yz· │ ▼│
+ └───┴─┴─────────────────┘  ▼
+
+
+     ASCII               Unicode BOX characters
+
+          X                   X
+          ^                   ▲                  X
+          |                   │                  ▲
+     X <--*--> X         X ◄──┼──► X         X ◄─┼─► X
+          |                   │                  ▼
+          v                   ▼                  X
+          X                   X
+
+Not recognized by AsciiFlow as a line-terminating drawing character:
+the BLACK CIRCLE, Unicode code point 0x25CF:
+
+          X
+          ●                  X
+          │                  ●
+     X ●──┼──● X         X ●─┼─● X
+          │                  ●
+          ●                  X
+          X

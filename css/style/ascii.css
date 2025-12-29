@@ -1,0 +1,12 @@
+a.bold {
+    goat-anchor-marks: "··";
+    font-weight: bold;
+}
+a.italic {
+    goat-anchor-marks: "``";
+    font-style: italic;
+}
+a.underline {
+    goat-anchor-marks: "‗‗";  /*  -- resort to UTF-8 */
+    text-decoration: underline;
+}

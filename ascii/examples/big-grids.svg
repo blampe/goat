@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="736" height="202"
+    viewBox="0 0 736 202">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    polyline, path {
+        fill: none;
+    }
+
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        fill: currentColor; stroke: currentColor;
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        color: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            color: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="32,0 72,0"/>
+    <polyline class="path" points="144,0 184,0"/>
+    <polyline class="path" points="296,16 344,16"/>
+    <polyline class="path" points="344,16 392,16"/>
+    <polyline class="path" points="392,16 440,16"/>
+    <polyline class="path" points="88,32 128,32"/>
+    <polyline class="path" points="200,32 240,32"/>
+    <polyline class="path" points="528,32 576,32"/>
+    <polyline class="path" points="576,32 624,32"/>
+    <polyline class="path" points="624,32 672,32"/>
+    <polyline class="path" points="672,32 720,32"/>
+    <polyline class="path" points="32,64 72,64"/>
+    <polyline class="path" points="144,64 184,64"/>
+    <polyline class="path" points="296,64 344,64"/>
+    <polyline class="path" points="344,64 392,64"/>
+    <polyline class="path" points="392,64 440,64"/>
+    <polyline class="path" points="512,64 560,64"/>
+    <polyline class="path" points="560,64 608,64"/>
+    <polyline class="path" points="608,64 656,64"/>
+    <polyline class="path" points="656,64 704,64"/>
+    <polyline class="path" points="88,96 128,96"/>
+    <polyline class="path" points="200,96 240,96"/>
+    <polyline class="path" points="496,96 544,96"/>
+    <polyline class="path" points="544,96 592,96"/>
+    <polyline class="path" points="592,96 640,96"/>
+    <polyline class="path" points="640,96 688,96"/>
+    <polyline class="path" points="296,112 344,112"/>
+    <polyline class="path" points="344,112 392,112"/>
+    <polyline class="path" points="392,112 440,112"/>
+    <polyline class="path" points="32,128 72,128"/>
+    <polyline class="path" points="144,128 184,128"/>
+    <polyline class="path" points="480,128 528,128"/>
+    <polyline class="path" points="528,128 576,128"/>
+    <polyline class="path" points="576,128 624,128"/>
+    <polyline class="path" points="624,128 672,128"/>
+    <polyline class="path" points="88,160 128,160"/>
+    <polyline class="path" points="200,160 240,160"/>
+    <polyline class="path" points="296,160 344,160"/>
+    <polyline class="path" points="344,160 392,160"/>
+    <polyline class="path" points="392,160 440,160"/>
+    <polyline class="path" points="464,160 512,160"/>
+    <polyline class="path" points="512,160 560,160"/>
+    <polyline class="path" points="560,160 608,160"/>
+    <polyline class="path" points="608,160 656,160"/>
+    <polyline class="path" points="296,16 296,64"/>
+    <polyline class="path" points="296,64 296,112"/>
+    <polyline class="path" points="296,112 296,160"/>
+    <polyline class="path" points="344,16 344,64"/>
+    <polyline class="path" points="344,64 344,112"/>
+    <polyline class="path" points="344,112 344,160"/>
+    <polyline class="path" points="392,16 392,64"/>
+    <polyline class="path" points="392,64 392,112"/>
+    <polyline class="path" points="392,112 392,160"/>
+    <polyline class="path" points="440,16 440,64"/>
+    <polyline class="path" points="440,64 440,112"/>
+    <polyline class="path" points="440,112 440,160"/>
+    <polyline class="path" points="16,32 32,0"/>
+    <polyline class="path" points="16,96 32,64"/>
+    <polyline class="path" points="72,64 88,32"/>
+    <polyline class="path" points="72,128 88,96"/>
+    <polyline class="path" points="128,32 144,0"/>
+    <polyline class="path" points="128,96 144,64"/>
+    <polyline class="path" points="128,160 144,128"/>
+    <polyline class="path" points="184,64 200,32"/>
+    <polyline class="path" points="184,128 200,96"/>
+    <polyline class="path" points="240,96 256,64"/>
+    <polyline class="path" points="240,160 256,128"/>
+    <polyline class="path" points="464,160 480,128"/>
+    <polyline class="path" points="480,128 496,96"/>
+    <polyline class="path" points="496,96 512,64"/>
+    <polyline class="path" points="512,64 528,32"/>
+    <polyline class="path" points="512,160 528,128"/>
+    <polyline class="path" points="528,128 544,96"/>
+    <polyline class="path" points="544,96 560,64"/>
+    <polyline class="path" points="560,64 576,32"/>
+    <polyline class="path" points="560,160 576,128"/>
+    <polyline class="path" points="576,128 592,96"/>
+    <polyline class="path" points="592,96 608,64"/>
+    <polyline class="path" points="608,64 624,32"/>
+    <polyline class="path" points="608,160 624,128"/>
+    <polyline class="path" points="624,128 640,96"/>
+    <polyline class="path" points="640,96 656,64"/>
+    <polyline class="path" points="656,64 672,32"/>
+    <polyline class="path" points="656,160 672,128"/>
+    <polyline class="path" points="672,128 688,96"/>
+    <polyline class="path" points="688,96 704,64"/>
+    <polyline class="path" points="704,64 720,32"/>
+    <polyline class="path" points="16,96 32,128"/>
+    <polyline class="path" points="16,32 32,64"/>
+    <polyline class="path" points="72,128 88,160"/>
+    <polyline class="path" points="72,64 88,96"/>
+    <polyline class="path" points="72,0 88,32"/>
+    <polyline class="path" points="128,96 144,128"/>
+    <polyline class="path" points="128,32 144,64"/>
+    <polyline class="path" points="184,128 200,160"/>
+    <polyline class="path" points="184,64 200,96"/>
+    <polyline class="path" points="184,0 200,32"/>
+    <polyline class="path" points="240,96 256,128"/>
+    <polyline class="path" points="240,32 256,64"/>
+  </g>
+  <g id='triangles'>
+  </g>
+  <g id='roundedCorners'>
+  </g>
+  <g id='circles'>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+    <text x="104" y="68">B</text>
+    <text x="48" y="100">A</text>
+    <text x="368" y="100">B</text>
+    <text x="560" y="116">A</text>
+    <text x="608" y="116">B</text>
+    <text x="320" y="148">A</text>
+</g>
+</g>
+</svg>
