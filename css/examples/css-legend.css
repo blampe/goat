@@ -1,0 +1,42 @@
+/* Each of the CSS rules below begins with a CSS selector assumed by one of
+ * the SVG marking elements emitted by GoAT, so the properties inside
+ * will be globally effective.
+ * The sample of CSS properties below was chosen for obviousness in demonstration
+ * rather than suitability for any production use in. */
+
+/* CSS selector consists of the SVG element tag only. */
+text {
+    fill: inherit;
+}
+
+/* Selector consists of GoAT's choice of CSS class name, only, because GoAT draws "lines"
+ * by stringing together various SVG elements depending upon topology or geometry.
+ * Class name chosen is "path" to avoid any suggestion that no curves are possible. */
+.path {
+    stroke: #00B;
+}
+@media (prefers-color-scheme: dark) {
+    .path {
+	stroke: #ED8;
+    }
+}
+
+/* Selector consists of GoAT's choice of CSS class name only, because
+ * the name of the SVG element actually used is too general to suggest
+ * a diagramatic arrowhead. */
+.arrowhead {
+    stroke-width: 2;  /* intrude into left and right neighbors */
+    stroke: #29F;
+    fill: none;
+}
+
+/* Selectors consist of the SVG element tag, qualified by GoAT's assignment of
+ * class "filled"/"hollow" based on recognition of a character code in the diagram source text. */
+circle.filled {
+    fill: #F60;
+    stroke: none;
+}
+circle.hollow {
+    stroke: #F6F;
+    stroke-width: 2;
+}

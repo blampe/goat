@@ -1,0 +1,12 @@
+
+ _
+|_|
+
+four half-cell vertical lines
+
+
+ _
+| |
+|_|
+
+six vertical lines

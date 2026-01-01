@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="752" height="138"
+    viewBox="0 0 752 138">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+    .path {
+        fill: none;
+    }
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+    svg {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        fill: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            fill: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="80,16 160,16"/>
+    <polyline class="path" points="224,16 288,16"/>
+    <polyline class="path" points="368,16 416,16"/>
+    <polyline class="path" points="456,16 536,16"/>
+    <polyline class="path" points="576,16 624,16"/>
+    <polyline class="path" points="680,16 720,16"/>
+    <polyline class="path" points="152,96 232,96"/>
+    <polyline class="path" points="264,96 328,96"/>
+    <polyline class="path" points="368,96 416,96"/>
+    <polyline class="path" points="456,96 536,96"/>
+    <polyline class="path" points="576,96 624,96"/>
+    <polyline class="path" points="680,96 720,96"/>
+    <polyline class="path" points="352,32 352,80"/>
+    <polyline class="path" points="432,32 432,80"/>
+    <polyline class="path" points="456,16 456,96"/>
+    <polyline class="path" points="536,16 536,96"/>
+    <polyline class="path" points="664,48 664,64"/>
+    <polyline class="path" points="736,48 736,64"/>
+    <polyline class="path" points="120,96 160,16"/>
+    <polyline class="path" points="152,96 192,16"/>
+    <polyline class="path" points="556,56 576,16"/>
+    <polyline class="path" points="624,96 644,56"/>
+    <polyline class="path" points="664,48 680,16"/>
+    <polyline class="path" points="720,96 736,64"/>
+    <polyline class="path" points="80,16 120,96"/>
+    <polyline class="path" points="192,16 232,96"/>
+    <polyline class="path" points="224,16 264,96"/>
+    <polyline class="path" points="288,16 328,96"/>
+    <polyline class="path" points="556,56 576,96"/>
+    <polyline class="path" points="624,16 644,56"/>
+    <polyline class="path" points="664,64 680,96"/>
+    <polyline class="path" points="720,16 736,48"/>
+  </g>
+  <g id='triangles'>
+  </g>
+  <g id='roundedCorners'>
+    <path class="path" d="M 368,16 A 16,16 0 0,0 352,32"></path>
+    <path class="path" d="M 416,16 A 16,16 0 0,1 432,32"></path>
+    <path class="path" d="M 352,80 A 16,16 0 0,0 368,96"></path>
+    <path class="path" d="M 432,80 A 16,16 0 0,1 416,96"></path>
+  </g>
+  <g id='circles'>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+</g>
+</g>
+</svg>

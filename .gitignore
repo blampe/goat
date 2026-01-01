@@ -1,13 +1,11 @@
-*.swp
-.DS_Store
-
-vendor
-
 # Hiding the SVG output files introduces friction when adding a new TXT,SVG pair to the test suite.
-#    examples/*.svg
+#    */examples/*.svg
 
+# Local-only additions to test suite
+*/examples/_*
+
+# Hide common outputs of dev testing
 cmd/tmpl-expand/tmpl-expand
-cmd/goat/goat
 
-*~
+# Output of local-only tests
 *.html

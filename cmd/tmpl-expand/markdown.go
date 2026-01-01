@@ -1,5 +1,6 @@
 // Copyright 2022 Donald Mullis. All rights reserved.
 
+// XX  generalize, as a library?
 package main
 
 import (

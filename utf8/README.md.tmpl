@@ -1,0 +1,46 @@
+# UTF-8 Box-drawing mode
+
+You will also need and editor capable of manipulating the Unicode
+ BOX characters (code points 0x25xx).
+
+Ordinary text editors with "rectangle-mode" support may be suitable.
+More ergonomic are:
+ - [Cascii](https://github.com/casparwylie/cascii-core)
+ - [AsciiFlow](https://github.com/lewish/asciiflow)
+ - For Emacs users, ```picture-mode``` or [uniline.el](https://github.com/tbanel/uniline)
+
+## Font Compatibility
+GoAT requires curating one's choice of fonts, to avoid introducing characters of non-standard width or height
+ into the rectangular grid.
+Use of utf8-mode generally tightens the curation requirement, because many popular body fonts, while
+ though nominally monospace, actually select Unicode box-drawing glyphs of non-standard dimension.
+
+Known suitable font, available on Debian distros: "DejaVu Sans Mono".
+
+## Example Graphics
+A highly abstract view of GoAT's internal data flow, using UTF-8 text:
+```
+{{include "./_README/dataflow.utf8.txt"}}
+```
+Processed to SVG, with garishly colorful CSS styling from
+[`embed:palette/bold.css`](./css/palette/bold.css):
+
+![XXX missing local SVG](./_README/dataflow.bold.svg)
+
+Processed to SVG, with unobtrusive colors from
+[`embed:palette/earth.css`](./css/palette/earth.css):
+
+![XXX missing local SVG](./_README/dataflow.earth.svg)
+
+### Input from AsciiFlow
+```
+{{.examples_asciiflow_txt}}
+```
+---
+![XXX missing local asciiflow.svg]({{.examples_DIR}}/asciiflow.svg)
+### Input from Uniline.el
+```
+{{include "./examples/uniline.txt"}}
+```
+---
+![XXX missing local asciiflow.svg]({{.examples_DIR}}/uniline.svg)
