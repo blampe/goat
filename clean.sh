@@ -1,3 +1,4 @@
 #! /bin/sh
 
-rm -f examples/*.svg *.svg README.md
+find -name README.md -delete
+find -name '*.svg' -delete

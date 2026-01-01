@@ -1,0 +1,24 @@
+svg {
+    --grey: #544;
+    --magenta: #424;
+    --red: #600;
+    --orange: #830;
+    --yellow: #650;
+    --green: #232;
+    --cyan: #356;
+    --blue: #126;
+    --violet: #626;
+}
+@media (prefers-color-scheme: dark) {
+    svg {
+	--grey: #ccc;
+	--magenta: #fcf;
+	--red : #fdc;
+	--orange: #fba;
+	--yellow: #ffd;
+	--green: #dfc;
+	--cyan: #dff;
+	--blue: #ccf;
+	--violet: #daf;
+    }
+}

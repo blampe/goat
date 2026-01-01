@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="752" height="186"
+    viewBox="0 0 752 186">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+    .path {
+        fill: none;
+    }
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+    svg {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        fill: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            fill: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="30,0 42,0"/>
+    <polyline class="path" points="88,0 106,0"/>
+    <polyline class="path" points="30,16 48,16"/>
+    <polyline class="path" points="88,16 112,16"/>
+    <polyline class="path" points="30,32 48,32"/>
+    <polyline class="path" points="88,32 112,32"/>
+    <polyline class="path" points="30,48 48,48"/>
+    <polyline class="path" points="88,48 112,48"/>
+    <polyline class="path" points="24,144 42,144"/>
+    <polyline class="path" points="80,144 104,144"/>
+    <polyline class="path" points="136,144 160,144"/>
+    <polyline class="path" points="192,144 216,144"/>
+    <polyline class="path" points="272,144 290,144"/>
+    <polyline class="path" points="328,144 352,144"/>
+    <polyline class="path" points="384,144 408,144"/>
+    <polyline class="path" points="440,144 464,144"/>
+    <polyline class="path" points="528,144 544,144"/>
+    <polyline class="path" points="584,144 600,144"/>
+    <polyline class="path" points="632,144 648,144"/>
+    <polyline class="path" points="688,144 704,144"/>
+    <polyline class="path" points="24,80 24,96"/>
+    <polyline class="path" points="48,80 48,96"/>
+    <polyline class="path" points="80,96 80,112"/>
+    <polyline class="path" points="104,96 104,112"/>
+    <polyline class="path" points="264,6 264,26"/>
+    <polyline class="path" points="264,64 264,90"/>
+    <polyline class="path" points="280,6 280,32"/>
+    <polyline class="path" points="280,64 280,96"/>
+    <polyline class="path" points="296,6 296,32"/>
+    <polyline class="path" points="296,64 296,96"/>
+    <polyline class="path" points="312,6 312,32"/>
+    <polyline class="path" points="312,64 312,96"/>
+    <polyline class="path" points="344,0 344,26"/>
+    <polyline class="path" points="344,64 344,90"/>
+    <polyline class="path" points="360,0 360,32"/>
+    <polyline class="path" points="360,64 360,96"/>
+    <polyline class="path" points="376,0 376,32"/>
+    <polyline class="path" points="376,64 376,96"/>
+    <polyline class="path" points="392,0 392,32"/>
+    <polyline class="path" points="392,64 392,96"/>
+    <polyline class="path" points="152,16 160,0"/>
+    <polyline class="path" points="176,16 184,0"/>
+    <polyline class="path" points="200,32 208,16"/>
+    <polyline class="path" points="224,32 232,16"/>
+    <polyline class="path" points="595,27 605,5"/>
+    <polyline class="path" points="608,32 621,5"/>
+    <polyline class="path" points="595,91 608,64"/>
+    <polyline class="path" points="624,32 637,5"/>
+    <polyline class="path" points="608,96 624,64"/>
+    <polyline class="path" points="640,32 653,5"/>
+    <polyline class="path" points="624,96 640,64"/>
+    <polyline class="path" points="640,96 656,64"/>
+    <polyline class="path" points="675,27 688,0"/>
+    <polyline class="path" points="688,32 704,0"/>
+    <polyline class="path" points="675,91 688,64"/>
+    <polyline class="path" points="704,32 720,0"/>
+    <polyline class="path" points="688,96 704,64"/>
+    <polyline class="path" points="720,32 736,0"/>
+    <polyline class="path" points="704,96 720,64"/>
+    <polyline class="path" points="720,96 736,64"/>
+    <polyline class="path" points="128,80 136,96"/>
+    <polyline class="path" points="152,80 160,96"/>
+    <polyline class="path" points="192,96 200,112"/>
+    <polyline class="path" points="216,96 224,112"/>
+    <polyline class="path" points="424,64 437,91"/>
+    <polyline class="path" points="440,64 456,96"/>
+    <polyline class="path" points="427,5 437,27"/>
+    <polyline class="path" points="456,64 472,96"/>
+    <polyline class="path" points="443,5 456,32"/>
+    <polyline class="path" points="472,64 488,96"/>
+    <polyline class="path" points="459,5 472,32"/>
+    <polyline class="path" points="475,5 488,32"/>
+    <polyline class="path" points="504,64 517,91"/>
+    <polyline class="path" points="520,64 536,96"/>
+    <polyline class="path" points="504,0 517,27"/>
+    <polyline class="path" points="536,64 552,96"/>
+    <polyline class="path" points="520,0 536,32"/>
+    <polyline class="path" points="552,64 568,96"/>
+    <polyline class="path" points="536,0 552,32"/>
+    <polyline class="path" points="552,0 568,32"/>
+  </g>
+  <g id='triangles'>
+    <polygon points="32,96 20,90.4 20,101.6" transform="rotate(90, 24, 96)" class="arrowhead"></polygon>
+    <polygon points="32,144 20,138.4 20,149.6" transform="rotate(180, 24, 144)" class="arrowhead"></polygon>
+    <polygon points="56,32 44,26.4 44,37.6" transform="rotate(0, 48, 32)" class="arrowhead"></polygon>
+    <polygon points="56,96 44,90.4 44,101.6" transform="rotate(90, 48, 96)" class="arrowhead"></polygon>
+    <polygon points="88,96 76,90.4 76,101.6" transform="rotate(270, 80, 96)" class="arrowhead"></polygon>
+    <polygon points="88,144 76,138.4 76,149.6" transform="rotate(180, 80, 144)" class="arrowhead"></polygon>
+    <polygon points="112,96 100,90.4 100,101.6" transform="rotate(270, 104, 96)" class="arrowhead"></polygon>
+    <polygon points="120,32 108,26.4 108,37.6" transform="rotate(0, 112, 32)" class="arrowhead"></polygon>
+    <polygon points="148,96 136,90.4 136,101.6" transform="rotate(60, 136, 96)" class="arrowhead"></polygon>
+    <polygon points="144,144 132,138.4 132,149.6" transform="rotate(180, 136, 144)" class="arrowhead"></polygon>
+    <polygon points="164,16 152,10.4 152,21.6" transform="rotate(120, 152, 16)" class="arrowhead"></polygon>
+    <polygon points="172,96 160,90.4 160,101.6" transform="rotate(60, 160, 96)" class="arrowhead"></polygon>
+    <polygon points="168,144 156,138.4 156,149.6" transform="rotate(0, 160, 144)" class="arrowhead"></polygon>
+    <polygon points="188,16 176,10.4 176,21.6" transform="rotate(120, 176, 16)" class="arrowhead"></polygon>
+    <polygon points="204,96 192,90.4 192,101.6" transform="rotate(240, 192, 96)" class="arrowhead"></polygon>
+    <polygon points="200,144 188,138.4 188,149.6" transform="rotate(180, 192, 144)" class="arrowhead"></polygon>
+    <polygon points="220,16 208,10.4 208,21.6" transform="rotate(300, 208, 16)" class="arrowhead"></polygon>
+    <polygon points="228,96 216,90.4 216,101.6" transform="rotate(240, 216, 96)" class="arrowhead"></polygon>
+    <polygon points="244,16 232,10.4 232,21.6" transform="rotate(300, 232, 16)" class="arrowhead"></polygon>
+    <polygon points="272,64 260,58.4 260,69.6" transform="rotate(270, 264, 64)" class="arrowhead"></polygon>
+    <polygon points="288,64 276,58.4 276,69.6" transform="rotate(270, 280, 64)" class="arrowhead"></polygon>
+    <polygon points="304,32 292,26.4 292,37.6" transform="rotate(90, 296, 32)" class="arrowhead"></polygon>
+    <polygon points="304,64 292,58.4 292,69.6" transform="rotate(270, 296, 64)" class="arrowhead"></polygon>
+    <polygon points="304,96 292,90.4 292,101.6" transform="rotate(90, 296, 96)" class="arrowhead"></polygon>
+    <polygon points="320,64 308,58.4 308,69.6" transform="rotate(270, 312, 64)" class="arrowhead"></polygon>
+    <polygon points="384,32 372,26.4 372,37.6" transform="rotate(90, 376, 32)" class="arrowhead"></polygon>
+    <polygon points="384,96 372,90.4 372,101.6" transform="rotate(90, 376, 96)" class="arrowhead"></polygon>
+    <polygon points="416,144 404,138.4 404,149.6" transform="rotate(0, 408, 144)" class="arrowhead"></polygon>
+    <polygon points="436,64 424,58.4 424,69.6" transform="rotate(240, 424, 64)" class="arrowhead"></polygon>
+    <polygon points="452,64 440,58.4 440,69.6" transform="rotate(240, 440, 64)" class="arrowhead"></polygon>
+    <polygon points="468,64 456,58.4 456,69.6" transform="rotate(240, 456, 64)" class="arrowhead"></polygon>
+    <polygon points="484,32 472,26.4 472,37.6" transform="rotate(60, 472, 32)" class="arrowhead"></polygon>
+    <polygon points="484,64 472,58.4 472,69.6" transform="rotate(240, 472, 64)" class="arrowhead"></polygon>
+    <polygon points="484,96 472,90.4 472,101.6" transform="rotate(60, 472, 96)" class="arrowhead"></polygon>
+    <polygon points="528,144 516,138.4 516,149.6" transform="rotate(180, 528, 144)" class="arrowhead"></polygon>
+    <polygon points="564,32 552,26.4 552,37.6" transform="rotate(60, 552, 32)" class="arrowhead"></polygon>
+    <polygon points="564,96 552,90.4 552,101.6" transform="rotate(60, 552, 96)" class="arrowhead"></polygon>
+    <polygon points="584,144 572,138.4 572,149.6" transform="rotate(180, 584, 144)" class="arrowhead"></polygon>
+    <polygon points="620,64 608,58.4 608,69.6" transform="rotate(300, 608, 64)" class="arrowhead"></polygon>
+    <polygon points="636,32 624,26.4 624,37.6" transform="rotate(120, 624, 32)" class="arrowhead"></polygon>
+    <polygon points="636,64 624,58.4 624,69.6" transform="rotate(300, 624, 64)" class="arrowhead"></polygon>
+    <polygon points="636,96 624,90.4 624,101.6" transform="rotate(120, 624, 96)" class="arrowhead"></polygon>
+    <polygon points="652,64 640,58.4 640,69.6" transform="rotate(300, 640, 64)" class="arrowhead"></polygon>
+    <polygon points="648,144 636,138.4 636,149.6" transform="rotate(0, 648, 144)" class="arrowhead"></polygon>
+    <polygon points="668,64 656,58.4 656,69.6" transform="rotate(300, 656, 64)" class="arrowhead"></polygon>
+    <polygon points="716,32 704,26.4 704,37.6" transform="rotate(120, 704, 32)" class="arrowhead"></polygon>
+    <polygon points="716,96 704,90.4 704,101.6" transform="rotate(120, 704, 96)" class="arrowhead"></polygon>
+    <polygon points="704,144 692,138.4 692,149.6" transform="rotate(0, 704, 144)" class="arrowhead"></polygon>
+  </g>
+  <g id='roundedCorners'>
+  </g>
+  <g id='circles'>
+    <circle cx="24" cy="0" r="6" class="hollow"></circle>
+    <circle cx="24" cy="16" r="6" class="hollow"></circle>
+    <circle cx="24" cy="32" r="6" class="hollow"></circle>
+    <circle cx="24" cy="48" r="6" class="hollow"></circle>
+    <circle cx="24" cy="112" r="6" class="filled"></circle>
+    <circle cx="48" cy="0" r="6" class="hollow"></circle>
+    <circle cx="48" cy="16" r="6" class="filled"></circle>
+    <circle cx="48" cy="112" r="6" class="hollow"></circle>
+    <circle cx="48" cy="144" r="6" class="hollow"></circle>
+    <circle cx="80" cy="80" r="6" class="filled"></circle>
+    <circle cx="88" cy="0" r="6" class="filled"></circle>
+    <circle cx="88" cy="16" r="6" class="filled"></circle>
+    <circle cx="88" cy="32" r="6" class="filled"></circle>
+    <circle cx="88" cy="48" r="6" class="filled"></circle>
+    <circle cx="104" cy="80" r="6" class="hollow"></circle>
+    <circle cx="104" cy="144" r="6" class="filled"></circle>
+    <circle cx="112" cy="0" r="6" class="hollow"></circle>
+    <circle cx="112" cy="16" r="6" class="filled"></circle>
+    <circle cx="144" cy="32" r="6" class="filled"></circle>
+    <circle cx="144" cy="112" r="6" class="filled"></circle>
+    <circle cx="168" cy="32" r="6" class="hollow"></circle>
+    <circle cx="168" cy="112" r="6" class="hollow"></circle>
+    <circle cx="184" cy="80" r="6" class="filled"></circle>
+    <circle cx="208" cy="80" r="6" class="hollow"></circle>
+    <circle cx="216" cy="0" r="6" class="filled"></circle>
+    <circle cx="240" cy="0" r="6" class="hollow"></circle>
+    <circle cx="264" cy="0" r="6" class="hollow"></circle>
+    <circle cx="264" cy="32" r="6" class="hollow"></circle>
+    <circle cx="264" cy="96" r="6" class="hollow"></circle>
+    <circle cx="280" cy="0" r="6" class="hollow"></circle>
+    <circle cx="280" cy="32" r="6" class="filled"></circle>
+    <circle cx="280" cy="96" r="6" class="filled"></circle>
+    <circle cx="296" cy="0" r="6" class="hollow"></circle>
+    <circle cx="296" cy="144" r="6" class="hollow"></circle>
+    <circle cx="312" cy="0" r="6" class="hollow"></circle>
+    <circle cx="344" cy="0" r="6" class="filled"></circle>
+    <circle cx="344" cy="32" r="6" class="hollow"></circle>
+    <circle cx="344" cy="96" r="6" class="hollow"></circle>
+    <circle cx="352" cy="144" r="6" class="filled"></circle>
+    <circle cx="360" cy="0" r="6" class="filled"></circle>
+    <circle cx="360" cy="32" r="6" class="filled"></circle>
+    <circle cx="360" cy="96" r="6" class="filled"></circle>
+    <circle cx="376" cy="0" r="6" class="filled"></circle>
+    <circle cx="392" cy="0" r="6" class="filled"></circle>
+    <circle cx="424" cy="0" r="6" class="hollow"></circle>
+    <circle cx="440" cy="0" r="6" class="hollow"></circle>
+    <circle cx="440" cy="32" r="6" class="hollow"></circle>
+    <circle cx="440" cy="96" r="6" class="hollow"></circle>
+    <circle cx="456" cy="0" r="6" class="hollow"></circle>
+    <circle cx="456" cy="32" r="6" class="filled"></circle>
+    <circle cx="456" cy="96" r="6" class="filled"></circle>
+    <circle cx="472" cy="0" r="6" class="hollow"></circle>
+    <circle cx="504" cy="0" r="6" class="filled"></circle>
+    <circle cx="520" cy="0" r="6" class="filled"></circle>
+    <circle cx="520" cy="32" r="6" class="hollow"></circle>
+    <circle cx="520" cy="96" r="6" class="hollow"></circle>
+    <circle cx="520" cy="144" r="6" class="filled"></circle>
+    <circle cx="536" cy="0" r="6" class="filled"></circle>
+    <circle cx="536" cy="32" r="6" class="filled"></circle>
+    <circle cx="536" cy="96" r="6" class="filled"></circle>
+    <circle cx="552" cy="0" r="6" class="filled"></circle>
+    <circle cx="576" cy="144" r="6" class="hollow"></circle>
+    <circle cx="592" cy="32" r="6" class="hollow"></circle>
+    <circle cx="592" cy="96" r="6" class="hollow"></circle>
+    <circle cx="608" cy="0" r="6" class="hollow"></circle>
+    <circle cx="608" cy="32" r="6" class="filled"></circle>
+    <circle cx="608" cy="96" r="6" class="filled"></circle>
+    <circle cx="624" cy="0" r="6" class="hollow"></circle>
+    <circle cx="640" cy="0" r="6" class="hollow"></circle>
+    <circle cx="656" cy="0" r="6" class="hollow"></circle>
+    <circle cx="656" cy="144" r="6" class="hollow"></circle>
+    <circle cx="672" cy="32" r="6" class="hollow"></circle>
+    <circle cx="672" cy="96" r="6" class="hollow"></circle>
+    <circle cx="688" cy="0" r="6" class="filled"></circle>
+    <circle cx="688" cy="32" r="6" class="filled"></circle>
+    <circle cx="688" cy="96" r="6" class="filled"></circle>
+    <circle cx="704" cy="0" r="6" class="filled"></circle>
+    <circle cx="712" cy="144" r="6" class="filled"></circle>
+    <circle cx="720" cy="0" r="6" class="filled"></circle>
+    <circle cx="736" cy="0" r="6" class="filled"></circle>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+</g>
+</g>
+</svg>

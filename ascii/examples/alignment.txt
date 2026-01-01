@@ -1,0 +1,32 @@
+o X
+XXX
+ o XX
+
+Regarding the above:
+  1. Dots  – requested with "*" or "o" – are centered on an XyIndex cell, as seen from
+     coord frame within final SVG space (as offset by <g transform='translate(8,16)'>)
+  2. "Dots" create a special case by exerting claims on
+     *three* horizontally adjacent XyIndex cells,
+     because they are centered on a cell, and extend into left and right neighbors.
+     Input .txt-file neighbors left and right must therefore contain only blank space.
+  3. The SVG space transform accommodates the double-width, allowing a Dot in the first .txt
+     column to escape clipping of its left edge.
+  4. XX XX   The Y-axis of the translation transform is more than necessary – there
+     is an always-blank band at the top of SVG image.   
+  5. Text elements <text> get an inline Y-offset of +4 – visually necessary for Y-alignment
+     with Dots to left or right – But why so?   
+  6. XyIndex method AsPixel() Pixel returns the SVG 'px' coordinate of the cell
+     center (within the transformed space)
+
+ .-. .-.  minimal-area rectangle – note that no "|" characters are used
+ '-' '-'
+
+ o-o  minimal-area rectangle with circles at corners
+ | |
+ o-o
+
+ o-o
+ o-o
+
+ *-*
+ *-*

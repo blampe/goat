@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="224" height="58"
+    viewBox="0 0 224 58">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+    .path {
+        fill: none;
+    }
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        color: #000;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FFF;  /* set value of 'currentColor' */
+        }
+    }
+    svg {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+  </style>
+  <style type="text/css" source-text-origin="embed:palette/bold.css">
+svg {
+    --grey: #222;
+    --magenta: #c0e;
+    --red: #d22;
+    --orange: #c40;
+    --yellow: #aa0;
+    --green: #060;
+    --cyan: #057;
+    --blue: #23b;
+    --violet: #51b;
+}
+@media (prefers-color-scheme: dark) {
+    svg {
+	--grey: #eee;
+	--magenta: #faf;
+	--red : #f34;
+	--orange: #f92;
+	--yellow: #ff6;
+	--green: #0d0;
+	--cyan: #4ff;
+	--blue: #0af;
+	--violet: #b3f;
+    }
+}
+  </style>
+  <style type="text/css" source-text-origin="embed:style/utf8.css">
+a.bold {
+    goat-anchor-marks: "**";
+    font-weight: bold;
+}
+a.italic {
+    goat-anchor-marks: "//";
+    font-style: italic;
+}
+a.underline {
+    goat-anchor-marks: "__";
+    text-decoration: underline;
+}
+a.code {
+    goat-anchor-marks: "``";
+    stroke: inherit;
+}
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines-vertical'>
+    <polyline class="path" points="48,4 48,32"/>
+    <polyline class="path" points="168,0 168,28"/>
+  </g>
+  <g id='lines-horizontal'>
+    <polyline class="path" points="52,0 168,0"/>
+    <polyline class="path" points="20,16 38,16"/>
+    <polyline class="path" points="168,16 188,16"/>
+    <polyline class="path" points="48,32 164,32"/>
+  </g>
+  <g id='triangles'>
+    <polygon points="43,16 38.5,13.9 38.5,18.1" transform="rotate(0, 40, 16)" class="arrowhead"></polygon>
+  </g>
+  <g id='roundedCorners'>
+    <path class="path" d="M 52,0 A 4,4 0 0,0 48,4"></path>
+    <path class="path" d="M 168,28 A 4,4 0 0,1 164,32"></path>
+  </g>
+  <g id='circles'>
+    <circle cx="16" cy="16" r="4" class="hollow"></circle>
+    <circle cx="192" cy="16" r="4" class="filled"></circle>
+  </g>
+  <g id='text'>
+  <a class='italic'>
+    <text x="64" y="20">H</text>
+    <text x="72" y="20">e</text>
+    <text x="80" y="20">l</text>
+    <text x="88" y="20">l</text>
+    <text x="96" y="20">o</text>
+    <text x="104" y="20">,</text>
+  <a class='underline'>
+    <text x="120" y="20">w</text>
+    <text x="128" y="20">o</text>
+    <text x="136" y="20">r</text>
+    <text x="144" y="20">l</text>
+    <text x="152" y="20">d</text>
+</a>
+</a>
+  </g>
+</g>
+</svg>

@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="728" height="234"
+    viewBox="0 0 728 234">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+    .path {
+        fill: none;
+    }
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+    svg {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        fill: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            fill: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="32,16 96,16"/>
+    <polyline class="path" points="392,32 408,32"/>
+    <polyline class="path" points="408,32 472,32"/>
+    <polyline class="path" points="472,32 488,32"/>
+    <polyline class="path" points="32,48 64,48"/>
+    <polyline class="path" points="64,48 96,48"/>
+    <polyline class="path" points="152,48 200,48"/>
+    <polyline class="path" points="224,64 272,64"/>
+    <polyline class="path" points="336,64 384,64"/>
+    <polyline class="path" points="488,64 520,64"/>
+    <polyline class="path" points="640,64 672,64"/>
+    <polyline class="path" points="152,80 200,80"/>
+    <polyline class="path" points="32,96 112,96"/>
+    <polyline class="path" points="392,96 408,96"/>
+    <polyline class="path" points="408,96 440,96"/>
+    <polyline class="path" points="440,96 472,96"/>
+    <polyline class="path" points="472,96 488,96"/>
+    <polyline class="path" points="16,128 64,128"/>
+    <polyline class="path" points="64,128 96,128"/>
+    <polyline class="path" points="16,176 112,176"/>
+    <polyline class="path" points="256,176 304,176"/>
+    <polyline class="path" points="304,176 352,176"/>
+    <polyline class="path" points="112,192 248,192"/>
+    <polyline class="path" points="360,192 416,192"/>
+    <polyline class="path" points="16,208 112,208"/>
+    <polyline class="path" points="256,208 352,208"/>
+    <polyline class="path" points="540,40 628,40"/>
+    <polyline class="path" points="540,88 628,88"/>
+    <polyline class="path" points="16,176 16,208"/>
+    <polyline class="path" points="64,48 64,80"/>
+    <polyline class="path" points="64,128 64,160"/>
+    <polyline class="path" points="112,176 112,192"/>
+    <polyline class="path" points="112,192 112,208"/>
+    <polyline class="path" points="256,176 256,208"/>
+    <polyline class="path" points="304,144 304,176"/>
+    <polyline class="path" points="352,176 352,208"/>
+    <polyline class="path" points="392,32 392,96"/>
+    <polyline class="path" points="408,32 408,96"/>
+    <polyline class="path" points="472,32 472,96"/>
+    <polyline class="path" points="488,32 488,64"/>
+    <polyline class="path" points="488,64 488,96"/>
+    <polyline class="path" points="16,128 32,96"/>
+    <polyline class="path" points="96,128 112,96"/>
+    <polyline class="path" points="272,64 304,0"/>
+    <polyline class="path" points="304,128 336,64"/>
+    <polyline class="path" points="528,64 540,40"/>
+    <polyline class="path" points="628,88 640,64"/>
+    <polyline class="path" points="272,64 304,128"/>
+    <polyline class="path" points="304,0 336,64"/>
+    <polyline class="path" points="528,64 540,88"/>
+    <polyline class="path" points="628,40 640,64"/>
+  </g>
+  <g id='triangles'>
+    <polyline class="path" points="64,80 64,88"/>
+    <polygon points="80,80 68,74.4 68,85.6" transform="rotate(90, 64, 80)" class="arrowhead"></polygon>
+    <polyline class="path" points="64,160 64,168"/>
+    <polygon points="80,160 68,154.4 68,165.6" transform="rotate(90, 64, 160)" class="arrowhead"></polygon>
+    <polygon points="232,64 220,58.4 220,69.6" transform="rotate(180, 224, 64)" class="arrowhead"></polygon>
+    <polygon points="256,192 244,186.4 244,197.6" transform="rotate(0, 248, 192)" class="arrowhead"></polygon>
+    <polyline class="path" points="304,136 304,144"/>
+    <polygon points="320,144 308,138.4 308,149.6" transform="rotate(270, 304, 144)" class="arrowhead"></polygon>
+    <polygon points="368,192 356,186.4 356,197.6" transform="rotate(180, 360, 192)" class="arrowhead"></polygon>
+    <polygon points="392,64 380,58.4 380,69.6" transform="rotate(0, 384, 64)" class="arrowhead"></polygon>
+    <polygon points="528,64 516,58.4 516,69.6" transform="rotate(0, 520, 64)" class="arrowhead"></polygon>
+    <polygon points="680,64 668,58.4 668,69.6" transform="rotate(0, 672, 64)" class="arrowhead"></polygon>
+  </g>
+  <g id='roundedCorners'>
+    <path class="path" d="M 32,16 A 16,16 0 0,0 16,32"></path>
+    <path class="path" d="M 96,16 A 16,16 0 0,1 112,32"></path>
+    <path class="path" d="M 16,32 A 16,16 0 0,0 32,48"></path>
+    <path class="path" d="M 112,32 A 16,16 0 0,1 96,48"></path>
+    <path class="path" d="M 152,48 A 16,16 0 0,0 136,64"></path>
+    <path class="path" d="M 200,48 A 16,16 0 0,1 216,64"></path>
+    <path class="path" d="M 696,48 A 16,16 0 0,0 680,64"></path>
+    <path class="path" d="M 696,48 A 16,16 0 0,1 712,64"></path>
+    <path class="path" d="M 136,64 A 16,16 0 0,0 152,80"></path>
+    <path class="path" d="M 216,64 A 16,16 0 0,1 200,80"></path>
+    <path class="path" d="M 680,64 A 16,16 0 0,0 696,80"></path>
+    <path class="path" d="M 712,64 A 16,16 0 0,1 696,80"></path>
+    <path class="path" d="M 432,176 A 16,16 0 0,0 416,192"></path>
+    <path class="path" d="M 432,176 A 16,16 0 0,1 448,192"></path>
+    <path class="path" d="M 416,192 A 16,16 0 0,0 432,208"></path>
+    <path class="path" d="M 448,192 A 16,16 0 0,1 432,208"></path>
+  </g>
+  <g id='circles'>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+    <text x="48" y="36">S</text>
+    <text x="56" y="36">T</text>
+    <text x="64" y="36">A</text>
+    <text x="72" y="36">R</text>
+    <text x="80" y="36">T</text>
+    <text x="248" y="52">A</text>
+    <text x="360" y="52">B</text>
+    <text x="416" y="52">C</text>
+    <text x="424" y="52">O</text>
+    <text x="432" y="52">M</text>
+    <text x="440" y="52">P</text>
+    <text x="448" y="52">L</text>
+    <text x="456" y="52">E</text>
+    <text x="464" y="52">X</text>
+    <text x="168" y="68">E</text>
+    <text x="176" y="68">N</text>
+    <text x="184" y="68">D</text>
+    <text x="280" y="68">C</text>
+    <text x="288" y="68">H</text>
+    <text x="296" y="68">O</text>
+    <text x="304" y="68">I</text>
+    <text x="312" y="68">C</text>
+    <text x="320" y="68">E</text>
+    <text x="544" y="68">P</text>
+    <text x="552" y="68">R</text>
+    <text x="560" y="68">E</text>
+    <text x="568" y="68">P</text>
+    <text x="576" y="68">A</text>
+    <text x="584" y="68">R</text>
+    <text x="592" y="68">A</text>
+    <text x="600" y="68">T</text>
+    <text x="608" y="68">I</text>
+    <text x="616" y="68">O</text>
+    <text x="624" y="68">N</text>
+    <text x="696" y="68">X</text>
+    <text x="416" y="84">P</text>
+    <text x="424" y="84">R</text>
+    <text x="432" y="84">O</text>
+    <text x="440" y="84">C</text>
+    <text x="448" y="84">E</text>
+    <text x="456" y="84">S</text>
+    <text x="464" y="84">S</text>
+    <text x="48" y="116">I</text>
+    <text x="56" y="116">N</text>
+    <text x="64" y="116">P</text>
+    <text x="72" y="116">U</text>
+    <text x="80" y="116">T</text>
+    <text x="40" y="196">P</text>
+    <text x="48" y="196">R</text>
+    <text x="56" y="196">O</text>
+    <text x="64" y="196">C</text>
+    <text x="72" y="196">E</text>
+    <text x="80" y="196">S</text>
+    <text x="88" y="196">S</text>
+    <text x="280" y="196">P</text>
+    <text x="288" y="196">R</text>
+    <text x="296" y="196">O</text>
+    <text x="304" y="196">C</text>
+    <text x="312" y="196">E</text>
+    <text x="320" y="196">S</text>
+    <text x="328" y="196">S</text>
+    <text x="432" y="196">X</text>
+</g>
+</g>
+</svg>

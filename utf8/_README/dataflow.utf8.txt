@@ -1,0 +1,18 @@
+                                          ╭─────────────╮
+                                          │SVG graphics │                 ╭───────────────╮
+┌         ┐ ╭─────────╮ ┌             ┐   │ generation  │                 │ concatenation │
+`annotated` │         │  / recovered /    │  ╭──────────┤                 ├ ─ ─ ─ ─ ┐     │
+ `diagram,` │ diagram │  /  source-  /    │  │/generic/ ●─────────────────▶               │
+`ASCII or`●─▶ parsing ●─▶/independent/╶─┬───▶├──────────┤   ╭─────────╮   │         │     │
+╷₁`UTF-8`₁  │         │  / structure /  │ │  │/source-/ │ ╭─▶  ASCII  ●─╮ │               │
+└         ┘ ╰─────────╯ └             ┘ │ │  │/specific/├╴× ├─────────┤ ×─▶         │     │
+                                        │ │  │          │ ╰─▶UTF8-BOX ●─╯ │   SVG         │  ┌          ┐
+                     ╭───────────────╮  │ ╰──┴──────────╯   ╰─────────╯   │ elements│     │  `CSS-styled`
+                     │ extraction of │  │ ╭───────────────┬────────────╮  │               ├─▶`₃SVG₃file`
+                     │ CSS class-    │  ╰─▶ text positions  *<a>*and   │  │         │     │  └          ┘
+┌            ┐       │ names and     │    ├╴ ─ ─ ─ ─ ─ ─ ─┤ *<text>*   ├──▶               │
+₂ CSS files₂○─────┬──▶ *goat-anchor* ├────▶    anchor     ╷ generation │  ├ ─ ─ ─ ─ ┤     │
+└            ┘    │  │ properties    │    │   class names ╵            │  │               │
+                  │  ╰───────────────╯    ╰───────────────┴────────────╯  │   CSS   │     │
+                  ╰───────────────────────────────────────────────────────▶               │
+                                                                          ╰─────────┴─────╯

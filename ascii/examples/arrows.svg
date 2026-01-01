@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="80" height="90"
+    viewBox="0 0 80 90">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+    .path {
+        fill: none;
+    }
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+    svg {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        fill: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            fill: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="0,32 32,32"/>
+    <polyline class="path" points="32,32 64,32"/>
+    <polyline class="path" points="32,0 32,32"/>
+    <polyline class="path" points="32,32 32,64"/>
+  </g>
+  <g id='triangles'>
+    <polygon points="8,32 -4,26.4 -4,37.6" transform="rotate(180, 0, 32)" class="arrowhead"></polygon>
+    <polygon points="40,0 28,-5.6 28,5.6" transform="rotate(270, 32, 0)" class="arrowhead"></polygon>
+    <polygon points="40,64 28,58.4 28,69.6" transform="rotate(90, 32, 64)" class="arrowhead"></polygon>
+    <polygon points="72,32 60,26.4 60,37.6" transform="rotate(0, 64, 32)" class="arrowhead"></polygon>
+  </g>
+  <g id='roundedCorners'>
+  </g>
+  <g id='circles'>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+</g>
+</g>
+</svg>

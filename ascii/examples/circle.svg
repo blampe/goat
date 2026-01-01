@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="64" height="90"
+    viewBox="0 0 64 90">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+    .path {
+        fill: none;
+    }
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        color: #212;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FEF;  /* set value of 'currentColor' */
+        }
+    }
+    svg {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    svg {
+        background-color: #FEF
+    }
+    text {
+        fill: #900
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            background-color: #212
+        }
+        text {
+            fill: #FBB
+        }
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+  </g>
+  <g id='triangles'>
+  </g>
+  <g id='roundedCorners'>
+    <path class="path" d="M 32,16 A 16,16 0 0,0 16,32"></path>
+    <path class="path" d="M 32,16 A 16,16 0 0,1 48,32"></path>
+    <path class="path" d="M 16,32 A 16,16 0 0,0 32,48"></path>
+    <path class="path" d="M 48,32 A 16,16 0 0,1 32,48"></path>
+  </g>
+  <g id='circles'>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+</g>
+</g>
+</svg>
