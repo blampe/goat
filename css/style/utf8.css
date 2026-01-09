@@ -1,16 +1,16 @@
-a.bold {
+.bold {
     goat-anchor-marks: "**";
     font-weight: bold;
 }
-a.italic {
+.italic {
     goat-anchor-marks: "//";
     font-style: italic;
 }
-a.underline {
+.underline {
     goat-anchor-marks: "__";
     text-decoration: underline;
 }
-a.code {
+.code {
     goat-anchor-marks: "``";
     stroke: inherit;
 }

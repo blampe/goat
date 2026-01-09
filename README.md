@@ -173,15 +173,15 @@ when executed at the top of the cloned GoAT source tree, combines a text file co
 ```
 with the CSS content
 ```
-a.bold {
+.bold {
     goat-anchor-marks: "··";
     font-weight: bold;
 }
-a.italic {
+.italic {
     goat-anchor-marks: "``";
     font-style: italic;
 }
-a.underline {
+.underline {
     goat-anchor-marks: "‗‗";  /*  -- resort to UTF-8 */
     text-decoration: underline;
 }
@@ -208,19 +208,19 @@ combines a text file containing
 ```
 with the CSS content
 ```
-a.bold {
+.bold {
     goat-anchor-marks: "**";
     font-weight: bold;
 }
-a.italic {
+.italic {
     goat-anchor-marks: "//";
     font-style: italic;
 }
-a.underline {
+.underline {
     goat-anchor-marks: "__";
     text-decoration: underline;
 }
-a.code {
+.code {
     goat-anchor-marks: "``";
     stroke: inherit;
 }
@@ -239,7 +239,7 @@ For further details, see
 GoAT can add web links to text strings within your diagram.
 By appending to the GoAT command line above also a path to a CSS file containing this:
 ```
-a.underline_href {
+.underline_href {
     goat-anchor-marks: "__";
     goat-anchor-href: "https://www.worldometers.info/";
 }

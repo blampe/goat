@@ -7,7 +7,7 @@ import (
 type (
 	markArr [2]rune
 
-	// "Binds" an <a> element, itself wrapping a series of <text> elements, to a
+	// "Binds" a <g> or <a> element, itself wrapping a series of <text> elements, to a
 	// CSS class containing a property "goat-anchor-marks".
 	//         https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/Introduction
 	markBinding struct {

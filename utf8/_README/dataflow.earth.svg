@@ -60,19 +60,19 @@ svg {
 }
   </style>
   <style type="text/css" source-text-origin="embed:style/utf8.css">
-a.bold {
+.bold {
     goat-anchor-marks: "**";
     font-weight: bold;
 }
-a.italic {
+.italic {
     goat-anchor-marks: "//";
     font-style: italic;
 }
-a.underline {
+.underline {
     goat-anchor-marks: "__";
     text-decoration: underline;
 }
-a.code {
+.code {
     goat-anchor-marks: "``";
     stroke: inherit;
 }
@@ -357,7 +357,7 @@ a.svg-art:hover {
     <text x="688" y="36">i</text>
     <text x="696" y="36">o</text>
     <text x="704" y="36">n</text>
-  <a class='code'>
+  <g class='code'>
     <text x="8" y="52">a</text>
     <text x="16" y="52">n</text>
     <text x="24" y="52">n</text>
@@ -367,8 +367,8 @@ a.svg-art:hover {
     <text x="56" y="52">t</text>
     <text x="64" y="52">e</text>
     <text x="72" y="52">d</text>
-</a>
-  <a class='italic'>
+  </g>
+  <g class='italic'>
     <text x="216" y="52">r</text>
     <text x="224" y="52">e</text>
     <text x="232" y="52">c</text>
@@ -378,8 +378,8 @@ a.svg-art:hover {
     <text x="264" y="52">r</text>
     <text x="272" y="52">e</text>
     <text x="280" y="52">d</text>
-</a>
-  <a class='code'>
+  </g>
+  <g class='code'>
     <text x="16" y="68">d</text>
     <text x="24" y="68">i</text>
     <text x="32" y="68">a</text>
@@ -388,7 +388,7 @@ a.svg-art:hover {
     <text x="56" y="68">a</text>
     <text x="64" y="68">m</text>
     <text x="72" y="68">,</text>
-</a>
+  </g>
     <text x="112" y="68">d</text>
     <text x="120" y="68">i</text>
     <text x="128" y="68">a</text>
@@ -396,7 +396,7 @@ a.svg-art:hover {
     <text x="144" y="68">r</text>
     <text x="152" y="68">a</text>
     <text x="160" y="68">m</text>
-  <a class='italic'>
+  <g class='italic'>
     <text x="224" y="68">s</text>
     <text x="232" y="68">o</text>
     <text x="240" y="68">u</text>
@@ -404,8 +404,8 @@ a.svg-art:hover {
     <text x="256" y="68">c</text>
     <text x="264" y="68">e</text>
     <text x="272" y="68">-</text>
-</a>
-  <a class='italic'>
+  </g>
+  <g class='italic'>
     <text x="376" y="68">g</text>
     <text x="384" y="68">e</text>
     <text x="392" y="68">n</text>
@@ -413,8 +413,8 @@ a.svg-art:hover {
     <text x="408" y="68">r</text>
     <text x="416" y="68">i</text>
     <text x="424" y="68">c</text>
-</a>
-  <a class='code'>
+  </g>
+  <g class='code'>
     <text x="8" y="84">A</text>
     <text x="16" y="84">S</text>
     <text x="24" y="84">C</text>
@@ -422,7 +422,7 @@ a.svg-art:hover {
     <text x="40" y="84">I</text>
     <text x="56" y="84">o</text>
     <text x="64" y="84">r</text>
-</a>
+  </g>
     <text x="112" y="84">p</text>
     <text x="120" y="84">a</text>
     <text x="128" y="84">r</text>
@@ -430,7 +430,7 @@ a.svg-art:hover {
     <text x="144" y="84">i</text>
     <text x="152" y="84">n</text>
     <text x="160" y="84">g</text>
-  <a class='italic'>
+  <g class='italic'>
     <text x="208" y="84">i</text>
     <text x="216" y="84">n</text>
     <text x="224" y="84">d</text>
@@ -442,17 +442,17 @@ a.svg-art:hover {
     <text x="272" y="84">e</text>
     <text x="280" y="84">n</text>
     <text x="288" y="84">t</text>
-</a>
-  <a href='https://developer.mozilla.org/en-US/docs/Glossary/UTF-8' class='utf8-art'>
-  <a class='code'>
+  </g>
+  <a class='utf8-art' href='https://developer.mozilla.org/en-US/docs/Glossary/UTF-8'>
+  <g class='code'>
     <text x="24" y="100">U</text>
     <text x="32" y="100">T</text>
     <text x="40" y="100">F</text>
     <text x="48" y="100">-</text>
     <text x="56" y="100">8</text>
-</a>
-</a>
-  <a class='italic'>
+  </g>
+  </a>
+  <g class='italic'>
     <text x="216" y="100">s</text>
     <text x="224" y="100">t</text>
     <text x="232" y="100">r</text>
@@ -462,8 +462,8 @@ a.svg-art:hover {
     <text x="264" y="100">u</text>
     <text x="272" y="100">r</text>
     <text x="280" y="100">e</text>
-</a>
-  <a class='italic'>
+  </g>
+  <g class='italic'>
     <text x="376" y="100">s</text>
     <text x="384" y="100">o</text>
     <text x="392" y="100">u</text>
@@ -471,13 +471,13 @@ a.svg-art:hover {
     <text x="408" y="100">c</text>
     <text x="416" y="100">e</text>
     <text x="424" y="100">-</text>
-</a>
+  </g>
     <text x="504" y="100">A</text>
     <text x="512" y="100">S</text>
     <text x="520" y="100">C</text>
     <text x="528" y="100">I</text>
     <text x="536" y="100">I</text>
-  <a class='italic'>
+  <g class='italic'>
     <text x="376" y="116">s</text>
     <text x="384" y="116">p</text>
     <text x="392" y="116">e</text>
@@ -486,7 +486,7 @@ a.svg-art:hover {
     <text x="416" y="116">f</text>
     <text x="424" y="116">i</text>
     <text x="432" y="116">c</text>
-</a>
+  </g>
     <text x="464" y="116">×</text>
     <text x="576" y="116">×</text>
     <text x="488" y="132">U</text>
@@ -508,7 +508,7 @@ a.svg-art:hover {
     <text x="648" y="148">n</text>
     <text x="656" y="148">t</text>
     <text x="664" y="148">s</text>
-  <a class='code'>
+  <g class='code'>
     <text x="752" y="148">C</text>
     <text x="760" y="148">S</text>
     <text x="768" y="148">S</text>
@@ -519,7 +519,7 @@ a.svg-art:hover {
     <text x="808" y="148">l</text>
     <text x="816" y="148">e</text>
     <text x="824" y="148">d</text>
-</a>
+  </g>
     <text x="184" y="164">e</text>
     <text x="192" y="164">x</text>
     <text x="200" y="164">t</text>
@@ -532,17 +532,17 @@ a.svg-art:hover {
     <text x="256" y="164">n</text>
     <text x="272" y="164">o</text>
     <text x="280" y="164">f</text>
-  <a class='code'>
-  <a href='https://developer.mozilla.org/en-US/docs/Web/SVG' class='svg-art'>
+  <g class='code'>
+  <a class='svg-art' href='https://developer.mozilla.org/en-US/docs/Web/SVG'>
     <text x="760" y="164">S</text>
     <text x="768" y="164">V</text>
     <text x="776" y="164">G</text>
-</a>
+  </a>
     <text x="792" y="164">f</text>
     <text x="800" y="164">i</text>
     <text x="808" y="164">l</text>
     <text x="816" y="164">e</text>
-</a>
+  </g>
     <text x="184" y="180">C</text>
     <text x="192" y="180">S</text>
     <text x="200" y="180">S</text>
@@ -565,14 +565,6 @@ a.svg-art:hover {
     <text x="440" y="180">o</text>
     <text x="448" y="180">n</text>
     <text x="456" y="180">s</text>
-  <a class='bold'>
-    <text x="488" y="180">&lt;</text>
-    <text x="496" y="180">a</text>
-    <text x="504" y="180">&gt;</text>
-</a>
-    <text x="520" y="180">a</text>
-    <text x="528" y="180">n</text>
-    <text x="536" y="180">d</text>
     <text x="184" y="196">n</text>
     <text x="192" y="196">a</text>
     <text x="200" y="196">m</text>
@@ -581,15 +573,15 @@ a.svg-art:hover {
     <text x="232" y="196">a</text>
     <text x="240" y="196">n</text>
     <text x="248" y="196">d</text>
-  <a class='bold'>
+  <g class='bold'>
     <text x="488" y="196">&lt;</text>
     <text x="496" y="196">t</text>
     <text x="504" y="196">e</text>
     <text x="512" y="196">x</text>
     <text x="520" y="196">t</text>
     <text x="528" y="196">&gt;</text>
-</a>
-  <a href='https://developer.mozilla.org/en-US/docs/Web/CSS' class='css-art'>
+  </g>
+  <a class='css-art' href='https://developer.mozilla.org/en-US/docs/Web/CSS'>
     <text x="16" y="212">C</text>
     <text x="24" y="212">S</text>
     <text x="32" y="212">S</text>
@@ -598,8 +590,8 @@ a.svg-art:hover {
     <text x="64" y="212">l</text>
     <text x="72" y="212">e</text>
     <text x="80" y="212">s</text>
-</a>
-  <a class='bold'>
+  </a>
+  <g class='bold'>
     <text x="192" y="212">g</text>
     <text x="200" y="212">o</text>
     <text x="208" y="212">a</text>
@@ -611,7 +603,7 @@ a.svg-art:hover {
     <text x="256" y="212">h</text>
     <text x="264" y="212">o</text>
     <text x="272" y="212">r</text>
-</a>
+  </g>
     <text x="376" y="212">a</text>
     <text x="384" y="212">n</text>
     <text x="392" y="212">c</text>

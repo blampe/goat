@@ -60,19 +60,19 @@ svg {
 }
   </style>
   <style type="text/css" source-text-origin="embed:style/utf8.css">
-a.bold {
+.bold {
     goat-anchor-marks: "**";
     font-weight: bold;
 }
-a.italic {
+.italic {
     goat-anchor-marks: "//";
     font-style: italic;
 }
-a.underline {
+.underline {
     goat-anchor-marks: "__";
     text-decoration: underline;
 }
-a.code {
+.code {
     goat-anchor-marks: "``";
     stroke: inherit;
 }
@@ -101,21 +101,21 @@ a.code {
     <circle cx="192" cy="16" r="4" class="filled"></circle>
   </g>
   <g id='text'>
-  <a class='italic'>
+  <g class='italic'>
     <text x="64" y="20">H</text>
     <text x="72" y="20">e</text>
     <text x="80" y="20">l</text>
     <text x="88" y="20">l</text>
     <text x="96" y="20">o</text>
     <text x="104" y="20">,</text>
-  <a class='underline'>
+  <g class='underline'>
     <text x="120" y="20">w</text>
     <text x="128" y="20">o</text>
     <text x="136" y="20">r</text>
     <text x="144" y="20">l</text>
     <text x="152" y="20">d</text>
-</a>
-</a>
+  </g>
+  </g>
   </g>
 </g>
 </svg>
