@@ -12,7 +12,8 @@ import (
 type textDrawer struct {
 	config *Config
 
-	// Support nesting of SVG anchor elements <a> -- report input errors promptly. 
+	// Support nesting of SVG elements to name additional classes:
+	// Goal: Report input errors promptly.
 	wrapperStack []wrapper
 }
 
@@ -63,13 +64,6 @@ tD.wrapperStack[0] = {
 
 // Output is nested inside <svg>...</svg>.
 // Draw a single text character as an SVG <text> element. (In HTML, there is no <text> element.)
-// Also emit grouping element <a>, modifying effect of contained <text> elements.
-//  XX For ease of debugging output in browser's Inspector, group by words, e.g. 
-//       	var lastX int
-//		if t.Start.X != lastX + 1 {
-//			internal.MustFPrintf(out, "  </g>\n  <g>\n")
-//		}
-//		lastX = t.Start.X
 
 // XX  ? Refactor this, to emit a single <text> element for consecutive characters, using the SVG feature:
 //          https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/letter-spacing
@@ -81,6 +75,7 @@ func (tD *textDrawer) Draw(out io.Writer, t text) error {
 	textIndex := t.Start
 	p := textIndex.AsPixel()
 
+	// X  Whether t.r is actually a beginning, or rather and ending mark is not known at this point.
 	endMarkBinding, foundEndMark := tD.config.endMap[t.r]
 	beginMarkBinding, foundBeginMark := tD.config.beginMap[t.r]
 
@@ -89,12 +84,6 @@ func (tD *textDrawer) Draw(out io.Writer, t text) error {
 			wrapper{beginMarkBinding, t})
 
 		var attrs string
-		if len(beginMarkBinding.HRef) > 0 {
-			// X  Observed in browser: empty string "href=''" produces linking to the page itself.
-			//    Therefore, drop the href attribute entirely -- apparently functional equivalent
-			//    of a <g> element.
-			attrs += fmt.Sprintf(" href='%s'", beginMarkBinding.HRef)
-		}
 		if len(beginMarkBinding.ClassNames) > 0 {
 			attrs += fmt.Sprintf(" class='%s", beginMarkBinding.ClassNames[0])
 			for _, classname := range beginMarkBinding.ClassNames[1:] {
@@ -102,7 +91,18 @@ func (tD *textDrawer) Draw(out io.Writer, t text) error {
 			}
 			attrs += fmt.Sprintf("'")
 		}
-		internal.MustFPrintf(out, "  <a%s>\n", attrs)
+		elemString := "g"
+		if len(beginMarkBinding.HRef) > 0 {
+			// XX Nesting of <a> is forbidden by the spec -- how check input for violations?   
+			// X  Observed in browser: empty string "href=''" produces linking to the page itself.
+			//    Therefore, drop the href attribute entirely -- apparently functional equivalent
+			//    of a <g> element.
+			attrs += fmt.Sprintf(" href='%s'", beginMarkBinding.HRef)
+			elemString = "a"
+		}
+		internal.MustFPrintf(out, `  <%s%s>
+`,
+			elemString, attrs)
 		//subst := beginMarkBinding.subst[0]
 		//
 		//if subst != 0 {
@@ -111,7 +111,7 @@ func (tD *textDrawer) Draw(out io.Writer, t text) error {
 	}
 
 	if foundEndMark {
-		elemString := "a"
+		// error cases
 		if len(tD.wrapperStack) == 0 {
 			if foundBeginMark {
 				handleBeginMark()
@@ -124,11 +124,13 @@ func (tD *textDrawer) Draw(out io.Writer, t text) error {
 					"\t\tIndex %+v, but no matching start mark on stack",
 				string(t.r), endMarkBinding, t.Start))
 		}
-		// Verify that t.r is the expected end mark.
+
+		// Verify that t.r is the specific end mark expected in accordance with
+		// nesting order of the input.
 		tosWrapper := tD.wrapperStack[len(tD.wrapperStack)-1]
 		tosMarkBinding := tosWrapper.markBinding
 		if t.r != tosMarkBinding.markpair[1] {
-			// toggling case?
+			// normal toggling case -- same mark for begin and end?
 			if foundBeginMark {
 				handleBeginMark()
 				return nil
@@ -154,7 +156,13 @@ func (tD *textDrawer) Draw(out io.Writer, t text) error {
 		//	finalDraw(out, p, subst)
 		//}
 
-		internal.MustFPrintf(out, "</%s>\n", elemString)
+		elemString := "g"
+		if len(endMarkBinding.HRef) > 0 {
+			elemString = "a"
+		}
+		internal.MustFPrintf(out, `  </%s>
+`,
+			elemString)
 		// pop the stack
 		tD.wrapperStack = tD.wrapperStack[:len(tD.wrapperStack)-1]
 		return nil

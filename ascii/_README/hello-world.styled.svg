@@ -60,15 +60,15 @@ svg {
 }
   </style>
   <style type="text/css" source-text-origin="embed:style/ascii.css">
-a.bold {
+.bold {
     goat-anchor-marks: "··";
     font-weight: bold;
 }
-a.italic {
+.italic {
     goat-anchor-marks: "``";
     font-style: italic;
 }
-a.underline {
+.underline {
     goat-anchor-marks: "‗‗";  /*  -- resort to UTF-8 */
     text-decoration: underline;
 }
@@ -97,21 +97,21 @@ a.underline {
   <g id='bridges'>
   </g>
   <g id='text'>
-  <a class='italic'>
+  <g class='italic'>
     <text x="72" y="20">H</text>
     <text x="80" y="20">e</text>
     <text x="88" y="20">l</text>
     <text x="96" y="20">l</text>
     <text x="104" y="20">o</text>
     <text x="112" y="20">,</text>
-  <a class='underline'>
+  <g class='underline'>
     <text x="128" y="20">w</text>
     <text x="136" y="20">o</text>
     <text x="144" y="20">r</text>
     <text x="152" y="20">l</text>
     <text x="160" y="20">d</text>
-</a>
-</a>
+  </g>
+  </g>
 </g>
 </g>
 </svg>

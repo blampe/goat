@@ -152,7 +152,7 @@ Input is a UTF-8 encoded byte stream; output is a single <svg> element.
 			err = svg.ParseCss(markBindingMap, newCss)
 			if err != nil {
 				log.Fatalf(`
-Could not parse filename '%s',
+Could not parse file '%s',
    err = %v`,
 					cssFilename, err)
 			}

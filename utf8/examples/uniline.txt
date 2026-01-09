@@ -3,3 +3,6 @@ Unicode BOX characters generatable by uniline.el, but neither of AsciiFlow nor C
     ╭╮    ╭─╮
     ╰╯    │X│
           ╰─╯
+    ╭╌╌╮
+    ┊  ┊
+    ╰╌╌╯

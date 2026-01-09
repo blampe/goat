@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-    width="696" height="90"
-    viewBox="0 0 696 90">
+    width="696" height="138"
+    viewBox="0 0 696 138">
   <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
     svg {
         color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
@@ -52,7 +52,11 @@
 <g transform='translate(8,12)'>
   <g id='lines-vertical'>
     <polyline class="path" points="32,36 32,44"/>
+    <polyline class="path" points="32,84 32,88"/>
+    <polyline class="path" points="32,104 32,108"/>
     <polyline class="path" points="40,36 40,44"/>
+    <polyline class="path" points="56,84 56,88"/>
+    <polyline class="path" points="56,104 56,108"/>
     <polyline class="path" points="80,36 80,60"/>
     <polyline class="path" points="96,36 96,60"/>
   </g>
@@ -71,6 +75,10 @@
     <path class="path" d="M 40,44 A 4,4 0 0,1 36,48"></path>
     <path class="path" d="M 80,60 A 4,4 0 0,0 84,64"></path>
     <path class="path" d="M 96,60 A 4,4 0 0,1 92,64"></path>
+    <path class="path" d="M 36,80 A 4,4 0 0,0 32,84"></path>
+    <path class="path" d="M 52,80 A 4,4 0 0,1 56,84"></path>
+    <path class="path" d="M 32,108 A 4,4 0 0,0 36,112"></path>
+    <path class="path" d="M 56,108 A 4,4 0 0,1 52,112"></path>
   </g>
   <g id='circles'>
   </g>
@@ -151,6 +159,12 @@
     <text x="672" y="4">i</text>
     <text x="680" y="4">:</text>
     <text x="88" y="52">X</text>
+    <text x="40" y="84">╌</text>
+    <text x="48" y="84">╌</text>
+    <text x="32" y="100">┊</text>
+    <text x="56" y="100">┊</text>
+    <text x="40" y="116">╌</text>
+    <text x="48" y="116">╌</text>
   </g>
 </g>
 </svg>

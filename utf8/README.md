@@ -31,7 +31,7 @@ A highly abstract view of GoAT's internal data flow, using UTF-8 text:
                                         │ │  │          │ ╰─▶UTF8-BOX ●─╯ │   SVG         │  ┌          ┐
                      ╭───────────────╮  │ ╰──┴──────────╯   ╰─────────╯   │ elements│     │  `CSS-styled`
                      │ extraction of │  │ ╭───────────────┬────────────╮  │               ├─▶`₃SVG₃file`
-                     │ CSS class-    │  ╰─▶ text positions  *<a>*and   │  │         │     │  └          ┘
+                     │ CSS class-    │  ╰─▶ text positions             │  │         │     │  └          ┘
 ┌            ┐       │ names and     │    ├╴ ─ ─ ─ ─ ─ ─ ─┤ *<text>*   ├──▶               │
 ₂ CSS files₂○─────┬──▶ *goat-anchor* ├────▶    anchor     ╷ generation │  ├ ─ ─ ─ ─ ┤     │
 └            ┘    │  │ properties    │    │   class names ╵            │  │               │
@@ -97,6 +97,9 @@ Unicode BOX characters generatable by uniline.el, but neither of AsciiFlow nor C
     ╭╮    ╭─╮
     ╰╯    │X│
           ╰─╯
+    ╭╌╌╮
+    ┊  ┊
+    ╰╌╌╯
 
 ```
 ---

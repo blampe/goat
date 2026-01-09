@@ -9,7 +9,7 @@
                                         │ │  │          │ ╰─▶UTF8-BOX ●─╯ │   SVG         │  ┌          ┐
                      ╭───────────────╮  │ ╰──┴──────────╯   ╰─────────╯   │ elements│     │  `CSS-styled`
                      │ extraction of │  │ ╭───────────────┬────────────╮  │               ├─▶`₃SVG₃file`
-                     │ CSS class-    │  ╰─▶ text positions  *<a>*and   │  │         │     │  └          ┘
+                     │ CSS class-    │  ╰─▶ text positions             │  │         │     │  └          ┘
 ┌            ┐       │ names and     │    ├╴ ─ ─ ─ ─ ─ ─ ─┤ *<text>*   ├──▶               │
 ₂ CSS files₂○─────┬──▶ *goat-anchor* ├────▶    anchor     ╷ generation │  ├ ─ ─ ─ ─ ┤     │
 └            ┘    │  │ properties    │    │   class names ╵            │  │               │

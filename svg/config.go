@@ -129,12 +129,13 @@ func ParseCss(bindings MarkBindingMap, cssBytes []byte) error {
 				markBinding.HRef = lexDeclaration(cssTokens)
 			}
 			// Fatal error if a GoAT-specific property is found
-			// inside a RuleSet whose CSS selector list is not simply names of anchor classes.
+			// inside a RuleSet whose CSS selector list is not names of classes, with or without a prepended element tag.
 			if len(markBinding.ClassNames) == 0 {
 				// XX  At this point, markBinding.markpair[2] is not yet initialized.
 				return fmt.Errorf(
-					"GoAT-specific properties found, but no a.CLASSNAME selectors for the RuleSet:\n\t%#v",
-					markBinding)
+					`GoAT-specific properties found, but no .CLASSNAME selectors for the RuleSet:
+	%s`,
+					markBinding.String())
 			}
 		}
 	}
@@ -172,11 +173,11 @@ func lexDeclaration(cssTokens []css.Token) (tokenStr string) {
 }
 
 func beginRuleSet(parser *css.Parser) (kb markBinding) {
-	var isAnchorClass bool
+	var isClass bool
 
 	// Consume the CSS selector list.
 	//   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Selector_list
-	lastTokenStr := ""
+	// lastTokenStr := ""
 	for _, token := range parser.Values() {
 		tokenStr := string(token.Data)
 		if DUMP_CSS {
@@ -192,17 +193,17 @@ func beginRuleSet(parser *css.Parser) (kb markBinding) {
 			kb._idName = tokenStr[1:]
 		case css.DelimToken:
 			// The initial '.' of a class rule hits this.
-			if lastTokenStr == "a" && tokenStr == "." {
-				isAnchorClass = true
+			if tokenStr == "." {
+				isClass = true
 			}
  		case css.IdentToken: // X  hits for both a class name, and an SVG element tag, which is not needed.
-			if isAnchorClass {
+			if isClass {
 				kb.ClassNames = append(kb.ClassNames, tokenStr)
 			}
 		default:
 			// some other selector syntax
 		}
-		lastTokenStr = tokenStr
+		//lastTokenStr = tokenStr
 	}
 	return
 }
